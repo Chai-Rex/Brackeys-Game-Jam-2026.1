@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3998266307428861708
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7103409154828404630}
+  - component: {fileID: 7036005523895601899}
+  m_Layer: 0
+  m_Name: GameBootstrap
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7103409154828404630
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3998266307428861708}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7036005523895601899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3998266307428861708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 698b6077cf11fb6489dfde4aebcbec19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::God
+  _iLoadingManager: {fileID: 11400000, guid: 538702b71d0804d438867e958d34bef0, type: 2}
+  _iCameraManager: {fileID: 11400000, guid: 9b450041a5e2d7d46b8ee5b97933b888, type: 2}
+  _iGameCommands: {fileID: 11400000, guid: afd9e7b049d45c941b64df0eb71ace5f, type: 2}
+  _iSoundManager: {fileID: 11400000, guid: 6ac33709902ba4042b0e633cfa7ca1dc, type: 2}
+  _iInputManager: {fileID: 11400000, guid: 060aa07aca206d345830d3de39888317, type: 2}
+  _iMainMenuContainer: {fileID: 11400000, guid: c485b1743705fd744a612354c8205969, type: 2}
+  _iGameplayContainer: {fileID: 11400000, guid: 5d505735d37a61246905fa2ca4002fae, type: 2}
+  _iCameraTemplate: {fileID: 3609894792491345745, guid: 3078bfc29fd4d2142a23c78f52192af3, type: 3}
+  _iEventSystemTemplate: {fileID: 1898514338746754847, guid: 7001fa82e6cf83f499517e8ad3d6839a, type: 3}
+  _iEnableDebugLogs: 0
+  _iEnableVerboseLogs: 0
