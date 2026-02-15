@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b557f7cb76d9a0147b68289da768ecaa, type: 3}
   m_Name: GameplayContainer
   m_EditorClassIdentifier: Assembly-CSharp::SceneContainerSO
-  _iSceneName: SampleScene
+  _iSceneName: ChaiSystemsTestScene
   _iManagers:
   - {fileID: 11400000, guid: 9b450041a5e2d7d46b8ee5b97933b888, type: 2}
   - {fileID: 11400000, guid: 060aa07aca206d345830d3de39888317, type: 2}
@@ -20,3 +20,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6028ccc9ba231bc4f846209f5ecb4192, type: 2}
   - {fileID: 11400000, guid: 68a1b4974e7f85e47ae817cf9259e06e, type: 2}
   - {fileID: 11400000, guid: 7762dcc57d51dd24081275eec62de0aa, type: 2}
+  _iEnableDebugLogs: 0
