@@ -36,7 +36,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1254.3451, y: -50}
+  m_AnchoredPosition: {x: 733.405, y: -50}
   m_SizeDelta: {x: 0, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &6757454547015826856
@@ -266,7 +266,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 105.305, y: -50}
+  m_AnchoredPosition: {x: 31.815, y: -50}
   m_SizeDelta: {x: 0, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &5805114941056639013
@@ -420,7 +420,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 973.69, y: -50}
+  m_AnchoredPosition: {x: 507.82, y: -50}
   m_SizeDelta: {x: 0, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1296431977299815377
@@ -499,7 +499,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 645.595, y: -50}
+  m_AnchoredPosition: {x: 644.015, y: -50}
   m_SizeDelta: {x: 0, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &3472276973982654026
@@ -578,7 +578,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1196.86, y: -50}
+  m_AnchoredPosition: {x: 912.945, y: -50}
   m_SizeDelta: {x: 0, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &4644510285074931716
@@ -736,7 +736,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1358.4451, y: -50}
+  m_AnchoredPosition: {x: 1242.535, y: -50}
   m_SizeDelta: {x: 0, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8580223982650575167
@@ -815,7 +815,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 955.45996, y: -50}
+  m_AnchoredPosition: {x: 694.06006, y: -50}
   m_SizeDelta: {x: 0, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &7302031368413708663
@@ -973,7 +973,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 355.72998, y: -50}
+  m_AnchoredPosition: {x: 189.03, y: -50}
   m_SizeDelta: {x: 0, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &4934526749727819466
@@ -1136,7 +1136,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 691.73, y: -50}
+  m_AnchoredPosition: {x: 276.65503, y: -50}
   m_SizeDelta: {x: 0, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &6651539277749594431
@@ -1294,7 +1294,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1535.465, y: -50}
+  m_AnchoredPosition: {x: 953.69, y: -50}
   m_SizeDelta: {x: 0, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1927131185687263802
@@ -1681,7 +1681,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4358547394090561897, guid: 616c98aaf72501543b99e03fcd52e71b, type: 3}
       propertyPath: m_text
-      value: Chai, Gabe
+      value: TBD
       objectReference: {fileID: 0}
     - target: {fileID: 4358547394090561897, guid: 616c98aaf72501543b99e03fcd52e71b, type: 3}
       propertyPath: m_fontColor32.rgba
@@ -1791,7 +1791,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4358547394090561897, guid: 616c98aaf72501543b99e03fcd52e71b, type: 3}
       propertyPath: m_text
-      value: Carly, Isabelle Jones, Gabe
+      value: TBD
       objectReference: {fileID: 0}
     - target: {fileID: 4358547394090561897, guid: 616c98aaf72501543b99e03fcd52e71b, type: 3}
       propertyPath: m_fontColor32.rgba
@@ -1949,7 +1949,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2782835107535380411, guid: 68590f9c43c296a4a8a62159b6b6b60e, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 648.01495
+      value: 424.10498
       objectReference: {fileID: 0}
     - target: {fileID: 2782835107535380411, guid: 68590f9c43c296a4a8a62159b6b6b60e, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2057,7 +2057,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5640187426615679948, guid: 68590f9c43c296a4a8a62159b6b6b60e, type: 3}
       propertyPath: m_text
-      value: Chai, Gabe, Roberto
+      value: TBD
       objectReference: {fileID: 0}
     - target: {fileID: 6096421869613951858, guid: 68590f9c43c296a4a8a62159b6b6b60e, type: 3}
       propertyPath: m_AnchorMax.y
@@ -2181,7 +2181,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7954318159360004472, guid: 68590f9c43c296a4a8a62159b6b6b60e, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 638.99
+      value: 485.77502
       objectReference: {fileID: 0}
     - target: {fileID: 7954318159360004472, guid: 68590f9c43c296a4a8a62159b6b6b60e, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2252,7 +2252,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4358547394090561897, guid: 616c98aaf72501543b99e03fcd52e71b, type: 3}
       propertyPath: m_text
-      value: Andrew, Ray
+      value: TBD
       objectReference: {fileID: 0}
     - target: {fileID: 4358547394090561897, guid: 616c98aaf72501543b99e03fcd52e71b, type: 3}
       propertyPath: m_fontColor32.rgba
@@ -2410,7 +2410,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2782835107535380411, guid: 68590f9c43c296a4a8a62159b6b6b60e, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 239.63
+      value: 57.49
       objectReference: {fileID: 0}
     - target: {fileID: 2782835107535380411, guid: 68590f9c43c296a4a8a62159b6b6b60e, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2522,7 +2522,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5640187426615679948, guid: 68590f9c43c296a4a8a62159b6b6b60e, type: 3}
       propertyPath: m_text
-      value: Akash, Alex, MJ Galicha, Roberto
+      value: TBD
       objectReference: {fileID: 0}
     - target: {fileID: 6096421869613951858, guid: 68590f9c43c296a4a8a62159b6b6b60e, type: 3}
       propertyPath: m_AnchorMax.y
@@ -2646,7 +2646,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7954318159360004472, guid: 68590f9c43c296a4a8a62159b6b6b60e, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 802.71
+      value: 508.94
       objectReference: {fileID: 0}
     - target: {fileID: 7954318159360004472, guid: 68590f9c43c296a4a8a62159b6b6b60e, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2827,7 +2827,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4358547394090561897, guid: 616c98aaf72501543b99e03fcd52e71b, type: 3}
       propertyPath: m_text
-      value: Chai, Ray
+      value: TBD
       objectReference: {fileID: 0}
     - target: {fileID: 4358547394090561897, guid: 616c98aaf72501543b99e03fcd52e71b, type: 3}
       propertyPath: m_fontColor32.rgba
@@ -3205,7 +3205,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2782835107535380411, guid: 68590f9c43c296a4a8a62159b6b6b60e, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 992.765
+      value: 933.23
       objectReference: {fileID: 0}
     - target: {fileID: 2782835107535380411, guid: 68590f9c43c296a4a8a62159b6b6b60e, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -3317,7 +3317,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5640187426615679948, guid: 68590f9c43c296a4a8a62159b6b6b60e, type: 3}
       propertyPath: m_text
-      value: Andrew, Heejae, Paul, Ray
+      value: TBD
       objectReference: {fileID: 0}
     - target: {fileID: 6096421869613951858, guid: 68590f9c43c296a4a8a62159b6b6b60e, type: 3}
       propertyPath: m_AnchorMax.y
@@ -3441,7 +3441,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7954318159360004472, guid: 68590f9c43c296a4a8a62159b6b6b60e, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 734.06
+      value: 676.105
       objectReference: {fileID: 0}
     - target: {fileID: 7954318159360004472, guid: 68590f9c43c296a4a8a62159b6b6b60e, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -3512,7 +3512,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4358547394090561897, guid: 616c98aaf72501543b99e03fcd52e71b, type: 3}
       propertyPath: m_text
-      value: Chai, Gabe
+      value: TBD
       objectReference: {fileID: 0}
     - target: {fileID: 4358547394090561897, guid: 616c98aaf72501543b99e03fcd52e71b, type: 3}
       propertyPath: m_fontColor32.rgba
@@ -3622,7 +3622,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4358547394090561897, guid: 616c98aaf72501543b99e03fcd52e71b, type: 3}
       propertyPath: m_text
-      value: Alex
+      value: TBD
       objectReference: {fileID: 0}
     - target: {fileID: 4358547394090561897, guid: 616c98aaf72501543b99e03fcd52e71b, type: 3}
       propertyPath: m_fontColor32.rgba
@@ -3732,7 +3732,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4358547394090561897, guid: 616c98aaf72501543b99e03fcd52e71b, type: 3}
       propertyPath: m_text
-      value: Chai, Ray
+      value: TBD
       objectReference: {fileID: 0}
     - target: {fileID: 4358547394090561897, guid: 616c98aaf72501543b99e03fcd52e71b, type: 3}
       propertyPath: m_fontColor32.rgba
@@ -4308,7 +4308,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4358547394090561897, guid: 616c98aaf72501543b99e03fcd52e71b, type: 3}
       propertyPath: m_text
-      value: Ray
+      value: TBD
       objectReference: {fileID: 0}
     - target: {fileID: 4358547394090561897, guid: 616c98aaf72501543b99e03fcd52e71b, type: 3}
       propertyPath: m_fontColor32.rgba
@@ -4640,7 +4640,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4358547394090561897, guid: 616c98aaf72501543b99e03fcd52e71b, type: 3}
       propertyPath: m_text
-      value: Anastasiia
+      value: TBD
       objectReference: {fileID: 0}
     - target: {fileID: 4358547394090561897, guid: 616c98aaf72501543b99e03fcd52e71b, type: 3}
       propertyPath: m_fontColor32.rgba
@@ -4750,7 +4750,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4358547394090561897, guid: 616c98aaf72501543b99e03fcd52e71b, type: 3}
       propertyPath: m_text
-      value: Akash, MJ Galicha
+      value: TBD
       objectReference: {fileID: 0}
     - target: {fileID: 4358547394090561897, guid: 616c98aaf72501543b99e03fcd52e71b, type: 3}
       propertyPath: m_fontColor32.rgba
@@ -4970,7 +4970,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4358547394090561897, guid: 616c98aaf72501543b99e03fcd52e71b, type: 3}
       propertyPath: m_text
-      value: Gabe
+      value: TBD
       objectReference: {fileID: 0}
     - target: {fileID: 4358547394090561897, guid: 616c98aaf72501543b99e03fcd52e71b, type: 3}
       propertyPath: m_fontColor32.rgba
@@ -5190,7 +5190,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4358547394090561897, guid: 616c98aaf72501543b99e03fcd52e71b, type: 3}
       propertyPath: m_text
-      value: Chai, Gabe, Roberto
+      value: TBD
       objectReference: {fileID: 0}
     - target: {fileID: 4358547394090561897, guid: 616c98aaf72501543b99e03fcd52e71b, type: 3}
       propertyPath: m_fontColor32.rgba
@@ -5596,7 +5596,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5734431888181686562, guid: fb396e95ab375a44686b94b6301eb689, type: 3}
       propertyPath: m_text
-      value: 'Loops: 69'
+      value: CREDITS
       objectReference: {fileID: 0}
     - target: {fileID: 5734431888181686562, guid: fb396e95ab375a44686b94b6301eb689, type: 3}
       propertyPath: m_fontColor32.rgba
@@ -5641,7 +5641,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4358547394090561897, guid: 616c98aaf72501543b99e03fcd52e71b, type: 3}
       propertyPath: m_text
-      value: Gabe, Roberto
+      value: TBD
       objectReference: {fileID: 0}
     - target: {fileID: 4358547394090561897, guid: 616c98aaf72501543b99e03fcd52e71b, type: 3}
       propertyPath: m_fontColor32.rgba
@@ -5751,7 +5751,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4358547394090561897, guid: 616c98aaf72501543b99e03fcd52e71b, type: 3}
       propertyPath: m_text
-      value: Carly, Isabelle Jones
+      value: TBD
       objectReference: {fileID: 0}
     - target: {fileID: 4358547394090561897, guid: 616c98aaf72501543b99e03fcd52e71b, type: 3}
       propertyPath: m_fontColor32.rgba
