@@ -9,7 +9,7 @@ using UtilityExtensions;
 /// Manages loading screen display and progress tracking.
 /// </summary>
 [CreateAssetMenu(fileName = "LoadingManager", menuName = "ScriptableObjects/Managers/LoadingManager")]
-public class LoadingManager : ScriptableObject, IInitializable, IPersistentManager {
+public class LoadingManager : ScriptableObject, IInitializable, ICleanable, IPersistentManager {
 
     [Header("Canvas Reference")]
     [SerializeField] private AssetReferenceGameObject _iLoadingCanvasPrefab;

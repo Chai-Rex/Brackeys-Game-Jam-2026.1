@@ -6,7 +6,7 @@ using UnityEngine;
 /// Provides type-safe, explicit API for all game actions.
 /// </summary>
 [CreateAssetMenu(fileName = "GameCommandsManager", menuName = "ScriptableObjects/Managers/GameCommandsManager")]
-public class GameCommandsManager : ScriptableObject, IInitializable, IPersistentManager {
+public class GameCommandsManager : ScriptableObject, IInitializable, ICleanable, IPersistentManager {
 
     public string _ManagerName => "GameCommandsManager";
     public bool _IsInitialized { get; private set; }

@@ -35,7 +35,4 @@ public class UIMainMenuManager : ScriptableObject, IInitializable {
     }
 
 
-    public void CleanUp() {
-    }
-
 }

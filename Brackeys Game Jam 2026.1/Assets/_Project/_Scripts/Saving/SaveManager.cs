@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "SaveManager", menuName = "ScriptableObjects/Managers/SaveManager")]
-public class SaveManager : ScriptableObject, IInitializable {
+public class SaveManager : ScriptableObject, IInitializable, ICleanable {
 
 
     [SerializeField] private SaveUISettingsSO _iSaveUISettings;

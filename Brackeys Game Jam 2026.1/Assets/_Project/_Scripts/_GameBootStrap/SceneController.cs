@@ -154,7 +154,7 @@ public class SceneController {
             return;
         }
 
-        if (!container.IsInitialized()) {
+        if (!container._IsInitialized) {
             LogWarning($"Container for {container.GetSceneName()} not initialized");
             return;
         }
@@ -165,7 +165,7 @@ public class SceneController {
 
         try {
             // Cleanup container
-            container.Unload();
+            container.CleanUp();
 
             // Unload Unity scene
             Scene scene = SceneManager.GetSceneByName(sceneName);
@@ -207,28 +207,28 @@ public class SceneController {
     /// Forward Update to active container
     /// </summary>
     public void Update() {
-        _activeContainer?.Update();
+        _activeContainer?.OnUpdate();
     }
 
     /// <summary>
     /// Forward FixedUpdate to active container
     /// </summary>
     public void FixedUpdate() {
-        _activeContainer?.FixedUpdate();
+        _activeContainer?.OnFixedUpdate();
     }
 
     /// <summary>
     /// Pause the active scene
     /// </summary>
     public void Pause() {
-        _activeContainer?.Pause();
+        _activeContainer?.OnPause();
     }
 
     /// <summary>
     /// Resume the active scene
     /// </summary>
     public void Resume() {
-        _activeContainer?.Resume();
+        _activeContainer?.OnResume();
     }
 
     #endregion

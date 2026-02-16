@@ -8,7 +8,7 @@ using UnityEngine;
 /// Handles smooth transitions between loading screens and gameplay.
 /// </summary>
 [CreateAssetMenu(fileName = "CameraManager", menuName = "ScriptableObjects/Managers/CameraManager")]
-public class CameraManager : ScriptableObject, IInitializable, IPersistentManager {
+public class CameraManager : ScriptableObject, IInitializable, ICleanable, IPersistentManager {
 
     [Header("Debug Settings")]
     [SerializeField] private bool _iEnableDebugLogs = false;

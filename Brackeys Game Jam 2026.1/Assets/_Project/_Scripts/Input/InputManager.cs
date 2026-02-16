@@ -6,7 +6,7 @@ using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 [CreateAssetMenu(fileName = "InputManager", menuName = "ScriptableObjects/Managers/InputManager")]
-public class InputManager : ScriptableObject, IInitializable, IPersistentManager {
+public class InputManager : ScriptableObject, IInitializable, ICleanable, IPersistentManager {
 
     public event UnityAction<string> _OnControlsChanged;
 

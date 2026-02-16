@@ -7,7 +7,7 @@ using UnityEngine.Pool;
 namespace SoundSystem {
 
     [CreateAssetMenu(fileName = "SoundManager", menuName = "ScriptableObjects/Managers/SoundManager")]
-    public class SoundManager : ScriptableObject, IInitializable, IPersistentManager {
+    public class SoundManager : ScriptableObject, IInitializable, ICleanable, IPersistentManager {
 
         [Header("References")]
         [SerializeField] private AudioMixer _iMixer;
