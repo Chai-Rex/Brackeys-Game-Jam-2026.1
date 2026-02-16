@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{09C7CDA1-D1F5-49B0-A28D-D9CDDD0B6387}" SchemaVersion="133" RootDocumentID="{DE19D50C-A927-41D8-8B3B-6B230573043D}" ParentDocumentID="{20454079-B662-4AB5-B914-9B615A56604A}">
+	<Containers>
+		<WorkUnit Name="Credits" ID="{09C7CDA1-D1F5-49B0-A28D-D9CDDD0B6387}" OwnerID="{20454079-B662-4AB5-B914-9B615A56604A}" PersistMode="Nested"/>
+	</Containers>
+</WwiseDocument>

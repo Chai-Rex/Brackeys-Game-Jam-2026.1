@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{3ECFDC21-BC11-4FE3-954C-F43EAD4EBE72}" SchemaVersion="133" RootDocumentID="{C5BE94EB-CFE7-4974-AD84-1EA50F78F7F1}" ParentDocumentID="{C5BE94EB-CFE7-4974-AD84-1EA50F78F7F1}">
+	<Containers>
+		<WorkUnit Name="Player" ID="{3ECFDC21-BC11-4FE3-954C-F43EAD4EBE72}" OwnerID="{C5BE94EB-CFE7-4974-AD84-1EA50F78F7F1}" PersistMode="Nested">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="2"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
+			<ChildrenList>
+				<PropertyContainer Name="Movement" ID="{EDA108A6-8666-4ECA-8F83-2EF63A88BA7B}" ShortID="546979871">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<SwitchContainer Name="Footsteps" ID="{53997450-A1CB-4D4A-9221-8FB7FADD7A48}" ShortID="358231526">
+							<PropertyList>
+								<Property Name="SwitchBehavior" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+								</Reference>
+								<Reference Name="DefaultSwitchOrState">
+									<ObjectRef Name="Dirt" ID="{46A7F098-4597-4C61-937D-8DCCF60A3EC8}" WorkUnitID="{A9C6184A-D0A9-4614-9B78-7D5E0FB8748D}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+								</Reference>
+								<Reference Name="SwitchGroupOrStateGroup">
+									<ObjectRef Name="Footsteps_Surface" ID="{46BD98F1-5115-43C8-AFB6-4E70F34F713D}" WorkUnitID="{A9C6184A-D0A9-4614-9B78-7D5E0FB8748D}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<SwitchContainer Name="Footsteps_Ice" ID="{D9AE55DE-9D11-4FEB-BA2E-EEC4A8BFCB65}" ShortID="989132290">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="15"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+										<Property Name="SwitchBehavior" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+										</Reference>
+										<Reference Name="DefaultSwitchOrState">
+											<ObjectRef Name="Run" ID="{CABFA66C-57E5-4722-8ACC-ECBC4E484B01}" WorkUnitID="{A9C6184A-D0A9-4614-9B78-7D5E0FB8748D}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+										</Reference>
+										<Reference Name="SwitchGroupOrStateGroup">
+											<ObjectRef Name="MoveSpeed" ID="{DB9672EC-F9AA-4117-8FD6-5813FC6E16AD}" WorkUnitID="{A9C6184A-D0A9-4614-9B78-7D5E0FB8748D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<RandomSequenceContainer Name="Footsteps_Ice_Run" ID="{CE6BE3C6-6E35-4635-BB38-773B10A67BF2}" ShortID="473368358">
+											<PropertyList>
+												<Property Name="Color" Type="int16" Value="15"/>
+												<Property Name="OverrideColor" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+												</Reference>
+											</ReferenceList>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="Footsteps_Ice_Walk" ID="{74A3811D-5328-44F4-B267-74299917AE39}" ShortID="510863744">
+											<PropertyList>
+												<Property Name="Color" Type="int16" Value="15"/>
+												<Property Name="OverrideColor" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+												</Reference>
+											</ReferenceList>
+										</RandomSequenceContainer>
+									</ChildrenList>
+									<GroupingInfo>
+										<GroupingBehaviorList>
+											<GroupingBehavior>
+												<ItemRef Name="Footsteps_Ice_Walk" ID="{74A3811D-5328-44F4-B267-74299917AE39}"/>
+											</GroupingBehavior>
+											<GroupingBehavior>
+												<ItemRef Name="Footsteps_Ice_Run" ID="{CE6BE3C6-6E35-4635-BB38-773B10A67BF2}"/>
+											</GroupingBehavior>
+										</GroupingBehaviorList>
+										<GroupingList>
+											<Grouping>
+												<SwitchRef Name="Walk" ID="{6E07CF22-C3F6-4C97-ABAE-C2B7024C6CD4}"/>
+												<ItemList>
+													<ItemRef Name="Footsteps_Ice_Walk" ID="{74A3811D-5328-44F4-B267-74299917AE39}"/>
+												</ItemList>
+											</Grouping>
+											<Grouping>
+												<SwitchRef Name="Run" ID="{CABFA66C-57E5-4722-8ACC-ECBC4E484B01}"/>
+												<ItemList>
+													<ItemRef Name="Footsteps_Ice_Run" ID="{CE6BE3C6-6E35-4635-BB38-773B10A67BF2}"/>
+												</ItemList>
+											</Grouping>
+										</GroupingList>
+									</GroupingInfo>
+								</SwitchContainer>
+								<SwitchContainer Name="Footsteps_Grass" ID="{561EED88-D582-4928-9F01-A49002F93999}" ShortID="932357369">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="4"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+										<Property Name="SwitchBehavior" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+										</Reference>
+										<Reference Name="DefaultSwitchOrState">
+											<ObjectRef Name="Run" ID="{CABFA66C-57E5-4722-8ACC-ECBC4E484B01}" WorkUnitID="{A9C6184A-D0A9-4614-9B78-7D5E0FB8748D}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+										</Reference>
+										<Reference Name="SwitchGroupOrStateGroup">
+											<ObjectRef Name="MoveSpeed" ID="{DB9672EC-F9AA-4117-8FD6-5813FC6E16AD}" WorkUnitID="{A9C6184A-D0A9-4614-9B78-7D5E0FB8748D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<RandomSequenceContainer Name="Footsteps_Grass_Run" ID="{D1CA8592-47EB-4921-ADAD-771348C06045}" ShortID="407514723">
+											<PropertyList>
+												<Property Name="Color" Type="int16" Value="4"/>
+												<Property Name="OverrideColor" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+												</Reference>
+											</ReferenceList>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="Footsteps_Grass_Walk" ID="{937BA305-5C6B-42BD-B0D3-403CAA00AC5B}" ShortID="325175795">
+											<PropertyList>
+												<Property Name="Color" Type="int16" Value="4"/>
+												<Property Name="OverrideColor" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+												</Reference>
+											</ReferenceList>
+										</RandomSequenceContainer>
+									</ChildrenList>
+									<GroupingInfo>
+										<GroupingBehaviorList>
+											<GroupingBehavior>
+												<ItemRef Name="Footsteps_Grass_Walk" ID="{937BA305-5C6B-42BD-B0D3-403CAA00AC5B}"/>
+											</GroupingBehavior>
+											<GroupingBehavior>
+												<ItemRef Name="Footsteps_Grass_Run" ID="{D1CA8592-47EB-4921-ADAD-771348C06045}"/>
+											</GroupingBehavior>
+										</GroupingBehaviorList>
+										<GroupingList>
+											<Grouping>
+												<SwitchRef Name="Walk" ID="{6E07CF22-C3F6-4C97-ABAE-C2B7024C6CD4}"/>
+												<ItemList>
+													<ItemRef Name="Footsteps_Grass_Walk" ID="{937BA305-5C6B-42BD-B0D3-403CAA00AC5B}"/>
+												</ItemList>
+											</Grouping>
+											<Grouping>
+												<SwitchRef Name="Run" ID="{CABFA66C-57E5-4722-8ACC-ECBC4E484B01}"/>
+												<ItemList>
+													<ItemRef Name="Footsteps_Grass_Run" ID="{D1CA8592-47EB-4921-ADAD-771348C06045}"/>
+												</ItemList>
+											</Grouping>
+										</GroupingList>
+									</GroupingInfo>
+								</SwitchContainer>
+								<SwitchContainer Name="Footsteps_Lava" ID="{4F873DAB-B90F-426E-A58B-B94CF013F09A}" ShortID="304216207">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="9"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+										<Property Name="SwitchBehavior" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+										</Reference>
+										<Reference Name="DefaultSwitchOrState">
+											<ObjectRef Name="Run" ID="{CABFA66C-57E5-4722-8ACC-ECBC4E484B01}" WorkUnitID="{A9C6184A-D0A9-4614-9B78-7D5E0FB8748D}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+										</Reference>
+										<Reference Name="SwitchGroupOrStateGroup">
+											<ObjectRef Name="MoveSpeed" ID="{DB9672EC-F9AA-4117-8FD6-5813FC6E16AD}" WorkUnitID="{A9C6184A-D0A9-4614-9B78-7D5E0FB8748D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<RandomSequenceContainer Name="Footsteps_Lava_Run" ID="{3B4EDDC7-28FD-4EE1-8D8A-3B343E06DB76}" ShortID="690219164">
+											<PropertyList>
+												<Property Name="Color" Type="int16" Value="9"/>
+												<Property Name="OverrideColor" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+												</Reference>
+											</ReferenceList>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="Footsteps_Lava_Walk" ID="{A695D3A1-9990-4957-9164-0ACC00B64F39}" ShortID="207506964">
+											<PropertyList>
+												<Property Name="Color" Type="int16" Value="9"/>
+												<Property Name="OverrideColor" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+												</Reference>
+											</ReferenceList>
+										</RandomSequenceContainer>
+									</ChildrenList>
+									<GroupingInfo>
+										<GroupingBehaviorList>
+											<GroupingBehavior>
+												<ItemRef Name="Footsteps_Lava_Walk" ID="{A695D3A1-9990-4957-9164-0ACC00B64F39}"/>
+											</GroupingBehavior>
+											<GroupingBehavior>
+												<ItemRef Name="Footsteps_Lava_Run" ID="{3B4EDDC7-28FD-4EE1-8D8A-3B343E06DB76}"/>
+											</GroupingBehavior>
+										</GroupingBehaviorList>
+										<GroupingList>
+											<Grouping>
+												<SwitchRef Name="Walk" ID="{6E07CF22-C3F6-4C97-ABAE-C2B7024C6CD4}"/>
+												<ItemList>
+													<ItemRef Name="Footsteps_Lava_Walk" ID="{A695D3A1-9990-4957-9164-0ACC00B64F39}"/>
+												</ItemList>
+											</Grouping>
+											<Grouping>
+												<SwitchRef Name="Run" ID="{CABFA66C-57E5-4722-8ACC-ECBC4E484B01}"/>
+												<ItemList>
+													<ItemRef Name="Footsteps_Lava_Run" ID="{3B4EDDC7-28FD-4EE1-8D8A-3B343E06DB76}"/>
+												</ItemList>
+											</Grouping>
+										</GroupingList>
+									</GroupingInfo>
+								</SwitchContainer>
+								<SwitchContainer Name="Footsteps_Stone" ID="{45F8A6B4-9DA7-4F37-804A-01811B7F543F}" ShortID="610605490">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="27"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+										<Property Name="SwitchBehavior" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+										</Reference>
+										<Reference Name="DefaultSwitchOrState">
+											<ObjectRef Name="Run" ID="{CABFA66C-57E5-4722-8ACC-ECBC4E484B01}" WorkUnitID="{A9C6184A-D0A9-4614-9B78-7D5E0FB8748D}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+										</Reference>
+										<Reference Name="SwitchGroupOrStateGroup">
+											<ObjectRef Name="MoveSpeed" ID="{DB9672EC-F9AA-4117-8FD6-5813FC6E16AD}" WorkUnitID="{A9C6184A-D0A9-4614-9B78-7D5E0FB8748D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<RandomSequenceContainer Name="Footsteps_Stone_Run" ID="{A8525D16-E609-4730-9F2A-54D7CB6A45D4}" ShortID="324214715">
+											<PropertyList>
+												<Property Name="Color" Type="int16" Value="27"/>
+												<Property Name="OverrideColor" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+												</Reference>
+											</ReferenceList>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="Footsteps_Stone_Walk" ID="{1F80D3D2-E6DA-4536-A993-DA5274432962}" ShortID="104080605">
+											<PropertyList>
+												<Property Name="Color" Type="int16" Value="27"/>
+												<Property Name="OverrideColor" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+												</Reference>
+											</ReferenceList>
+										</RandomSequenceContainer>
+									</ChildrenList>
+									<GroupingInfo>
+										<GroupingBehaviorList>
+											<GroupingBehavior>
+												<ItemRef Name="Footsteps_Stone_Run" ID="{A8525D16-E609-4730-9F2A-54D7CB6A45D4}"/>
+											</GroupingBehavior>
+											<GroupingBehavior>
+												<ItemRef Name="Footsteps_Stone_Walk" ID="{1F80D3D2-E6DA-4536-A993-DA5274432962}"/>
+											</GroupingBehavior>
+										</GroupingBehaviorList>
+										<GroupingList>
+											<Grouping>
+												<SwitchRef Name="Walk" ID="{6E07CF22-C3F6-4C97-ABAE-C2B7024C6CD4}"/>
+												<ItemList>
+													<ItemRef Name="Footsteps_Stone_Walk" ID="{1F80D3D2-E6DA-4536-A993-DA5274432962}"/>
+												</ItemList>
+											</Grouping>
+											<Grouping>
+												<SwitchRef Name="Run" ID="{CABFA66C-57E5-4722-8ACC-ECBC4E484B01}"/>
+												<ItemList>
+													<ItemRef Name="Footsteps_Stone_Run" ID="{A8525D16-E609-4730-9F2A-54D7CB6A45D4}"/>
+												</ItemList>
+											</Grouping>
+										</GroupingList>
+									</GroupingInfo>
+								</SwitchContainer>
+								<SwitchContainer Name="Footsteps_Dirt" ID="{D493EC7F-D5EA-436F-882A-29DB55F49300}" ShortID="829074415">
+									<PropertyList>
+										<Property Name="Color" Type="int16" Value="8"/>
+										<Property Name="OverrideColor" Type="bool" Value="True"/>
+										<Property Name="SwitchBehavior" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+										</Reference>
+										<Reference Name="DefaultSwitchOrState">
+											<ObjectRef Name="Run" ID="{CABFA66C-57E5-4722-8ACC-ECBC4E484B01}" WorkUnitID="{A9C6184A-D0A9-4614-9B78-7D5E0FB8748D}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+										</Reference>
+										<Reference Name="SwitchGroupOrStateGroup">
+											<ObjectRef Name="MoveSpeed" ID="{DB9672EC-F9AA-4117-8FD6-5813FC6E16AD}" WorkUnitID="{A9C6184A-D0A9-4614-9B78-7D5E0FB8748D}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<RandomSequenceContainer Name="Footsteps_Dirt_Run" ID="{B9C9EB0D-0147-4457-A615-35501FBA5829}" ShortID="238420434">
+											<PropertyList>
+												<Property Name="Color" Type="int16" Value="8"/>
+												<Property Name="OverrideColor" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+												</Reference>
+											</ReferenceList>
+										</RandomSequenceContainer>
+										<RandomSequenceContainer Name="Footsteps_Dirt_Walk" ID="{3C17DA35-A8DD-4F65-AEC7-4CA85635E39E}" ShortID="150687836">
+											<PropertyList>
+												<Property Name="Color" Type="int16" Value="8"/>
+												<Property Name="OverrideColor" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+												</Reference>
+											</ReferenceList>
+										</RandomSequenceContainer>
+									</ChildrenList>
+									<GroupingInfo>
+										<GroupingBehaviorList>
+											<GroupingBehavior>
+												<ItemRef Name="Footsteps_Dirt_Run" ID="{B9C9EB0D-0147-4457-A615-35501FBA5829}"/>
+											</GroupingBehavior>
+											<GroupingBehavior>
+												<ItemRef Name="Footsteps_Dirt_Walk" ID="{3C17DA35-A8DD-4F65-AEC7-4CA85635E39E}"/>
+											</GroupingBehavior>
+										</GroupingBehaviorList>
+										<GroupingList>
+											<Grouping>
+												<SwitchRef Name="Walk" ID="{6E07CF22-C3F6-4C97-ABAE-C2B7024C6CD4}"/>
+												<ItemList>
+													<ItemRef Name="Footsteps_Dirt_Walk" ID="{3C17DA35-A8DD-4F65-AEC7-4CA85635E39E}"/>
+												</ItemList>
+											</Grouping>
+											<Grouping>
+												<SwitchRef Name="Run" ID="{CABFA66C-57E5-4722-8ACC-ECBC4E484B01}"/>
+												<ItemList>
+													<ItemRef Name="Footsteps_Dirt_Run" ID="{B9C9EB0D-0147-4457-A615-35501FBA5829}"/>
+												</ItemList>
+											</Grouping>
+										</GroupingList>
+									</GroupingInfo>
+								</SwitchContainer>
+							</ChildrenList>
+							<GroupingInfo>
+								<GroupingBehaviorList>
+									<GroupingBehavior>
+										<ItemRef Name="Footsteps_Dirt" ID="{D493EC7F-D5EA-436F-882A-29DB55F49300}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Footsteps_Grass" ID="{561EED88-D582-4928-9F01-A49002F93999}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Footsteps_Lava" ID="{4F873DAB-B90F-426E-A58B-B94CF013F09A}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Footsteps_Stone" ID="{45F8A6B4-9DA7-4F37-804A-01811B7F543F}"/>
+									</GroupingBehavior>
+									<GroupingBehavior>
+										<ItemRef Name="Footsteps_Ice" ID="{D9AE55DE-9D11-4FEB-BA2E-EEC4A8BFCB65}"/>
+									</GroupingBehavior>
+								</GroupingBehaviorList>
+								<GroupingList>
+									<Grouping>
+										<SwitchRef Name="Stone" ID="{96360207-76A9-411E-B50D-E845752382D9}"/>
+										<ItemList>
+											<ItemRef Name="Footsteps_Stone" ID="{45F8A6B4-9DA7-4F37-804A-01811B7F543F}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Lava" ID="{1790D767-796C-457A-A127-EDAF81D8F659}"/>
+										<ItemList>
+											<ItemRef Name="Footsteps_Lava" ID="{4F873DAB-B90F-426E-A58B-B94CF013F09A}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Dirt" ID="{46A7F098-4597-4C61-937D-8DCCF60A3EC8}"/>
+										<ItemList>
+											<ItemRef Name="Footsteps_Dirt" ID="{D493EC7F-D5EA-436F-882A-29DB55F49300}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Ice" ID="{8BE887E6-AA92-4715-AD56-FC2065026C54}"/>
+										<ItemList>
+											<ItemRef Name="Footsteps_Ice" ID="{D9AE55DE-9D11-4FEB-BA2E-EEC4A8BFCB65}"/>
+										</ItemList>
+									</Grouping>
+									<Grouping>
+										<SwitchRef Name="Grass" ID="{F37F10EA-F944-40B2-A648-B3FBBB0A54B1}"/>
+										<ItemList>
+											<ItemRef Name="Footsteps_Grass" ID="{561EED88-D582-4928-9F01-A49002F93999}"/>
+										</ItemList>
+									</Grouping>
+								</GroupingList>
+							</GroupingInfo>
+						</SwitchContainer>
+					</ChildrenList>
+				</PropertyContainer>
+			</ChildrenList>
+		</WorkUnit>
+	</Containers>
+</WwiseDocument>

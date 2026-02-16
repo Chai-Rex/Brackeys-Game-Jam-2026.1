@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae8491d89e9d0634e946dd7c27c59b8e, type: 3}
+  m_Name: UIMainMenuManager
+  m_EditorClassIdentifier: Assembly-CSharp::UIManager
+  _iPauseCanvas:
+    m_AssetGUID: c4be7812846aa774085d85748613fdf4
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 1
+  _iMainMenuCanvas:
+    m_AssetGUID: 5b222f910861cc04884b2dbd207a4ecf
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 1
+  _iHUDCanvas:
+    m_AssetGUID: ea61ca304fa40cb45b49e30f417f8322
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 1
+  _iCreditsCanvas:
+    m_AssetGUID: 810983d9986f0d14796562ab7a45d721
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 1
+  _iLoadingCanvas:
+    m_AssetGUID: c3e501a646322b249a62a84fac824d11
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 1

@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b557f7cb76d9a0147b68289da768ecaa, type: 3}
+  m_Name: MainMenuContainer
+  m_EditorClassIdentifier: Assembly-CSharp::SceneContainerSO
+  _iSceneName: MainMenuScene
+  _iManagers:
+  - {fileID: 11400000, guid: 9b450041a5e2d7d46b8ee5b97933b888, type: 2}
+  - {fileID: 11400000, guid: 060aa07aca206d345830d3de39888317, type: 2}
+  - {fileID: 11400000, guid: 6ac33709902ba4042b0e633cfa7ca1dc, type: 2}
+  - {fileID: 11400000, guid: 23434a9ac2ec85d48b701b9a0008a09a, type: 2}
+  - {fileID: 11400000, guid: afd9e7b049d45c941b64df0eb71ace5f, type: 2}
+  - {fileID: 11400000, guid: bc03a433894f0f7418f7d723079c4d89, type: 2}
+  _iEnableDebugLogs: 0

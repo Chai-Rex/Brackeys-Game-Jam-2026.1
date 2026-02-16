@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{C5BE94EB-CFE7-4974-AD84-1EA50F78F7F1}" SchemaVersion="133">
+	<Containers>
+		<WorkUnit Name="World" ID="{C5BE94EB-CFE7-4974-AD84-1EA50F78F7F1}" PersistMode="Standalone">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="11"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
+			<ChildrenList>
+				<WorkUnit Name="Ambience" ID="{6B2133DB-1EF9-47C1-9714-1D4F27A13E81}" PersistMode="Reference"/>
+				<WorkUnit Name="Player" ID="{3ECFDC21-BC11-4FE3-954C-F43EAD4EBE72}" PersistMode="Reference"/>
+				<WorkUnit Name="Enemy" ID="{F886C20C-1D2F-45E5-AF2C-0EB7D17032A5}" PersistMode="Reference"/>
+				<WorkUnit Name="Weapons" ID="{11C41816-BB81-4D5E-AB01-A01C8800C032}" PersistMode="Reference"/>
+				<WorkUnit Name="NPC" ID="{80871154-ECAD-4EBF-A9F2-88B52B1A667C}" PersistMode="Reference"/>
+			</ChildrenList>
+		</WorkUnit>
+	</Containers>
+</WwiseDocument>
