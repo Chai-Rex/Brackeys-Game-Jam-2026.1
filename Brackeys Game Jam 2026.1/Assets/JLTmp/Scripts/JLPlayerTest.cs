@@ -1,0 +1,112 @@
+using EditorAttributes;
+using UnityEngine;
+using UnityEngine.InputSystem;
+
+[RequireComponent(typeof(Rigidbody2D))]
+public class JLPlayerTest : Singleton<JLPlayerTest>, IBarnakTarget
+{
+    [SerializeField] Transform center;
+
+    [Header("Movement")]
+    [SerializeField] float groundAcceleration = 10;
+    [SerializeField] float airAcceleration = 10;
+    [SerializeField] float groundFriction = 10;
+    [SerializeField] float airFriction = 10;
+    [SerializeField] float jumpSpeed = 1;
+
+    [Header("Input")]
+    [SerializeField] Key leftKey = Key.A;
+    [SerializeField] Key rightKey = Key.D;
+    [SerializeField] Key jumpKey = Key.Space;
+
+    [Header("Ground Detection")]
+    [SerializeField] Transform groundCheck;
+    [SerializeField] Vector2 groundCheckSize = new Vector2(0.95f, 0.1f);
+    [SerializeField] LayerMask groundLayer;
+    [SerializeField, ReadOnly] bool isGrounded = false;
+
+    Rigidbody2D rb;
+
+    public Transform Center => center;
+
+    void OnDrawGizmosSelected()
+    {
+        DrawGroundCheck();
+    }
+
+    void DrawGroundCheck()
+    {
+        if (groundCheck == null) 
+            return;
+
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireCube(groundCheck.position, groundCheckSize);
+    }
+
+    void Reset()
+    {
+        center = transform;
+        groundCheck = transform;
+    }
+
+    protected override void Awake()
+    {
+        base.Awake();
+        rb = GetComponent<Rigidbody2D>();
+    }
+
+    void Update()
+    {
+        CheckJump();
+    }
+
+    void FixedUpdate()
+    {
+        UpdateIsGrounded();
+        ApplyAcceleration();
+        ApplyFriction();
+    }
+
+    void UpdateIsGrounded()
+    {
+        isGrounded = Physics2D.OverlapBox(groundCheck.position, groundCheckSize, 0f, groundLayer);
+    }
+
+    void ApplyAcceleration()
+    {
+        float xInput = 0;
+        if (Keyboard.current[leftKey].isPressed)  xInput--;
+        if (Keyboard.current[rightKey].isPressed) xInput++;
+
+        if (xInput == 0)
+            return;
+
+        float acceleration = isGrounded ? groundAcceleration : airAcceleration;
+        rb.linearVelocityX += xInput * acceleration * Time.fixedDeltaTime;
+    }
+
+    void ApplyFriction()
+    {
+        float friction = isGrounded ? groundFriction : airFriction;
+        rb.linearVelocityX *= 1 - friction * Time.fixedDeltaTime;
+    }
+
+    void CheckJump()
+    {
+        if (isGrounded &&
+            Keyboard.current[jumpKey].wasPressedThisFrame)
+            Jump();
+    }
+
+    void Jump()
+    {
+        rb.linearVelocityY = jumpSpeed;
+    }
+
+    public void OnTriggerBarnak()
+    {
+        rb.simulated = false;
+        rb.linearVelocity = Vector2.zero;
+        // TODO isCatched ? State : Ground, Air, CatchedByBarnak ?
+    }
+}
