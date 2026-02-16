@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{C0F08618-1548-4DC6-832E-C903FA09EF9C}" SchemaVersion="133">
+	<Devices>
+		<WorkUnit Name="Factory Motion" ID="{C0F08618-1548-4DC6-832E-C903FA09EF9C}" PersistMode="Standalone">
+			<ChildrenList>
+				<AudioDevice Name="Default_Motion_Device" ID="{FE3B98C3-CC9B-47D4-8A6B-6E8C81B55CC0}" PluginName="Motion" CompanyID="0" PluginID="507" PluginType="7"/>
+			</ChildrenList>
+		</WorkUnit>
+	</Devices>
+</WwiseDocument>

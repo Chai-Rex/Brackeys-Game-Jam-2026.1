@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{A9C6184A-D0A9-4614-9B78-7D5E0FB8748D}" SchemaVersion="133">
+	<Switches>
+		<WorkUnit Name="Movements" ID="{A9C6184A-D0A9-4614-9B78-7D5E0FB8748D}" PersistMode="Standalone">
+			<ChildrenList>
+				<SwitchGroup Name="Footsteps_Surface" ID="{46BD98F1-5115-43C8-AFB6-4E70F34F713D}">
+					<ChildrenList>
+						<Switch Name="Dirt" ID="{46A7F098-4597-4C61-937D-8DCCF60A3EC8}"/>
+						<Switch Name="Lava" ID="{1790D767-796C-457A-A127-EDAF81D8F659}"/>
+						<Switch Name="Grass" ID="{F37F10EA-F944-40B2-A648-B3FBBB0A54B1}"/>
+						<Switch Name="Ice" ID="{8BE887E6-AA92-4715-AD56-FC2065026C54}"/>
+						<Switch Name="Stone" ID="{96360207-76A9-411E-B50D-E845752382D9}"/>
+					</ChildrenList>
+				</SwitchGroup>
+				<SwitchGroup Name="MoveSpeed" ID="{DB9672EC-F9AA-4117-8FD6-5813FC6E16AD}">
+					<ChildrenList>
+						<Switch Name="Walk" ID="{6E07CF22-C3F6-4C97-ABAE-C2B7024C6CD4}"/>
+						<Switch Name="Run" ID="{CABFA66C-57E5-4722-8ACC-ECBC4E484B01}"/>
+					</ChildrenList>
+				</SwitchGroup>
+			</ChildrenList>
+		</WorkUnit>
+	</Switches>
+</WwiseDocument>
