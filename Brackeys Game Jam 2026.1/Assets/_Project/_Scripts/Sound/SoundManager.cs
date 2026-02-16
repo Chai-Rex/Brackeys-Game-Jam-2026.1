@@ -25,15 +25,12 @@ namespace SoundSystem {
         
         public GameObject _SoundsParent { get; private set; }
 
-        private bool _isInitialized = false;
-        public bool _IsInitialized => _isInitialized;
 
         public string _ManagerName => GetType().Name;
 
         public async Task Initialize() {
             _SoundsParent = new GameObject("===== Sounds =====");
             InitializePool();
-            _isInitialized = true;
             await Task.Yield();
         }
 

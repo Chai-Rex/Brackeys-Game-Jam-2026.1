@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class P_GroundedState : BaseHierarchicalState {
 
-    public P_GroundedState(HierarchicalStateMachine currentContext) : base(currentContext) {
+    public P_GroundedState(HierarchicalStateMachineSO currentContext) : base(currentContext) {
 
     }
 

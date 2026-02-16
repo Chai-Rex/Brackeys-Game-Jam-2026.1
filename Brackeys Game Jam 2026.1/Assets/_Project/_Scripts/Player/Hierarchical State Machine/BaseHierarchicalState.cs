@@ -5,14 +5,14 @@ public abstract class BaseHierarchicalState {
 
     protected SceneContainerSO _sceneContainer;
     protected HierarchicalStateFactory _factory;
-    protected HierarchicalStateMachine _machine; 
+    protected HierarchicalStateMachineSO _machine; 
 
     protected bool _isRootState = false;
 
     private BaseHierarchicalState _currentSuperState;
     private BaseHierarchicalState _currentSubState;
 
-    public BaseHierarchicalState(HierarchicalStateMachine currentContext) { 
+    public BaseHierarchicalState(HierarchicalStateMachineSO currentContext) { 
         _sceneContainer = currentContext.SceneContainer;
         _factory = currentContext.Factory;
         _machine = currentContext; 

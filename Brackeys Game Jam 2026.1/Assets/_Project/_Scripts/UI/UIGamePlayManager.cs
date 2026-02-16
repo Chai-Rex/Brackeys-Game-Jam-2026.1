@@ -16,9 +16,6 @@ public class UIGamePlayManager : ScriptableObject, IInitializable {
     public HUDCanvas _HUDCanvas { get; private set; }
     public LoadingCanvas _LoadingCanvas { get; private set; }
 
-
-    private bool _isInitialized = false;
-    public bool _IsInitialized => _isInitialized;
     public string _ManagerName => GetType().Name;
 
     private GameObject _CanvasParent;
@@ -31,7 +28,6 @@ public class UIGamePlayManager : ScriptableObject, IInitializable {
 
         Resume();
 
-        _isInitialized = true;
     }
 
     private async Task InstantiateCanvas() {

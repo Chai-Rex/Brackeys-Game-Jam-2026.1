@@ -33,8 +33,6 @@ public class InputManager : ScriptableObject, IInitializable, ICleanable, IPersi
     // Death Actions
     public InputAction _DeathRespawnAction { get; private set; }
 
-    private bool _isInitialized = false;
-    public bool _IsInitialized => _isInitialized;
     public string _ManagerName => GetType().Name;
 
     ////////////////////////////////////////////////////////////
@@ -71,8 +69,6 @@ public class InputManager : ScriptableObject, IInitializable, ICleanable, IPersi
         PlayerInput_onControlsChanged(_playerInput);
 
         StartRumbleLoop();
-
-        _isInitialized = true;
 
         Log("InputManager initialized.");
         await Task.Yield();

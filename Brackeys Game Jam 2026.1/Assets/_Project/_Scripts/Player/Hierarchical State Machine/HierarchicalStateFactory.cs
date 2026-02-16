@@ -33,11 +33,11 @@ public class HierarchicalStateFactory : ScriptableObject {
         WallJump,
 
     }
-    private HierarchicalStateMachine _context;
+    private HierarchicalStateMachineSO _context;
 
     private Dictionary<PlayerStates, BaseHierarchicalState> _states = new Dictionary<PlayerStates, BaseHierarchicalState>();
 
-    public HierarchicalStateFactory(HierarchicalStateMachine currentContext) {
+    public HierarchicalStateFactory(HierarchicalStateMachineSO currentContext) {
         _context = currentContext;
 
         //_states[PlayerStates.Grounded] = new PlayerGroundedState(_context, this);

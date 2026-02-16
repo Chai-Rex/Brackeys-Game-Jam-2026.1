@@ -9,7 +9,6 @@ using UnityEngine;
 public class GameCommandsManager : ScriptableObject, IInitializable, ICleanable, IPersistentManager {
 
     public string _ManagerName => "GameCommandsManager";
-    public bool _IsInitialized { get; private set; }
 
     [Header("Debug")]
     [SerializeField] private bool _enableDebugLogs = true;
@@ -22,7 +21,6 @@ public class GameCommandsManager : ScriptableObject, IInitializable, ICleanable,
     ////////////////////////////////////////////////////////////
 
     public Task Initialize() {
-        _IsInitialized = true;
         return Task.CompletedTask;
     }
 
@@ -36,7 +34,6 @@ public class GameCommandsManager : ScriptableObject, IInitializable, ICleanable,
 
     public void CleanUp() {
         _gameBootstrap = null;
-        _IsInitialized = false;
     }
 
     ////////////////////////////////////////////////////////////

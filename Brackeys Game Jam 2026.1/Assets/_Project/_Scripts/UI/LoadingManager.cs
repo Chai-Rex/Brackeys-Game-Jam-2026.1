@@ -23,11 +23,9 @@ public class LoadingManager : ScriptableObject, IInitializable, ICleanable, IPer
     private CancellationTokenSource _currentLoadingCts;
 
     // State
-    private bool _isInitialized = false;
     private bool _isLoading = false;
 
     // Properties
-    public bool _IsInitialized => _isInitialized;
     public string _ManagerName => GetType().Name;
     public bool IsLoading => _isLoading;
 
@@ -36,10 +34,6 @@ public class LoadingManager : ScriptableObject, IInitializable, ICleanable, IPer
     ////////////////////////////////////////////////////////////
 
     public async Task Initialize() {
-        if (_isInitialized) {
-            LogWarning("Already initialized");
-            return;
-        }
 
         Log("Initializing...");
 
@@ -61,12 +55,10 @@ public class LoadingManager : ScriptableObject, IInitializable, ICleanable, IPer
         // Hide by default
         _loadingCanvas.gameObject.SetActive(false);
 
-        _isInitialized = true;
         Log("Initialized successfully");
     }
 
     public void CleanUp() {
-        if (!_isInitialized) return;
 
         Log("Cleaning up...");
 
@@ -86,7 +78,6 @@ public class LoadingManager : ScriptableObject, IInitializable, ICleanable, IPer
             _loadingParent = null;
         }
 
-        _isInitialized = false;
         _isLoading = false;
         Log("Cleanup complete");
     }
@@ -104,11 +95,6 @@ public class LoadingManager : ScriptableObject, IInitializable, ICleanable, IPer
     /// <param name="i_targetProgress">Target progress (0-1)</param>
     /// <param name="i_operation">Optional Unity AsyncOperation to track</param>
     public async Task ShowLoading(string i_taskName, float i_targetProgress, AsyncOperation i_operation = null) {
-        if (!_isInitialized) {
-            LogError("Cannot show loading - manager not initialized");
-            return;
-        }
-
         if (_loadingCanvas == null) {
             LogError("Loading canvas is null");
             return;
@@ -154,7 +140,7 @@ public class LoadingManager : ScriptableObject, IInitializable, ICleanable, IPer
     /// (No animation, instant update)
     /// </summary>
     public void ShowLoadingInstant(string i_taskName, float i_progress) {
-        if (!_isInitialized || _loadingCanvas == null) return;
+        if (_loadingCanvas == null) return;
 
         _loadingCanvas.gameObject.SetActive(true);
         Cursor.lockState = CursorLockMode.Locked;
@@ -168,7 +154,7 @@ public class LoadingManager : ScriptableObject, IInitializable, ICleanable, IPer
     /// Hide the loading screen
     /// </summary>
     public async Task HideLoading() {
-        if (!_isInitialized || _loadingCanvas == null) return;
+        if (_loadingCanvas == null) return;
 
         // Optional: fade out animation here
         await Task.Delay(100); // Small delay for visual polish
@@ -184,7 +170,7 @@ public class LoadingManager : ScriptableObject, IInitializable, ICleanable, IPer
     /// Force hide loading screen immediately (no animation)
     /// </summary>
     public void HideLoadingInstant() {
-        if (!_isInitialized || _loadingCanvas == null) return;
+        if (_loadingCanvas == null) return;
 
         _loadingCanvas.gameObject.SetActive(false);
         Cursor.lockState = CursorLockMode.Confined;
@@ -197,7 +183,7 @@ public class LoadingManager : ScriptableObject, IInitializable, ICleanable, IPer
     /// Update loading text without changing progress
     /// </summary>
     public void UpdateLoadingText(string i_taskName) {
-        if (!_isInitialized || _loadingCanvas == null) return;
+        if (_loadingCanvas == null) return;
         _loadingCanvas.UpdateText(i_taskName);
     }
 

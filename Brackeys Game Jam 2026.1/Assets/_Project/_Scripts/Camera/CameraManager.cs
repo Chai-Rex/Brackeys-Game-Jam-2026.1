@@ -14,7 +14,6 @@ public class CameraManager : ScriptableObject, IInitializable, ICleanable, IPers
     [SerializeField] private bool _iEnableDebugLogs = false;
 
     // State
-    private bool _isInitialized = false;
     private Camera _bootstrapCamera;
     private Camera _activeSceneCamera;
     private List<Camera> _registeredSceneCameras = new List<Camera>();
@@ -24,7 +23,6 @@ public class CameraManager : ScriptableObject, IInitializable, ICleanable, IPers
     private AudioListener _activeAudioListener;
 
     // Properties
-    public bool _IsInitialized => _isInitialized;
     public string _ManagerName => GetType().Name;
     public Camera _ActiveCamera => _activeSceneCamera != null ? _activeSceneCamera : _bootstrapCamera;
     public bool _IsUsingBootstrapCamera => _activeSceneCamera == null;
@@ -34,20 +32,12 @@ public class CameraManager : ScriptableObject, IInitializable, ICleanable, IPers
     ////////////////////////////////////////////////////////////
 
     public Task Initialize() {
-        if (_isInitialized) {
-            LogWarning("Already initialized");
-            return Task.CompletedTask;
-        }
-
         Log("Initializing...");
         _registeredSceneCameras.Clear();
-        _isInitialized = true;
         return Task.CompletedTask;
     }
 
     public void CleanUp() {
-        if (!_isInitialized) return;
-
         Log("Cleaning up...");
 
         // Unregister all scene cameras
@@ -58,8 +48,6 @@ public class CameraManager : ScriptableObject, IInitializable, ICleanable, IPers
         _bootstrapCamera = null;
         _bootstrapAudioListener = null;
         _activeAudioListener = null;
-
-        _isInitialized = false;
     }
 
     #endregion

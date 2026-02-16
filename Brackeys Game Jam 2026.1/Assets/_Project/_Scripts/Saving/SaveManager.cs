@@ -12,8 +12,6 @@ public class SaveManager : ScriptableObject, IInitializable, ICleanable {
 #endif
     public SaveUISettingsSO SaveSettingsSO { get { return _iSaveUISettings; } }
 
-    public bool _IsInitialized => throw new System.NotImplementedException();
-
     public string _ManagerName => GetType().Name;
 
     private string SavePath => Path.Combine(Application.persistentDataPath, "settings.json");

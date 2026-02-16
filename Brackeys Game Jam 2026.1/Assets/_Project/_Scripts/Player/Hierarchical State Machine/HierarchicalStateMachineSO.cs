@@ -1,8 +1,9 @@
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Playables;
 
-public class HierarchicalStateMachine : MonoBehaviour {
+public class HierarchicalStateMachineSO : IInitializable {
     [Header("Debug")]
     public bool debugStates = false;
 
@@ -10,10 +11,13 @@ public class HierarchicalStateMachine : MonoBehaviour {
     public HierarchicalStateFactory Factory { get; private set; }
     public SceneContainerSO SceneContainer { get; private set; }
 
+    public bool _IsInitialized => throw new System.NotImplementedException();
 
-    private void Start() {
+    public string _ManagerName => GetType().Name;
+
+
+    public async Task Initialize() {
         InitializeStates();
-
     }
 
     public enum States {
@@ -65,5 +69,6 @@ public class HierarchicalStateMachine : MonoBehaviour {
     public void SetState(BaseHierarchicalState i_state) {
 
     }
+
 
 }

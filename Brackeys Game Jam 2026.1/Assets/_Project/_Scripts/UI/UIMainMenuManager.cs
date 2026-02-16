@@ -12,10 +12,6 @@ public class UIMainMenuManager : ScriptableObject, IInitializable {
 
     public MainMenuCanvas _MainMenuCanvas { get; private set; }
 
-
-    private bool _isInitialized = false;
-    public bool _IsInitialized => _isInitialized;
-
     public string _ManagerName => GetType().Name;
 
     private GameObject _CanvasParent;
@@ -28,8 +24,6 @@ public class UIMainMenuManager : ScriptableObject, IInitializable {
 
         //_MainMenuCanvas.gameObject.SetActive(true);
         Cursor.lockState = CursorLockMode.Confined;
-
-        _isInitialized = true;
 
         await Task.Yield();
     }

@@ -10,7 +10,6 @@ public interface IManager {
 }
 
 public interface IInitializable : IManager {
-    bool _IsInitialized { get; }
     Task Initialize();
 }
 
