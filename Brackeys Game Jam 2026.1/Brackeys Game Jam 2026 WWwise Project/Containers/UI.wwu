@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{20454079-B662-4AB5-B914-9B615A56604A}" SchemaVersion="133" RootDocumentID="{DE19D50C-A927-41D8-8B3B-6B230573043D}" ParentDocumentID="{DE19D50C-A927-41D8-8B3B-6B230573043D}">
+	<Containers>
+		<WorkUnit Name="UI" ID="{20454079-B662-4AB5-B914-9B615A56604A}" OwnerID="{DE19D50C-A927-41D8-8B3B-6B230573043D}" PersistMode="Nested">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="17"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
+			<ChildrenList>
+				<WorkUnit Name="Pause Menu" ID="{0322AFCA-B03F-4014-BF95-D82DCD42371F}" PersistMode="Reference"/>
+				<WorkUnit Name="Title Screen" ID="{27ED4A94-DF66-4D70-BB8C-C9CCE0F068FD}" PersistMode="Reference"/>
+				<WorkUnit Name="Credits" ID="{09C7CDA1-D1F5-49B0-A28D-D9CDDD0B6387}" PersistMode="Reference"/>
+			</ChildrenList>
+		</WorkUnit>
+	</Containers>
+</WwiseDocument>
