@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{27ED4A94-DF66-4D70-BB8C-C9CCE0F068FD}" SchemaVersion="133" RootDocumentID="{DE19D50C-A927-41D8-8B3B-6B230573043D}" ParentDocumentID="{20454079-B662-4AB5-B914-9B615A56604A}">
+	<Containers>
+		<WorkUnit Name="Title Screen" ID="{27ED4A94-DF66-4D70-BB8C-C9CCE0F068FD}" OwnerID="{20454079-B662-4AB5-B914-9B615A56604A}" PersistMode="Nested"/>
+	</Containers>
+</WwiseDocument>
