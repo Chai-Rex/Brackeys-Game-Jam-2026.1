@@ -6,7 +6,7 @@
 				<SoundcasterSession Name="Testing" ID="{BA460DA4-9B4F-4465-A92C-085A2BE421DD}">
 					<ModuleList>
 						<Module>
-							<ObjectRef Name="Player_Footsteps" ID="{DD56A193-7B0E-44F1-94F6-A26B9C41BDC1}" WorkUnitID="{554DF8A6-00DD-4132-9FB0-B200859DCB4B}"/>
+							<ObjectRef Name="Player_Movement" ID="{DD56A193-7B0E-44F1-94F6-A26B9C41BDC1}" WorkUnitID="{554DF8A6-00DD-4132-9FB0-B200859DCB4B}"/>
 							<Position X="0" Y="0"/>
 						</Module>
 					</ModuleList>
