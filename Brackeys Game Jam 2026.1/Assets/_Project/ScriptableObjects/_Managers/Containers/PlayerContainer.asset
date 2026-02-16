@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7861398c63ed4b41a5632a6d791df0e, type: 3}
   m_Name: PlayerContainer
   m_EditorClassIdentifier: Assembly-CSharp::PlayerContainerSO
-  _managers: []
+  _managers:
+  - {fileID: 0}
   _enableDebugLogs: 0

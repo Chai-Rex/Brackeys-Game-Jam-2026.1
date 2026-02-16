@@ -1,70 +1,62 @@
 using UnityEngine;
-using UnityEngine.Playables;
 
 public abstract class BaseHierarchicalState {
-
     protected SceneContainerSO _sceneContainer;
-    protected HierarchicalStateFactory _factory;
-    protected HierarchicalStateMachineSO _machine; 
+    protected object _context; // Generic context for the state machine
 
     protected bool _isRootState = false;
 
     private BaseHierarchicalState _currentSuperState;
     private BaseHierarchicalState _currentSubState;
 
-    public BaseHierarchicalState(HierarchicalStateMachineSO currentContext) { 
-        _sceneContainer = currentContext.SceneContainer;
-        _factory = currentContext.Factory;
-        _machine = currentContext; 
+    public BaseHierarchicalState(object context, SceneContainerSO sceneContainer) {
+        _context = context;
+        _sceneContainer = sceneContainer;
     }
 
     public abstract void EnterState();
-
     public abstract void InitializeSubState();
-
     public abstract void Update();
-
-    public abstract void UpdateRotation(ref Quaternion currentRotation, float deltaTime);
-
-    public abstract void UpdateVelocity(ref Vector3 currentVelocity, float deltaTime);
-
+    public abstract void FixedUpdate();
     public abstract void CheckSwitchStates();
-
     public abstract void ExitState();
 
     public void UpdateStates() {
         Update();
+        CheckSwitchStates();
+
         if (_currentSubState != null) {
             _currentSubState.UpdateStates();
         }
     }
 
-    public void UpdateRotationStates(ref Quaternion currentRotation, float deltaTime) {
-        UpdateRotation(ref currentRotation, deltaTime);
-        if (_currentSubState != null) {
-            _currentSubState.UpdateRotationStates(ref currentRotation, deltaTime);
-        }
-    }
+    public void FixedUpdateStates() {
+        FixedUpdate();
 
-    public void UpdateVelocityStates(ref Vector3 currentVelocity, float deltaTime) {
-        UpdateVelocity(ref currentVelocity, deltaTime);
         if (_currentSubState != null) {
-            _currentSubState.UpdateVelocityStates(ref currentVelocity, deltaTime);
+            _currentSubState.FixedUpdateStates();
         }
     }
 
     public void ExitStates() {
         ExitState();
+
         if (_currentSubState != null) {
-            _currentSubState.ExitState();
+            _currentSubState.ExitStates();
         }
     }
 
     protected void SwitchState(BaseHierarchicalState newState) {
         ExitStates();
+
         if (_isRootState) {
+            // Update the machine's current state
+            if (_context is IStateMachineContext stateMachineContext) {
+                stateMachineContext.SetState(newState);
+            }
+
             newState.EnterState();
-            _machine.SetState(newState);
+            newState.InitializeSubState();
         } else if (_currentSuperState != null) {
             _currentSuperState.SetSubState(newState);
         }
@@ -75,12 +67,32 @@ public abstract class BaseHierarchicalState {
     }
 
     protected void SetSubState(BaseHierarchicalState newSubState) {
+        if (_currentSubState != null) {
+            _currentSubState.ExitStates();
+        }
+
         _currentSubState = newSubState;
-        newSubState.EnterState();
         newSubState.SetSuperState(this);
+        newSubState.EnterState();
+        newSubState.InitializeSubState();
     }
 
-    public BaseHierarchicalState GetSubState() {
+    public BaseHierarchicalState GetCurrentSubState() {
         return _currentSubState;
     }
+
+    public BaseHierarchicalState GetCurrentSuperState() {
+        return _currentSuperState;
+    }
+
+    public bool IsRootState() {
+        return _isRootState;
+    }
+}
+
+/// <summary>
+/// Interface to allow base state to communicate with the state machine
+/// </summary>
+public interface IStateMachineContext {
+    void SetState(BaseHierarchicalState state);
 }

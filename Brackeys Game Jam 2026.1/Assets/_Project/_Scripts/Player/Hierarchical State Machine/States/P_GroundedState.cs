@@ -1,36 +1,32 @@
 using UnityEngine;
 
 public class P_GroundedState : BaseHierarchicalState {
-
-    public P_GroundedState(HierarchicalStateMachineSO currentContext) : base(currentContext) {
-
+    public P_GroundedState(object context, SceneContainerSO sceneContainer) : base(context, sceneContainer) {
     }
 
     public override void CheckSwitchStates() {
-
+        throw new System.NotImplementedException();
     }
 
     public override void EnterState() {
-
+        throw new System.NotImplementedException();
     }
 
     public override void ExitState() {
+        throw new System.NotImplementedException();
+    }
 
+    public override void FixedUpdate() {
+        throw new System.NotImplementedException();
     }
 
     public override void InitializeSubState() {
-
+        throw new System.NotImplementedException();
     }
 
     public override void Update() {
-
-    }
-
-    public override void UpdateRotation(ref Quaternion currentRotation, float deltaTime) {
-
-    }
-
-    public override void UpdateVelocity(ref Vector3 currentVelocity, float deltaTime) {
-
+        throw new System.NotImplementedException();
     }
 }
+
+
