@@ -18,7 +18,7 @@ public class Mosquito : MonoBehaviour
     [SerializeField, ReadOnly] bool isLanded = false;
     [SerializeField] float landMaxSpeed = 0.1f;
     [SerializeField, ReadOnly] bool takingOff = false;
-    [SerializeField] float takingOffTime = 1;
+    [SerializeField] Vector2 takingOffTimeRange = new (0.8f, 1.2f);
     [SerializeField] Vector2 takeOffSpeedRange = new(1.5f, 2f);
 
     [Space(15)]
@@ -222,7 +222,7 @@ public class Mosquito : MonoBehaviour
         target = null;
 
         takingOff = true;
-        Invoke("SetTakingOffFalse", takingOffTime);
+        Invoke("SetTakingOffFalse", takingOffTimeRange.RandomInRange());
 
         if (!calledFromSetLanded)
             SetIsLanded(false, true);

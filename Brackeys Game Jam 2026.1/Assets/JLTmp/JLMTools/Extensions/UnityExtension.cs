@@ -102,25 +102,109 @@ public static class UnityExtension
         transform.position = position;
     }
 
+    public static void AddXPosition(this Transform transform, float x)
+    {
+        Vector3 position = transform.position;
+        position.x += x;
+        transform.position = position;
+    }
+    
+    public static void AddYPosition(this Transform transform, float y)
+    {
+        Vector3 position = transform.position;
+        position.y += y;
+        transform.position = position;
+    }
+
+    public static void AddZPosition(this Transform transform, float z)
+    {
+        Vector3 position = transform.position;
+        position.z += z;
+        transform.position = position;
+    }
+
+    public static void SetXLocalPosition(this Transform transform, float x)
+    {
+        Vector3 position = transform.localPosition;
+        position.x = x;
+        transform.localPosition = position;
+    }
+    
+    public static void SetYLocalPosition(this Transform transform, float y)
+    {
+        Vector3 position = transform.localPosition;
+        position.y = y;
+        transform.localPosition = position;
+    }
+
+    public static void SetZLocalPosition(this Transform transform, float z)
+    {
+        Vector3 position = transform.localPosition;
+        position.z = z;
+        transform.localPosition = position;
+    }
+
+        public static void AddXLocalPosition(this Transform transform, float x)
+    {
+        Vector3 position = transform.localPosition;
+        position.x += x;
+        transform.localPosition = position;
+    }
+    
+    public static void AddYLocalPosition(this Transform transform, float y)
+    {
+        Vector3 position = transform.localPosition;
+        position.y += y;
+        transform.localPosition = position;
+    }
+
+    public static void AddZLocalPosition(this Transform transform, float z)
+    {
+        Vector3 position = transform.localPosition;
+        position.z += z;
+        transform.localPosition = position;
+    }
+
     public static void SetXScale(this Transform transform, float x)
     {
-        Vector3 position = transform.localScale;
-        position.x = x;
-        transform.localScale = position;
+        Vector3 scale = transform.localScale;
+        scale.x = x;
+        transform.localScale = scale;
     }
     
     public static void SetYScale(this Transform transform, float y)
     {
-        Vector3 position = transform.localScale;
-        position.y = y;
-        transform.localScale = position;
+        Vector3 scale = transform.localScale;
+        scale.y = y;
+        transform.localScale = scale;
     }
 
     public static void SetZScale(this Transform transform, float z)
     {
-        Vector3 position = transform.localScale;
-        position.z = z;
-        transform.localScale = position;
+        Vector3 scale = transform.localScale;
+        scale.z = z;
+        transform.localScale = scale;
+    }
+        
+    public static void AddXScale(this Transform transform, float x)
+    {
+        Vector3 scale = transform.localScale;
+        scale.x += x;
+        transform.localScale = scale;
+    }
+    
+    public static void AddYScale(this Transform transform, float y)
+    {
+        Vector3 scale = transform.localScale;
+        scale.y += y;
+        transform.localScale = scale;
+    }
+
+    public static void AddZScale(this Transform transform, float z)
+    {
+        Vector3 scale = transform.localScale;
+        scale.z += z;
+        transform.localScale = scale;
     }
 }
 

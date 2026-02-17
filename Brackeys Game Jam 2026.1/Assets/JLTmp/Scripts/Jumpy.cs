@@ -41,7 +41,7 @@ public class Jumpy : Jumper
     void UpdatePlayerDetected()
     {
         float sqrRadius = playerCheckRadius * playerCheckRadius;
-        Vector3 toPlayer = JLPlayerTest.Instance.Center.position - playerCheck.position;
+        Vector3 toPlayer = JLPlayerTest.Instance.transform.position - playerCheck.position;
 
         playerDetected = toPlayer.sqrMagnitude <= sqrRadius &&
                          !Physics2D.Raycast(playerCheck.position, toPlayer, toPlayer.magnitude, playerCheckLayer);
@@ -65,7 +65,7 @@ public class Jumpy : Jumper
             base.Jump();
 
         else {
-            float angle = (JLPlayerTest.Instance.Center.position.x < transform.position.x ? jumpMaxAngle : -jumpMaxAngle) * Random.value;
+            float angle = (JLPlayerTest.Instance.transform.position.x < transform.position.x ? jumpMaxAngle : -jumpMaxAngle) * Random.value;
             Vector2 direction = Quaternion.Euler(0, 0, angle) * Vector2.up;
             rb.linearVelocity = direction * jumpSpeed;
 

@@ -5,8 +5,6 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(Rigidbody2D))]
 public class JLPlayerTest : Singleton<JLPlayerTest>, IBarnakTarget
 {
-    [SerializeField] Transform center;
-
     [Header("Movement")]
     [SerializeField] float groundAcceleration = 10;
     [SerializeField] float airAcceleration = 10;
@@ -25,13 +23,18 @@ public class JLPlayerTest : Singleton<JLPlayerTest>, IBarnakTarget
     [SerializeField] LayerMask groundLayer;
     [SerializeField, ReadOnly] bool isGrounded = false;
 
+    [Header("Other")]
+    [SerializeField] float radius = 0.6f;
+
     Rigidbody2D rb;
 
-    public Transform Center => center;
+    public float Radius => radius;
+    public float BarnakTargetRadius => radius;
 
     void OnDrawGizmosSelected()
     {
         DrawGroundCheck();
+        DrawRadius();
     }
 
     void DrawGroundCheck()
@@ -43,9 +46,14 @@ public class JLPlayerTest : Singleton<JLPlayerTest>, IBarnakTarget
         Gizmos.DrawWireCube(groundCheck.position, groundCheckSize);
     }
 
+    void DrawRadius()
+    {
+        Gizmos.color = Color.yellow;
+        GizmosExtension.DrawCircle(transform.position, radius);
+    }
+
     void Reset()
     {
-        center = transform;
         groundCheck = transform;
     }
 
