@@ -154,11 +154,6 @@ public class SceneController {
             return;
         }
 
-        if (!container._IsInitialized) {
-            LogWarning($"Container for {container.GetSceneName()} not initialized");
-            return;
-        }
-
         string sceneName = container.GetSceneName();
         Log($"Unloading scene: {sceneName}");
         _OnSceneUnloadStarted?.Invoke(sceneName);

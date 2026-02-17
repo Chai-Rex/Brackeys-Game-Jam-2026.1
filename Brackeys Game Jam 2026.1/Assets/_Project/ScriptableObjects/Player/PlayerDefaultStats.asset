@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9b941342333349499c8dd0be90437fb, type: 3}
+  m_Name: PlayerDefaultStats
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerDefaultStatsSO
+  MoveThreshold: 0.1
+  GroundTargetSpeed: 12
+  GroundMaxSpeed: 100
+  GroundAcceleration: 12
+  GroundDeceleration: 12
+  AirborneTargetSpeed: 12
+  AirborneAcceleration: 12
+  AirborneDeceleration: 12
+  WallSlideTargetSpeed: 5
+  WallSlideDeceleration: 5
+  TurnThreshold: 8
+  TurnDeceleration: 4
+  TurnBuffer: 0.1
+  JumpBufferTime: 0.1
+  CoyoteTime: 0.1
+  ApexThreshold: 0.97
+  ApexHangTime: 0.075
+  ApexHangTargetSpeed: 16
+  ApexHangAcceleration: 16
+  ApexHangDeceleration: 16
+  GroundJumpHeight: 6
+  GroundJumpTimeTillApex: 0.3
+  GroundJumpCancelableTime: 0.028
+  GroundJumpReleaseGravityMultiplier: 2
+  AirJumpHeight: 6
+  AirJumpTimeTillApex: 0.3
+  AirJumpCancelableTime: 0.028
+  AirJumpReleaseGravityMultiplier: 2
+  WallJumpDirection: {x: 15, y: 3}
+  WallJumpTimeTillApex: 0.15
+  WallJumpCancelableTime: 0.125
+  WallJumpReleaseGravityMultiplier: 2
+  MaxFallSpeed: 20
+  DecelerationAfterForce: 5
+  GroundLayer:
+    serializedVersion: 2
+    m_Bits: 1
+  GroundDetectionRayLength: 0.02
+  HeadDetectionRayLength: 0.02
+  HeadWidth: 0.75
+  WallDetectionRayLength: 0.02
+  WallDetectionRayHeightMultiplier: 0.9
+  DodgingCooldown: 0.25
+  DodgingDistance: 5

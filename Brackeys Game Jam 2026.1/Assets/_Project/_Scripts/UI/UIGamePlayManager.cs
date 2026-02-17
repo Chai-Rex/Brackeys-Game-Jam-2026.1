@@ -31,7 +31,7 @@ public class UIGamePlayManager : ScriptableObject, IInitializable {
     }
 
     private async Task InstantiateCanvas() {
-
+        await Task.CompletedTask;
     }
 
     public void CleanUp() {

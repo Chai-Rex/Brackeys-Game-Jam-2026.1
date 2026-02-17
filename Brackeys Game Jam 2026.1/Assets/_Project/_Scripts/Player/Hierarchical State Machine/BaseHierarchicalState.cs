@@ -1,7 +1,6 @@
 using UnityEngine;
 
 public abstract class BaseHierarchicalState {
-    protected SceneContainerSO _sceneContainer;
     protected object _context; // Generic context for the state machine
 
     protected bool _isRootState = false;
@@ -9,9 +8,8 @@ public abstract class BaseHierarchicalState {
     private BaseHierarchicalState _currentSuperState;
     private BaseHierarchicalState _currentSubState;
 
-    public BaseHierarchicalState(object context, SceneContainerSO sceneContainer) {
+    public BaseHierarchicalState(object context) {
         _context = context;
-        _sceneContainer = sceneContainer;
     }
 
     public abstract void EnterState();
