@@ -59,7 +59,7 @@ MonoBehaviour:
   isLanded: 0
   landMaxSpeed: 0.1
   takingOff: 0
-  takingOffTime: 1
+  takingOffTimeRange: {x: 0.8, y: 1.2}
   takeOffSpeedRange: {x: 1.5, y: 2}
   groundRepulsion: 1
   groundRaycastDistance: 0.5
@@ -82,13 +82,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99c571871b81f479aba0e41ff127a13e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RandomIncrOrDecrementSpriteOrder
-  spriteRenderers:
-  - {fileID: 301451102357551418}
-  - {fileID: 7284382145878292179}
-  - {fileID: 196240774643886413}
-  - {fileID: 1312975168188425468}
-  - {fileID: 7849101586552221937}
-  value: 5
+  lvlRange: {x: -5, y: 5}
+  orderPerLvl: 100
+  addOrder: 10
 --- !u!50 &5896835420201570088
 Rigidbody2D:
   serializedVersion: 5

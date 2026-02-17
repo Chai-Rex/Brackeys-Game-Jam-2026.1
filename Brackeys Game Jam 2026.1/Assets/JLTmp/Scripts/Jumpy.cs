@@ -6,7 +6,6 @@ public class Jumpy : Jumper
     [SerializeField] Vector2 dtJumpRangePlayerDetected = new Vector2(0, 0.5f);
 
     [Header("Player Detection")]
-    [SerializeField] Transform playerCheck;
     [SerializeField] float playerCheckRadius = 3;
     [SerializeField] LayerMask playerCheckLayer;
     [SerializeField, ReadOnly] bool playerDetected = false;
@@ -19,17 +18,8 @@ public class Jumpy : Jumper
 
     void DrawPlayerCheck()
     {
-        if (playerCheck == null) 
-            return;
-
         Gizmos.color = Color.yellow;
-        GizmosExtension.DrawCircle(playerCheck.position, Vector3.forward, playerCheckRadius);
-    }
-
-    protected override void Reset()
-    {
-        base.Reset();
-        playerCheck = transform;
+        GizmosExtension.DrawCircle(transform.position, Vector3.forward, playerCheckRadius);
     }
 
     protected override void FixedUpdate()
@@ -41,10 +31,10 @@ public class Jumpy : Jumper
     void UpdatePlayerDetected()
     {
         float sqrRadius = playerCheckRadius * playerCheckRadius;
-        Vector3 toPlayer = JLPlayerTest.Instance.transform.position - playerCheck.position;
+        Vector3 toPlayer = JLPlayerTest.Instance.transform.position - transform.position;
 
         playerDetected = toPlayer.sqrMagnitude <= sqrRadius &&
-                         !Physics2D.Raycast(playerCheck.position, toPlayer, toPlayer.magnitude, playerCheckLayer);
+                         !Physics2D.Raycast(transform.position, toPlayer, toPlayer.magnitude, playerCheckLayer);
     }
 
     protected override void SetIsGrounded(bool isGrounded)

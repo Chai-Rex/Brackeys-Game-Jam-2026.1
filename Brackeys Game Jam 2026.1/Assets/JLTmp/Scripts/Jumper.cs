@@ -29,6 +29,7 @@ public class Jumper : MonoBehaviour, IBarnakTarget
     {
         DrawGroundCheck();
         DrawJumpMaxAngle();
+        DrawBarnakTargetRadius();
     }
 
     void DrawGroundCheck()
@@ -45,6 +46,13 @@ public class Jumper : MonoBehaviour, IBarnakTarget
         Gizmos.color = Color.green;
         GizmosExtension.DrawArc(transform.position, Vector3.up, Vector3.forward, jumpMaxAngle * 2, 2);
     }
+
+    void DrawBarnakTargetRadius()
+    {
+        Gizmos.color = Color.yellow;
+        GizmosExtension.DrawCircle(transform.position, barnakTargetRadius);
+    }
+
 
     protected virtual void Reset()
     {
