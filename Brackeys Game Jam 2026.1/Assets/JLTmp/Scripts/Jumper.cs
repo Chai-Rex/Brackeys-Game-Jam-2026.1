@@ -2,7 +2,7 @@ using EditorAttributes;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
-public class Jumper : MonoBehaviour
+public class Jumper : MonoBehaviour, IBarnakTarget
 {
     [Header("Ground Detection")]
     [SerializeField] Transform groundCheck;
@@ -15,9 +15,15 @@ public class Jumper : MonoBehaviour
     [SerializeField, Range(0, 90)] protected float jumpMaxAngle = 30;
     [SerializeField] protected Vector2 dtJumpRange = new Vector2(0, 3);
 
-   protected bool isGroundedLocked = false;
+    [Header("Barnak")]
+    [SerializeField] float barnakTargetRadius = 0.6f;
+    Barnak barnakCaught = null;
+
+    protected bool isGroundedLocked = false;
 
     protected Rigidbody2D rb;
+
+    public float BarnakTargetRadius => barnakTargetRadius;
 
     protected virtual void OnDrawGizmosSelected()
     {
@@ -89,4 +95,18 @@ public class Jumper : MonoBehaviour
         LockIsGrounded();
         Invoke("UnlockIsGrounded", 0.1f);
     }
+
+    public void OnBarnakCaught(Barnak barnak)
+    {
+        rb.simulated = false;
+        rb.linearVelocity = Vector2.zero;
+        CancelInvoke("Jump");
+    }
+
+    public void OnBarnakEat(Barnak barnak)
+    {
+        Destroy(gameObject);
+    }
+
+    public void OnBarnakRelease(Barnak barnak) {}
 }

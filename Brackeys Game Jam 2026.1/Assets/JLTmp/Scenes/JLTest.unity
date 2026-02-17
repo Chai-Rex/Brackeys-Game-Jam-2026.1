@@ -203,6 +203,7 @@ MonoBehaviour:
   jumpSpeed: 6
   jumpMaxAngle: 30
   dtJumpRange: {x: 0.5, y: 2}
+  barnakTargetRadius: 0.6
   dtJumpRangePlayerDetected: {x: 0, y: 0.5}
   playerCheck: {fileID: 350868798}
   playerCheckRadius: 3
@@ -963,7 +964,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2430635527813850553, guid: 4fb31eb3c7c3e4ab8a94bd5d92d6e1f7, type: 3}
   m_PrefabInstance: {fileID: 182117634}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &197176961
+--- !u!1 &203705220
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -971,44 +972,49 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 197176962}
-  - component: {fileID: 197176963}
-  m_Layer: 19
-  m_Name: MosquitoTarget
+  - component: {fileID: 203705221}
+  - component: {fileID: 203705222}
+  m_Layer: 20
+  m_Name: Shake
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &197176962
+--- !u!4 &203705221
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 197176961}
+  m_GameObject: {fileID: 203705220}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1074328374}
+  m_Father: {fileID: 207213988}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &197176963
+--- !u!114 &203705222
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 197176961}
+  m_GameObject: {fileID: 203705220}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c45fd8b26b33646df9a848b7de59a473, type: 3}
+  m_Script: {fileID: 11500000, guid: 5b605b57964c94f3487eb64ba3e09529, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MosquitoTarget
-  rigidbody2D: {fileID: 1074328373}
-  radius: 0.6
+  m_EditorClassIdentifier: Assembly-CSharp::Shake
+  axis: {x: 1, y: 1, z: 0}
+  baseAmplitude: 0.1
+  baseNoise: 5
+  addAmplitude: 0
+  addNoise: 0
+  speed: 5
+  target: {fileID: 0}
 --- !u!1 &207213987
 GameObject:
   m_ObjectHideFlags: 0
@@ -1044,6 +1050,7 @@ Transform:
   - {fileID: 407467536}
   - {fileID: 181506667}
   - {fileID: 1304132408}
+  - {fileID: 203705221}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &207213989
@@ -1062,6 +1069,10 @@ MonoBehaviour:
   vine: {fileID: 181506667}
   vineSpeed: 5
   caughtSpeed: 0.5
+  shakeCaughtTarget: {fileID: 203705222}
+  hitsToRelease: 5
+  hitShakeAmplitude: 0.4
+  hitShakeNoise: 10
   eatingTime: 5
   recoveringTime: 5
 --- !u!61 &207213990
@@ -1324,7 +1335,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &262637198
 Transform:
   m_ObjectHideFlags: 0
@@ -1334,7 +1345,7 @@ Transform:
   m_GameObject: {fileID: 262637197}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -7.07, y: -1.52, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1803,7 +1814,6 @@ GameObject:
   - component: {fileID: 695461687}
   - component: {fileID: 695461689}
   - component: {fileID: 695461690}
-  - component: {fileID: 695461691}
   - component: {fileID: 695461688}
   m_Layer: 18
   m_Name: Player
@@ -1885,9 +1895,6 @@ MonoBehaviour:
   isGrounded: 0
   barnakCaught: {fileID: 0}
   barnakTargetRadius: 0.6
-  hitsToRelease: 5
-  shake: {fileID: 695461691}
-  shakeAmplitude: 0.5
 --- !u!114 &695461690
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1902,25 +1909,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MosquitoTarget
   rigidbody2D: {fileID: 695461688}
   radius: 0.6
---- !u!114 &695461691
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 695461686}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b605b57964c94f3487eb64ba3e09529, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Shake
-  axis: {x: 1, y: 1, z: 0}
-  baseAmplitude: 0
-  baseNoise: 15
-  addAmplitude: 0
-  addNoise: 0
-  speed: 10
-  target: {fileID: 43331557}
 --- !u!1 &737967332
 GameObject:
   m_ObjectHideFlags: 0
@@ -2658,7 +2646,7 @@ Transform:
   m_GameObject: {fileID: 999307698}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2914,6 +2902,7 @@ MonoBehaviour:
   jumpSpeed: 6
   jumpMaxAngle: 30
   dtJumpRange: {x: 0.5, y: 2}
+  barnakTargetRadius: 0.6
   dtJumpRangePlayerDetected: {x: 0, y: 0.5}
   playerCheck: {fileID: 1769388883}
   playerCheckRadius: 3
@@ -3117,6 +3106,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1074328374}
   - component: {fileID: 1074328375}
+  - component: {fileID: 1074328376}
   - component: {fileID: 1074328373}
   m_Layer: 19
   m_Name: Jumper
@@ -3124,7 +3114,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!50 &1074328373
 Rigidbody2D:
   serializedVersion: 5
@@ -3167,7 +3157,7 @@ Transform:
   m_Children:
   - {fileID: 1203509232}
   - {fileID: 999307699}
-  - {fileID: 197176962}
+  - {fileID: 1540139200}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1074328375
@@ -3182,7 +3172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8851cdbf48f3c41619614a0b49ee380f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::JLJumper
-  groundCheck: {fileID: 1074328374}
+  groundCheck: {fileID: 1540139200}
   groundCheckSize: {x: 0.95, y: 0.1}
   groundLayer:
     serializedVersion: 2
@@ -3191,6 +3181,21 @@ MonoBehaviour:
   jumpSpeed: 8
   jumpMaxAngle: 30
   dtJumpRange: {x: 2, y: 2}
+  barnakTargetRadius: 0.6
+--- !u!114 &1074328376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1074328371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c45fd8b26b33646df9a848b7de59a473, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MosquitoTarget
+  rigidbody2D: {fileID: 1074328373}
+  radius: 0.6
 --- !u!1 &1129160462
 GameObject:
   m_ObjectHideFlags: 0
@@ -3257,6 +3262,7 @@ MonoBehaviour:
   jumpSpeed: 6
   jumpMaxAngle: 30
   dtJumpRange: {x: 0.5, y: 2}
+  barnakTargetRadius: 0.6
   dtJumpRangePlayerDetected: {x: 0, y: 0.5}
   playerCheck: {fileID: 532484127}
   playerCheckRadius: 3
@@ -3387,7 +3393,7 @@ Transform:
   m_GameObject: {fileID: 1203509231}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3532,6 +3538,7 @@ MonoBehaviour:
   jumpSpeed: 6
   jumpMaxAngle: 30
   dtJumpRange: {x: 0.5, y: 2}
+  barnakTargetRadius: 0.6
   dtJumpRangePlayerDetected: {x: 0, y: 0.5}
   playerCheck: {fileID: 380129600}
   playerCheckRadius: 3
@@ -3925,6 +3932,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2430635527813850553, guid: 4fb31eb3c7c3e4ab8a94bd5d92d6e1f7, type: 3}
   m_PrefabInstance: {fileID: 1358148001}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1540139199
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1540139200}
+  m_Layer: 18
+  m_Name: GroundCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1540139200
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1540139199}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1074328374}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1540333433
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,12 +5,19 @@ using UnityEngine;
 public class Barnak : MonoBehaviour
 {
     [SerializeField, ReadOnly] State state = State.Waiting;
+
     [SerializeField] Transform vine;
     [SerializeField] float vineSpeed = 5;
     float maxVineLength;
     float vineLength;
 
     [SerializeField] float caughtSpeed = 1;
+    [SerializeField] Shake shakeCaughtTarget;
+    [SerializeField] int hitsToRelease = 5;
+    [SerializeField] float hitShakeAmplitude = 0.5f;
+    [SerializeField] float hitShakeNoise = 10f;
+    int hitsCount = 0;
+
     [SerializeField] float eatingTime = 5;
     [SerializeField] float recoveringTime = 5;
 
@@ -51,13 +58,17 @@ public class Barnak : MonoBehaviour
             return;
 
         state = State.Caught;
-
         trigger.enabled = false;
-
         caughtTarget = target;
+
         target.transform.SetXPosition(transform.position.x);
-        target.OnBarnakCaught(this);
-        
+        shakeCaughtTarget.transform.SetParent(target.transform.parent);
+        shakeCaughtTarget.transform.position = target.transform.position;
+        target.transform.SetParent(shakeCaughtTarget.transform);
+        shakeCaughtTarget.Target = target.transform;
+
+        hitsCount = 0;
+        target.OnBarnakCaught(this);        
         animator.SetInteger("state", 1);
     }
 
@@ -93,10 +104,17 @@ public class Barnak : MonoBehaviour
     void UpdateCaught()
     {
         if (transform.position.y - caughtTarget.transform.position.y > caughtTarget.BarnakTargetRadius)
-            caughtTarget.transform.AddYPosition(caughtSpeed * Time.fixedDeltaTime);
+            shakeCaughtTarget.transform.AddYPosition(caughtSpeed * Time.fixedDeltaTime);
 
         else {
             state = State.Eating;
+
+            caughtTarget.transform.SetParent(shakeCaughtTarget.transform.parent);
+            shakeCaughtTarget.transform.SetParent(transform);
+            shakeCaughtTarget.transform.localPosition = Vector3.zero;
+            shakeCaughtTarget.Target = null;
+
+            hitsCount = 0;
             caughtTarget.OnBarnakEat(this);
             caughtTarget = null;
             animator.SetInteger("state", 2);
@@ -114,12 +132,32 @@ public class Barnak : MonoBehaviour
         animator.SetInteger("state", 0);
     }
 
-    public void ReleaseTarget()
+    public void HitToRelease()
+    {
+        hitsCount++;
+
+        if (hitsCount < hitsToRelease)
+        {
+            shakeCaughtTarget.AddAmplitude += hitShakeAmplitude;
+            shakeCaughtTarget.AddNoise += hitShakeNoise;
+        }
+
+        else ReleaseTarget();
+    }
+
+    void ReleaseTarget()
     {
         if (state != State.Caught)
             return;
 
         state = State.Recovering;
+
+        caughtTarget.transform.SetParent(shakeCaughtTarget.transform.parent);
+        shakeCaughtTarget.transform.SetParent(transform);
+        shakeCaughtTarget.transform.localPosition = Vector3.zero;
+        shakeCaughtTarget.Target = null;
+
+        hitsCount = 0;
         caughtTarget.OnBarnakRelease(this);
         caughtTarget = null;
         animator.SetInteger("state", 0);

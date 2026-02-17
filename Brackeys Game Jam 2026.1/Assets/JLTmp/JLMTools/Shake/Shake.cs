@@ -1,7 +1,7 @@
 using UnityEngine;
 
 
-public class Shake : Singleton<Shake>
+public class Shake : MonoBehaviour
 {    
     [SerializeField] Vector3 axis = new Vector3(1, 1, 0);
     [SerializeField] float baseAmplitude = 0;
@@ -48,26 +48,34 @@ public class Shake : Singleton<Shake>
         set => speed = value;
     }
 
+    public Transform Target
+    {
+        get => target;
+        set => target = value;
+    }
+
     public float Amplitude => baseAmplitude + addAmplitude;
 
     public float Noise => baseNoise + addNoise;
 
-    protected override void Awake()
+    void Awake()
     {
-        base.Awake();
         noisePosition = RandomExtension.RandomVector3(0, 1000);
     }
 
     void Update()
     {
-        addAmplitude /= 1 + Time.deltaTime * speed;
-        addNoise /= 1 + Time.deltaTime * speed;
+        addAmplitude *= 1 - Time.deltaTime * speed;
+        addNoise *= 1 - Time.deltaTime * speed;
 
-        noisePosition += Time.deltaTime * Noise * Vector3.one;
+        if (target)
+        {
+            noisePosition += Time.deltaTime * Noise * Vector3.one;
 
-        target.localPosition = new Vector3(
-            (Mathf.PerlinNoise1D(noisePosition.x) - 0.5f) * axis.x * Amplitude,
-            (Mathf.PerlinNoise1D(noisePosition.y) - 0.5f) * axis.y * Amplitude,
-            (Mathf.PerlinNoise1D(noisePosition.z) - 0.5f) * axis.z * Amplitude);
+            target.localPosition = new Vector3(
+                (Mathf.PerlinNoise1D(noisePosition.x) - 0.5f) * axis.x * Amplitude,
+                (Mathf.PerlinNoise1D(noisePosition.y) - 0.5f) * axis.y * Amplitude,
+                (Mathf.PerlinNoise1D(noisePosition.z) - 0.5f) * axis.z * Amplitude);
+        }
     }
 }

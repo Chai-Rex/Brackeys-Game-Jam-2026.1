@@ -26,10 +26,6 @@ public class JLPlayerTest : Singleton<JLPlayerTest>, IBarnakTarget
     [Header("Barnak")]
     [SerializeField, ReadOnly] Barnak barnakCaught = null;
     [SerializeField]float barnakTargetRadius = 0.6f;
-    [SerializeField] int hitsToRelease = 5;
-    [SerializeField] Shake shake;
-    [SerializeField] float shakeAmplitude = 1;
-    int hitsCount = 0;
 
     Rigidbody2D rb;
 
@@ -127,42 +123,26 @@ public class JLPlayerTest : Singleton<JLPlayerTest>, IBarnakTarget
     {
         if (barnakCaught &&
             Keyboard.current[jumpKey].wasPressedThisFrame)
-            HitBarnakToRelease();
+            barnakCaught.HitToRelease();
     }
 
-    void HitBarnakToRelease()
-    {
-        if (!barnakCaught)
-            return;
-
-        hitsCount++;
-
-        if (hitsCount >= hitsToRelease)
-            barnakCaught.ReleaseTarget();
-
-        else if (shake)
-            shake.AddAmplitude += shakeAmplitude;
-    }
 
     public void OnBarnakCaught(Barnak barnak)
     {
         rb.simulated = false;
         rb.linearVelocity = Vector2.zero;
         barnakCaught = barnak;
-        hitsCount = 0;
     }
 
     public void OnBarnakEat(Barnak barnak)
     {
         rb.simulated = true;
         barnakCaught = null;
-        hitsCount = 0;
     }
 
     public void OnBarnakRelease(Barnak barnak)
     {
         rb.simulated = true;
         barnakCaught = null;
-        hitsCount = 0;
     }
 }
