@@ -3,9 +3,9 @@ using UnityEngine;
 public class PlayerCollisionHandler : MonoBehaviour {
 
     [Header("Debug Visualization")]
-    [SerializeField] private bool _debugGroundCheck = true;
-    [SerializeField] private bool _debugHeadCheck = true;
-    [SerializeField] private bool _debugWallCheck = true;
+    [SerializeField] private bool _debugGroundCheck = false;
+    [SerializeField] private bool _debugHeadCheck = false;
+    [SerializeField] private bool _debugWallCheck = false;
     [SerializeField] private bool _debugLedgeCheck = false;
 
     [Header("Collision Points")]

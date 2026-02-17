@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7330600760219537918}
-  m_Layer: 10
+  m_Layer: 18
   m_Name: LedgeCheckPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 7689519159607885051}
   - component: {fileID: 6439155220111374215}
   - component: {fileID: 2592130765572809362}
-  m_Layer: 10
+  m_Layer: 18
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -165,7 +165,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6432518208431990153}
-  m_Layer: 10
+  m_Layer: 18
   m_Name: HeadCheckPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -196,7 +196,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 355862387479639127}
-  m_Layer: 10
+  m_Layer: 18
   m_Name: WallGroundCheckPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -229,7 +229,7 @@ GameObject:
   - component: {fileID: 111442277544435256}
   - component: {fileID: 8004719981359593947}
   - component: {fileID: 6475234786190257254}
-  m_Layer: 10
+  m_Layer: 18
   m_Name: Visuals
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -296,7 +296,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 781606139734587876}
-  m_Layer: 10
+  m_Layer: 18
   m_Name: GroundCheckPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -330,7 +330,7 @@ GameObject:
   - component: {fileID: 7427431417548613239}
   - component: {fileID: 3277874709289101923}
   - component: {fileID: 1895197865012672842}
-  m_Layer: 10
+  m_Layer: 18
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -443,7 +443,7 @@ GameObject:
   - component: {fileID: 3626871439788766180}
   - component: {fileID: 7061885710586945066}
   - component: {fileID: 1032540880346355792}
-  m_Layer: 10
+  m_Layer: 18
   m_Name: Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -540,7 +540,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7546320729124428008}
   - component: {fileID: 7769900012915802510}
-  m_Layer: 10
+  m_Layer: 18
   m_Name: Blackboard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -604,7 +604,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3265121937260499156}
   - component: {fileID: 6088752286152335885}
-  m_Layer: 10
+  m_Layer: 18
   m_Name: Stats
   m_TagString: Untagged
   m_Icon: {fileID: 0}
