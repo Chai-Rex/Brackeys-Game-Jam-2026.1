@@ -6,23 +6,26 @@ using UnityEngine;
 public class MosquitoTarget : MonoBehaviour
 {
     static HashSet<MosquitoTarget> set = new();
+    static HashSet<MosquitoTarget> rbSet = new();
+    static HashSet<MosquitoTarget> noRbSet = new();
+
     static public IEnumerable<MosquitoTarget> Targets => set;
+    static public IEnumerable<MosquitoTarget> RbTargets => rbSet;
+    static public IEnumerable<MosquitoTarget> NoRbTargets => noRbSet;
+
     static public int TargetsCount => set.Count;
+    static public int RbTargetsCount => rbSet.Count;
+    static public int NoRbTargetsCount => noRbSet.Count;
+
 
     [SerializeField] new Rigidbody2D rigidbody2D;
-    [SerializeField] float minSpeed = 1f;
-    [SerializeField] float outRadius = 0.6f;
-    [SerializeField] float inRadius = 0.5f;
-    [SerializeField] MyEvent onStartMoving;
-    [SerializeField, ReadOnly] bool isMoving;
+    [SerializeField] float radius = 0.6f;
+
 
     public Rigidbody2D Rigidbody2D => rigidbody2D;
-    public float OutRadius => outRadius;
-    public float InRadius => inRadius;
-    public float SqrOutRadius => outRadius * outRadius;
-    public float SqrInRadius => inRadius * inRadius;
-    public bool IsMoving => isMoving;
-    public MyEvent OnStartMoving => onStartMoving;
+    public float Radius => radius;
+    public float SqrRadius => radius * radius;
+
 
     void Reset()
     {
@@ -36,41 +39,19 @@ public class MosquitoTarget : MonoBehaviour
 
     void DrawRadius()
     {
-        Gizmos.color = Color.orange;
-        GizmosExtension.DrawCircle(transform.position, Vector3.forward, outRadius);
-
         Gizmos.color = Color.red;
-        GizmosExtension.DrawCircle(transform.position, Vector3.forward, inRadius);
+        GizmosExtension.DrawCircle(transform.position, Vector3.forward, radius);
     }
 
     void OnEnable()
     {
         set.Add(this);
-        
-        isMoving = rigidbody2D && rigidbody2D.linearVelocity.sqrMagnitude > minSpeed * minSpeed;
-        
-        if (isMoving)
-            onStartMoving.Invoke();
+        (rigidbody2D ? rbSet : noRbSet).Add(this);
     }
 
     void OnDisable()
     {        
         set.Remove(this);
-    }
-
-    void FixedUpdate()
-    {
-        SetIsMoving(rigidbody2D && rigidbody2D.linearVelocity.sqrMagnitude > minSpeed * minSpeed);
-    }
-
-    void SetIsMoving(bool isMoving)
-    {
-        if (this.isMoving == isMoving)
-            return;
-
-        this.isMoving = isMoving;
-
-        if (isMoving)
-            onStartMoving.Invoke();
+        (rigidbody2D ? rbSet : noRbSet).Remove(this);
     }
 }

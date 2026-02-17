@@ -81,25 +81,46 @@ public static class UnityExtension
         return Object.Instantiate(prefab, transform.position, transform.rotation, transform);
     }
 
-    public static void SetX(this Transform transform, float x)
+    public static void SetXPosition(this Transform transform, float x)
     {
         Vector3 position = transform.position;
         position.x = x;
         transform.position = position;
     }
     
-    public static void SetY(this Transform transform, float y)
+    public static void SetYPosition(this Transform transform, float y)
     {
         Vector3 position = transform.position;
         position.y = y;
         transform.position = position;
     }
 
-    public static void SetZ(this Transform transform, float z)
+    public static void SetZPosition(this Transform transform, float z)
     {
         Vector3 position = transform.position;
         position.z = z;
         transform.position = position;
+    }
+
+    public static void SetXScale(this Transform transform, float x)
+    {
+        Vector3 position = transform.localScale;
+        position.x = x;
+        transform.localScale = position;
+    }
+    
+    public static void SetYScale(this Transform transform, float y)
+    {
+        Vector3 position = transform.localScale;
+        position.y = y;
+        transform.localScale = position;
+    }
+
+    public static void SetZScale(this Transform transform, float z)
+    {
+        Vector3 position = transform.localScale;
+        position.z = z;
+        transform.localScale = position;
     }
 }
 

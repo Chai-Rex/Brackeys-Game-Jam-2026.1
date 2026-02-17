@@ -12,7 +12,7 @@ public class Barnak : MonoBehaviour
             return;
 
         state = BarnakState.Eating;
-        target.transform.SetX(transform.position.x);
+        target.transform.SetXPosition(transform.position.x);
         target.OnTriggerBarnak();
     }
 }
