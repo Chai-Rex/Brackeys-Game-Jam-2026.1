@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 /// <summary>
@@ -224,5 +225,36 @@ public class PlayerStatsHandler : MonoBehaviour {
         if (_defaultStats != null) {
             LoadFromDefaultStats(_defaultStats);
         }
+    }
+    
+    //
+
+    private void Awake()
+    {
+        SkillTreeNode.upgradeActivation += ApplyUpgrade;
+    }
+
+    private void OnDestroy()
+    {
+        SkillTreeNode.upgradeActivation -= ApplyUpgrade;
+    }
+
+    public void ApplyUpgrade(SkillUpgradeSO upgradeSO)
+    {
+        foreach (var dataObject in upgradeSO.SkillUpgrades)
+        {
+            //Find the field according to the name
+            var field = GetType().GetField(dataObject.SkillUpgradeEnum.ToString());
+            
+            if (field != null && field.FieldType == typeof(float))
+            {
+                //Add the current value of the field with the upgrade amount
+                float current = (float)field.GetValue(this);
+                field.SetValue(this, current + dataObject.UpgradeAmount);
+                Debug.Log(field.Name+" has been upgraded to "+field.GetValue(this)+" from "+current);
+            }
+        }
+        
+        CalculateJumpValues();
     }
 }
