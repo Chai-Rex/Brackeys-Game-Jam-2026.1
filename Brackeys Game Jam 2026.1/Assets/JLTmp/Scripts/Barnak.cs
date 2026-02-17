@@ -11,6 +11,8 @@ public class Barnak : MonoBehaviour
     float vineLength;
 
     [SerializeField] float caughtSpeed = 1;
+    [SerializeField] float eatingTime = 5;
+    [SerializeField] float recoveringTime = 5;
 
     BoxCollider2D trigger;
     Animator animator;
@@ -54,7 +56,7 @@ public class Barnak : MonoBehaviour
 
         caughtTarget = target;
         target.transform.SetXPosition(transform.position.x);
-        target.OnTriggerBarnak();
+        target.OnBarnakCaught(this);
         
         animator.SetInteger("state", 1);
     }
@@ -74,23 +76,64 @@ public class Barnak : MonoBehaviour
 
     void UpdateVineLength()
     {
-        SetVineLength(Mathf.Lerp(
-            vineLength, 
-            caughtTarget != null ? transform.position.y - caughtTarget.transform.position.y : maxVineLength, 
-            vineSpeed * Time.fixedDeltaTime));
+        float targetLength;
+
+        if (state == State.Caught)
+            targetLength = transform.position.y - caughtTarget.transform.position.y;
+
+        else if (state == State.Eating ||
+                 state == State.Recovering)
+            targetLength = 0;
+
+        else targetLength = maxVineLength;
+
+        SetVineLength(Mathf.Lerp(vineLength, targetLength, vineSpeed * Time.fixedDeltaTime));
     }
 
     void UpdateCaught()
     {
-        if (state != State.Caught)
-            return;
-
         if (transform.position.y - caughtTarget.transform.position.y > caughtTarget.BarnakTargetRadius)
             caughtTarget.transform.AddYPosition(caughtSpeed * Time.fixedDeltaTime);
 
         else {
-            
+            state = State.Eating;
+            caughtTarget.OnBarnakEat(this);
+            caughtTarget = null;
+            animator.SetInteger("state", 2);
+            Invoke("StopEating", eatingTime);
         }
+    }
+
+    void StopEating()
+    {
+        if (state != State.Eating)
+            return;
+
+        state = State.Waiting;
+        trigger.enabled = true;
+        animator.SetInteger("state", 0);
+    }
+
+    public void ReleaseTarget()
+    {
+        if (state != State.Caught)
+            return;
+
+        state = State.Recovering;
+        caughtTarget.OnBarnakRelease(this);
+        caughtTarget = null;
+        animator.SetInteger("state", 0);
+        Invoke("StopRecovering", recoveringTime);
+    }
+
+    void StopRecovering()
+    {
+        if (state != State.Recovering)
+            return;
+
+        state = State.Waiting;
+        trigger.enabled = true;
+        animator.SetInteger("state", 0);
     }
 }
 
@@ -98,7 +141,9 @@ public class Barnak : MonoBehaviour
 
 public interface IBarnakTarget
 {
-    public void OnTriggerBarnak();
+    public void OnBarnakCaught(Barnak barnak);
+    public void OnBarnakEat(Barnak barnak);
+    public void OnBarnakRelease(Barnak barnak);
     public Transform transform { get; }
     public float BarnakTargetRadius { get; }
 }

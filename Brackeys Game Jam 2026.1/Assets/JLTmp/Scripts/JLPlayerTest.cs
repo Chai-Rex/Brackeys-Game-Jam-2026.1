@@ -23,18 +23,22 @@ public class JLPlayerTest : Singleton<JLPlayerTest>, IBarnakTarget
     [SerializeField] LayerMask groundLayer;
     [SerializeField, ReadOnly] bool isGrounded = false;
 
-    [Header("Other")]
-    [SerializeField] float radius = 0.6f;
+    [Header("Barnak")]
+    [SerializeField, ReadOnly] Barnak barnakCaught = null;
+    [SerializeField]float barnakTargetRadius = 0.6f;
+    [SerializeField] int hitsToRelease = 5;
+    [SerializeField] Shake shake;
+    [SerializeField] float shakeAmplitude = 1;
+    int hitsCount = 0;
 
     Rigidbody2D rb;
 
-    public float Radius => radius;
-    public float BarnakTargetRadius => radius;
+    public float BarnakTargetRadius => barnakTargetRadius;
 
     void OnDrawGizmosSelected()
     {
         DrawGroundCheck();
-        DrawRadius();
+        DrawBarnakTargetRadius();
     }
 
     void DrawGroundCheck()
@@ -46,10 +50,10 @@ public class JLPlayerTest : Singleton<JLPlayerTest>, IBarnakTarget
         Gizmos.DrawWireCube(groundCheck.position, groundCheckSize);
     }
 
-    void DrawRadius()
+    void DrawBarnakTargetRadius()
     {
         Gizmos.color = Color.yellow;
-        GizmosExtension.DrawCircle(transform.position, radius);
+        GizmosExtension.DrawCircle(transform.position, barnakTargetRadius);
     }
 
     void Reset()
@@ -66,6 +70,7 @@ public class JLPlayerTest : Singleton<JLPlayerTest>, IBarnakTarget
     void Update()
     {
         CheckJump();
+        CheckHitBarnak();
     }
 
     void FixedUpdate()
@@ -82,6 +87,9 @@ public class JLPlayerTest : Singleton<JLPlayerTest>, IBarnakTarget
 
     void ApplyAcceleration()
     {
+        if (barnakCaught)
+            return;
+
         float xInput = 0;
         if (Keyboard.current[leftKey].isPressed)  xInput--;
         if (Keyboard.current[rightKey].isPressed) xInput++;
@@ -94,7 +102,10 @@ public class JLPlayerTest : Singleton<JLPlayerTest>, IBarnakTarget
     }
 
     void ApplyFriction()
-    {
+    {        
+        if (barnakCaught)
+            return;
+
         float friction = isGrounded ? groundFriction : airFriction;
         rb.linearVelocityX *= 1 - friction * Time.fixedDeltaTime;
     }
@@ -102,7 +113,8 @@ public class JLPlayerTest : Singleton<JLPlayerTest>, IBarnakTarget
     void CheckJump()
     {
         if (isGrounded &&
-            Keyboard.current[jumpKey].wasPressedThisFrame)
+            Keyboard.current[jumpKey].wasPressedThisFrame &&
+            !barnakCaught)
             Jump();
     }
 
@@ -111,10 +123,46 @@ public class JLPlayerTest : Singleton<JLPlayerTest>, IBarnakTarget
         rb.linearVelocityY = jumpSpeed;
     }
 
-    public void OnTriggerBarnak()
+    void CheckHitBarnak()
+    {
+        if (barnakCaught &&
+            Keyboard.current[jumpKey].wasPressedThisFrame)
+            HitBarnakToRelease();
+    }
+
+    void HitBarnakToRelease()
+    {
+        if (!barnakCaught)
+            return;
+
+        hitsCount++;
+
+        if (hitsCount >= hitsToRelease)
+            barnakCaught.ReleaseTarget();
+
+        else if (shake)
+            shake.AddAmplitude += shakeAmplitude;
+    }
+
+    public void OnBarnakCaught(Barnak barnak)
     {
         rb.simulated = false;
         rb.linearVelocity = Vector2.zero;
-        // TODO isCatched ? State : Ground, Air, CatchedByBarnak ?
+        barnakCaught = barnak;
+        hitsCount = 0;
+    }
+
+    public void OnBarnakEat(Barnak barnak)
+    {
+        rb.simulated = true;
+        barnakCaught = null;
+        hitsCount = 0;
+    }
+
+    public void OnBarnakRelease(Barnak barnak)
+    {
+        rb.simulated = true;
+        barnakCaught = null;
+        hitsCount = 0;
     }
 }

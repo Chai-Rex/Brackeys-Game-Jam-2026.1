@@ -1062,6 +1062,8 @@ MonoBehaviour:
   vine: {fileID: 181506667}
   vineSpeed: 5
   caughtSpeed: 0.5
+  eatingTime: 5
+  recoveringTime: 5
 --- !u!61 &207213990
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1801,6 +1803,7 @@ GameObject:
   - component: {fileID: 695461687}
   - component: {fileID: 695461689}
   - component: {fileID: 695461690}
+  - component: {fileID: 695461691}
   - component: {fileID: 695461688}
   m_Layer: 18
   m_Name: Player
@@ -1880,7 +1883,11 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 131072
   isGrounded: 0
-  radius: 0.6
+  barnakCaught: {fileID: 0}
+  barnakTargetRadius: 0.6
+  hitsToRelease: 5
+  shake: {fileID: 695461691}
+  shakeAmplitude: 0.5
 --- !u!114 &695461690
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1895,6 +1902,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MosquitoTarget
   rigidbody2D: {fileID: 695461688}
   radius: 0.6
+--- !u!114 &695461691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 695461686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b605b57964c94f3487eb64ba3e09529, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Shake
+  axis: {x: 1, y: 1, z: 0}
+  baseAmplitude: 0
+  baseNoise: 15
+  addAmplitude: 0
+  addNoise: 0
+  speed: 10
+  target: {fileID: 43331557}
 --- !u!1 &737967332
 GameObject:
   m_ObjectHideFlags: 0
