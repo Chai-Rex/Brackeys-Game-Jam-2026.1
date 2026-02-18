@@ -292,8 +292,8 @@ PolygonCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
-    border: {x: 0.049999997, y: 0.44, z: 1.8299999, w: 0.77}
-    pivot: {x: 0.0047080987, y: 0.42414737}
+    border: {x: 0, y: 0.44, z: 1.8299999, w: 0.77}
+    pivot: {x: -0.03, y: 0.42569384}
     oldSize: {x: 10, y: 2.25}
     newSize: {x: 1, y: 2}
     adaptiveTilingThreshold: 0.5
@@ -336,8 +336,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1458408319}
   - component: {fileID: 1458408318}
-  - component: {fileID: 1458408317}
   - component: {fileID: 1458408320}
+  - component: {fileID: 1458408322}
+  - component: {fileID: 1458408321}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -345,14 +346,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1458408317
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1458408316}
-  m_Enabled: 1
 --- !u!20 &1458408318
 Camera:
   m_ObjectHideFlags: 0
@@ -463,6 +456,46 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!114 &1458408321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1458408316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a45f2002bf50a40d3a568a28367a2752, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: AK.Wwise.Unity.MonoBehaviour::AkAudioListener
+  isDefaultListener: 1
+  bOverrideScalingFactor: 0
+  scalingFactor: -1
+  listenerId: 0
+--- !u!114 &1458408322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1458408316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83661c9394bf24015acefec4013dcc82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: AK.Wwise.Unity.MonoBehaviour::AkGameObj
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 0
+  isStaticObject: 0
+  usePositionOffsetData: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  scalingFactor: 1
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
 --- !u!1 &1710439597
 GameObject:
   m_ObjectHideFlags: 0
@@ -495,8 +528,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dc14fc9df0d4e24296215de36292f60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DrillHandler
-  playerInput: {fileID: 0}
+  DestructibleLayer:
+    serializedVersion: 2
+    m_Bits: 0
   drill: {fileID: 343646548}
+  isDrilling: 0
 --- !u!212 &1710439599
 SpriteRenderer:
   serializedVersion: 2
@@ -3129,6 +3165,63 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &1964450211
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1964450213}
+  - component: {fileID: 1964450212}
+  m_Layer: 0
+  m_Name: WwiseGlobal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1964450212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1964450211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c665d8747e0f54e34bc51468250d1681, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: AK.Wwise.Unity.MonoBehaviour::AkInitializer
+  InitializationSettings: {fileID: 11400000, guid: 17e8a3a056161447985aa13334acd7de, type: 2}
+  basePath: 
+  language: 
+  defaultPoolSize: 0
+  lowerPoolSize: 0
+  streamingPoolSize: 0
+  memoryCutoffThreshold: 0
+  monitorPoolSize: 0
+  monitorQueuePoolSize: 0
+  callbackManagerBufferSize: 0
+  spatialAudioPoolSize: 0
+  maxSoundPropagationDepth: 0
+  engineLogging: 0
+--- !u!4 &1964450213
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1964450211}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -3136,3 +3229,4 @@ SceneRoots:
   - {fileID: 1458408319}
   - {fileID: 238962759}
   - {fileID: 1710439600}
+  - {fileID: 1964450213}
