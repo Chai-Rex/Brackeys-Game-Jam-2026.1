@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: 4613a45889dc21b499b88248b6727736
+guid: ceeb49b050943c74a99b4429d3adb30f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3145128070430800737
-    second: TILE_brick_0
+      213: 8793816978936205501
+    second: skill icon health_0
+  - first:
+      213: 6096522408052533944
+    second: skill icon health_1
+  - first:
+      213: -135022415906603509
+    second: skill icon health_2
+  - first:
+      213: 2750329305641202668
+    second: skill icon health_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,12 +55,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 1080
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -96,30 +105,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TILE_brick_0
+      name: skill icon health_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1080
-        height: 1080
+        width: 393
+        height: 726
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +124,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 16b3323015db5ab20800000000000000
-      internalID: 3145128070430800737
+      spriteID: db09a4163f9e90a70800000000000000
+      internalID: 8793816978936205501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill icon health_1
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 579
+        width: 450
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ba2e2154d23b9450800000000000000
+      internalID: 6096522408052533944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill icon health_2
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 0
+        width: 395
+        height: 726
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0efb2ff3dd402ef0800000000000000
+      internalID: -135022415906603509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: skill icon health_3
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 274
+        width: 232
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce3371e7ee12b2620800000000000000
+      internalID: 2750329305641202668
       vertices: []
       indices: 
       edges: []
@@ -138,7 +200,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +210,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      TILE_brick_0: 3145128070430800737
+      skill icon health_0: 8793816978936205501
+      skill icon health_1: 6096522408052533944
+      skill icon health_2: -135022415906603509
+      skill icon health_3: 2750329305641202668
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 4613a45889dc21b499b88248b6727736
+guid: c544c3030ec521849b800db48e3d4ce7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3145128070430800737
-    second: TILE_brick_0
+      213: 1457832552942791734
+    second: filler_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -49,10 +49,10 @@ TextureImporter:
   spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 0
-  spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 1080
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  alignment: 9
+  spritePivot: {x: -0.03, y: 0.42569384}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 44, z: 183, w: 77}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -96,40 +96,27 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TILE_brick_0
+      name: filler_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1080
-        height: 1080
+        x: 4
+        y: 41
+        width: 816
+        height: 111
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 16b3323015db5ab20800000000000000
-      internalID: 3145128070430800737
+      spriteID: 63ce724abf24b3410800000000000000
+      internalID: 1457832552942791734
       vertices: []
       indices: 
       edges: []
@@ -139,7 +126,7 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 0
+    internalID: 1537655665
     vertices: []
     indices: 
     edges: []
@@ -148,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      TILE_brick_0: 3145128070430800737
+      filler_0: 1457832552942791734
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
