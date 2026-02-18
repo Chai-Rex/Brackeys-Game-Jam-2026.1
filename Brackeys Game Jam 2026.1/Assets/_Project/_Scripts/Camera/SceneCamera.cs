@@ -27,9 +27,7 @@ public class SceneCamera : MonoBehaviour {
 
     private void Awake() {
         _camera = GetComponent<Camera>();
-
         GetCameraManager();
-
         RegisterWithManager();
     }
 

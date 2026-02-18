@@ -8,7 +8,10 @@ using UnityEngine;
 /// Handles smooth transitions between loading screens and gameplay.
 /// </summary>
 [CreateAssetMenu(fileName = "SceneCameraManager", menuName = "ScriptableObjects/Managers/SceneCameraManager")]
-public class SceneCameraManager : ScriptableObject, IInitializable, ICleanable, IPersistentManager {
+public class SceneCameraManager : ScriptableObject, IInitializable, IPersistentManager {
+
+    [Header("Camera Prefab for Loading")]
+    [SerializeField] private Camera _bootstrapCameraPrefab; // assign in SO inspector
 
     [Header("Debug Settings")]
     [SerializeField] private bool _iEnableDebugLogs = false;
@@ -34,20 +37,17 @@ public class SceneCameraManager : ScriptableObject, IInitializable, ICleanable, 
     public Task Initialize() {
         Log("Initializing...");
         _registeredSceneCameras.Clear();
+
+        // Own the bootstrap camera entirely
+        _bootstrapCamera = Object.Instantiate(_bootstrapCameraPrefab);
+        Object.DontDestroyOnLoad(_bootstrapCamera.gameObject);
+        _bootstrapCamera.name = "Bootstrap Camera";
+
+        _bootstrapAudioListener = _bootstrapCamera.GetComponent<AudioListener>();
+        ActivateCamera(_bootstrapCamera, _bootstrapAudioListener);
+
+        Log("Bootstrap camera created and activated");
         return Task.CompletedTask;
-    }
-
-    public void CleanUp() {
-        Log("Cleaning up...");
-
-        // Unregister all scene cameras
-        _registeredSceneCameras.Clear();
-        _activeSceneCamera = null;
-
-        // Note: Don't destroy cameras here - they're managed by GameBootstrap
-        _bootstrapCamera = null;
-        _bootstrapAudioListener = null;
-        _activeAudioListener = null;
     }
 
     #endregion

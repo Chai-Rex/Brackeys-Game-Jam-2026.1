@@ -11,7 +11,7 @@ public class PlayerManager : ScriptableObject, IInitializable, IUpdateable, IFix
     [Header("Configuration")]
     [SerializeField] private PlayerDefaultStatsSO _defaultStats;
 
-    [Header("Runtime References")]
+    //"Runtime References"
     private PlayerHandler _playerHandler;
     private bool _isInitialized = false;
 
@@ -50,13 +50,15 @@ public class PlayerManager : ScriptableObject, IInitializable, IUpdateable, IFix
     /// <summary>
     /// Register the player handler instance (called by PlayerHandler.Awake)
     /// </summary>
-    public void SetPlayerHandler(PlayerHandler handler) {
+    public async void SetPlayerHandler(PlayerHandler handler) {
         if (_playerHandler != null && _playerHandler != handler) {
             LogWarning($"PlayerHandler already registered! Replacing...");
         }
 
         _playerHandler = handler;
         Log($"PlayerHandler registered");
+
+        await Awaitable.NextFrameAsync();
 
         // Initialize the player handler now that it's registered
         _playerHandler.Initialize(_defaultStats);

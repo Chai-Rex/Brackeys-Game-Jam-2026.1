@@ -2207,12 +2207,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: f6f0f7f7c2baa3b40922b6bb6ef056ab, type: 2}
     - target: {fileID: 4096073405818364241, guid: 3044cfe94d77e9940a7d91b2081448c3, type: 3}
+      propertyPath: _blackboard
+      value: 
+      objectReference: {fileID: 867513162471405402}
+    - target: {fileID: 4096073405818364241, guid: 3044cfe94d77e9940a7d91b2081448c3, type: 3}
       propertyPath: _sceneContainer
       value: 
       objectReference: {fileID: 11400000, guid: 65c9f2595d5c30c4798015d12c436ef3, type: 2}
+    - target: {fileID: 4096073405818364241, guid: 3044cfe94d77e9940a7d91b2081448c3, type: 3}
+      propertyPath: _cameraFollowPlayerTransform
+      value: 
+      objectReference: {fileID: 867513162471405401}
     - target: {fileID: 4334328454887346666, guid: 3044cfe94d77e9940a7d91b2081448c3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4334328454887346666, guid: 3044cfe94d77e9940a7d91b2081448c3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5638,6 +5646,22 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d241870146dd2464e8e8149fe85f7965, type: 3}
+--- !u!4 &867513162471405401 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7752172467759371753, guid: d241870146dd2464e8e8149fe85f7965, type: 3}
+  m_PrefabInstance: {fileID: 867513162471405400}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &867513162471405402 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7769900012915802510, guid: d241870146dd2464e8e8149fe85f7965, type: 3}
+  m_PrefabInstance: {fileID: 867513162471405400}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a258cf6053a110b45af365cc51186243, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerBlackboardHandler
 --- !u!1001 &5536515441265770093
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5795,9 +5819,9 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 867513162471405400}
   - {fileID: 777809819}
   - {fileID: 529760544}
-  - {fileID: 867513162471405400}
   - {fileID: 545585732}
   - {fileID: 5536515441265770093}
   - {fileID: 990054818}

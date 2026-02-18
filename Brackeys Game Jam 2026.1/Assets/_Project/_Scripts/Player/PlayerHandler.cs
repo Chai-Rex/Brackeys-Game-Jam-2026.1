@@ -42,7 +42,7 @@ public class PlayerHandler : MonoBehaviour {
 
     #region Unity Lifecycle
 
-    private void Awake() {
+    private void Start() {
         ValidateComponents();
         RegisterWithManager();
     }

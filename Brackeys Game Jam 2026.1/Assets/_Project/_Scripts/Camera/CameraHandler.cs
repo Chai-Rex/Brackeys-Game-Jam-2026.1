@@ -47,6 +47,9 @@ public class CameraHandler : MonoBehaviour {
     #region Private Runtime State
     ////////////////////////////////////////////////////////////
 
+    // Camera Manager
+    private CameraManager _cameraManager;
+
     // Player
     private PlayerHandler _playerHandler;
     private Transform _cameraFollowPlayerTransform;
@@ -111,14 +114,20 @@ public class CameraHandler : MonoBehaviour {
     #region Initialization
     ////////////////////////////////////////////////////////////
 
+    private void Start() {
+        _cameraManager = _sceneContainer.GetManager<CameraManager>();
+        _cameraManager.SetPlayerHandler(this);
+    }
+
     /// <summary>
     /// Called by CameraManager after the scene is ready.
     /// </summary>
-    public void Awake() {
+    public void Initialize() {
+
+        _inputManager = _sceneContainer.GetManager<InputManager>();
         _playerHandler = _sceneContainer.GetManager<PlayerManager>().GetPlayerHandler();
         _cameraFollowPlayerTransform = _playerHandler.CameraFollowPlayer;
         _blackboard = _playerHandler.Blackboard;
-        _inputManager = _sceneContainer.GetManager<InputManager>();
 
         if (_stats.OverrideFollowPointLocalPosition) {
             _cameraFollowPlayerTransform.localPosition = new Vector3(
@@ -157,7 +166,7 @@ public class CameraHandler : MonoBehaviour {
     #region OnLateUpdate (called by CameraManager after all other managers)
     ////////////////////////////////////////////////////////////
 
-    public void LateUpdate() {
+    public void OnUpdate() {
         if (_stats == null || _cameraFollowPlayerTransform == null) return;
 
         float dt = Time.deltaTime;

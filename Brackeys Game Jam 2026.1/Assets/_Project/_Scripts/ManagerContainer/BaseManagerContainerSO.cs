@@ -76,7 +76,7 @@ public abstract class BaseManagerContainerSO : ScriptableObject,
     /// Example: SceneContainer skips IPersistentManager
     /// </summary>
     protected virtual bool ShouldSkipInitialization(IInitializable initializer) {
-        return false;
+        return initializer is IPersistentManager;
     }
 
     #endregion

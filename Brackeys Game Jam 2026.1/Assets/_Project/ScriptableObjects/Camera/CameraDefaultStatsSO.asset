@@ -53,7 +53,7 @@ MonoBehaviour:
   LookaheadMinVelocityYDown: 5
   LookaheadMaxVelocityYDown: 30
   LookaheadMinDistanceYDown: 0.5
-  LookaheadMaxDistanceYDown: 20
+  LookaheadMaxDistanceYDown: 15
   LookaheadCurveYDown:
     serializedVersion: 2
     m_Curve:
@@ -79,9 +79,9 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   LookaheadMinVelocityYUp: 12
-  LookaheadMaxVelocityYUp: 20
+  LookaheadMaxVelocityYUp: 30
   LookaheadMinDistanceYUp: 0.5
-  LookaheadMaxDistanceYUp: 20
+  LookaheadMaxDistanceYUp: 15
   LookaheadCurveYUp:
     serializedVersion: 2
     m_Curve:
@@ -106,7 +106,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  LookaheadDampingY: 0.2
+  LookaheadDampingY: 0.5
   LookaheadRetractDampingY: 0.8
   JumpVerticalLockBoundsTop: 8
   JumpVerticalLockBoundsBottom: 4

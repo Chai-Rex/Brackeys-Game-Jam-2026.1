@@ -157,7 +157,7 @@ public class LoadingManager : ScriptableObject, IInitializable, ICleanable, IPer
         if (_loadingCanvas == null) return;
 
         // Optional: fade out animation here
-        await Task.Delay(100); // Small delay for visual polish
+        await Awaitable.WaitForSecondsAsync(.1f); // Small delay for visual polish
 
         _loadingCanvas.gameObject.SetActive(false);
         Cursor.lockState = CursorLockMode.Confined;

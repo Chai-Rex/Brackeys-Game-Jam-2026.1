@@ -21,7 +21,6 @@ public class GameBootstrap : MonoBehaviour {
     [SerializeField] private SceneContainerSO _iGameplayContainer;
 
     [Header("Core GameObjects")]
-    [SerializeField] private Camera _iCameraTemplate;
     [SerializeField] private EventSystem _iEventSystemTemplate;
 
     [Header("Debug Settings")]
@@ -95,16 +94,6 @@ public class GameBootstrap : MonoBehaviour {
         // STEP 2: Initialize CameraManager
         // ========================================
         await _iCameraManager.Initialize();
-
-        // ========================================
-        // STEP 3: Create and register bootstrap camera
-        // ========================================
-        _camera = Instantiate(_iCameraTemplate);
-        DontDestroyOnLoad(_camera.gameObject);
-        _camera.name = "Bootstrap Camera";
-
-        // Register with CameraManager (this activates it for loading screens)
-        _iCameraManager.RegisterBootstrapCamera(_camera);
 
         // ========================================
         // STEP 4: Create EventSystem
@@ -233,7 +222,6 @@ public class GameBootstrap : MonoBehaviour {
         // Cleanup systems
         _ = _sceneController.Cleanup();
         _iLoadingManager.CleanUp();
-        _iCameraManager.CleanUp();
         _iGameCommands.CleanUp();
         _iSoundManager.CleanUp();
         _iInputManager.CleanUp();

@@ -9,8 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0732b2f4dc7635c4a917e75801b8b439, type: 3}
-  m_Name: SceneCameraManager
-  m_EditorClassIdentifier: Assembly-CSharp::SceneCameraManager
-  _bootstrapCameraPrefab: {fileID: 3609894792491345745, guid: 3078bfc29fd4d2142a23c78f52192af3, type: 3}
+  m_Script: {fileID: 11500000, guid: 457a3e4927030764b8a57157413c5113, type: 3}
+  m_Name: CameraManager
+  m_EditorClassIdentifier: Assembly-CSharp::CameraManager
   _iEnableDebugLogs: 0
