@@ -69,6 +69,7 @@ Transform:
   - {fileID: 3626871439788766180}
   - {fileID: 3265121937260499156}
   - {fileID: 7546320729124428008}
+  - {fileID: 7752172467759371753}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6383517494559533306
@@ -91,6 +92,7 @@ MonoBehaviour:
   _statsHandler: {fileID: 6088752286152335885}
   _blackboardHandler: {fileID: 7769900012915802510}
   _inputHandler: {fileID: 2592130765572809362}
+  _cameraFollowPlayerTransform: {fileID: 7752172467759371753}
   _iEnableDebugLogs: 0
 --- !u!50 &1356515244556690249
 Rigidbody2D:
@@ -115,7 +117,7 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
@@ -594,6 +596,37 @@ MonoBehaviour:
   IsJumping: 0
   IsWallJumping: 0
   CurrentAnimationHash: 0
+--- !u!1 &8940536100089694668
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7752172467759371753}
+  m_Layer: 18
+  m_Name: CameraFollowPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7752172467759371753
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8940536100089694668}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.6, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3617825743134656497}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8997419561760918599
 GameObject:
   m_ObjectHideFlags: 0

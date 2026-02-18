@@ -11,7 +11,7 @@ public class GameBootstrap : MonoBehaviour {
 
     [Header("Persistent Managers")]
     [SerializeField] private LoadingManager _iLoadingManager;
-    [SerializeField] private CameraManager _iCameraManager;
+    [SerializeField] private SceneCameraManager _iCameraManager;
     [SerializeField] private GameCommandsManager _iGameCommands;
     [SerializeField] private SoundManager _iSoundManager;
     [SerializeField] private InputManager _iInputManager;
@@ -37,7 +37,7 @@ public class GameBootstrap : MonoBehaviour {
     private bool _canUpdate = false;
 
     // Public property for SceneCamera to access
-    public CameraManager CameraManager => _iCameraManager;
+    public SceneCameraManager CameraManager => _iCameraManager;
 
     ////////////////////////////////////////////////////////////
     #region Initialization

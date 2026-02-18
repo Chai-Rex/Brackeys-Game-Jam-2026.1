@@ -17,6 +17,7 @@ public class PlayerHandler : MonoBehaviour {
     [SerializeField] private PlayerStatsHandler _statsHandler;
     [SerializeField] private PlayerBlackboardHandler _blackboardHandler;
     [SerializeField] private PlayerInputHandler _inputHandler;
+    [SerializeField] private Transform _cameraFollowPlayerTransform;
 
     [Header("Debug Settings")]
     [SerializeField] private bool _iEnableDebugLogs = false;
@@ -35,6 +36,7 @@ public class PlayerHandler : MonoBehaviour {
     public PlayerStatsHandler Stats => _statsHandler;
     public PlayerBlackboardHandler Blackboard => _blackboardHandler;
     public PlayerInputHandler Input => _inputHandler;
+    public Transform CameraFollowPlayer => _cameraFollowPlayerTransform;
 
     #endregion
 
@@ -62,6 +64,7 @@ public class PlayerHandler : MonoBehaviour {
         if (_statsHandler == null) LogError("StatsHandler not assigned!");
         if (_blackboardHandler == null) LogError("BlackboardHandler not assigned!");
         if (_inputHandler == null) LogError("InputHandler not assigned!");
+        if (_cameraFollowPlayerTransform == null) LogError("CameraFollowPlayerTransform not assigned!");
     }
 
     private void RegisterWithManager() {

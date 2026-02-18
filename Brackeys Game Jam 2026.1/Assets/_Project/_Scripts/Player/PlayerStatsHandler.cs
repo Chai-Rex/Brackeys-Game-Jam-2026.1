@@ -200,7 +200,7 @@ public class PlayerStatsHandler : MonoBehaviour {
 
     /// <summary>
     /// Calculate jump physics values based on desired height and time
-    /// Uses kinematic equations: v = gt, h = 0.5gt²
+    /// Uses kinematic equations: v = gt, h = 0.5gt^2
     /// </summary>
     private void CalculateJumpValues() {
         // Ground Jump: Calculate gravity and initial velocity

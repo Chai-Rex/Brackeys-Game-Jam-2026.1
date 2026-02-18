@@ -17,6 +17,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6ac33709902ba4042b0e633cfa7ca1dc, type: 2}
   - {fileID: 11400000, guid: afd9e7b049d45c941b64df0eb71ace5f, type: 2}
   - {fileID: 11400000, guid: bc03a433894f0f7418f7d723079c4d89, type: 2}
-  - {fileID: 11400000, guid: 9b450041a5e2d7d46b8ee5b97933b888, type: 2}
+  - {fileID: 11400000, guid: baad1b09049dc69479e3f008241a4772, type: 2}
   _enableDebugLogs: 0
   _iSceneName: MainMenuScene

@@ -15,7 +15,7 @@ MonoBehaviour:
   MoveThreshold: 0.1
   GroundTargetSpeed: 12
   GroundMaxSpeed: 100
-  GroundAcceleration: 12
+  GroundAcceleration: 6
   GroundDeceleration: 12
   AirborneTargetSpeed: 12
   AirborneAcceleration: 12
@@ -40,11 +40,11 @@ MonoBehaviour:
   AirJumpTimeTillApex: 0.3
   AirJumpCancelableTime: 0.028
   AirJumpReleaseGravityMultiplier: 2
-  WallJumpDirection: {x: 15, y: 3}
+  WallJumpDirection: {x: 30, y: 3}
   WallJumpTimeTillApex: 0.15
   WallJumpCancelableTime: 0.125
   WallJumpReleaseGravityMultiplier: 2
-  MaxFallSpeed: 20
+  MaxFallSpeed: 30
   DecelerationAfterForce: 5
   GroundLayer:
     serializedVersion: 2

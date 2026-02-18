@@ -1,0 +1,129 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e5eac91cce7a674fb17047880ca2efb, type: 3}
+  m_Name: CameraDefaultStatsSO
+  m_EditorClassIdentifier: Assembly-CSharp::CameraDefaultStatsSO
+  OverrideFollowPointLocalPosition: 0
+  FollowPointLocalPositionOverride: {x: 0, y: 0}
+  DampingX: 0.8
+  DampingY: 0.8
+  LandingSettleDamping: 0.8
+  DeadzoneSize: {x: 10, y: 0}
+  LockHorizontal: 0
+  LockVertical: 0
+  LookaheadMinVelocityX: 0.5
+  LookaheadMaxVelocityX: 12
+  LookaheadMinDistanceX: 0.5
+  LookaheadMaxDistanceX: 20
+  LookaheadCurveX:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  LookaheadDampingX: 0.8
+  LookaheadRetractDampingX: 0.8
+  LookaheadMinVelocityYDown: 5
+  LookaheadMaxVelocityYDown: 30
+  LookaheadMinDistanceYDown: 0.5
+  LookaheadMaxDistanceYDown: 20
+  LookaheadCurveYDown:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  LookaheadMinVelocityYUp: 12
+  LookaheadMaxVelocityYUp: 20
+  LookaheadMinDistanceYUp: 0.5
+  LookaheadMaxDistanceYUp: 20
+  LookaheadCurveYUp:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  LookaheadDampingY: 0.2
+  LookaheadRetractDampingY: 0.8
+  JumpVerticalLockBoundsTop: 8
+  JumpVerticalLockBoundsBottom: 4
+  InfluenceMaxWeight: 0.4
+  InfluenceDamping: 0.1
+  UseCameraBounds: 0
+  WorldBounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 50, y: 50, z: 0}
+  ShakeMaxOffset: 0.3
+  ShakeMaxRotation: 1.5
+  TraumaDecayRate: 1.2
+  ShakeFrequency: 25
+  MouseLookWeight: 0.4
+  MouseLookDamping: 0.08
+  MouseLookRetractDamping: 0.05
+  ShowDeadzone: 0
+  ShowLookaheadPoint: 0
+  ShowCenterCrosshair: 0
+  CrosshairSize: 0

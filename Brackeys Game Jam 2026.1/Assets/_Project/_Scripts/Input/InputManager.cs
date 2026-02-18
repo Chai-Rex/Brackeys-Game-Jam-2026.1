@@ -18,6 +18,7 @@ public class InputManager : ScriptableObject, IInitializable, ICleanable, IPersi
     public InputAction _PlayerJumpAction { get; private set; }
     public InputAction _PlayerSprintAction { get; private set; }
     public InputAction _PlayerPauseAction { get; private set; }
+    public InputAction _TestDamageAction { get; private set; }
 
     // UI Actions
     public InputAction _UINavigateAction { get; private set; }
@@ -119,6 +120,7 @@ public class InputManager : ScriptableObject, IInitializable, ICleanable, IPersi
         _PlayerJumpAction = BuildAction("Jump");
         _PlayerSprintAction = BuildAction("Sprint");
         _PlayerPauseAction = BuildAction("PlayerPause");
+        _TestDamageAction = BuildAction("TestDamage");
 
         _UINavigateAction = BuildAction("UINavigation");
         _UIResumeAction = BuildAction("Unpause");

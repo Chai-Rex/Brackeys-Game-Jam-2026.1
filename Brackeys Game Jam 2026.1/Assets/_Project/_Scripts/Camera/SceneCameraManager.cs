@@ -7,8 +7,8 @@ using UnityEngine;
 /// Prevents "Multiple Audio Listeners" errors by ensuring only one camera is active at a time.
 /// Handles smooth transitions between loading screens and gameplay.
 /// </summary>
-[CreateAssetMenu(fileName = "CameraManager", menuName = "ScriptableObjects/Managers/CameraManager")]
-public class CameraManager : ScriptableObject, IInitializable, ICleanable, IPersistentManager {
+[CreateAssetMenu(fileName = "SceneCameraManager", menuName = "ScriptableObjects/Managers/SceneCameraManager")]
+public class SceneCameraManager : ScriptableObject, IInitializable, ICleanable, IPersistentManager {
 
     [Header("Debug Settings")]
     [SerializeField] private bool _iEnableDebugLogs = false;

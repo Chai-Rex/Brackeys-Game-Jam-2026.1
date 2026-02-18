@@ -19,7 +19,7 @@ public class SceneCamera : MonoBehaviour {
     [SerializeField] private bool _iEnableDebugLogs = false;
 
     private Camera _camera;
-    private CameraManager _cameraManager;
+    private SceneCameraManager _cameraManager;
 
     ////////////////////////////////////////////////////////////
     #region Unity Lifecycle
@@ -59,7 +59,7 @@ public class SceneCamera : MonoBehaviour {
     /// Initializes the camera manager by retrieving it from the scene container.
     /// </summary>
     private void GetCameraManager() {
-        _cameraManager = _iSceneContainerSO.GetManager<CameraManager>();
+        _cameraManager = _iSceneContainerSO.GetManager<SceneCameraManager>();
         if (_cameraManager == null) {
             LogError($"Could not find CameraManager in SceneContainerSO!");
             return;

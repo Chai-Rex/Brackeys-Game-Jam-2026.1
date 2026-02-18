@@ -41,7 +41,7 @@ public class PS_Grounded : BaseHierarchicalState {
 
     public override void FixedUpdate() {
         // Apply gravity when grounded (keeps player stuck to ground)
-        _stateMachine.Physics.ApplyGravityForce(_stateMachine.Stats.GroundJumpGravity * 0.1f);
+        _stateMachine.Physics.ApplyGravityForce(1f);
     }
 
     public override void CheckSwitchStates() {
