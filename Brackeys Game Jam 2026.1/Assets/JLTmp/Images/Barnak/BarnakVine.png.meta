@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: e3c8295bcb815412d86e300b29f99e92
+guid: eb1ca7db5a97f4b85b1b049b65aff63f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7137108738498115610
-    second: vine_0
+      213: 1524861060760497822
+    second: vine (1)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,12 +46,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 9
-  spritePivot: {x: 0.53530014, y: 0.7538242}
-  spritePixelsToUnits: 300
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 220
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -113,23 +113,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: vine_0
+      name: vine (1)_0
       rect:
         serializedVersion: 2
-        x: 428
+        x: 430
         y: 0
-        width: 152
-        height: 858
+        width: 118
+        height: 997
       alignment: 9
-      pivot: {x: 0.69906056, y: 0.8761577}
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6e7cb769a65e3fc90800000000000000
-      internalID: -7137108738498115610
+      spriteID: e9e64724e05692510800000000000000
+      internalID: 1524861060760497822
       vertices: []
       indices: 
       edges: []
@@ -138,8 +138,8 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: b6d58b56553bd4c54a5ec70345fdd2d0
-    internalID: 1332050058
+    spriteID: ca9e9683f1d7e49fca116380afad0f63
+    internalID: 0
     vertices: []
     indices: 
     edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      vine_0: -7137108738498115610
+      vine (1)_0: 1524861060760497822
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

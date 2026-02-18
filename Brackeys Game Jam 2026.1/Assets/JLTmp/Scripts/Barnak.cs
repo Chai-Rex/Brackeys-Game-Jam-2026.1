@@ -74,8 +74,6 @@ public class Barnak : MonoBehaviour
 
     void SetVineLength(float length)
     {
-        length = Mathf.Clamp(length, 0, maxVineLength);
-
         if (vineLength == length)
             return;
 
