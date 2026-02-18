@@ -24,8 +24,7 @@ public class PS_Moving : BaseHierarchicalState {
     }
 
     public override void Update() {
-        // Update animation based on speed
-        UpdateAnimation();
+
     }
 
     public override void FixedUpdate() {
@@ -44,6 +43,9 @@ public class PS_Moving : BaseHierarchicalState {
 
         // Update facing direction
         _stateMachine.CheckForTurning(_stateMachine.Blackboard.MoveInput);
+
+        // Update animation based on speed
+        UpdateAnimation();
     }
 
     public override void CheckSwitchStates() {

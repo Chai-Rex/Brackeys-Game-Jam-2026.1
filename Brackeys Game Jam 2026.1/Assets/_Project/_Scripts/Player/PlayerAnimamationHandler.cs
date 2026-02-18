@@ -58,6 +58,7 @@ public class PlayerAnimamationHandler : MonoBehaviour {
             _currentAnimation = hash;
             //animator.CrossFade(hash, 0, 0);
             spineAnimator.AnimationState.SetAnimation(0, hash, true);
+            //Debug.LogWarning($"Playing animation: {hash}");
         }
     }
 }
