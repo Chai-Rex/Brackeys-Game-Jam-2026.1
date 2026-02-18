@@ -1,39 +1,65 @@
+using System;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
 
 public static class UnityExtension
 {
-    public static bool TryGetComponentInParent<T>(this Component component, out T componentOut, bool includeInactive = true)
+    public static T GetComponent<T>(this Component from, Predicate<T> filter)
     {
-        componentOut = component.GetComponentInParent<T>(includeInactive);
-        return componentOut != null;
+        if (filter == null)
+            return from.GetComponent<T>();
+
+        foreach (T t in from.GetComponents<T>())
+            if (filter(t))
+                return t;
+
+        return default;
     }
 
-    public static bool TryGetComponentInParent<T>(this GameObject gameObject, out T componentOut, bool includeInactive = true)
+    public static T GetComponent<T>(this GameObject from, Predicate<T> filter)
     {
-        componentOut = gameObject.GetComponentInParent<T>(includeInactive);
-        return componentOut != null;
+        if (filter == null)
+            return from.GetComponent<T>();
+
+        foreach (T t in from.GetComponents<T>())
+            if (filter(t))
+                return t;
+
+        return default;
     }
 
-    public static bool TryGetComponentInChildren<T>(this Component component, out T componentOut, bool includeInactive = true)
+    public static bool TryGetComponentInParent<T>(this Component from, out T component, bool includeInactive = true)
     {
-        componentOut = component.GetComponentInChildren<T>(includeInactive);
-        return componentOut != null;
+        component = from.GetComponentInParent<T>(includeInactive);
+        return component != null;
     }
 
-    public static bool TryGetComponentInChildren<T>(this GameObject gameObject, out T componentOut, bool includeInactive = true)
+    public static bool TryGetComponentInParent<T>(this GameObject from, out T component, bool includeInactive = true)
     {
-        componentOut = gameObject.GetComponentInChildren<T>(includeInactive);
-        return componentOut != null;
+        component = from.GetComponentInParent<T>(includeInactive);
+        return component != null;
     }
 
-    public static bool TryGetComponentInParentOrInChildren<T>(this Component component, out T componentOut, bool includeInactive = true)
-        => component.TryGetComponentInParent(out componentOut, includeInactive) || 
-           component.TryGetComponentInChildren(out componentOut, includeInactive);
+    public static bool TryGetComponentInChildren<T>(this Component from, out T component, bool includeInactive = true)
+    {
+        component = from.GetComponentInChildren<T>(includeInactive);
+        return component != null;
+    }
 
-    public static bool TryGetComponentInParentOrInChildren<T>(this GameObject gameObject, out T componentOut, bool includeInactive = true)
-        => gameObject.TryGetComponentInParent(out componentOut, includeInactive) || 
-           gameObject.TryGetComponentInChildren(out componentOut, includeInactive);
+    public static bool TryGetComponentInChildren<T>(this GameObject from, out T component, bool includeInactive = true)
+    {
+        component = from.GetComponentInChildren<T>(includeInactive);
+        return component != null;
+    }
+
+    public static bool TryGetComponentInParentOrInChildren<T>(this Component from, out T component, bool includeInactive = true)
+        => from.TryGetComponentInParent(out component, includeInactive) || 
+           from.TryGetComponentInChildren(out component, includeInactive);
+
+    public static bool TryGetComponentInParentOrInChildren<T>(this GameObject from, out T component, bool includeInactive = true)
+        => from.TryGetComponentInParent(out component, includeInactive) || 
+           from.TryGetComponentInChildren(out component, includeInactive);
 
     public static Transform[] GetChildren(this Transform parent)
     {

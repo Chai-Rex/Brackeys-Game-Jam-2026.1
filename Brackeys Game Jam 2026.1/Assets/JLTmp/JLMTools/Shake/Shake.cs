@@ -6,9 +6,9 @@ public class Shake : MonoBehaviour
     [SerializeField] Vector3 axis = new Vector3(1, 1, 0);
     [SerializeField] float baseAmplitude = 0;
     [SerializeField] float baseNoise = 5;
-    [SerializeField] float addAmplitude = 0;
-    [SerializeField] float addNoise = 0;
-    [SerializeField] float speed = 5;
+    [SerializeField] float impactAmplitude = 0;
+    [SerializeField] float impactNoise = 0;
+    [SerializeField] float impactSpeed = 5;
     [SerializeField] Transform target;
     Vector3 noisePosition;
 
@@ -30,22 +30,22 @@ public class Shake : MonoBehaviour
         set => baseNoise = value;
     }
     
-    public float AddAmplitude
+    public float ImpactAmplitude
     {
-        get => addAmplitude;
-        set => addAmplitude = value;
+        get => impactAmplitude;
+        set => impactAmplitude = value;
     }
 
-    public float AddNoise
+    public float ImpactNoise
     {
-        get => addNoise;
-        set => addNoise = value;
+        get => impactNoise;
+        set => impactNoise = value;
     }
 
-    public float Speed
+    public float ImpactSpeed
     {
-        get => speed;
-        set => speed = value;
+        get => impactSpeed;
+        set => impactSpeed = value;
     }
 
     public Transform Target
@@ -54,19 +54,24 @@ public class Shake : MonoBehaviour
         set => target = value;
     }
 
-    public float Amplitude => baseAmplitude + addAmplitude;
+    public void Impact(float amplitude, float noise = 0)
+    {
+        impactAmplitude += amplitude;
+        impactNoise += noise;
+    }
 
-    public float Noise => baseNoise + addNoise;
+    public float Amplitude => baseAmplitude + ImpactAmplitude;
+    public float Noise => baseNoise + impactNoise;
 
-    void Awake()
+    protected virtual void Awake()
     {
         noisePosition = RandomExtension.RandomVector3(0, 1000);
     }
 
     void Update()
     {
-        addAmplitude *= 1 - Time.deltaTime * speed;
-        addNoise *= 1 - Time.deltaTime * speed;
+        impactAmplitude *= 1 - impactSpeed * Time.deltaTime;
+        impactNoise *= 1 - impactSpeed * Time.deltaTime;
 
         if (target)
         {

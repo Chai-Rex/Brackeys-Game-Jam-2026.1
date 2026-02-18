@@ -278,6 +278,7 @@ GameObject:
   - component: {fileID: 3381900945127731881}
   - component: {fileID: 6736504683414707074}
   - component: {fileID: 3702199883439577042}
+  - component: {fileID: 7550437363336149182}
   m_Layer: 20
   m_Name: Barnak
   m_TagString: Untagged
@@ -326,6 +327,12 @@ MonoBehaviour:
   hitShakeNoise: 10
   eatingTime: 5
   recoveringTime: 5
+  notifyAkOnCatch: Vine_Catch
+  notifyAkOnStartEating: Vine_StartEating
+  notifyAkOnStopEating: Vine_StopEating
+  notifyAkOnHit: Vine_Hit
+  notifyAkOnLastHit: Vine_LastHit
+  notifyAkOnStopRecovering: Vine_StopRecovering
 --- !u!61 &6736504683414707074
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -394,6 +401,30 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7550437363336149182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5652510724377365988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83661c9394bf24015acefec4013dcc82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: AK.Wwise.Unity.MonoBehaviour::AkGameObj
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 1
+  isStaticObject: 0
+  usePositionOffsetData: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  scalingFactor: 1
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
 --- !u!1 &6439293126340116846
 GameObject:
   m_ObjectHideFlags: 0

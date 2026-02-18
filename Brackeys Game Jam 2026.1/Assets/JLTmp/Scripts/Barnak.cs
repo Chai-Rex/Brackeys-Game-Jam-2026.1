@@ -21,6 +21,13 @@ public class Barnak : MonoBehaviour
     [SerializeField] float eatingTime = 5;
     [SerializeField] float recoveringTime = 5;
 
+    [SerializeField] string notifyAkOnCatch = "Vine_Catch";
+    [SerializeField] string notifyAkOnStartEating = "Vine_StartEating";
+    [SerializeField] string notifyAkOnStopEating = "Vine_StopEating";
+    [SerializeField] string notifyAkOnHit = "Vine_Hit";
+    [SerializeField] string notifyAkOnLastHit = "Vine_LastHit";
+    [SerializeField] string notifyAkOnStopRecovering = "Vine_StopRecovering";
+
     BoxCollider2D trigger;
     Animator animator;
     IBarnakTarget caughtTarget;
@@ -40,7 +47,7 @@ public class Barnak : MonoBehaviour
         trigger.enabled = true;
 
         maxVineLength = -vine.localPosition.y;
-        SetVineLength(maxVineLength);
+        SetVineLength(maxVineLength);        
     }
 
     void FixedUpdate()
@@ -70,6 +77,7 @@ public class Barnak : MonoBehaviour
         hitsCount = 0;
         target.OnBarnakCaught(this);        
         animator.SetInteger("state", 1);
+        AkUnitySoundEngine.PostEvent(notifyAkOnCatch, gameObject);
     }
 
     void SetVineLength(float length)
@@ -102,7 +110,13 @@ public class Barnak : MonoBehaviour
     void UpdateCaught()
     {
         if (transform.position.y - caughtTarget.transform.position.y > caughtTarget.BarnakTargetRadius)
+        {
             shakeCaughtTarget.transform.AddYPosition(caughtSpeed * Time.fixedDeltaTime);
+            float dist = transform.position.y - shakeCaughtTarget.transform.position.y;
+            float progress = 1 - dist / maxVineLength;
+            print(progress);
+            AkUnitySoundEngine.SetRTPCValue("Pull_Tension", progress * 100, gameObject);
+        }
 
         else {
             state = State.Eating;
@@ -116,6 +130,7 @@ public class Barnak : MonoBehaviour
             caughtTarget.OnBarnakEat(this, null);
             caughtTarget = null;
             animator.SetInteger("state", 2);
+            AkUnitySoundEngine.PostEvent(notifyAkOnStartEating, gameObject);
             Invoke("StopEating", eatingTime);
         }
     }
@@ -128,6 +143,7 @@ public class Barnak : MonoBehaviour
         state = State.Waiting;
         trigger.enabled = true;
         animator.SetInteger("state", 0);
+        AkUnitySoundEngine.PostEvent(notifyAkOnStopEating, gameObject);
     }
 
     public void HitToRelease()
@@ -136,11 +152,14 @@ public class Barnak : MonoBehaviour
 
         if (hitsCount < hitsToRelease)
         {
-            shakeCaughtTarget.AddAmplitude += hitShakeAmplitude;
-            shakeCaughtTarget.AddNoise += hitShakeNoise;
+            AkUnitySoundEngine.PostEvent(notifyAkOnHit, gameObject);
+            shakeCaughtTarget.Impact(hitShakeAmplitude, hitShakeNoise);
         }
 
-        else ReleaseTarget();
+        else {
+            AkUnitySoundEngine.PostEvent(notifyAkOnLastHit, gameObject);
+            ReleaseTarget();
+        } 
     }
 
     void ReleaseTarget()
@@ -170,6 +189,7 @@ public class Barnak : MonoBehaviour
         state = State.Waiting;
         trigger.enabled = true;
         animator.SetInteger("state", 0);
+        AkUnitySoundEngine.PostEvent(notifyAkOnStopRecovering, gameObject);
     }
 }
 
