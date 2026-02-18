@@ -5,9 +5,15 @@
 			<PropertyList>
 				<Property Name="AudioFileImporter\x64_FilesToImport" Type="string" Value="AAAAAAAAAAA="/>
 				<Property Name="AudioFilesImporter\DestinationFolder" Type="string" Value="Y:\Documents\Brackeys Game Jam 2026\Brackeys-Game-Jam-2026.1\Brackeys Game Jam 2026.1\Brackeys Game Jam 2026 WWwise Project\Originals\SFX\"/>
+				<Property Name="Event Action List\{12001EBC-3F44-4627-A43D-699A0F9E70F9}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{24396B32-2482-4E15-840B-36E9F4386C86}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{2AEDA264-929A-4736-B984-F58160E2545C}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{8F1FE686-7674-4066-B327-54A1D423C7AE}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{961672CD-2575-44DF-8CF4-FD126DD897BD}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{AF7CE75B-1933-47DF-9C2B-91ECACD9B248}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{DD56A193-7B0E-44F1-94F6-A26B9C41BDC1}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{E55BEC49-8120-4EEF-8440-E819B650F9F0}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{F1A09195-2D22-4971-84AD-4D036EF67649}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="EventView\FilterMode1" Type="int32" Value="2"/>
 				<Property Name="EventView\FilterMode2" Type="int32" Value="2"/>
 				<Property Name="ExternalSourcesInputPath" Type="string">
