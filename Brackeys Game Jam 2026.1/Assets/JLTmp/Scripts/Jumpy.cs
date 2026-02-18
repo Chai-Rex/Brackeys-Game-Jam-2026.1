@@ -6,7 +6,6 @@ public class Jumpy : Jumper
     [SerializeField] Vector2 dtJumpRangePlayerDetected = new Vector2(0, 0.5f);
 
     [Header("Player Detection")]
-    [SerializeField] Transform playerCheck;
     [SerializeField] float playerCheckRadius = 3;
     [SerializeField] LayerMask playerCheckLayer;
     [SerializeField, ReadOnly] bool playerDetected = false;
@@ -19,17 +18,8 @@ public class Jumpy : Jumper
 
     void DrawPlayerCheck()
     {
-        if (playerCheck == null) 
-            return;
-
         Gizmos.color = Color.yellow;
-        GizmosExtension.DrawCircle(playerCheck.position, Vector3.forward, playerCheckRadius);
-    }
-
-    protected override void Reset()
-    {
-        base.Reset();
-        playerCheck = transform;
+        GizmosExtension.DrawCircle(transform.position, Vector3.forward, playerCheckRadius);
     }
 
     protected override void FixedUpdate()
@@ -41,10 +31,10 @@ public class Jumpy : Jumper
     void UpdatePlayerDetected()
     {
         float sqrRadius = playerCheckRadius * playerCheckRadius;
-        Vector3 toPlayer = JLPlayerTest.Instance.Center.position - playerCheck.position;
+        Vector3 toPlayer = JLPlayerTest.Instance.transform.position - transform.position;
 
         playerDetected = toPlayer.sqrMagnitude <= sqrRadius &&
-                         !Physics2D.Raycast(playerCheck.position, toPlayer, toPlayer.magnitude, playerCheckLayer);
+                         !Physics2D.Raycast(transform.position, toPlayer, toPlayer.magnitude, playerCheckLayer);
     }
 
     protected override void SetIsGrounded(bool isGrounded)
@@ -54,6 +44,7 @@ public class Jumpy : Jumper
             return;
 
         this.isGrounded = isGrounded;
+        SpriteMatchIsGrounded();
 
         if (isGrounded) Invoke("Jump", (playerDetected ? dtJumpRangePlayerDetected : dtJumpRange).RandomInRange());
         else            CancelInvoke("Jump");
@@ -65,10 +56,11 @@ public class Jumpy : Jumper
             base.Jump();
 
         else {
-            float angle = (JLPlayerTest.Instance.Center.position.x < transform.position.x ? jumpMaxAngle : -jumpMaxAngle) * Random.value;
+            float angle = (JLPlayerTest.Instance.transform.position.x < transform.position.x ? jumpMaxAngle : -jumpMaxAngle) * Random.value;
             Vector2 direction = Quaternion.Euler(0, 0, angle) * Vector2.up;
             rb.linearVelocity = direction * jumpSpeed;
 
+            SetLookRight(rb.linearVelocity.x > 0);
             SetIsGrounded(false);
             LockIsGrounded();
             Invoke("UnlockIsGrounded", 0.1f);

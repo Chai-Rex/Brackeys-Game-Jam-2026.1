@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{5BB2882E-5704-470E-90AD-9DCD39A5278E}" SchemaVersion="133">
+	<Events>
+		<WorkUnit Name="Enemy" ID="{5BB2882E-5704-470E-90AD-9DCD39A5278E}" PersistMode="Standalone">
+			<ChildrenList>
+				<WorkUnit Name="Vine" ID="{CA44F333-07BC-40EB-B33A-DBFF62ABE241}" PersistMode="Reference"/>
+				<WorkUnit Name="Mosquito" ID="{13AA3B5E-E0E1-4D0B-A94D-1AA1A696DD9D}" PersistMode="Reference"/>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>
