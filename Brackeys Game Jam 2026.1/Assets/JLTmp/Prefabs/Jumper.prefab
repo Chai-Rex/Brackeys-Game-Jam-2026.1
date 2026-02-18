@@ -271,7 +271,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 131072
   isGrounded: 0
-  jumpSpeed: 8
+  jumpSpeed: 10
   jumpMaxAngle: 30
   dtJumpRange: {x: 1.5, y: 2.5}
   barnakTargetRadius: 0.42
