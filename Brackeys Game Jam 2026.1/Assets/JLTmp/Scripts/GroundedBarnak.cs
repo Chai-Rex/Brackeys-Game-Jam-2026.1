@@ -14,7 +14,7 @@ public class GroundedBarnak : MonoBehaviour
     void Awake()
     {
         animator = GetComponent<Animator>();
-        animator.SetInteger("state", 1);
+        animator.SetBool("isEating", isEating);
         trigger = GetComponent<Collider2D>();
         trigger.enabled = true;
     }
