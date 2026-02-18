@@ -138,10 +138,10 @@ public class Jumper : MonoBehaviour, IBarnakTarget
         CancelInvoke("Jump");
     }
 
-    public void OnBarnakEat(Barnak barnak)
+    public void OnBarnakRelease(Barnak barnak) {}
+    
+    public void OnBarnakEat(Barnak barnak, GroundedBarnak groundedBarnak)
     {
         Destroy(gameObject);
     }
-
-    public void OnBarnakRelease(Barnak barnak) {}
 }

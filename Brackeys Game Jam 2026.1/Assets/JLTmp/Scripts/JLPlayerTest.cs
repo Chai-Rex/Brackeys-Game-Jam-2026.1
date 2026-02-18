@@ -134,15 +134,20 @@ public class JLPlayerTest : Singleton<JLPlayerTest>, IBarnakTarget
         barnakCaught = barnak;
     }
 
-    public void OnBarnakEat(Barnak barnak)
+    public void OnBarnakRelease(Barnak barnak)
     {
         rb.simulated = true;
         barnakCaught = null;
     }
 
-    public void OnBarnakRelease(Barnak barnak)
+    public void OnBarnakEat(Barnak barnak, GroundedBarnak groundedBarnak)
     {
-        rb.simulated = true;
-        barnakCaught = null;
+        if (barnak)
+        {
+            rb.simulated = true;
+            barnakCaught = null;
+        }
+
+        //...
     }
 }

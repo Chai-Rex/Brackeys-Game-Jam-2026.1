@@ -113,7 +113,7 @@ public class Barnak : MonoBehaviour
             shakeCaughtTarget.Target = null;
 
             hitsCount = 0;
-            caughtTarget.OnBarnakEat(this);
+            caughtTarget.OnBarnakEat(this, null);
             caughtTarget = null;
             animator.SetInteger("state", 2);
             Invoke("StopEating", eatingTime);
@@ -178,8 +178,8 @@ public class Barnak : MonoBehaviour
 public interface IBarnakTarget
 {
     public void OnBarnakCaught(Barnak barnak);
-    public void OnBarnakEat(Barnak barnak);
     public void OnBarnakRelease(Barnak barnak);
+    public void OnBarnakEat(Barnak barnak, GroundedBarnak groundedBarnak);
     public Transform transform { get; }
     public float BarnakTargetRadius { get; }
 }
