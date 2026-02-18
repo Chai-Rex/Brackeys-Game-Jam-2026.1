@@ -15,13 +15,13 @@
 						<Action Name="" ID="{F6EBDC5D-F6CB-497A-9FFA-AD8B7929D2C1}" ShortID="370062884">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Vine Eating" ID="{77EC9096-A8F1-4E95-947E-F39E499051FD}" WorkUnitID="{A80FAC1F-5598-46B4-A396-211E88A88EEF}"/>
+									<ObjectRef Name="Vine Eating" ID="{1CD35A9E-9B36-46B9-8096-0E565065CEBB}" WorkUnitID="{A80FAC1F-5598-46B4-A396-211E88A88EEF}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Vine_Snap" ID="{F1A09195-2D22-4971-84AD-4D036EF67649}">
+				<Event Name="Vine_LastHit" ID="{F1A09195-2D22-4971-84AD-4D036EF67649}">
 					<PropertyList>
 						<Property Name="CooldownTime" Type="Real32">
 							<ValueList>
@@ -37,32 +37,21 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Vine Eating" ID="{77EC9096-A8F1-4E95-947E-F39E499051FD}" WorkUnitID="{A80FAC1F-5598-46B4-A396-211E88A88EEF}"/>
+									<ObjectRef Name="Vine Pulling" ID="{77EC9096-A8F1-4E95-947E-F39E499051FD}" WorkUnitID="{A80FAC1F-5598-46B4-A396-211E88A88EEF}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
 						<Action Name="" ID="{37923AB3-F7DC-4EB4-93E6-A3F7F054FB6F}" ShortID="420489468">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Vine Snap" ID="{52C50D5A-CFDF-475C-8C44-C05BDCDC538A}" WorkUnitID="{A80FAC1F-5598-46B4-A396-211E88A88EEF}"/>
+									<ObjectRef Name="Vine Break" ID="{52C50D5A-CFDF-475C-8C44-C05BDCDC538A}" WorkUnitID="{A80FAC1F-5598-46B4-A396-211E88A88EEF}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="Vine_Capture" ID="{E55BEC49-8120-4EEF-8440-E819B650F9F0}">
+				<Event Name="Vine_Catch" ID="{E55BEC49-8120-4EEF-8440-E819B650F9F0}">
 					<ChildrenList>
-						<Action Name="" ID="{1DA4B3AB-514F-4A9F-A34F-068E0B377396}" ShortID="779335527">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
-								<Property Name="FadeTime" Type="Real64" Value="1"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Vine Hiding" ID="{F9A0CDF9-DFBC-4F17-AFB6-7F5D5C64D46B}" WorkUnitID="{A80FAC1F-5598-46B4-A396-211E88A88EEF}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
 						<Action Name="" ID="{86B266F8-D0B8-4D30-82ED-8FD47FDC58D8}" ShortID="234334586">
 							<ReferenceList>
 								<Reference Name="Target">
@@ -70,14 +59,13 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Vine_Hiding" ID="{961672CD-2575-44DF-8CF4-FD126DD897BD}">
-					<ChildrenList>
-						<Action Name="" ID="{1ED85A91-8624-4D8F-B44C-43A0C61028FA}" ShortID="336476650">
+						<Action Name="" ID="{F831C795-5C1E-4976-90DD-B43A1B9F1612}" ShortID="464025279">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="0.5"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Vine Hiding" ID="{F9A0CDF9-DFBC-4F17-AFB6-7F5D5C64D46B}" WorkUnitID="{A80FAC1F-5598-46B4-A396-211E88A88EEF}"/>
+									<ObjectRef Name="Vine Pulling" ID="{77EC9096-A8F1-4E95-947E-F39E499051FD}" WorkUnitID="{A80FAC1F-5598-46B4-A396-211E88A88EEF}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -89,6 +77,51 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Vine Hit" ID="{24142604-1423-4E57-8758-F81E8EC668F0}" WorkUnitID="{A80FAC1F-5598-46B4-A396-211E88A88EEF}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="FloorVine_Eating" ID="{99114310-2CC4-4090-A08D-C16D25BA7F11}">
+					<ChildrenList>
+						<Action Name="" ID="{12DA276E-C0B4-4E36-8269-4108AA61FA30}" ShortID="506380203">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Floor Vine" ID="{ED1A9A84-4861-4D32-A52E-8CDC9DFF2100}" WorkUnitID="{A80FAC1F-5598-46B4-A396-211E88A88EEF}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Vine_StopRecovering" ID="{27A00249-7432-437F-BAEA-8DE89DC31077}">
+					<ChildrenList>
+						<Action Name="" ID="{195902E1-302C-424A-946C-A7EE2B166B0B}" ShortID="458059342">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Floor Vine" ID="{ED1A9A84-4861-4D32-A52E-8CDC9DFF2100}" WorkUnitID="{A80FAC1F-5598-46B4-A396-211E88A88EEF}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{D7698DF1-58F4-4BD9-833E-F74EED543C63}" ShortID="270247707">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Vine Eating" ID="{1CD35A9E-9B36-46B9-8096-0E565065CEBB}" WorkUnitID="{A80FAC1F-5598-46B4-A396-211E88A88EEF}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{DFE25754-5336-4571-966E-0CAC2B12059D}" ShortID="58610701">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Vine Pulling" ID="{77EC9096-A8F1-4E95-947E-F39E499051FD}" WorkUnitID="{A80FAC1F-5598-46B4-A396-211E88A88EEF}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{08A6DE27-4AE4-3D2F-8D13-F981933D198B}",
+    "Hash": "{55C8C768-409A-89C8-D647-BF0C294D728D}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -180,6 +180,12 @@
       "Name": "SS_Air_TimeOfDay",
       "ObjectPath": "\\Game Parameters\\Factory Soundseed Air Game Syncs\\SS_Air_TimeOfDay",
       "GUID": "{536FA72C-8C7E-4C8B-AE03-EF34FDADC314}"
+     },
+     {
+      "Id": "3385394437",
+      "Name": "Mosquito_Swarm",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Enemy\\Mosquito\\Mosquito_Swarm",
+      "GUID": "{1EFFB97B-C5FC-4079-A91F-A94613729EAE}"
      },
      {
       "Id": "3715662592",
@@ -739,6 +745,6 @@
     ]
    }
   ],
-  "FileHash": "{F5C0FAD6-EFBC-BEB5-A3F8-9BBA90242B85}"
+  "FileHash": "{3E420F80-FF91-88DF-9C2B-9CB371D8DFBF}"
  }
 }

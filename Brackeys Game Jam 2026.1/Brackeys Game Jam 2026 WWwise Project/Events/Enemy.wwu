@@ -5,6 +5,7 @@
 			<ChildrenList>
 				<WorkUnit Name="Vine" ID="{CA44F333-07BC-40EB-B33A-DBFF62ABE241}" PersistMode="Reference"/>
 				<WorkUnit Name="Mosquito" ID="{13AA3B5E-E0E1-4D0B-A94D-1AA1A696DD9D}" PersistMode="Reference"/>
+				<WorkUnit Name="Cricket" ID="{CCEB8AD9-5AFF-4154-817E-D18B7C9C610B}" PersistMode="Reference"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

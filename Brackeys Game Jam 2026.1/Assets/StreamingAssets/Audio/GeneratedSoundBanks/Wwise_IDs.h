@@ -13,14 +13,20 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID CRICKET_JUMP = 515483981U;
+        static const AkUniqueID CRICKET_LAND = 3381550706U;
+        static const AkUniqueID FLOORVINE_EATING = 2689584014U;
+        static const AkUniqueID PLAY_MOSQUITO = 1534211419U;
         static const AkUniqueID PLAYER_JUMP = 1305133589U;
         static const AkUniqueID PLAYER_LAND = 3629196698U;
         static const AkUniqueID PLAYER_MOVEMENT = 541470702U;
-        static const AkUniqueID VINE_CAPTURE = 584321918U;
+        static const AkUniqueID UMBRELLA_CLOSE = 3217770052U;
+        static const AkUniqueID UMBRELLA_OPEN = 89220416U;
+        static const AkUniqueID VINE_CATCH = 1532741045U;
         static const AkUniqueID VINE_EATING = 2783995914U;
-        static const AkUniqueID VINE_HIDING = 1619694577U;
         static const AkUniqueID VINE_HIT = 3793263743U;
-        static const AkUniqueID VINE_SNAP = 4145961444U;
+        static const AkUniqueID VINE_LASTHIT = 2514947935U;
+        static const AkUniqueID VINE_STOPRECOVERING = 239772940U;
     } // namespace EVENTS
 
     namespace SWITCHES
@@ -57,6 +63,7 @@ namespace AK
         static const AkUniqueID DENSITY_FA_SSGRAIN = 2715217995U;
         static const AkUniqueID IMMERSION_FA_SSGRAIN = 2481728872U;
         static const AkUniqueID INSTRUMENT_FA_SSGRAIN = 2317409760U;
+        static const AkUniqueID MOSQUITO_SWARM = 3385394437U;
         static const AkUniqueID PLAYBACK_RATE = 1524500807U;
         static const AkUniqueID PROXIMITY_FA_SSGRAIN = 1791284502U;
         static const AkUniqueID PULL_TENSION = 2763939063U;

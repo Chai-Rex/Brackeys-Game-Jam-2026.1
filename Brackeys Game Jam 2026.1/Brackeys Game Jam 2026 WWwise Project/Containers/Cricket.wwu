@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{62E2888F-9678-47D7-A3B7-0BB2F85273D9}" SchemaVersion="133" RootDocumentID="{C5BE94EB-CFE7-4974-AD84-1EA50F78F7F1}" ParentDocumentID="{F886C20C-1D2F-45E5-AF2C-0EB7D17032A5}">
+	<Containers>
+		<WorkUnit Name="Cricket" ID="{62E2888F-9678-47D7-A3B7-0BB2F85273D9}" OwnerID="{F886C20C-1D2F-45E5-AF2C-0EB7D17032A5}" PersistMode="Nested">
+			<ChildrenList>
+				<PropertyContainer Name="Cricket Movement" ID="{656B066E-854F-470C-9D4D-CB2E8DC1C040}" ShortID="501627974">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFX" ID="{C0901958-AA0D-4450-9846-B896800D3928}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<RandomSequenceContainer Name="Jump" ID="{838B2932-320E-406A-9E98-4DB63E9A80B3}" ShortID="888987626">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Distant_Attenuation" ID="{F8C4934F-08F6-441F-AC38-92E297D16BBD}" WorkUnitID="{4D1AF88C-570E-4823-A48A-8F0B5156508D}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Cricket Jump" ID="{0AB701CB-AC64-4483-A638-2BE746AC25C6}" ShortID="56358550">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Cricket Jump" ID="{2FBE635D-B677-4E05-94FF-78473E0AF482}">
+											<Language>SFX</Language>
+											<AudioFile>Cricket Jump.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="553929548"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Cricket Jump" ID="{2FBE635D-B677-4E05-94FF-78473E0AF482}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Land" ID="{530F0A01-30FE-433C-B64E-4C3F5DE330DE}" ShortID="395277777">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Distant_Attenuation" ID="{F8C4934F-08F6-441F-AC38-92E297D16BBD}" WorkUnitID="{4D1AF88C-570E-4823-A48A-8F0B5156508D}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Cricket Land" ID="{77D08AFF-EBF5-4DEA-BD2E-B83193CDE278}" ShortID="447156129">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Cricket Land" ID="{8D78DAFF-D5A1-4184-80D1-4B23EBA52C94}">
+											<Language>SFX</Language>
+											<AudioFile>Cricket Land.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="226119631"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Cricket Land" ID="{8D78DAFF-D5A1-4184-80D1-4B23EBA52C94}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+					</ChildrenList>
+				</PropertyContainer>
+			</ChildrenList>
+		</WorkUnit>
+	</Containers>
+</WwiseDocument>

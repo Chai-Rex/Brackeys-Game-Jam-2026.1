@@ -14,16 +14,12 @@
 							<Position X="0" Y="1"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Vine_Snap" ID="{F1A09195-2D22-4971-84AD-4D036EF67649}" WorkUnitID="{CA44F333-07BC-40EB-B33A-DBFF62ABE241}"/>
+							<ObjectRef Name="Vine_LastHit" ID="{F1A09195-2D22-4971-84AD-4D036EF67649}" WorkUnitID="{CA44F333-07BC-40EB-B33A-DBFF62ABE241}"/>
 							<Position X="0" Y="2"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Vine_Capture" ID="{E55BEC49-8120-4EEF-8440-E819B650F9F0}" WorkUnitID="{CA44F333-07BC-40EB-B33A-DBFF62ABE241}"/>
+							<ObjectRef Name="Vine_Catch" ID="{E55BEC49-8120-4EEF-8440-E819B650F9F0}" WorkUnitID="{CA44F333-07BC-40EB-B33A-DBFF62ABE241}"/>
 							<Position X="1" Y="0"/>
-						</Module>
-						<Module>
-							<ObjectRef Name="Vine_Hiding" ID="{961672CD-2575-44DF-8CF4-FD126DD897BD}" WorkUnitID="{CA44F333-07BC-40EB-B33A-DBFF62ABE241}"/>
-							<Position X="1" Y="1"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="Vine_Hit" ID="{AF7CE75B-1933-47DF-9C2B-91ECACD9B248}" WorkUnitID="{CA44F333-07BC-40EB-B33A-DBFF62ABE241}"/>

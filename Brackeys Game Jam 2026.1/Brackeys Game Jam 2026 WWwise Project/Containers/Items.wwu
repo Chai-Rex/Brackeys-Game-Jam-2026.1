@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{11C41816-BB81-4D5E-AB01-A01C8800C032}" SchemaVersion="133" RootDocumentID="{C5BE94EB-CFE7-4974-AD84-1EA50F78F7F1}" ParentDocumentID="{C5BE94EB-CFE7-4974-AD84-1EA50F78F7F1}">
+	<Containers>
+		<WorkUnit Name="Items" ID="{11C41816-BB81-4D5E-AB01-A01C8800C032}" OwnerID="{C5BE94EB-CFE7-4974-AD84-1EA50F78F7F1}" PersistMode="Nested">
+			<PropertyList>
+				<Property Name="Color" Type="int16" Value="27"/>
+				<Property Name="OverrideColor" Type="bool" Value="True"/>
+			</PropertyList>
+			<ChildrenList>
+				<PropertyContainer Name="Umbrella" ID="{D674765D-8E3B-4FCB-AC4B-57BB71691436}" ShortID="1011493074">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFX" ID="{C0901958-AA0D-4450-9846-B896800D3928}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<RandomSequenceContainer Name="Umbrella Close" ID="{A1C99289-C962-4021-99D0-5BC1953EFB1A}" ShortID="1016368680">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Umbrella Close 1" ID="{83127EB2-3A05-4D48-9830-34AFFA50BD55}" ShortID="617207021">
+									<PropertyList>
+										<Property Name="Soundly:ActiveChannels" Type="string" Value="[]"/>
+										<Property Name="Soundly:FileID" Type="string" Value="SND6671"/>
+										<Property Name="Soundly:FileName" Type="string" Value="https://signing-274265463422.us-central1.run.app?Type=GetFile&amp;SessionID=1771368178HAmS6KDH2bHAd3fQwh2&amp;File=soundlyeu/1426367345Ff4sxqvM_wkFwG/SND6671/sfy_HzTquOthrOLkUQPtSBcCneykVrCwDc"/>
+										<Property Name="Soundly:HandleStartTime" Type="string" Value="0"/>
+										<Property Name="Soundly:HandleStopTime" Type="string" Value="3.392"/>
+										<Property Name="Soundly:LibraryID" Type="string" Value="1426367345Ff4sxqvM_wkFwG"/>
+										<Property Name="Soundly:LibraryLocation" Type="string" Value="Cloud"/>
+										<Property Name="Soundly:PlaybackSpeed" Type="string" Value="1.0"/>
+										<Property Name="Soundly:ProcessList" Type="string" Value="[]"/>
+										<Property Name="Soundly:RenderedFileBitRate" Type="string" Value="3"/>
+										<Property Name="Soundly:RenderedFilePath" Type="string" Value="/Users/stephenlunn/Documents/Soundly Audio/Objects, Umbrella, Open and Close, Automatic, Fast SND6671.wav"/>
+										<Property Name="Soundly:RenderedFileSampleRate" Type="string" Value="96000"/>
+										<Property Name="Soundly:SelectionStartTime" Type="string" Value="0.24644549763033174"/>
+										<Property Name="Soundly:SelectionStopTime" Type="string" Value="0.3798239675016926"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Objects, Umbrella, Open and Close, Automatic, Fast SND6671" ID="{AC674373-D139-432B-9D95-1CCE42D021D8}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0798744103597884"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0798744103597883"/>
+												<Property Name="MarkerInputMode" Type="int16" Value="2"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="Soundly:FileIDForAudioSource" Type="string" Value="SND6671"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.835943127962085"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.28836289776574"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Soundly Audio\Objects, Umbrella, Open and Close, Automatic, Fast SND6671.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="621941156"/>
+											</MediaIDList>
+											<ObjectLists>
+												<ObjectList Name="Markers">
+													<Marker Name="" ID="{326350D3-CE9B-4133-912F-B8D6DD3B020D}">
+														<PropertyList>
+															<Property Name="Time" Type="Real64" Value="0.110947916666667"/>
+														</PropertyList>
+													</Marker>
+													<Marker Name="" ID="{7D012BB4-6642-4862-8DF2-3B593F3AD657}">
+														<PropertyList>
+															<Property Name="Time" Type="Real64" Value="0.249177083333333"/>
+														</PropertyList>
+													</Marker>
+													<Marker Name="" ID="{D9F4706C-D211-4A70-A890-E57EF1A308C7}">
+														<PropertyList>
+															<Property Name="Time" Type="Real64" Value="0.855311313689798"/>
+														</PropertyList>
+													</Marker>
+													<Marker Name="" ID="{77F8AEF2-4DD2-484C-BC5E-8A510573921A}">
+														<PropertyList>
+															<Property Name="Time" Type="Real64" Value="1.21983863031846"/>
+														</PropertyList>
+													</Marker>
+													<Marker Name="" ID="{524AD245-BFA8-4FB7-A158-CC203156C075}">
+														<PropertyList>
+															<Property Name="Time" Type="Real64" Value="2.17396875"/>
+														</PropertyList>
+													</Marker>
+													<Marker Name="" ID="{7815B79A-3B10-4B3C-8A59-3019DD510B34}">
+														<PropertyList>
+															<Property Name="Time" Type="Real64" Value="2.76392708333333"/>
+														</PropertyList>
+													</Marker>
+												</ObjectList>
+											</ObjectLists>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Objects, Umbrella, Open and Close, Automatic, Fast SND6671" ID="{AC674373-D139-432B-9D95-1CCE42D021D8}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Umbrella Open" ID="{06C4EE7B-81BF-4AB5-9FA9-A66C06F241EB}" ShortID="412359033">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Umbrella Open 1" ID="{C9DDBBC8-59FE-4041-A284-B3AC9AD6D0D1}" ShortID="229849545">
+									<PropertyList>
+										<Property Name="Soundly:ActiveChannels" Type="string" Value="[]"/>
+										<Property Name="Soundly:FileID" Type="string" Value="1770301998GTktihqYpz"/>
+										<Property Name="Soundly:FileName" Type="string" Value="/Volumes/B2 DRIVE/Stephen Sound Library/Ben Maughan SFX/Sound Ideas/The General/6021/Umbrella_Unfold_Open_01_G1.Wav.wav"/>
+										<Property Name="Soundly:HandleStartTime" Type="string" Value="0"/>
+										<Property Name="Soundly:HandleStopTime" Type="string" Value="6.4053125"/>
+										<Property Name="Soundly:LibraryID" Type="string" Value="1770300385vVf_K-zXrg"/>
+										<Property Name="Soundly:LibraryLocation" Type="string" Value="Local"/>
+										<Property Name="Soundly:PlaybackSpeed" Type="string" Value="1.0"/>
+										<Property Name="Soundly:ProcessList" Type="string" Value="[]"/>
+										<Property Name="Soundly:RenderedFileBitRate" Type="string" Value="2"/>
+										<Property Name="Soundly:RenderedFilePath" Type="string" Value="/Users/stephenlunn/Documents/Soundly Audio/Umbrella_Unfold_Open_01_G1Wav.wav"/>
+										<Property Name="Soundly:RenderedFileSampleRate" Type="string" Value="48000"/>
+										<Property Name="Soundly:SelectionStartTime" Type="string" Value="0.4583615436696005"/>
+										<Property Name="Soundly:SelectionStopTime" Type="string" Value="0.5524712254570074"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Umbrella_Unfold_Open_01_G1Wav" ID="{2831EECE-6111-4D58-B01C-3213BB6EECA6}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.140776099739494"/>
+												<Property Name="LoopBegin" Type="Real64" Value="2.93594892518619"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="Soundly:FileIDForAudioSource" Type="string" Value="1770301998GTktihqYpz"/>
+												<Property Name="TrimBegin" Type="Real64" Value="2.93594892518619"/>
+												<Property Name="TrimEnd" Type="Real64" Value="3.53875084631009"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Soundly Audio\Umbrella_Unfold_Open_01_G1Wav.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="531220136"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Umbrella_Unfold_Open_01_G1Wav" ID="{2831EECE-6111-4D58-B01C-3213BB6EECA6}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+					</ChildrenList>
+				</PropertyContainer>
+			</ChildrenList>
+		</WorkUnit>
+	</Containers>
+</WwiseDocument>

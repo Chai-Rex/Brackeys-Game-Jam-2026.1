@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{CCEB8AD9-5AFF-4154-817E-D18B7C9C610B}" SchemaVersion="133" RootDocumentID="{5BB2882E-5704-470E-90AD-9DCD39A5278E}" ParentDocumentID="{5BB2882E-5704-470E-90AD-9DCD39A5278E}">
+	<Events>
+		<WorkUnit Name="Cricket" ID="{CCEB8AD9-5AFF-4154-817E-D18B7C9C610B}" OwnerID="{5BB2882E-5704-470E-90AD-9DCD39A5278E}" PersistMode="Nested">
+			<ChildrenList>
+				<Event Name="Cricket_Land" ID="{A872FAE8-06FF-4387-8025-B342A87F5D37}">
+					<ChildrenList>
+						<Action Name="" ID="{318A5732-F038-4D4A-9038-114C444460BE}" ShortID="698879160">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Land" ID="{530F0A01-30FE-433C-B64E-4C3F5DE330DE}" WorkUnitID="{62E2888F-9678-47D7-A3B7-0BB2F85273D9}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Cricket_Jump" ID="{0FE70C19-896A-4938-88C5-2B77CDD3A42E}">
+					<ChildrenList>
+						<Action Name="" ID="{50EC3677-0545-4322-994F-D9174003967B}" ShortID="434432489">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Jump" ID="{838B2932-320E-406A-9E98-4DB63E9A80B3}" WorkUnitID="{62E2888F-9678-47D7-A3B7-0BB2F85273D9}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

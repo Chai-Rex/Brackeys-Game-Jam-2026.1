@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{4C60F7ED-E134-441E-8642-BA4CFEA074BC}" SchemaVersion="133" RootDocumentID="{BB83B9EE-E870-43DF-9B03-09E650C10305}" ParentDocumentID="{1104F235-17E4-4EF6-9D1F-E4260C2ECEB3}">
+	<GameParameters>
+		<WorkUnit Name="Mosquito" ID="{4C60F7ED-E134-441E-8642-BA4CFEA074BC}" OwnerID="{1104F235-17E4-4EF6-9D1F-E4260C2ECEB3}" PersistMode="Nested">
+			<ChildrenList>
+				<GameParameter Name="Mosquito_Swarm" ID="{1EFFB97B-C5FC-4079-A91F-A94613729EAE}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+					</PropertyList>
+				</GameParameter>
+			</ChildrenList>
+		</WorkUnit>
+	</GameParameters>
+</WwiseDocument>

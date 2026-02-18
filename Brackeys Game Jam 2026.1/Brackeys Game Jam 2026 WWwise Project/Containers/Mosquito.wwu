@@ -3,38 +3,7 @@
 	<Containers>
 		<WorkUnit Name="Mosquito" ID="{9DC0BC8F-668B-42A2-81E3-9C9EC51F4841}" OwnerID="{F886C20C-1D2F-45E5-AF2C-0EB7D17032A5}" PersistMode="Nested">
 			<ChildrenList>
-				<RandomSequenceContainer Name="Mosquito Buzz" ID="{25D127E1-C800-4FEF-B60A-27C5079B5DAE}" ShortID="751613240">
-					<PropertyList>
-						<Property Name="Pitch" Type="int32">
-							<ModifierList>
-								<ModifierInfo>
-									<Modifier Name="" ID="{11A9AFF8-4E84-4FD6-810A-4958F5EA0B16}">
-										<PropertyList>
-											<Property Name="Max" Type="Real64" Value="200"/>
-											<Property Name="Min" Type="Real64" Value="-200"/>
-										</PropertyList>
-									</Modifier>
-								</ModifierInfo>
-							</ModifierList>
-						</Property>
-						<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
-						<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
-						<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="2"/>
-						<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
-						<Property Name="Volume" Type="Real64">
-							<ModifierList>
-								<ModifierInfo>
-									<Modifier Name="" ID="{D073405A-8EF7-48C0-975D-12CA605217F0}">
-										<PropertyList>
-											<Property Name="Enabled" Type="bool" Value="True"/>
-											<Property Name="Max" Type="Real64" Value="2"/>
-											<Property Name="Min" Type="Real64" Value="-10"/>
-										</PropertyList>
-									</Modifier>
-								</ModifierInfo>
-							</ModifierList>
-						</Property>
-					</PropertyList>
+				<PropertyContainer Name="Mosquito Movement" ID="{32A0787D-B2B5-4099-B9D8-07893B428631}" ShortID="897343239">
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
@@ -44,12 +13,34 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<Sound Name="Mosquito Buzz 1" ID="{CA88264A-515C-4B3E-B74E-C39C7C666612}" ShortID="371096635">
+						<RandomSequenceContainer Name="Mosquito Buzz" ID="{25D127E1-C800-4FEF-B60A-27C5079B5DAE}" ShortID="751613240">
 							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{11A9AFF8-4E84-4FD6-810A-4958F5EA0B16}">
+												<PropertyList>
+													<Property Name="Max" Type="Real64" Value="200"/>
+													<Property Name="Min" Type="Real64" Value="-200"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="2"/>
+								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 								<Property Name="Volume" Type="Real64">
 									<ModifierList>
 										<ModifierInfo>
-											<Modifier Name="" ID="{5885AFBB-DFBA-4CF6-9151-47EF1106E36C}"/>
+											<Modifier Name="" ID="{D073405A-8EF7-48C0-975D-12CA605217F0}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="2"/>
+													<Property Name="Min" Type="Real64" Value="-10"/>
+												</PropertyList>
+											</Modifier>
 										</ModifierInfo>
 									</ModifierList>
 								</Property>
@@ -63,85 +54,141 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="Mosquito Buzz 1" ID="{3E1527BE-3C9F-4BEC-B158-0889F15914FE}">
+								<Sound Name="Mosquito Buzz 1" ID="{CA88264A-515C-4B3E-B74E-C39C7C666612}" ShortID="371096635">
 									<PropertyList>
-										<Property Name="FadeInDuration" Type="Real64" Value="0.0818681323921287"/>
-										<Property Name="FadeOutDuration" Type="Real64" Value="0.0545787549280861"/>
-										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-										<Property Name="TrimBegin" Type="Real64" Value="0.0974620623715818"/>
-										<Property Name="TrimEnd" Type="Real64" Value="2.40926216593093"/>
+										<Property Name="Volume" Type="Real64">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{5885AFBB-DFBA-4CF6-9151-47EF1106E36C}"/>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
 									</PropertyList>
-									<Language>SFX</Language>
-									<AudioFile>Mosquito Buzz 1.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="736287973"/>
-									</MediaIDList>
-								</AudioFileSource>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Mosquito Buzz 1" ID="{3E1527BE-3C9F-4BEC-B158-0889F15914FE}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0818681323921287"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0545787549280861"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0974620623715818"/>
+												<Property Name="TrimEnd" Type="Real64" Value="2.40926216593093"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Mosquito Buzz 1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="736287973"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Mosquito Buzz 1" ID="{3E1527BE-3C9F-4BEC-B158-0889F15914FE}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Mosquito Buzz 2" ID="{925F2E2E-F13E-4AC5-955B-F00908057574}" ShortID="303851944">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Mosquito Buzz 2" ID="{627D7D3B-4616-4223-AF2B-27873B762BB0}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0779696498972655"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.116954474845898"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0389848249486327"/>
+												<Property Name="TrimEnd" Type="Real64" Value="2.45604395586929"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Mosquito Buzz 2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="401250644"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Mosquito Buzz 2" ID="{627D7D3B-4616-4223-AF2B-27873B762BB0}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Mosquito Buzz 3" ID="{8AF3BDD3-9A21-449A-929A-894A4592EC81}" ShortID="100812462">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Mosquito Buzz 3" ID="{ABADE620-C788-4738-ACC9-A7E0F287CF32}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0762951347854111"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0593406603886533"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0805337533846006"/>
+												<Property Name="TrimEnd" Type="Real64" Value="2.64065933961135"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Mosquito Buzz 3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1040240039"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Mosquito Buzz 3" ID="{ABADE620-C788-4738-ACC9-A7E0F287CF32}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
 							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="Mosquito Buzz 1" ID="{3E1527BE-3C9F-4BEC-B158-0889F15914FE}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="Mosquito Buzz 2" ID="{925F2E2E-F13E-4AC5-955B-F00908057574}" ShortID="303851944">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="Mosquito Buzz 2" ID="{627D7D3B-4616-4223-AF2B-27873B762BB0}">
-									<PropertyList>
-										<Property Name="FadeInDuration" Type="Real64" Value="0.0779696498972655"/>
-										<Property Name="FadeOutDuration" Type="Real64" Value="0.116954474845898"/>
-										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-										<Property Name="TrimBegin" Type="Real64" Value="0.0389848249486327"/>
-										<Property Name="TrimEnd" Type="Real64" Value="2.45604395586929"/>
-									</PropertyList>
-									<Language>SFX</Language>
-									<AudioFile>Mosquito Buzz 2.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="401250644"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="Mosquito Buzz 2" ID="{627D7D3B-4616-4223-AF2B-27873B762BB0}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="Mosquito Buzz 3" ID="{8AF3BDD3-9A21-449A-929A-894A4592EC81}" ShortID="100812462">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="Mosquito Buzz 3" ID="{ABADE620-C788-4738-ACC9-A7E0F287CF32}">
-									<PropertyList>
-										<Property Name="FadeInDuration" Type="Real64" Value="0.0762951347854111"/>
-										<Property Name="FadeOutDuration" Type="Real64" Value="0.0593406603886533"/>
-										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-										<Property Name="TrimBegin" Type="Real64" Value="0.0805337533846006"/>
-										<Property Name="TrimEnd" Type="Real64" Value="2.64065933961135"/>
-									</PropertyList>
-									<Language>SFX</Language>
-									<AudioFile>Mosquito Buzz 3.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="1040240039"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="Mosquito Buzz 3" ID="{ABADE620-C788-4738-ACC9-A7E0F287CF32}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
+							<ObjectLists>
+								<ObjectList Name="RTPC">
+									<RTPC Name="" ID="{EB760C6F-5F4A-4874-93FF-D7FD6B056DEC}" ShortID="1018934394">
+										<PropertyList>
+											<Property Name="PropertyName" Type="string" Value="Volume"/>
+										</PropertyList>
+										<ReferenceList>
+											<Reference Name="ControlInput">
+												<ObjectRef Name="Mosquito_Swarm" ID="{1EFFB97B-C5FC-4079-A91F-A94613729EAE}" WorkUnitID="{4C60F7ED-E134-441E-8642-BA4CFEA074BC}"/>
+											</Reference>
+											<Reference Name="Curve">
+												<Custom>
+													<Curve Name="" ID="{2866CF90-0737-4F07-85A7-220E13DED9E5}">
+														<PropertyList>
+															<Property Name="Flags" Type="int32" Value="3"/>
+														</PropertyList>
+														<PointList>
+															<Point>
+																<XPos>0</XPos>
+																<YPos>-200</YPos>
+																<Flags>5</Flags>
+															</Point>
+															<Point>
+																<XPos>100</XPos>
+																<YPos>0</YPos>
+																<Flags>37</Flags>
+															</Point>
+														</PointList>
+													</Curve>
+												</Custom>
+											</Reference>
+										</ReferenceList>
+									</RTPC>
+								</ObjectList>
+							</ObjectLists>
+						</RandomSequenceContainer>
 					</ChildrenList>
-				</RandomSequenceContainer>
+				</PropertyContainer>
 			</ChildrenList>
 		</WorkUnit>
 	</Containers>

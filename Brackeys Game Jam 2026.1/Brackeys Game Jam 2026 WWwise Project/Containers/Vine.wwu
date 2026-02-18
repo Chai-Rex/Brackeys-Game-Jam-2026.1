@@ -3,10 +3,7 @@
 	<Containers>
 		<WorkUnit Name="Vine" ID="{A80FAC1F-5598-46B4-A396-211E88A88EEF}" OwnerID="{F886C20C-1D2F-45E5-AF2C-0EB7D17032A5}" PersistMode="Nested">
 			<ChildrenList>
-				<BlendContainer Name="Vine Eating" ID="{77EC9096-A8F1-4E95-947E-F39E499051FD}" ShortID="733394258">
-					<PropertyList>
-						<Property Name="BlendBehavior" Type="int16" Value="1"/>
-					</PropertyList>
+				<PropertyContainer Name="Vine Movement" ID="{85844C47-C196-49F9-9AFF-26B7210DAB00}" ShortID="1068309980">
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
@@ -16,13 +13,474 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<RandomSequenceContainer Name="Pulling" ID="{5E086D47-44C6-4E9E-9BCD-1DEF8D2BAEE4}" ShortID="772760465">
+						<BlendContainer Name="Vine Pulling" ID="{77EC9096-A8F1-4E95-947E-F39E499051FD}" ShortID="733394258">
 							<PropertyList>
-								<Property Name="GlobalOrPerObject" Type="int16" Value="0"/>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+								<Property Name="BlendBehavior" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Distant_Attenuation" ID="{F8C4934F-08F6-441F-AC38-92E297D16BBD}" WorkUnitID="{4D1AF88C-570E-4823-A48A-8F0B5156508D}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="Pulling" ID="{5E086D47-44C6-4E9E-9BCD-1DEF8D2BAEE4}" ShortID="772760465">
+									<PropertyList>
+										<Property Name="GlobalOrPerObject" Type="int16" Value="0"/>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{C20672A5-0116-44AD-8018-4955F9FCCE25}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="300"/>
+															<Property Name="Min" Type="Real64" Value="-300"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+										<Property Name="RandomAvoidRepeating" Type="bool" Value="False"/>
+										<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
+										<Property Name="Volume" Type="Real64">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{A7F4AE0C-2BE7-4661-910C-28E8A0A6BB29}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="3"/>
+															<Property Name="Min" Type="Real64" Value="-3"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Vine Pull 1" ID="{BC1481F7-21CB-441B-ABBA-5050EA40A1C9}" ShortID="400991003">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Vine Pull 1" ID="{9869124A-BFCA-4CE1-9487-86B32D89E34D}">
+													<Language>SFX</Language>
+													<AudioFile>Vine Pull 1 .wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="95379733"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Vine Pull 1" ID="{9869124A-BFCA-4CE1-9487-86B32D89E34D}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Vine Pull 2" ID="{DC1E3E30-CB7B-4F22-8EFA-8B9120412B75}" ShortID="590021232">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Vine Pull 2" ID="{D18CD975-2CC4-412F-8A47-0F976D2AA6F7}">
+													<Language>SFX</Language>
+													<AudioFile>Vine Pull 2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="19112778"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Vine Pull 2" ID="{D18CD975-2CC4-412F-8A47-0F976D2AA6F7}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Vine Pull 3" ID="{83AD3732-2421-4FDE-903F-B8AA66EF0E4F}" ShortID="402850352">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Vine Pull 3" ID="{912E7FFB-1DBC-432E-BCBF-9707202F3FD0}">
+													<Language>SFX</Language>
+													<AudioFile>Vine Pull 3.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="482852995"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Vine Pull 3" ID="{912E7FFB-1DBC-432E-BCBF-9707202F3FD0}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<RandomSequenceContainer Name="Mouth Sounds" ID="{E6C59FCA-B21A-470E-8854-E8C99D7E4D07}" ShortID="878271553">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{E848302D-078F-4C28-BAA4-74419D004C04}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="500"/>
+															<Property Name="Min" Type="Real64" Value="-500"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.5"/>
+										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+										<Property Name="Volume" Type="Real64">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{D370006F-D7D7-4EC5-B228-257E9111EAE2}"/>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Vine Eat 1" ID="{40E48031-4F71-4175-84D0-4CC9D3B13A7A}" ShortID="590987501">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Vine Eat 1" ID="{B39C668E-5677-4238-B03C-82FB6BFD31F2}">
+													<Language>SFX</Language>
+													<AudioFile>Vine Eat 1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="393418815"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Vine Eat 1" ID="{B39C668E-5677-4238-B03C-82FB6BFD31F2}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Vine Eat 2" ID="{294DC930-A625-4615-BC1A-BD8C050B7E36}" ShortID="969932806">
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Vine Eat 2" ID="{C17124D9-D325-4787-82F8-F55E70773346}">
+													<Language>SFX</Language>
+													<AudioFile>Vine Eat 2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="543064581"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Vine Eat 2" ID="{C17124D9-D325-4787-82F8-F55E70773346}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Vine Eat 3" ID="{7852127C-3D3A-4249-9CF1-D79D42BEE49F}" ShortID="334538161">
+											<PropertyList>
+												<Property Name="Inclusion" Type="bool">
+													<ValueList>
+														<Value>False</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Vine Eat 3" ID="{1C33EFD4-84E8-4C51-B66A-47B963AC833D}">
+													<Language>SFX</Language>
+													<AudioFile>Vine Eat 3.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="372107856"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Vine Eat 3" ID="{1C33EFD4-84E8-4C51-B66A-47B963AC833D}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Vine Eat 4" ID="{027419D5-913C-4716-9CA8-3230E37A23E5}" ShortID="92192039">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-6</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Vine Eat 4" ID="{9C625D7A-A1CB-4042-ACDB-AE7477CF1FD1}">
+													<Language>SFX</Language>
+													<AudioFile>Vine Eat 4.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="328235011"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Vine Eat 4" ID="{9C625D7A-A1CB-4042-ACDB-AE7477CF1FD1}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+							</ChildrenList>
+							<BlendTrackList>
+								<BlendTrack Name="New Blend Track" ID="{7057261E-F0BD-487F-8F01-9FA5979AC587}" ShortID="361171796">
+									<ReferenceList>
+										<Reference Name="LayerCrossFadeControlInput">
+											<ObjectRef Name="Pull_Tension" ID="{0AA0AA01-C138-4A71-B05D-AB817962BF49}" WorkUnitID="{764C261B-C567-4CE0-B93D-123AD4FC1CB3}"/>
+										</Reference>
+									</ReferenceList>
+									<ObjectLists>
+										<ObjectList Name="RTPC">
+											<RTPC Name="" ID="{D485BE5A-06B8-4946-AB01-CDC766AE8CB9}" ShortID="588226056">
+												<PropertyList>
+													<Property Name="PropertyName" Type="string" Value="Volume"/>
+												</PropertyList>
+												<ReferenceList>
+													<Reference Name="ControlInput">
+														<ObjectRef Name="Pull_Tension" ID="{0AA0AA01-C138-4A71-B05D-AB817962BF49}" WorkUnitID="{764C261B-C567-4CE0-B93D-123AD4FC1CB3}"/>
+													</Reference>
+													<Reference Name="Curve">
+														<Custom>
+															<Curve Name="" ID="{E58B129B-CE26-4797-AAF0-2BFF736C59F6}">
+																<PropertyList>
+																	<Property Name="Flags" Type="int32" Value="3"/>
+																</PropertyList>
+																<PointList>
+																	<Point>
+																		<XPos>0</XPos>
+																		<YPos>-8.51937</YPos>
+																		<Flags>5</Flags>
+																	</Point>
+																	<Point>
+																		<XPos>100</XPos>
+																		<YPos>3.25442</YPos>
+																		<Flags>37</Flags>
+																	</Point>
+																</PointList>
+															</Curve>
+														</Custom>
+													</Reference>
+												</ReferenceList>
+											</RTPC>
+										</ObjectList>
+									</ObjectLists>
+									<BlendTrackAssocList>
+										<BlendTrackAssoc>
+											<ItemRef Name="Mouth Sounds" ID="{E6C59FCA-B21A-470E-8854-E8C99D7E4D07}"/>
+											<CrossfadingInfo>
+												<LeftEdgePos>0</LeftEdgePos>
+												<LeftFadingMode>Automatic</LeftFadingMode>
+												<RightEdgePos>100</RightEdgePos>
+												<RightFadingMode>Automatic</RightFadingMode>
+											</CrossfadingInfo>
+										</BlendTrackAssoc>
+									</BlendTrackAssocList>
+								</BlendTrack>
+							</BlendTrackList>
+						</BlendContainer>
+						<BlendContainer Name="Vine Break" ID="{52C50D5A-CFDF-475C-8C44-C05BDCDC538A}" ShortID="850485175">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Distant_Attenuation" ID="{F8C4934F-08F6-441F-AC38-92E297D16BBD}" WorkUnitID="{4D1AF88C-570E-4823-A48A-8F0B5156508D}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{C0901958-AA0D-4450-9846-B896800D3928}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Vine Snap" ID="{16E8711A-D6E0-4A20-9F0C-67939F38820D}" ShortID="911642665">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Vine Snap" ID="{EEBB2743-B317-42DF-B378-2A5701DC288A}">
+											<Language>SFX</Language>
+											<AudioFile>Vine Snap.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="511758148"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Vine Snap" ID="{EEBB2743-B317-42DF-B378-2A5701DC288A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</BlendContainer>
+						<BlendContainer Name="Vine Capture" ID="{27D0573A-9C9C-4B66-A37B-B986430C829F}" ShortID="618654940">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Distant_Attenuation" ID="{F8C4934F-08F6-441F-AC38-92E297D16BBD}" WorkUnitID="{4D1AF88C-570E-4823-A48A-8F0B5156508D}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Vine Capture" ID="{95AF01CD-997D-4230-AD05-E6A799470BFD}" ShortID="705407591">
+									<PropertyList>
+										<Property Name="InitialDelay" Type="Real64">
+											<ValueList>
+												<Value>0.2</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Vine Capture" ID="{50CCF01E-F729-476D-BF7A-55BB94DDAD5C}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0682888520381514"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0758765022646127"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0652537919475669"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.402145489817948"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Vine Capture.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="36096113"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Vine Capture" ID="{50CCF01E-F729-476D-BF7A-55BB94DDAD5C}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="VIne Open" ID="{98E0E81A-F149-40C0-BB5F-3D9EBFCEBFC2}" ShortID="962275434">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="VIne Open" ID="{96DE46C4-FD76-4A47-A8AB-433306170EFC}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.178335952421934"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0879120892220799"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.251177397777372"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.26844583493387"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>VIne Open.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="996710276"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="VIne Open" ID="{96DE46C4-FD76-4A47-A8AB-433306170EFC}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<BlendTrackList>
+								<BlendTrack Name="New Blend Track" ID="{A3FAA7D3-EB8B-4F3A-988B-9221C07947E8}" ShortID="1052365374">
+									<BlendTrackAssocList>
+										<BlendTrackAssoc>
+											<ItemRef Name="VIne Open" ID="{98E0E81A-F149-40C0-BB5F-3D9EBFCEBFC2}"/>
+										</BlendTrackAssoc>
+										<BlendTrackAssoc>
+											<ItemRef Name="Vine Capture" ID="{95AF01CD-997D-4230-AD05-E6A799470BFD}"/>
+										</BlendTrackAssoc>
+									</BlendTrackAssocList>
+								</BlendTrack>
+							</BlendTrackList>
+						</BlendContainer>
+						<RandomSequenceContainer Name="Vine Hit" ID="{24142604-1423-4E57-8758-F81E8EC668F0}" ShortID="243426325">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
 								<Property Name="Pitch" Type="int32">
 									<ModifierList>
 										<ModifierInfo>
-											<Modifier Name="" ID="{C20672A5-0116-44AD-8018-4955F9FCCE25}">
+											<Modifier Name="" ID="{627D306F-8B8A-4A15-9E20-BF2CB1AB8168}">
 												<PropertyList>
 													<Property Name="Enabled" Type="bool" Value="True"/>
 													<Property Name="Max" Type="Real64" Value="300"/>
@@ -32,19 +490,14 @@
 										</ModifierInfo>
 									</ModifierList>
 								</Property>
-								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
-								<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
-								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
-								<Property Name="RandomAvoidRepeating" Type="bool" Value="False"/>
-								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
 								<Property Name="Volume" Type="Real64">
 									<ModifierList>
 										<ModifierInfo>
-											<Modifier Name="" ID="{A7F4AE0C-2BE7-4661-910C-28E8A0A6BB29}">
+											<Modifier Name="" ID="{03C6592B-91CF-46E1-9B5F-3AFB03E14D54}">
 												<PropertyList>
 													<Property Name="Enabled" Type="bool" Value="True"/>
-													<Property Name="Max" Type="Real64" Value="3"/>
-													<Property Name="Min" Type="Real64" Value="-3"/>
+													<Property Name="Max" Type="Real64" Value="2"/>
+													<Property Name="Min" Type="Real64" Value="-2"/>
 												</PropertyList>
 											</Modifier>
 										</ModifierInfo>
@@ -52,15 +505,18 @@
 								</Property>
 							</PropertyList>
 							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Distant_Attenuation" ID="{F8C4934F-08F6-441F-AC38-92E297D16BBD}" WorkUnitID="{4D1AF88C-570E-4823-A48A-8F0B5156508D}"/>
+								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+									<ObjectRef Name="SFX" ID="{C0901958-AA0D-4450-9846-B896800D3928}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<Sound Name="Vine Pull 1" ID="{BC1481F7-21CB-441B-ABBA-5050EA40A1C9}" ShortID="400991003">
+								<Sound Name="Vine Hit 1" ID="{C04FDAA6-1547-4AD3-AEA6-B53BE60A50E5}" ShortID="283893856">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
@@ -70,19 +526,19 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Vine Pull 1" ID="{9869124A-BFCA-4CE1-9487-86B32D89E34D}">
+										<AudioFileSource Name="Vine Hit 1" ID="{1DB38FC2-42EE-45F4-9B4E-8C3639BBDED7}">
 											<Language>SFX</Language>
-											<AudioFile>Vine Pull 1 .wav</AudioFile>
+											<AudioFile>Vine Hit 1.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="95379733"/>
+												<MediaID ID="679536967"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Vine Pull 1" ID="{9869124A-BFCA-4CE1-9487-86B32D89E34D}" Platform="Linked"/>
+										<ActiveSource Name="Vine Hit 1" ID="{1DB38FC2-42EE-45F4-9B4E-8C3639BBDED7}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="Vine Pull 2" ID="{DC1E3E30-CB7B-4F22-8EFA-8B9120412B75}" ShortID="590021232">
+								<Sound Name="Vine Hit 2" ID="{48A8117F-3502-4317-BCED-5C7EC4D4954C}" ShortID="265861318">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
@@ -92,19 +548,19 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Vine Pull 2" ID="{D18CD975-2CC4-412F-8A47-0F976D2AA6F7}">
+										<AudioFileSource Name="Vine Hit 2" ID="{109691E2-3639-4B25-A71C-071F9438A2E9}">
 											<Language>SFX</Language>
-											<AudioFile>Vine Pull 2.wav</AudioFile>
+											<AudioFile>Vine Hit 2.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="19112778"/>
+												<MediaID ID="142764419"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Vine Pull 2" ID="{D18CD975-2CC4-412F-8A47-0F976D2AA6F7}" Platform="Linked"/>
+										<ActiveSource Name="Vine Hit 2" ID="{109691E2-3639-4B25-A71C-071F9438A2E9}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
-								<Sound Name="Vine Pull 3" ID="{83AD3732-2421-4FDE-903F-B8AA66EF0E4F}" ShortID="402850352">
+								<Sound Name="Vine Hit 3" ID="{3B356443-EB76-4444-A88E-5DCA5C14D9C1}" ShortID="14818257">
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
@@ -114,47 +570,21 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Vine Pull 3" ID="{912E7FFB-1DBC-432E-BCBF-9707202F3FD0}">
+										<AudioFileSource Name="Vine Hit 3" ID="{74999512-F46F-4B53-B1C1-6E06D002ACB3}">
 											<Language>SFX</Language>
-											<AudioFile>Vine Pull 3.wav</AudioFile>
+											<AudioFile>Vine Hit 3.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="482852995"/>
+												<MediaID ID="1073382980"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Vine Pull 3" ID="{912E7FFB-1DBC-432E-BCBF-9707202F3FD0}" Platform="Linked"/>
+										<ActiveSource Name="Vine Hit 3" ID="{74999512-F46F-4B53-B1C1-6E06D002ACB3}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
 						</RandomSequenceContainer>
-						<RandomSequenceContainer Name="Mouth Sounds" ID="{E6C59FCA-B21A-470E-8854-E8C99D7E4D07}" ShortID="878271553">
-							<PropertyList>
-								<Property Name="Pitch" Type="int32">
-									<ModifierList>
-										<ModifierInfo>
-											<Modifier Name="" ID="{E848302D-078F-4C28-BAA4-74419D004C04}">
-												<PropertyList>
-													<Property Name="Enabled" Type="bool" Value="True"/>
-													<Property Name="Max" Type="Real64" Value="500"/>
-													<Property Name="Min" Type="Real64" Value="-500"/>
-												</PropertyList>
-											</Modifier>
-										</ModifierInfo>
-									</ModifierList>
-								</Property>
-								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
-								<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
-								<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.5"/>
-								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
-								<Property Name="Volume" Type="Real64">
-									<ModifierList>
-										<ModifierInfo>
-											<Modifier Name="" ID="{D370006F-D7D7-4EC5-B228-257E9111EAE2}"/>
-										</ModifierInfo>
-									</ModifierList>
-								</Property>
-							</PropertyList>
+						<BlendContainer Name="Floor Vine" ID="{ED1A9A84-4861-4D32-A52E-8CDC9DFF2100}" ShortID="591757954">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
@@ -164,88 +594,268 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<Sound Name="Vine Eat 1" ID="{40E48031-4F71-4175-84D0-4CC9D3B13A7A}" ShortID="590987501">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Vine Eat 1" ID="{B39C668E-5677-4238-B03C-82FB6BFD31F2}">
-											<Language>SFX</Language>
-											<AudioFile>Vine Eat 1.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="393418815"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Vine Eat 1" ID="{B39C668E-5677-4238-B03C-82FB6BFD31F2}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="Vine Eat 2" ID="{294DC930-A625-4615-BC1A-BD8C050B7E36}" ShortID="969932806">
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Vine Eat 2" ID="{C17124D9-D325-4787-82F8-F55E70773346}">
-											<Language>SFX</Language>
-											<AudioFile>Vine Eat 2.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="543064581"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Vine Eat 2" ID="{C17124D9-D325-4787-82F8-F55E70773346}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="Vine Eat 3" ID="{7852127C-3D3A-4249-9CF1-D79D42BEE49F}" ShortID="334538161">
+								<Sound Name="Vine Eating_01" ID="{F037DB74-4829-4C07-BF92-585DC29B5DD0}" ShortID="930646194">
 									<PropertyList>
+										<Property Name="InitialDelay" Type="Real64">
+											<ValueList>
+												<Value>0.5</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Vine Eating" ID="{715A148E-F72D-4F14-A714-E33747B625E7}">
+											<Language>SFX</Language>
+											<AudioFile>Vine Eating .wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="545669700"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Vine Eating" ID="{715A148E-F72D-4F14-A714-E33747B625E7}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Vine Snap" ID="{C8445AB4-DDF1-4558-A6C7-6EE9D7E547D0}" ShortID="707993480">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Vine Snap" ID="{3AB9E408-3962-4E6B-B830-105B6961029E}">
+											<Language>SFX</Language>
+											<AudioFile>Vine Snap.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="511758148"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Vine Snap" ID="{3AB9E408-3962-4E6B-B830-105B6961029E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<BlendTrackList>
+								<BlendTrack Name="New Blend Track" ID="{4531C9E7-C9CB-4B26-A026-83C88F0B9914}" ShortID="574880631">
+									<BlendTrackAssocList>
+										<BlendTrackAssoc>
+											<ItemRef Name="Vine Snap" ID="{C8445AB4-DDF1-4558-A6C7-6EE9D7E547D0}"/>
+										</BlendTrackAssoc>
+										<BlendTrackAssoc>
+											<ItemRef Name="Vine Eating_01" ID="{F037DB74-4829-4C07-BF92-585DC29B5DD0}"/>
+											<CrossfadingInfo>
+												<LeftEdgePos>0</LeftEdgePos>
+												<LeftFadingMode>Automatic</LeftFadingMode>
+												<RightEdgePos>0</RightEdgePos>
+												<RightFadingMode>Automatic</RightFadingMode>
+											</CrossfadingInfo>
+										</BlendTrackAssoc>
+									</BlendTrackAssocList>
+								</BlendTrack>
+							</BlendTrackList>
+						</BlendContainer>
+						<BlendContainer Name="Vine Eating" ID="{1CD35A9E-9B36-46B9-8096-0E565065CEBB}" ShortID="356066807">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Distant_Attenuation" ID="{F8C4934F-08F6-441F-AC38-92E297D16BBD}" WorkUnitID="{4D1AF88C-570E-4823-A48A-8F0B5156508D}"/>
+								</Reference>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<RandomSequenceContainer Name="Vine Hiding" ID="{F9A0CDF9-DFBC-4F17-AFB6-7F5D5C64D46B}" ShortID="187364007">
+									<PropertyList>
+										<Property Name="3DSpatialization" Type="int16" Value="1"/>
 										<Property Name="Inclusion" Type="bool">
 											<ValueList>
 												<Value>False</Value>
 											</ValueList>
 										</Property>
-									</PropertyList>
-									<ReferenceList>
-										<Reference Name="Conversion">
-											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
-										</Reference>
-										<Reference Name="OutputBus">
-											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
-										</Reference>
-									</ReferenceList>
-									<ChildrenList>
-										<AudioFileSource Name="Vine Eat 3" ID="{1C33EFD4-84E8-4C51-B66A-47B963AC833D}">
-											<Language>SFX</Language>
-											<AudioFile>Vine Eat 3.wav</AudioFile>
-											<MediaIDList>
-												<MediaID ID="372107856"/>
-											</MediaIDList>
-										</AudioFileSource>
-									</ChildrenList>
-									<ActiveSourceList>
-										<ActiveSource Name="Vine Eat 3" ID="{1C33EFD4-84E8-4C51-B66A-47B963AC833D}" Platform="Linked"/>
-									</ActiveSourceList>
-								</Sound>
-								<Sound Name="Vine Eat 4" ID="{027419D5-913C-4716-9CA8-3230E37A23E5}" ShortID="92192039">
-									<PropertyList>
+										<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+										<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="2"/>
+										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-6</Value>
+												<Value>-12</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
 									<ReferenceList>
+										<Reference Name="Attenuation">
+											<ObjectRef Name="Distant_Attenuation" ID="{F8C4934F-08F6-441F-AC38-92E297D16BBD}" WorkUnitID="{4D1AF88C-570E-4823-A48A-8F0B5156508D}"/>
+										</Reference>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="SFX" ID="{C0901958-AA0D-4450-9846-B896800D3928}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Vegetation" ID="{A7C22520-002F-4A29-B28D-429188842F65}" ShortID="50964760">
+											<PropertyList>
+												<Property Name="Soundly:ActiveChannels" Type="string" Value="[]"/>
+												<Property Name="Soundly:FileID" Type="string" Value="SND133890"/>
+												<Property Name="Soundly:FileName" Type="string" Value="/var/folders/xp/g_qlryt92qs2ydl8vr73yp9m0000gn/T/tmp_lm1hbsc/afcache/1426367345Ff4sxqvM_wkFwGSND133890sfy.sfy"/>
+												<Property Name="Soundly:HandleStartTime" Type="string" Value="0"/>
+												<Property Name="Soundly:HandleStopTime" Type="string" Value="16.63053125"/>
+												<Property Name="Soundly:LibraryID" Type="string" Value="1426367345Ff4sxqvM_wkFwG"/>
+												<Property Name="Soundly:LibraryLocation" Type="string" Value="Cloud"/>
+												<Property Name="Soundly:PlaybackSpeed" Type="string" Value="1.0"/>
+												<Property Name="Soundly:ProcessList" Type="string" Value="[]"/>
+												<Property Name="Soundly:RenderedFileBitRate" Type="string" Value="3"/>
+												<Property Name="Soundly:RenderedFilePath" Type="string" Value="/Users/stephenlunn/Documents/Soundly Audio/Vegetation, Misc, Plant, Vines, Growing, Movement, Creaks, Rubbery Vines SND133890 1.wav"/>
+												<Property Name="Soundly:RenderedFileSampleRate" Type="string" Value="96000"/>
+												<Property Name="Soundly:SelectionStartTime" Type="string" Value="0"/>
+												<Property Name="Soundly:SelectionStopTime" Type="string" Value="0"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Vegetation, Misc, Plant, Vines, Growing, Movement, Creaks, Rubbery Vines SND133890 1" ID="{E90322FF-3CBD-4477-9C2B-149A440F7D7D}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.259852051734924"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.285837256908417"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="Soundly:FileIDForAudioSource" Type="string" Value="SND133890"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.155911231040955"/>
+														<Property Name="TrimEnd" Type="Real64" Value="6.05455274438858"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Soundly Audio\Vegetation, Misc, Plant, Vines, Growing, Movement, Creaks, Rubbery Vines SND133890 1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="653262788"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Vegetation, Misc, Plant, Vines, Growing, Movement, Creaks, Rubbery Vines SND133890 1" ID="{E90322FF-3CBD-4477-9C2B-149A440F7D7D}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Vegetation_01" ID="{68552BED-05A9-4B32-A298-65687EF5DA74}" ShortID="268698647">
+											<PropertyList>
+												<Property Name="Soundly:ActiveChannels" Type="string" Value="[]"/>
+												<Property Name="Soundly:FileID" Type="string" Value="SND133890"/>
+												<Property Name="Soundly:FileName" Type="string" Value="/var/folders/xp/g_qlryt92qs2ydl8vr73yp9m0000gn/T/tmp_lm1hbsc/afcache/1426367345Ff4sxqvM_wkFwGSND133890sfy.sfy"/>
+												<Property Name="Soundly:HandleStartTime" Type="string" Value="0"/>
+												<Property Name="Soundly:HandleStopTime" Type="string" Value="16.63053125"/>
+												<Property Name="Soundly:LibraryID" Type="string" Value="1426367345Ff4sxqvM_wkFwG"/>
+												<Property Name="Soundly:LibraryLocation" Type="string" Value="Cloud"/>
+												<Property Name="Soundly:PlaybackSpeed" Type="string" Value="1.0"/>
+												<Property Name="Soundly:ProcessList" Type="string" Value="[]"/>
+												<Property Name="Soundly:RenderedFileBitRate" Type="string" Value="3"/>
+												<Property Name="Soundly:RenderedFilePath" Type="string" Value="/Users/stephenlunn/Documents/Soundly Audio/Vegetation, Misc, Plant, Vines, Growing, Movement, Creaks, Rubbery Vines SND133890 1.wav"/>
+												<Property Name="Soundly:RenderedFileSampleRate" Type="string" Value="96000"/>
+												<Property Name="Soundly:SelectionStartTime" Type="string" Value="0"/>
+												<Property Name="Soundly:SelectionStopTime" Type="string" Value="0"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Vegetation, Misc, Plant, Vines, Growing, Movement, Creaks, Rubbery Vines SND133890 1" ID="{4011DBF8-260E-4823-87EF-60ABBF25944C}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.207881641387939"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.181896436214446"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="Soundly:FileIDForAudioSource" Type="string" Value="SND133890"/>
+														<Property Name="TrimBegin" Type="Real64" Value="3.71588433980942"/>
+														<Property Name="TrimEnd" Type="Real64" Value="9.66649626350403"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Soundly Audio\Vegetation, Misc, Plant, Vines, Growing, Movement, Creaks, Rubbery Vines SND133890 1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="370205602"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Vegetation, Misc, Plant, Vines, Growing, Movement, Creaks, Rubbery Vines SND133890 1" ID="{4011DBF8-260E-4823-87EF-60ABBF25944C}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="Vegetation_02" ID="{6387270A-0683-4C8A-941E-D7D2EED0F756}" ShortID="95390783">
+											<PropertyList>
+												<Property Name="Soundly:ActiveChannels" Type="string" Value="[]"/>
+												<Property Name="Soundly:FileID" Type="string" Value="SND133890"/>
+												<Property Name="Soundly:FileName" Type="string" Value="/var/folders/xp/g_qlryt92qs2ydl8vr73yp9m0000gn/T/tmp_lm1hbsc/afcache/1426367345Ff4sxqvM_wkFwGSND133890sfy.sfy"/>
+												<Property Name="Soundly:HandleStartTime" Type="string" Value="0"/>
+												<Property Name="Soundly:HandleStopTime" Type="string" Value="16.63053125"/>
+												<Property Name="Soundly:LibraryID" Type="string" Value="1426367345Ff4sxqvM_wkFwG"/>
+												<Property Name="Soundly:LibraryLocation" Type="string" Value="Cloud"/>
+												<Property Name="Soundly:PlaybackSpeed" Type="string" Value="1.0"/>
+												<Property Name="Soundly:ProcessList" Type="string" Value="[]"/>
+												<Property Name="Soundly:RenderedFileBitRate" Type="string" Value="3"/>
+												<Property Name="Soundly:RenderedFilePath" Type="string" Value="/Users/stephenlunn/Documents/Soundly Audio/Vegetation, Misc, Plant, Vines, Growing, Movement, Creaks, Rubbery Vines SND133890 1.wav"/>
+												<Property Name="Soundly:RenderedFileSampleRate" Type="string" Value="96000"/>
+												<Property Name="Soundly:SelectionStartTime" Type="string" Value="0"/>
+												<Property Name="Soundly:SelectionStopTime" Type="string" Value="0"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Vegetation, Misc, Plant, Vines, Growing, Movement, Creaks, Rubbery Vines SND133890 1" ID="{06F3B4E2-B14C-42EF-AE5E-953DF03AC5D4}">
+													<PropertyList>
+														<Property Name="FadeInDuration" Type="Real64" Value="0.233866846561432"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.233866846561432"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="Soundly:FileIDForAudioSource" Type="string" Value="SND133890"/>
+														<Property Name="TrimBegin" Type="Real64" Value="9.14679222106933"/>
+														<Property Name="TrimEnd" Type="Real64" Value="14.4217888102531"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Soundly Audio\Vegetation, Misc, Plant, Vines, Growing, Movement, Creaks, Rubbery Vines SND133890 1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="126584430"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Vegetation, Misc, Plant, Vines, Growing, Movement, Creaks, Rubbery Vines SND133890 1" ID="{06F3B4E2-B14C-42EF-AE5E-953DF03AC5D4}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<Sound Name="Vine Eating" ID="{8EE133DB-0E3B-47FE-AFF5-26B28D9CA8E1}" ShortID="825582065">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
 										</Reference>
@@ -254,453 +864,27 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Vine Eat 4" ID="{9C625D7A-A1CB-4042-ACDB-AE7477CF1FD1}">
+										<AudioFileSource Name="Vine Eating" ID="{78882A41-E363-4B27-BA5A-D6B13B405F1F}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.656070099146437"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.463108305279838"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+											</PropertyList>
 											<Language>SFX</Language>
-											<AudioFile>Vine Eat 4.wav</AudioFile>
+											<AudioFile>Vine Eating .wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="328235011"/>
+												<MediaID ID="29898209"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Vine Eat 4" ID="{9C625D7A-A1CB-4042-ACDB-AE7477CF1FD1}" Platform="Linked"/>
+										<ActiveSource Name="Vine Eating" ID="{78882A41-E363-4B27-BA5A-D6B13B405F1F}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
-						</RandomSequenceContainer>
+						</BlendContainer>
 					</ChildrenList>
-					<BlendTrackList>
-						<BlendTrack Name="New Blend Track" ID="{7057261E-F0BD-487F-8F01-9FA5979AC587}" ShortID="361171796">
-							<ReferenceList>
-								<Reference Name="LayerCrossFadeControlInput">
-									<ObjectRef Name="Pull_Tension" ID="{0AA0AA01-C138-4A71-B05D-AB817962BF49}" WorkUnitID="{764C261B-C567-4CE0-B93D-123AD4FC1CB3}"/>
-								</Reference>
-							</ReferenceList>
-							<ObjectLists>
-								<ObjectList Name="RTPC">
-									<RTPC Name="" ID="{D485BE5A-06B8-4946-AB01-CDC766AE8CB9}" ShortID="588226056">
-										<PropertyList>
-											<Property Name="PropertyName" Type="string" Value="Volume"/>
-										</PropertyList>
-										<ReferenceList>
-											<Reference Name="ControlInput">
-												<ObjectRef Name="Pull_Tension" ID="{0AA0AA01-C138-4A71-B05D-AB817962BF49}" WorkUnitID="{764C261B-C567-4CE0-B93D-123AD4FC1CB3}"/>
-											</Reference>
-											<Reference Name="Curve">
-												<Custom>
-													<Curve Name="" ID="{E58B129B-CE26-4797-AAF0-2BFF736C59F6}">
-														<PropertyList>
-															<Property Name="Flags" Type="int32" Value="3"/>
-														</PropertyList>
-														<PointList>
-															<Point>
-																<XPos>0</XPos>
-																<YPos>-8.51937</YPos>
-																<Flags>5</Flags>
-															</Point>
-															<Point>
-																<XPos>100</XPos>
-																<YPos>3.25442</YPos>
-																<Flags>37</Flags>
-															</Point>
-														</PointList>
-													</Curve>
-												</Custom>
-											</Reference>
-										</ReferenceList>
-									</RTPC>
-								</ObjectList>
-							</ObjectLists>
-							<BlendTrackAssocList>
-								<BlendTrackAssoc>
-									<ItemRef Name="Mouth Sounds" ID="{E6C59FCA-B21A-470E-8854-E8C99D7E4D07}"/>
-									<CrossfadingInfo>
-										<LeftEdgePos>0</LeftEdgePos>
-										<LeftFadingMode>Automatic</LeftFadingMode>
-										<RightEdgePos>100</RightEdgePos>
-										<RightFadingMode>Automatic</RightFadingMode>
-									</CrossfadingInfo>
-								</BlendTrackAssoc>
-							</BlendTrackAssocList>
-						</BlendTrack>
-					</BlendTrackList>
-				</BlendContainer>
-				<BlendContainer Name="Vine Snap" ID="{52C50D5A-CFDF-475C-8C44-C05BDCDC538A}" ShortID="850485175">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="SFX" ID="{C0901958-AA0D-4450-9846-B896800D3928}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<Sound Name="Vine Snap" ID="{16E8711A-D6E0-4A20-9F0C-67939F38820D}" ShortID="911642665">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="Vine Snap" ID="{EEBB2743-B317-42DF-B378-2A5701DC288A}">
-									<Language>SFX</Language>
-									<AudioFile>Vine Snap.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="511758148"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="Vine Snap" ID="{EEBB2743-B317-42DF-B378-2A5701DC288A}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-					</ChildrenList>
-				</BlendContainer>
-				<BlendContainer Name="Vine Capture" ID="{27D0573A-9C9C-4B66-A37B-B986430C829F}" ShortID="618654940">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="SFX" ID="{C0901958-AA0D-4450-9846-B896800D3928}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<Sound Name="Vine Capture" ID="{95AF01CD-997D-4230-AD05-E6A799470BFD}" ShortID="705407591">
-							<PropertyList>
-								<Property Name="InitialDelay" Type="Real64">
-									<ValueList>
-										<Value>0.5</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="Vine Capture" ID="{50CCF01E-F729-476D-BF7A-55BB94DDAD5C}">
-									<Language>SFX</Language>
-									<AudioFile>Vine Capture.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="36096113"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="Vine Capture" ID="{50CCF01E-F729-476D-BF7A-55BB94DDAD5C}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="VIne Open" ID="{98E0E81A-F149-40C0-BB5F-3D9EBFCEBFC2}" ShortID="962275434">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="VIne Open" ID="{96DE46C4-FD76-4A47-A8AB-433306170EFC}">
-									<Language>SFX</Language>
-									<AudioFile>VIne Open.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="996710276"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="VIne Open" ID="{96DE46C4-FD76-4A47-A8AB-433306170EFC}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-					</ChildrenList>
-					<BlendTrackList>
-						<BlendTrack Name="New Blend Track" ID="{A3FAA7D3-EB8B-4F3A-988B-9221C07947E8}" ShortID="1052365374">
-							<BlendTrackAssocList>
-								<BlendTrackAssoc>
-									<ItemRef Name="VIne Open" ID="{98E0E81A-F149-40C0-BB5F-3D9EBFCEBFC2}"/>
-								</BlendTrackAssoc>
-								<BlendTrackAssoc>
-									<ItemRef Name="Vine Capture" ID="{95AF01CD-997D-4230-AD05-E6A799470BFD}"/>
-								</BlendTrackAssoc>
-							</BlendTrackAssocList>
-						</BlendTrack>
-					</BlendTrackList>
-				</BlendContainer>
-				<RandomSequenceContainer Name="Vine Hiding" ID="{F9A0CDF9-DFBC-4F17-AFB6-7F5D5C64D46B}" ShortID="187364007">
-					<PropertyList>
-						<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
-						<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
-						<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="2"/>
-						<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
-						<Property Name="Volume" Type="Real64">
-							<ValueList>
-								<Value>-12</Value>
-							</ValueList>
-						</Property>
-					</PropertyList>
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="SFX" ID="{C0901958-AA0D-4450-9846-B896800D3928}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<Sound Name="Vegetation" ID="{A7C22520-002F-4A29-B28D-429188842F65}" ShortID="50964760">
-							<PropertyList>
-								<Property Name="Soundly:ActiveChannels" Type="string" Value="[]"/>
-								<Property Name="Soundly:FileID" Type="string" Value="SND133890"/>
-								<Property Name="Soundly:FileName" Type="string" Value="/var/folders/xp/g_qlryt92qs2ydl8vr73yp9m0000gn/T/tmp_lm1hbsc/afcache/1426367345Ff4sxqvM_wkFwGSND133890sfy.sfy"/>
-								<Property Name="Soundly:HandleStartTime" Type="string" Value="0"/>
-								<Property Name="Soundly:HandleStopTime" Type="string" Value="16.63053125"/>
-								<Property Name="Soundly:LibraryID" Type="string" Value="1426367345Ff4sxqvM_wkFwG"/>
-								<Property Name="Soundly:LibraryLocation" Type="string" Value="Cloud"/>
-								<Property Name="Soundly:PlaybackSpeed" Type="string" Value="1.0"/>
-								<Property Name="Soundly:ProcessList" Type="string" Value="[]"/>
-								<Property Name="Soundly:RenderedFileBitRate" Type="string" Value="3"/>
-								<Property Name="Soundly:RenderedFilePath" Type="string" Value="/Users/stephenlunn/Documents/Soundly Audio/Vegetation, Misc, Plant, Vines, Growing, Movement, Creaks, Rubbery Vines SND133890 1.wav"/>
-								<Property Name="Soundly:RenderedFileSampleRate" Type="string" Value="96000"/>
-								<Property Name="Soundly:SelectionStartTime" Type="string" Value="0"/>
-								<Property Name="Soundly:SelectionStopTime" Type="string" Value="0"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="Vegetation, Misc, Plant, Vines, Growing, Movement, Creaks, Rubbery Vines SND133890 1" ID="{E90322FF-3CBD-4477-9C2B-149A440F7D7D}">
-									<PropertyList>
-										<Property Name="FadeInDuration" Type="Real64" Value="0.259852051734924"/>
-										<Property Name="FadeOutDuration" Type="Real64" Value="0.285837256908417"/>
-										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-										<Property Name="Soundly:FileIDForAudioSource" Type="string" Value="SND133890"/>
-										<Property Name="TrimBegin" Type="Real64" Value="0.155911231040955"/>
-										<Property Name="TrimEnd" Type="Real64" Value="6.05455274438858"/>
-									</PropertyList>
-									<Language>SFX</Language>
-									<AudioFile>Soundly Audio\Vegetation, Misc, Plant, Vines, Growing, Movement, Creaks, Rubbery Vines SND133890 1.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="653262788"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="Vegetation, Misc, Plant, Vines, Growing, Movement, Creaks, Rubbery Vines SND133890 1" ID="{E90322FF-3CBD-4477-9C2B-149A440F7D7D}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="Vegetation_01" ID="{68552BED-05A9-4B32-A298-65687EF5DA74}" ShortID="268698647">
-							<PropertyList>
-								<Property Name="Soundly:ActiveChannels" Type="string" Value="[]"/>
-								<Property Name="Soundly:FileID" Type="string" Value="SND133890"/>
-								<Property Name="Soundly:FileName" Type="string" Value="/var/folders/xp/g_qlryt92qs2ydl8vr73yp9m0000gn/T/tmp_lm1hbsc/afcache/1426367345Ff4sxqvM_wkFwGSND133890sfy.sfy"/>
-								<Property Name="Soundly:HandleStartTime" Type="string" Value="0"/>
-								<Property Name="Soundly:HandleStopTime" Type="string" Value="16.63053125"/>
-								<Property Name="Soundly:LibraryID" Type="string" Value="1426367345Ff4sxqvM_wkFwG"/>
-								<Property Name="Soundly:LibraryLocation" Type="string" Value="Cloud"/>
-								<Property Name="Soundly:PlaybackSpeed" Type="string" Value="1.0"/>
-								<Property Name="Soundly:ProcessList" Type="string" Value="[]"/>
-								<Property Name="Soundly:RenderedFileBitRate" Type="string" Value="3"/>
-								<Property Name="Soundly:RenderedFilePath" Type="string" Value="/Users/stephenlunn/Documents/Soundly Audio/Vegetation, Misc, Plant, Vines, Growing, Movement, Creaks, Rubbery Vines SND133890 1.wav"/>
-								<Property Name="Soundly:RenderedFileSampleRate" Type="string" Value="96000"/>
-								<Property Name="Soundly:SelectionStartTime" Type="string" Value="0"/>
-								<Property Name="Soundly:SelectionStopTime" Type="string" Value="0"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="Vegetation, Misc, Plant, Vines, Growing, Movement, Creaks, Rubbery Vines SND133890 1" ID="{4011DBF8-260E-4823-87EF-60ABBF25944C}">
-									<PropertyList>
-										<Property Name="FadeInDuration" Type="Real64" Value="0.207881641387939"/>
-										<Property Name="FadeOutDuration" Type="Real64" Value="0.181896436214446"/>
-										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-										<Property Name="Soundly:FileIDForAudioSource" Type="string" Value="SND133890"/>
-										<Property Name="TrimBegin" Type="Real64" Value="3.71588433980942"/>
-										<Property Name="TrimEnd" Type="Real64" Value="9.66649626350403"/>
-									</PropertyList>
-									<Language>SFX</Language>
-									<AudioFile>Soundly Audio\Vegetation, Misc, Plant, Vines, Growing, Movement, Creaks, Rubbery Vines SND133890 1.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="370205602"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="Vegetation, Misc, Plant, Vines, Growing, Movement, Creaks, Rubbery Vines SND133890 1" ID="{4011DBF8-260E-4823-87EF-60ABBF25944C}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="Vegetation_02" ID="{6387270A-0683-4C8A-941E-D7D2EED0F756}" ShortID="95390783">
-							<PropertyList>
-								<Property Name="Soundly:ActiveChannels" Type="string" Value="[]"/>
-								<Property Name="Soundly:FileID" Type="string" Value="SND133890"/>
-								<Property Name="Soundly:FileName" Type="string" Value="/var/folders/xp/g_qlryt92qs2ydl8vr73yp9m0000gn/T/tmp_lm1hbsc/afcache/1426367345Ff4sxqvM_wkFwGSND133890sfy.sfy"/>
-								<Property Name="Soundly:HandleStartTime" Type="string" Value="0"/>
-								<Property Name="Soundly:HandleStopTime" Type="string" Value="16.63053125"/>
-								<Property Name="Soundly:LibraryID" Type="string" Value="1426367345Ff4sxqvM_wkFwG"/>
-								<Property Name="Soundly:LibraryLocation" Type="string" Value="Cloud"/>
-								<Property Name="Soundly:PlaybackSpeed" Type="string" Value="1.0"/>
-								<Property Name="Soundly:ProcessList" Type="string" Value="[]"/>
-								<Property Name="Soundly:RenderedFileBitRate" Type="string" Value="3"/>
-								<Property Name="Soundly:RenderedFilePath" Type="string" Value="/Users/stephenlunn/Documents/Soundly Audio/Vegetation, Misc, Plant, Vines, Growing, Movement, Creaks, Rubbery Vines SND133890 1.wav"/>
-								<Property Name="Soundly:RenderedFileSampleRate" Type="string" Value="96000"/>
-								<Property Name="Soundly:SelectionStartTime" Type="string" Value="0"/>
-								<Property Name="Soundly:SelectionStopTime" Type="string" Value="0"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="Vegetation, Misc, Plant, Vines, Growing, Movement, Creaks, Rubbery Vines SND133890 1" ID="{06F3B4E2-B14C-42EF-AE5E-953DF03AC5D4}">
-									<PropertyList>
-										<Property Name="FadeInDuration" Type="Real64" Value="0.233866846561432"/>
-										<Property Name="FadeOutDuration" Type="Real64" Value="0.233866846561432"/>
-										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-										<Property Name="Soundly:FileIDForAudioSource" Type="string" Value="SND133890"/>
-										<Property Name="TrimBegin" Type="Real64" Value="9.14679222106933"/>
-										<Property Name="TrimEnd" Type="Real64" Value="14.4217888102531"/>
-									</PropertyList>
-									<Language>SFX</Language>
-									<AudioFile>Soundly Audio\Vegetation, Misc, Plant, Vines, Growing, Movement, Creaks, Rubbery Vines SND133890 1.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="126584430"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="Vegetation, Misc, Plant, Vines, Growing, Movement, Creaks, Rubbery Vines SND133890 1" ID="{06F3B4E2-B14C-42EF-AE5E-953DF03AC5D4}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-					</ChildrenList>
-				</RandomSequenceContainer>
-				<RandomSequenceContainer Name="Vine Hit" ID="{24142604-1423-4E57-8758-F81E8EC668F0}" ShortID="243426325">
-					<PropertyList>
-						<Property Name="Pitch" Type="int32">
-							<ModifierList>
-								<ModifierInfo>
-									<Modifier Name="" ID="{627D306F-8B8A-4A15-9E20-BF2CB1AB8168}">
-										<PropertyList>
-											<Property Name="Enabled" Type="bool" Value="True"/>
-											<Property Name="Max" Type="Real64" Value="300"/>
-											<Property Name="Min" Type="Real64" Value="-300"/>
-										</PropertyList>
-									</Modifier>
-								</ModifierInfo>
-							</ModifierList>
-						</Property>
-						<Property Name="Volume" Type="Real64">
-							<ModifierList>
-								<ModifierInfo>
-									<Modifier Name="" ID="{03C6592B-91CF-46E1-9B5F-3AFB03E14D54}">
-										<PropertyList>
-											<Property Name="Enabled" Type="bool" Value="True"/>
-											<Property Name="Max" Type="Real64" Value="2"/>
-											<Property Name="Min" Type="Real64" Value="-2"/>
-										</PropertyList>
-									</Modifier>
-								</ModifierInfo>
-							</ModifierList>
-						</Property>
-					</PropertyList>
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="SFX" ID="{C0901958-AA0D-4450-9846-B896800D3928}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<Sound Name="Vine Hit 1" ID="{C04FDAA6-1547-4AD3-AEA6-B53BE60A50E5}" ShortID="283893856">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="Vine Hit 1" ID="{1DB38FC2-42EE-45F4-9B4E-8C3639BBDED7}">
-									<Language>SFX</Language>
-									<AudioFile>Vine Hit 1.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="679536967"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="Vine Hit 1" ID="{1DB38FC2-42EE-45F4-9B4E-8C3639BBDED7}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="Vine Hit 2" ID="{48A8117F-3502-4317-BCED-5C7EC4D4954C}" ShortID="265861318">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="Vine Hit 2" ID="{109691E2-3639-4B25-A71C-071F9438A2E9}">
-									<Language>SFX</Language>
-									<AudioFile>Vine Hit 2.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="142764419"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="Vine Hit 2" ID="{109691E2-3639-4B25-A71C-071F9438A2E9}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="Vine Hit 3" ID="{3B356443-EB76-4444-A88E-5DCA5C14D9C1}" ShortID="14818257">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="Vine Hit 3" ID="{74999512-F46F-4B53-B1C1-6E06D002ACB3}">
-									<Language>SFX</Language>
-									<AudioFile>Vine Hit 3.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="1073382980"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="Vine Hit 3" ID="{74999512-F46F-4B53-B1C1-6E06D002ACB3}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-					</ChildrenList>
-				</RandomSequenceContainer>
+				</PropertyContainer>
 			</ChildrenList>
 		</WorkUnit>
 	</Containers>

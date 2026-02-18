@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{2B4FCDD6-7034-4F03-8455-9DC46B8F8FD0}",
     "Language": "SFX",
-    "Hash": "{D254E942-C279-AC40-5F0A-FAC189A01670}",
+    "Hash": "{3E99E754-EE8E-3251-C86C-F474FCA373C8}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\SFX",
     "ShortName": "SFX",
     "Path": "SFX.bnk",
@@ -40,12 +40,20 @@
       "CachePath": "32/{32FEF8BD-A3CA-1A2B-BD41-B2CB39BC653A}.wem"
      },
      {
+      "Id": "29898209",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Vine Eating .wav",
+      "CachePath": "36/{36CD9535-68BB-3F35-E163-88D459E56F04}.wem"
+     },
+     {
       "Id": "36096113",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Vine Capture.wav",
-      "CachePath": "E3/{E38C8702-0E27-70C3-5626-DFE8BACD9C90}.wem"
+      "CachePath": "83/{83F7274B-C53C-E066-15D2-2C625CC052FC}.wem"
      },
      {
       "Id": "73412954",
@@ -86,14 +94,6 @@
       "Location": "Memory",
       "ShortName": "Dirt Run 1.wav",
       "CachePath": "84/{8487A3A4-3B69-3351-3A6D-D0679DEA5A42}.wem"
-     },
-     {
-      "Id": "126584430",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Memory",
-      "ShortName": "Soundly Audio\\Vegetation, Misc, Plant, Vines, Growing, Movement, Creaks, Rubbery Vines SND133890 1.wav",
-      "CachePath": "6D/{6D2D1170-0084-8E90-ACF5-69A21F445062}.wem"
      },
      {
       "Id": "138220742",
@@ -214,6 +214,14 @@
       "Location": "Memory",
       "ShortName": "Dirt Walk 2.wav",
       "CachePath": "0E/{0EB5A96A-9E21-63B9-2EC3-A883EFC62CF1}.wem"
+     },
+     {
+      "Id": "226119631",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Cricket Land.wav",
+      "CachePath": "7C/{7C79FA0A-93DF-959D-3E84-0274BF112DF4}.wem"
      },
      {
       "Id": "233633792",
@@ -344,14 +352,6 @@
       "CachePath": "50/{5098AEB5-98C4-EB48-0A00-E914B9AF8E5D}.wem"
      },
      {
-      "Id": "370205602",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Memory",
-      "ShortName": "Soundly Audio\\Vegetation, Misc, Plant, Vines, Growing, Movement, Creaks, Rubbery Vines SND133890 1.wav",
-      "CachePath": "20/{2099A4CA-7299-BAFA-23C7-C389BDC5F68F}.wem"
-     },
-     {
       "Id": "370718029",
       "Language": "SFX",
       "Streaming": "false",
@@ -398,6 +398,14 @@
       "Location": "Memory",
       "ShortName": "Vine Eat 1.wav",
       "CachePath": "90/{909CCB9B-37B6-6AC7-389D-DB5E853FF54B}.wem"
+     },
+     {
+      "Id": "401250644",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Mosquito Buzz 2.wav",
+      "CachePath": "21/{21FD12BA-5653-8F6D-03AD-0D73D48CC2C1}.wem"
      },
      {
       "Id": "407363137",
@@ -544,6 +552,14 @@
       "CachePath": "0A/{0A8866CF-6534-00DC-13A4-623DDEC27255}.wem"
      },
      {
+      "Id": "531220136",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Soundly Audio\\Umbrella_Unfold_Open_01_G1Wav.wav",
+      "CachePath": "8B/{8B237B2A-6845-92B4-48B5-A5AC9C7FEC1B}.wem"
+     },
+     {
       "Id": "541092370",
       "Language": "SFX",
       "Streaming": "false",
@@ -560,6 +576,14 @@
       "CachePath": "24/{2404713E-8A98-3437-CECD-1A33CFCB55D9}.wem"
      },
      {
+      "Id": "545669700",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Vine Eating .wav",
+      "CachePath": "5F/{5F7E28EC-7387-62F8-D48C-709524455BAB}.wem"
+     },
+     {
       "Id": "551966142",
       "Language": "SFX",
       "Streaming": "false",
@@ -574,6 +598,14 @@
       "Location": "Memory",
       "ShortName": "Dirt Walk 8.wav",
       "CachePath": "45/{45C55466-F1FA-3049-CBD8-407ACFBC41B3}.wem"
+     },
+     {
+      "Id": "553929548",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Cricket Jump.wav",
+      "CachePath": "1A/{1AFE6C5D-AAEE-957A-65B8-05334B47BC37}.wem"
      },
      {
       "Id": "565954011",
@@ -656,6 +688,14 @@
       "CachePath": "99/{99C85BB0-FC41-E574-F270-71DFFB9886FA}.wem"
      },
      {
+      "Id": "621941156",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Soundly Audio\\Objects, Umbrella, Open and Close, Automatic, Fast SND6671.wav",
+      "CachePath": "46/{4679DFCE-1D21-F5E2-0722-C41C254DF366}.wem"
+     },
+     {
       "Id": "628138148",
       "Language": "SFX",
       "Streaming": "false",
@@ -710,14 +750,6 @@
       "Location": "Memory",
       "ShortName": "Dirt Run 6.wav",
       "CachePath": "4C/{4C6193F3-3A4E-4622-635B-C7F78D66F05F}.wem"
-     },
-     {
-      "Id": "653262788",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Memory",
-      "ShortName": "Soundly Audio\\Vegetation, Misc, Plant, Vines, Growing, Movement, Creaks, Rubbery Vines SND133890 1.wav",
-      "CachePath": "C2/{C281E6EF-B2A3-A307-EECC-79EE2BE0BCB8}.wem"
      },
      {
       "Id": "655803969",
@@ -806,6 +838,14 @@
       "Location": "Memory",
       "ShortName": "Dirt Run 4.wav",
       "CachePath": "52/{52F75E3E-5AB8-8F35-0310-98E611583101}.wem"
+     },
+     {
+      "Id": "736287973",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Mosquito Buzz 1.wav",
+      "CachePath": "41/{4145EDCD-DDA0-51D5-2F3E-9E97E7454F80}.wem"
      },
      {
       "Id": "740521810",
@@ -1101,7 +1141,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "VIne Open.wav",
-      "CachePath": "D1/{D1FAA5AF-C0FD-EBA3-9236-747659C9AB73}.wem"
+      "CachePath": "3B/{3B7B1338-23B1-DD97-5A35-20E80B82772B}.wem"
      },
      {
       "Id": "999894426",
@@ -1168,6 +1208,14 @@
       "CachePath": "81/{81D8C2B2-0741-A925-D5EB-0D6919DA4524}.wem"
      },
      {
+      "Id": "1040240039",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Mosquito Buzz 3.wav",
+      "CachePath": "95/{9539E9AC-638B-AE4A-5C36-3FBA8D6B1E17}.wem"
+     },
+     {
       "Id": "1052615943",
       "Language": "SFX",
       "Streaming": "false",
@@ -1209,6 +1257,69 @@
      }
     ],
     "Events": [
+     {
+      "Id": "515483981",
+      "Name": "Cricket_Jump",
+      "ObjectPath": "\\Events\\Enemy\\Cricket\\Cricket_Jump",
+      "GUID": "{0FE70C19-896A-4938-88C5-2B77CDD3A42E}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.6666667",
+      "DurationMax": "0.6666667",
+      "MediaRefs": [
+       {
+        "Id": "553929548"
+       }
+      ]
+     },
+     {
+      "Id": "3381550706",
+      "Name": "Cricket_Land",
+      "ObjectPath": "\\Events\\Enemy\\Cricket\\Cricket_Land",
+      "GUID": "{A872FAE8-06FF-4387-8025-B342A87F5D37}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.7",
+      "DurationMax": "0.7",
+      "MediaRefs": [
+       {
+        "Id": "226119631"
+       }
+      ]
+     },
+     {
+      "Id": "2689584014",
+      "Name": "FloorVine_Eating",
+      "ObjectPath": "\\Events\\Enemy\\Vine\\FloorVine_Eating",
+      "GUID": "{99114310-2CC4-4090-A08D-C16D25BA7F11}",
+      "DurationType": "OneShot",
+      "DurationMin": "5.4166665",
+      "DurationMax": "5.4166665",
+      "MediaRefs": [
+       {
+        "Id": "511758148"
+       },
+       {
+        "Id": "545669700"
+       }
+      ]
+     },
+     {
+      "Id": "1534211419",
+      "Name": "Play_Mosquito",
+      "ObjectPath": "\\Events\\Enemy\\Mosquito\\Play_Mosquito",
+      "GUID": "{2AB893C6-4C6B-48C4-98F9-E93C2272117A}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "401250644"
+       },
+       {
+        "Id": "736287973"
+       },
+       {
+        "Id": "1040240039"
+       }
+      ]
+     },
      {
       "Id": "1305133589",
       "Name": "Player_Jump",
@@ -1888,31 +1999,45 @@
       ]
      },
      {
-      "Id": "584321918",
-      "Name": "Vine_Capture",
-      "ObjectPath": "\\Events\\Enemy\\Vine\\Vine_Capture",
-      "GUID": "{E55BEC49-8120-4EEF-8440-E819B650F9F0}",
+      "Id": "3217770052",
+      "Name": "Umbrella_Close",
+      "ObjectPath": "\\Events\\Items\\Umbrella_Close",
+      "GUID": "{27AE33D3-8BDD-4488-9DEB-4DDAF14BCE28}",
       "DurationType": "OneShot",
-      "DurationMin": "1.6",
-      "DurationMax": "1.6",
+      "DurationMin": "0.45241976",
+      "DurationMax": "0.45241976",
       "MediaRefs": [
        {
-        "Id": "36096113"
-       },
-       {
-        "Id": "996710276"
+        "Id": "621941156"
        }
       ]
      },
      {
-      "Id": "2783995914",
-      "Name": "Vine_Eating",
-      "ObjectPath": "\\Events\\Enemy\\Vine\\Vine_Eating",
-      "GUID": "{12001EBC-3F44-4627-A43D-699A0F9E70F9}",
+      "Id": "89220416",
+      "Name": "Umbrella_Open",
+      "ObjectPath": "\\Events\\Items\\Umbrella_Open",
+      "GUID": "{BD1E4134-6717-499D-8F7F-8F16622F38FC}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.6028019",
+      "DurationMax": "0.6028019",
+      "MediaRefs": [
+       {
+        "Id": "531220136"
+       }
+      ]
+     },
+     {
+      "Id": "1532741045",
+      "Name": "Vine_Catch",
+      "ObjectPath": "\\Events\\Enemy\\Vine\\Vine_Catch",
+      "GUID": "{E55BEC49-8120-4EEF-8440-E819B650F9F0}",
       "DurationType": "Infinite",
       "MediaRefs": [
        {
         "Id": "19112778"
+       },
+       {
+        "Id": "36096113"
        },
        {
         "Id": "95379733"
@@ -1928,24 +2053,21 @@
        },
        {
         "Id": "543064581"
+       },
+       {
+        "Id": "996710276"
        }
       ]
      },
      {
-      "Id": "1619694577",
-      "Name": "Vine_Hiding",
-      "ObjectPath": "\\Events\\Enemy\\Vine\\Vine_Hiding",
-      "GUID": "{961672CD-2575-44DF-8CF4-FD126DD897BD}",
+      "Id": "2783995914",
+      "Name": "Vine_Eating",
+      "ObjectPath": "\\Events\\Enemy\\Vine\\Vine_Eating",
+      "GUID": "{12001EBC-3F44-4627-A43D-699A0F9E70F9}",
       "DurationType": "Infinite",
       "MediaRefs": [
        {
-        "Id": "126584430"
-       },
-       {
-        "Id": "370205602"
-       },
-       {
-        "Id": "653262788"
+        "Id": "29898209"
        }
       ]
      },
@@ -1970,9 +2092,9 @@
       ]
      },
      {
-      "Id": "4145961444",
-      "Name": "Vine_Snap",
-      "ObjectPath": "\\Events\\Enemy\\Vine\\Vine_Snap",
+      "Id": "2514947935",
+      "Name": "Vine_LastHit",
+      "ObjectPath": "\\Events\\Enemy\\Vine\\Vine_LastHit",
       "GUID": "{F1A09195-2D22-4971-84AD-4D036EF67649}",
       "DurationType": "OneShot",
       "DurationMin": "1.1166667",
@@ -1982,6 +2104,16 @@
         "Id": "511758148"
        }
       ]
+     },
+     {
+      "Id": "239772940",
+      "Name": "Vine_StopRecovering",
+      "ObjectPath": "\\Events\\Enemy\\Vine\\Vine_StopRecovering",
+      "GUID": "{27A00249-7432-437F-BAEA-8DE89DC31077}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
      }
     ],
     "GameParameters": [
@@ -1990,6 +2122,12 @@
       "Name": "Pull_Tension",
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\Enemy\\VIne\\Pull_Tension",
       "GUID": "{0AA0AA01-C138-4A71-B05D-AB817962BF49}"
+     },
+     {
+      "Id": "3385394437",
+      "Name": "Mosquito_Swarm",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Enemy\\Mosquito\\Mosquito_Swarm",
+      "GUID": "{1EFFB97B-C5FC-4079-A91F-A94613729EAE}"
      }
     ],
     "SwitchGroups": [
@@ -2054,6 +2192,6 @@
     ]
    }
   ],
-  "FileHash": "{D7CCA785-0E3E-A6E5-FC34-3EA46863A85E}"
+  "FileHash": "{FC0BCD94-E569-4925-71A6-C0CFF5127CE5}"
  }
 }
