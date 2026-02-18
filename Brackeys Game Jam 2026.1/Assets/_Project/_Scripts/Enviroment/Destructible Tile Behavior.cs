@@ -16,7 +16,7 @@ public class DestructibleTileBehavior : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log("Collision Detected");
         if (collision.gameObject.CompareTag("Drill"))
@@ -24,18 +24,23 @@ public class DestructibleTileBehavior : MonoBehaviour
             bool isDrilling = collision.gameObject.GetComponent<DrillHandler>().isDrilling = true;
             if(isDrilling == true)
             {
-                StartCoroutine(DrillDelay(collision, isDrilling));
+                foreach (ContactPoint2D contact in collision.contacts)
+                {
+                    Vector3Int position = contact.collider.gameObject.GetComponent<Tilemap>().WorldToCell(contact.point);
+                    contact.collider.gameObject.GetComponent<Tilemap>().SetTile(position, null);
+                }
+                //StartCoroutine(DrillDelay(collision, isDrilling));
             }
         }   
     }
 
-    private void DrillBreak(Collider2D col)
+    private void DrillBreak(Collision2D col)
     {
         Vector3Int position = col.gameObject.GetComponent<Tilemap>().WorldToCell(col.gameObject.transform.position);
         col.gameObject.GetComponent<Tilemap>().SetTile(position, null);
     }
 
-    private System.Collections.IEnumerator DrillDelay(Collider2D col, bool isDrilling)
+    private System.Collections.IEnumerator DrillDelay(Collision2D col, bool isDrilling)
     {
         Debug.Log("Wait function started");
         float startTime = Time.time;
