@@ -12,11 +12,11 @@ public class InputManager : ScriptableObject, IInitializable, ICleanable, IPersi
 
     // Player Actions
     public InputAction _PlayerMoveAction { get; private set; }
-    public InputAction _PlayerLookAction { get; private set; }
+    public InputAction _PlayerDrillAction { get; private set; }
     public InputAction _PlayerInteractAction { get; private set; }
     public InputAction _PlayerCrouchAction { get; private set; }
     public InputAction _PlayerJumpAction { get; private set; }
-    public InputAction _PlayerSprintAction { get; private set; }
+    public InputAction _PlayerDodgeAction { get; private set; }
     public InputAction _PlayerPauseAction { get; private set; }
     public InputAction _TestDamageAction { get; private set; }
 
@@ -114,11 +114,11 @@ public class InputManager : ScriptableObject, IInitializable, ICleanable, IPersi
     private void GetInputActions() {
 
         _PlayerMoveAction = BuildAction("Move");
-        _PlayerLookAction = BuildAction("Look");
+        _PlayerDrillAction = BuildAction("Drill");
         _PlayerInteractAction = BuildAction("Interact");
         _PlayerCrouchAction = BuildAction("Crouch");
         _PlayerJumpAction = BuildAction("Jump");
-        _PlayerSprintAction = BuildAction("Sprint");
+        _PlayerDodgeAction = BuildAction("Dodge");
         _PlayerPauseAction = BuildAction("PlayerPause");
         _TestDamageAction = BuildAction("TestDamage");
 
