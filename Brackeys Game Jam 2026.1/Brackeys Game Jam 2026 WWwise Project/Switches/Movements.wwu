@@ -16,8 +16,6 @@
 					<ChildrenList>
 						<Switch Name="Walk" ID="{6E07CF22-C3F6-4C97-ABAE-C2B7024C6CD4}"/>
 						<Switch Name="Run" ID="{CABFA66C-57E5-4722-8ACC-ECBC4E484B01}"/>
-						<Switch Name="Jump" ID="{38FC5CF1-CE29-429E-830B-8869D6244CC1}"/>
-						<Switch Name="Land" ID="{E56CD7C5-1A7B-4621-9CAD-6F9B541C8415}"/>
 					</ChildrenList>
 				</SwitchGroup>
 			</ChildrenList>

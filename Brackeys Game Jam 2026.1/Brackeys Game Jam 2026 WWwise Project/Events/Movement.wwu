@@ -14,6 +14,28 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Player_Jump" ID="{2552BA06-D665-4E83-98C8-1B3460BDEC65}">
+					<ChildrenList>
+						<Action Name="" ID="{0FDDE4CF-0A93-4CB5-A95B-7C956C20F7DE}" ShortID="118649339">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Jump" ID="{C1F0AC8C-EF0A-4E1E-98B0-91822B44617E}" WorkUnitID="{3ECFDC21-BC11-4FE3-954C-F43EAD4EBE72}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Player_Land" ID="{D5FAADD1-2EFB-4432-A434-1CF7F916DCD0}">
+					<ChildrenList>
+						<Action Name="" ID="{69AAA70C-3AAC-42D0-97F4-D5AE6827D733}" ShortID="669755898">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Land" ID="{9A3B2ED9-1262-4EDB-BB44-DEFE348C4235}" WorkUnitID="{3ECFDC21-BC11-4FE3-954C-F43EAD4EBE72}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

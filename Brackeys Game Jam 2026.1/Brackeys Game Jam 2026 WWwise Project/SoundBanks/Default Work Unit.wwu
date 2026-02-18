@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{79478083-7C63-4BEF-BDC8-A1D6FFF5EE52}" SchemaVersion="133">
 	<SoundBanks>
-		<WorkUnit Name="Default Work Unit" ID="{79478083-7C63-4BEF-BDC8-A1D6FFF5EE52}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{79478083-7C63-4BEF-BDC8-A1D6FFF5EE52}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="SFX" ID="{2B4FCDD6-7034-4F03-8455-9DC46B8F8FD0}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Player_Land" ID="{D5FAADD1-2EFB-4432-A434-1CF7F916DCD0}" WorkUnitID="{554DF8A6-00DD-4132-9FB0-B200859DCB4B}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Vine_Hiding" ID="{961672CD-2575-44DF-8CF4-FD126DD897BD}" WorkUnitID="{CA44F333-07BC-40EB-B33A-DBFF62ABE241}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Player_Movement" ID="{DD56A193-7B0E-44F1-94F6-A26B9C41BDC1}" WorkUnitID="{554DF8A6-00DD-4132-9FB0-B200859DCB4B}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Vine_Eating" ID="{12001EBC-3F44-4627-A43D-699A0F9E70F9}" WorkUnitID="{CA44F333-07BC-40EB-B33A-DBFF62ABE241}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Vine_Hit" ID="{AF7CE75B-1933-47DF-9C2B-91ECACD9B248}" WorkUnitID="{CA44F333-07BC-40EB-B33A-DBFF62ABE241}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Vine_Snap" ID="{F1A09195-2D22-4971-84AD-4D036EF67649}" WorkUnitID="{CA44F333-07BC-40EB-B33A-DBFF62ABE241}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Player_Jump" ID="{2552BA06-D665-4E83-98C8-1B3460BDEC65}" WorkUnitID="{554DF8A6-00DD-4132-9FB0-B200859DCB4B}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Vine_Capture" ID="{E55BEC49-8120-4EEF-8440-E819B650F9F0}" WorkUnitID="{CA44F333-07BC-40EB-B33A-DBFF62ABE241}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
 	</SoundBanks>
 </WwiseDocument>
