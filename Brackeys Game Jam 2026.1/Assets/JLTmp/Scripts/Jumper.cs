@@ -4,6 +4,16 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class Jumper : MonoBehaviour, IBarnakTarget
 {
+    [Header("Animation")]
+    [SerializeField, ReadOnly] bool lookRight = true;
+    [SerializeField] Transform lookRightTransform;
+    [SerializeField] Animator squashAnimator;
+
+    [Header("Sprite")]
+    [SerializeField] SpriteRenderer spriteRenderer;
+    [SerializeField] Sprite isGroundedSprite;
+    [SerializeField] Sprite isInAirSprite;
+
     [Header("Ground Detection")]
     [SerializeField] Transform groundCheck;
     [SerializeField] Vector2 groundCheckSize = new Vector2(0.95f, 0.1f);
@@ -14,12 +24,13 @@ public class Jumper : MonoBehaviour, IBarnakTarget
     [SerializeField] protected float jumpSpeed = 8;
     [SerializeField, Range(0, 90)] protected float jumpMaxAngle = 30;
     [SerializeField] protected Vector2 dtJumpRange = new Vector2(0, 3);
+    protected bool isGroundedLocked = false;
+    
 
     [Header("Barnak")]
     [SerializeField] float barnakTargetRadius = 0.6f;
     Barnak barnakCaught = null;
 
-    protected bool isGroundedLocked = false;
 
     protected Rigidbody2D rb;
 
@@ -85,13 +96,17 @@ public class Jumper : MonoBehaviour, IBarnakTarget
 
         this.isGrounded = isGrounded;
 
+        squashAnimator.Play("Squash", 0, 0);
+        SpriteMatchIsGrounded();
+        
         if (isGrounded) Invoke("Jump", dtJumpRange.RandomInRange());
         else            CancelInvoke("Jump");
     }
 
-
     protected void LockIsGrounded() => isGroundedLocked = true;
     protected void UnlockIsGrounded() => isGroundedLocked = false;
+
+    protected void SpriteMatchIsGrounded() => spriteRenderer.sprite = isGrounded ? isGroundedSprite : isInAirSprite;
 
     protected virtual void Jump()
     {
@@ -99,9 +114,21 @@ public class Jumper : MonoBehaviour, IBarnakTarget
         Vector2 direction = Quaternion.Euler(0, 0, angle) * Vector2.up;
         rb.linearVelocity = direction * jumpSpeed;
 
+        SetLookRight(rb.linearVelocity.x > 0);
         SetIsGrounded(false);
         LockIsGrounded();
         Invoke("UnlockIsGrounded", 0.1f);
+    }
+
+    protected void SetLookRight(bool lookRight)
+    {
+        if (this.lookRight == lookRight)
+            return;
+
+        this.lookRight = lookRight;
+        lookRightTransform.transform.SetXScale(lookRight ? 1 : -1);
+        
+        squashAnimator.Play("Squash", 0, 0);
     }
 
     public void OnBarnakCaught(Barnak barnak)

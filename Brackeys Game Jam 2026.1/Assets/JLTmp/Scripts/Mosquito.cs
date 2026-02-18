@@ -2,7 +2,7 @@ using System.Linq;
 using EditorAttributes;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D), typeof(Animator))]
+[RequireComponent(typeof(Rigidbody2D))]
 public class Mosquito : MonoBehaviour
 {
     [SerializeField] float randomAcceleration = 5;
@@ -17,6 +17,7 @@ public class Mosquito : MonoBehaviour
     [SerializeField] float targetFriction = 2;
     [SerializeField, ReadOnly] bool isLanded = false;
     [SerializeField] float landMaxSpeed = 0.1f;
+    [SerializeField] Vector2 landTimeRange = new(2, 20);
     [SerializeField, ReadOnly] bool takingOff = false;
     [SerializeField] Vector2 takingOffTimeRange = new (0.8f, 1.2f);
     [SerializeField] Vector2 takeOffSpeedRange = new(1.5f, 2f);
@@ -27,14 +28,12 @@ public class Mosquito : MonoBehaviour
     [SerializeField] LayerMask groundLayer;
 
     [Space(15)]
-    [SerializeField] GameObject spritesParent;
-    [SerializeField] GameObject activeOnFlying;
-    [SerializeField] GameObject activeOnLanded;
-    [SerializeField] string squashAnimName = "MosquitoSquash";
-    bool lookRight = true;
+    [SerializeField, ReadOnly] bool lookRight = true;
+    [SerializeField] Transform lookRightTransform;
+    [SerializeField] Animator squashAnimator;
+    Animator animator;
 
     Rigidbody2D rb;
-    Animator animator;
 
     public bool IsLanded => isLanded;
     public bool IsFlying => !isLanded;
@@ -62,8 +61,7 @@ public class Mosquito : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         noiseOffset = RandomExtension.RandomVector2() * 1000;
-        activeOnFlying.SetActive(!isLanded);
-        activeOnLanded.SetActive(isLanded);
+        animator.SetBool("isLanded", isLanded);
     }
 
     void FixedUpdate()
@@ -196,17 +194,20 @@ public class Mosquito : MonoBehaviour
             return;
 
         this.isLanded = isLanded;
-        activeOnFlying.SetActive(!isLanded);
-        activeOnLanded.SetActive(isLanded);
+        
+        animator.SetBool("isLanded", isLanded);
+        squashAnimator.Play("Squash", 0, 0);
 
-        animator.Play(squashAnimName, 0, 0);
+        if (isLanded)   Invoke("TakeOff", landTimeRange.RandomInRange());
+        else            CancelInvoke("TakeOff");
 
         if (!isLanded &&
             !calledFromTakeOff)
             TakeOff(true);
     }
 
-    void TakeOff(bool calledFromSetLanded = false)
+    void TakeOff() => TakeOff(false);
+    void TakeOff(bool calledFromSetLanded)
     {
         if (!isLanded && 
             !calledFromSetLanded)
@@ -236,9 +237,9 @@ public class Mosquito : MonoBehaviour
             return;
 
         this.lookRight = lookRight;
-        spritesParent.transform.SetXScale(lookRight ? 1 : -1);
+        lookRightTransform.transform.SetXScale(lookRight ? 1 : -1);
         
-        animator.Play(squashAnimName, 0, 0);
+        squashAnimator.Play("Squash", 0, 0);
     }
 
     void UpdateLook()

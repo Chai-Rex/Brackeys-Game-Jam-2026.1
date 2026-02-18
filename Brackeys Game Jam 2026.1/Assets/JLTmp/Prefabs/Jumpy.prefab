@@ -29,11 +29,11 @@ Transform:
   m_GameObject: {fileID: 1678481030055239886}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.26999998, y: -1.49, z: 0}
+  m_LocalPosition: {x: 0, y: -1.848, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 3332659564746380478}
+  - {fileID: 939472898893088188}
   - {fileID: 7162917274050714415}
   - {fileID: 5062566547858146407}
   m_Father: {fileID: 0}
@@ -50,8 +50,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2d8c4c43c4f84c6e85539cd679ff95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Jumpy
+  lookRight: 1
+  lookRightTransform: {fileID: 939472898893088188}
+  squashAnimator: {fileID: 2917440396357792026}
+  spriteRenderer: {fileID: 6364504105702022026}
+  isGroundedSprite: {fileID: 21300000, guid: 9600f7f421dbc4376b3e9c9b851c7319, type: 3}
+  isInAirSprite: {fileID: 21300000, guid: f72204623a1bc4764a4332c0c9083866, type: 3}
   groundCheck: {fileID: 5062566547858146407}
-  groundCheckSize: {x: 0.45, y: 0.1}
+  groundCheckSize: {x: 0.59, y: 0.1}
   groundLayer:
     serializedVersion: 2
     m_Bits: 131072
@@ -59,7 +65,7 @@ MonoBehaviour:
   jumpSpeed: 6
   jumpMaxAngle: 30
   dtJumpRange: {x: 0.5, y: 2}
-  barnakTargetRadius: 0.3
+  barnakTargetRadius: 0.18
   dtJumpRangePlayerDetected: {x: 0, y: 0.5}
   playerCheckRadius: 3
   playerCheckLayer:
@@ -79,7 +85,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MosquitoTarget
   rigidbody2D: {fileID: 4800991322579046972}
-  radius: 0.3
+  radius: 0.18
 --- !u!50 &4800991322579046972
 Rigidbody2D:
   serializedVersion: 5
@@ -105,7 +111,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &7675622965273531319
 MonoBehaviour:
@@ -121,7 +127,94 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::RandomIncrOrDecrementSpriteOrder
   lvlRange: {x: -5, y: 5}
   orderPerLvl: 100
-  addOrder: 30
+  addOrder: 20
+--- !u!1 &3545697869635611058
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5077610607163430068}
+  - component: {fileID: 2917440396357792026}
+  m_Layer: 0
+  m_Name: Squash
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5077610607163430068
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3545697869635611058}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3332659564746380478}
+  m_Father: {fileID: 939472898893088188}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &2917440396357792026
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3545697869635611058}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4b257cce573484fa5b316275b3740003, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!1 &3615857260334248094
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 939472898893088188}
+  m_Layer: 0
+  m_Name: LookRight
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &939472898893088188
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3615857260334248094}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5077610607163430068}
+  m_Father: {fileID: 5831255662825009913}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4226817879721184302
 GameObject:
   m_ObjectHideFlags: 0
@@ -147,7 +240,7 @@ Transform:
   m_GameObject: {fileID: 4226817879721184302}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.25, z: 0}
+  m_LocalPosition: {x: 0, y: -0.153, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -183,7 +276,7 @@ Transform:
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 5831255662825009913}
+  m_Father: {fileID: 5077610607163430068}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6364504105702022026
 SpriteRenderer:
@@ -234,9 +327,9 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.8584906, g: 0.48998755, b: 0.48998755, a: 1}
-  m_FlipX: 0
+  m_Sprite: {fileID: 21300000, guid: 9600f7f421dbc4376b3e9c9b851c7319, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
@@ -320,5 +413,5 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.28, y: 0.6}
   m_EdgeRadius: 0

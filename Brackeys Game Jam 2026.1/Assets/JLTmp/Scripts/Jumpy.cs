@@ -44,6 +44,7 @@ public class Jumpy : Jumper
             return;
 
         this.isGrounded = isGrounded;
+        SpriteMatchIsGrounded();
 
         if (isGrounded) Invoke("Jump", (playerDetected ? dtJumpRangePlayerDetected : dtJumpRange).RandomInRange());
         else            CancelInvoke("Jump");
@@ -59,6 +60,7 @@ public class Jumpy : Jumper
             Vector2 direction = Quaternion.Euler(0, 0, angle) * Vector2.up;
             rb.linearVelocity = direction * jumpSpeed;
 
+            SetLookRight(rb.linearVelocity.x > 0);
             SetIsGrounded(false);
             LockIsGrounded();
             Invoke("UnlockIsGrounded", 0.1f);
