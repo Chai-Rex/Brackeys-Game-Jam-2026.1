@@ -1,24 +1,22 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerStateFactory : IStateFactory<PlayerStateFactory.PlayerStates> {
     public enum PlayerStates {
-        // Root super states
-        Grounded,
-        Airborne,
-        OnWall,
 
+        // super state
+        Grounded,
         // Grounded substates
         Idling,
         Moving,
-        GroundJump,
-        GroundAttacking,
-        GroundDamaged,
+        GroundedJump,
         Landing,
         Dodging,
-        GroundTurning,
+        GroundedTurning,
+        GroundedWallPressing,
 
+        // super state
+        Airborne,
         // Airborne substates
         Falling,
         GroundJumping,
@@ -26,44 +24,52 @@ public class PlayerStateFactory : IStateFactory<PlayerStateFactory.PlayerStates>
         CoyoteGroundJump,
         CoyoteWallJump,
         WallJumping,
+        AirDodging,
 
+        // super state
+        OnWall, // Assumed you are only touching the wall. no ground. 
         // OnWall substates
         WallSliding,
         WallJump,
     }
 
-    private PlayerStateMachineSO _context;
-    private SceneContainerSO _sceneContainer;
+    private PlayerStateMachineHandler _context;
     private Dictionary<PlayerStates, BaseHierarchicalState> _states;
 
-    public PlayerStateFactory(PlayerStateMachineSO context, SceneContainerSO sceneContainer) {
+    public PlayerStateFactory(PlayerStateMachineHandler context) {
         _context = context;
-        _sceneContainer = sceneContainer;
         _states = new Dictionary<PlayerStates, BaseHierarchicalState>();
     }
 
     public void InitializeStates() {
-        // Initialize all your states here
-        // Root states
-        _states[PlayerStates.Grounded] = new P_GroundedState(_context, _sceneContainer);
-        //_states[PlayerStates.Airborne] = new PlayerAirborneState(_context, _sceneContainer);
-        //_states[PlayerStates.OnWall] = new PlayerOnWallState(_context, _sceneContainer);
+        // Initialize all states here
 
-        // Sub states
-        //_states[PlayerStates.Idling] = new PlayerIdlingState(_context, _sceneContainer);
-        //_states[PlayerStates.Moving] = new PlayerMovingState(_context, _sceneContainer);
-        //_states[PlayerStates.GroundAttacking] = new PlayerGroundAttackingState(_context, _sceneContainer);
-        //_states[PlayerStates.Falling] = new PlayerFallingState(_context, _sceneContainer);
-        //_states[PlayerStates.Landing] = new PlayerLandingState(_context, _sceneContainer);
-        //_states[PlayerStates.GroundJump] = new PlayerGroundJumpState(_context, _sceneContainer);
-        //_states[PlayerStates.GroundJumping] = new PlayerGroundJumpingState(_context, _sceneContainer);
-        //_states[PlayerStates.AirHanging] = new PlayerAirHangingState(_context, _sceneContainer);
-        //_states[PlayerStates.WallSliding] = new PlayerWallSlidingState(_context, _sceneContainer);
-        //_states[PlayerStates.CoyoteGroundJump] = new PlayerCoyoteGroundJumpState(_context, _sceneContainer);
-        //_states[PlayerStates.CoyoteWallJump] = new PlayerCoyoteWallJumpState(_context, _sceneContainer);
-        //_states[PlayerStates.WallJump] = new PlayerWallJumpState(_context, _sceneContainer);
-        //_states[PlayerStates.WallJumping] = new PlayerWallJumpingState(_context, _sceneContainer);
-        //_states[PlayerStates.GroundTurning] = new PlayerGroundTurningState(_context, _sceneContainer);
+        // Root states
+        _states[PlayerStates.Grounded] = new PS_Grounded(_context);
+        _states[PlayerStates.Airborne] = new PS_Airborne(_context);
+        _states[PlayerStates.OnWall] = new PS_OnWall(_context);
+
+        // Grounded substates
+        _states[PlayerStates.Idling] = new PS_Idling(_context);
+        _states[PlayerStates.Moving] = new PS_Moving(_context);
+        _states[PlayerStates.GroundedJump] = new PS_GroundedJump(_context);
+        _states[PlayerStates.Landing] = new PS_Landing(_context);
+        _states[PlayerStates.Dodging] = new PS_Dodging(_context);
+        _states[PlayerStates.GroundedTurning] = new PS_GroundedTurning(_context);
+        _states[PlayerStates.GroundedWallPressing] = new PS_GroundedWallPressing(_context);
+
+        // Airborne substates
+        _states[PlayerStates.Falling] = new PS_Falling(_context);
+        _states[PlayerStates.GroundJumping] = new PS_GroundJumping(_context);
+        _states[PlayerStates.AirHanging] = new PS_AirHanging(_context);
+        _states[PlayerStates.CoyoteGroundJump] = new PS_CoyoteGroundJump(_context);
+        _states[PlayerStates.CoyoteWallJump] = new PS_CoyoteWallJump(_context);
+        _states[PlayerStates.WallJumping] = new PS_WallJumping(_context);
+        _states[PlayerStates.AirDodging] = new PS_AirDodging(_context);
+
+        // OnWall substates
+        _states[PlayerStates.WallSliding] = new PS_WallSliding(_context);
+        _states[PlayerStates.WallJump] = new PS_WallJump(_context);
     }
 
     public void SetState(PlayerStates state) {

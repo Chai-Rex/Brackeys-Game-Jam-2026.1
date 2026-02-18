@@ -4,6 +4,9 @@ using UnityEngine;
 
 public static class GizmosExtension
 {
+    public static void DrawCircle(Vector3 center, float radius, int resolution = 30)
+        => DrawCircle(center, Vector3.forward, radius, resolution);
+        
     public static void DrawCircle(Vector3 center, Vector3 normal, float radius, int resolution = 30)
     {
         if (normal == Vector3.zero)

@@ -17,6 +17,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 060aa07aca206d345830d3de39888317, type: 2}
   - {fileID: 11400000, guid: 6ac33709902ba4042b0e633cfa7ca1dc, type: 2}
   - {fileID: 11400000, guid: afd9e7b049d45c941b64df0eb71ace5f, type: 2}
-  - {fileID: 11400000, guid: 32098c1ba2e14ce4ebfe74e28c1a4f47, type: 2}
+  - {fileID: 11400000, guid: 7762dcc57d51dd24081275eec62de0aa, type: 2}
   _enableDebugLogs: 0
   _iSceneName: ChaiSystemsTestScene

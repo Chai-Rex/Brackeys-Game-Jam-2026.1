@@ -4,19 +4,19 @@ using UnityEngine;
 
 public static class PhysicExtension
 {
-    public static bool TryRaycast2DCircle(Vector2 center, float radius, int raycastCount, LayerMask layer, out RaycastHit2D hit)
+    public static bool TryRaycast2DCircle(Vector2 center, float radius, int nbRaycast, LayerMask layer, out RaycastHit2D hit)
     {
-        hit = Raycast2DCircle(center, radius, raycastCount, layer);
+        hit = Raycast2DCircle(center, radius, nbRaycast, layer);
         return hit;
     }
 
-    public static RaycastHit2D Raycast2DCircle(Vector2 center, float radius, int raycastCount, LayerMask layer)
+    public static RaycastHit2D Raycast2DCircle(Vector2 center, float radius, int nbRaycast, LayerMask layer)
     {
         Vector2 dir = Vector3.up;
-        float stepAngle = 360f / raycastCount;
+        float stepAngle = 360f / nbRaycast;
         List<RaycastHit2D> hits = new();
 
-        for (int i = 0; i < raycastCount; i++)
+        for (int i = 0; i < nbRaycast; i++)
         {
             RaycastHit2D h = Physics2D.Raycast(center, dir, radius, layer);
             if (h) hits.Add(h);

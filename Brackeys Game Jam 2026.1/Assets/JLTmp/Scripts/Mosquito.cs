@@ -1,85 +1,251 @@
-using System.Collections.Generic;
 using System.Linq;
 using EditorAttributes;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(Rigidbody2D), typeof(Animator))]
 public class Mosquito : MonoBehaviour
 {
-    [Header("Mouvement")]
-    [SerializeField] float acceleration = 10;
-    [SerializeField] float friction = 10;
+    [SerializeField] float randomAcceleration = 5;
     [SerializeField] float noiseScale = 1;
     Vector2 noiseOffset;
+    [SerializeField] float friction = 1;
 
     [Space(15)]
-    [SerializeField] bool avoidObstacles = true;
-    [SerializeField, ShowField("avoidObstacles")] float avoidObstaclesRadius = 1;
-    [SerializeField, ShowField("avoidObstacles")] int avoidObstaclesRaycastCount = 10;
-    [SerializeField, ShowField("avoidObstacles")] LayerMask avoidObstaclesLayer;
-    [SerializeField, ShowField("avoidObstacles")] float avoidObstaclesAcceleration = 1;
+    [SerializeField, ReadOnly] MosquitoTarget target = null;
+    [SerializeField] float viewTargetRadius = 3;
+    [SerializeField] float accelerationToTarget = 1;
+    [SerializeField] float targetFriction = 2;
+    [SerializeField, ReadOnly] bool isLanded = false;
+    [SerializeField] float landMaxSpeed = 0.1f;
+    [SerializeField, ReadOnly] bool takingOff = false;
+    [SerializeField] Vector2 takingOffTimeRange = new (0.8f, 1.2f);
+    [SerializeField] Vector2 takeOffSpeedRange = new(1.5f, 2f);
+
+    [Space(15)]
+    [SerializeField] float groundRepulsion = 1f;
+    [SerializeField] float groundRaycastDistance = 0.5f;
+    [SerializeField] LayerMask groundLayer;
+
+    [Space(15)]
+    [SerializeField] GameObject spritesParent;
+    [SerializeField] GameObject activeOnFlying;
+    [SerializeField] GameObject activeOnLanded;
+    [SerializeField] string squashAnimName = "MosquitoSquash";
+    bool lookRight = true;
 
     Rigidbody2D rb;
+    Animator animator;
+
+    public bool IsLanded => isLanded;
+    public bool IsFlying => !isLanded;
 
     void OnDrawGizmosSelected()
-    {   
-        DrawAvoidObstacles();
+    {
+        DrawViewTargetRadius();
+        DrawGroundRaycast();
     }
 
-    void DrawAvoidObstacles()
+    void DrawViewTargetRadius()
     {
-        Vector3 dir = Vector3.up;
-        float stepAngle = 360f / avoidObstaclesRaycastCount;
+        Gizmos.color = Color.yellow;
+        GizmosExtension.DrawCircle(transform.position, Vector3.forward, viewTargetRadius);
+    }
 
-        for (int i = 0; i < avoidObstaclesRaycastCount; i++)
-        {
-            RaycastHit2D h = Physics2D.Raycast(transform.position, dir, avoidObstaclesRadius, avoidObstaclesLayer);
-            Vector2 lineEnd = h ? h.point : transform.position + dir * avoidObstaclesRadius;
-            Gizmos.color = h ? Color.red : Color.green;
-            Gizmos.DrawLine(transform.position, lineEnd);            
-            dir =  Quaternion.Euler(0, 0, stepAngle) * dir;
-        }
-
-        if (PhysicExtension.TryRaycast2DCircle(transform.position, avoidObstaclesRadius, avoidObstaclesRaycastCount, avoidObstaclesLayer, out RaycastHit2D hit))
-        {
-            Gizmos.color = Color.red;
-            Gizmos.DrawSphere(hit.point, 0.05f);  
-        }
+    void DrawGroundRaycast()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawLine(transform.position, transform.position + Vector3.down * groundRaycastDistance);
     }
 
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
         noiseOffset = RandomExtension.RandomVector2() * 1000;
+        activeOnFlying.SetActive(!isLanded);
+        activeOnLanded.SetActive(isLanded);
     }
 
     void FixedUpdate()
     {
-        ApplyAcceleration();
-        if (avoidObstacles) AvoidObstacles();
+        ApplyRandomAcceleration();
+        GroundRepulsion();
+        UpdateTarget();
+        ApplyTargetAcceleration();
+        ApplyTargetFriction();
+        UpdateIsLanded();
         ApplyFriction();
+        UpdateLook();
     }
 
-    void ApplyAcceleration()
+    Vector2 ApplyRandomAcceleration()
     {
+        if (target && 
+            (target.transform.position - transform.position).sqrMagnitude < target.SqrRadius)
+            return Vector2.zero;
+
         Vector2 noiseValue = new(Mathf.PerlinNoise1D(noiseOffset.x + Time.time * noiseScale) * 2f - 0.9305f, 
                                  Mathf.PerlinNoise1D(noiseOffset.y + Time.time * noiseScale) * 2f - 0.9305f);
 
-        rb.linearVelocity += acceleration * Time.fixedDeltaTime * noiseValue;
-    }
-
-    void AvoidObstacles()
-    {
-        if (!PhysicExtension.TryRaycast2DCircle(transform.position, avoidObstaclesRadius, avoidObstaclesRaycastCount, avoidObstaclesLayer, out RaycastHit2D hit))
-            return;
-
-        Vector2 toHitPoint = hit.point - (Vector2)transform.position;
-        Vector2 direction = Vector2.Reflect(toHitPoint.normalized, hit.normal);
-        rb.linearVelocity += avoidObstaclesAcceleration * Time.fixedDeltaTime * direction;
+        Vector2 acceleration = randomAcceleration * noiseValue;
+        rb.linearVelocity += acceleration * Time.fixedDeltaTime;
+        return acceleration;
     }
 
     void ApplyFriction()
     {
         rb.linearVelocity *= 1 - friction * Time.fixedDeltaTime;
+    }
+
+    Vector2 GroundRepulsion()
+    {
+        if (target ||
+            !Physics2D.Raycast(transform.position, Vector2.down, groundRaycastDistance, groundLayer))
+            return Vector2.zero;
+
+        Vector2 acceleration = groundRepulsion * Vector2.up;
+        rb.linearVelocity += acceleration * Time.fixedDeltaTime;
+        return acceleration;
+    }
+
+    void UpdateTarget()
+    {
+        if (takingOff)
+            return;
+
+        float sqrRadius = viewTargetRadius * viewTargetRadius;
+
+        if (MosquitoTarget.RbTargetsCount > 0)
+        {
+            MosquitoTarget closestTarget = MosquitoTarget.RbTargets.OrderBy((t) => (transform.position - t.transform.position).sqrMagnitude).First();
+            float sqrDist = (transform.position - closestTarget.transform.position).sqrMagnitude;
+
+            if (sqrDist <= sqrRadius)
+            {
+                SetTarget(closestTarget);
+                return;
+            }
+        }
+
+        if (MosquitoTarget.NoRbTargetsCount > 0)
+        {
+            MosquitoTarget closestTarget = MosquitoTarget.NoRbTargets.OrderBy((t) => (transform.position - t.transform.position).sqrMagnitude).First();
+            float sqrDist = (transform.position - closestTarget.transform.position).sqrMagnitude;
+
+            if (sqrDist <= sqrRadius)
+            {
+                SetTarget(closestTarget);
+                return;
+            }
+        }
+
+        SetTarget(null);
+    }
+
+    Vector2 ApplyTargetAcceleration()
+    {
+        if (!target)
+            return Vector2.zero;
+
+        Vector2 toTarget = target.transform.position - transform.position;
+
+        if (toTarget.sqrMagnitude < target.SqrRadius) 
+            return Vector2.zero;
+
+        Vector2 accelerration = accelerationToTarget * toTarget.normalized;
+        rb.linearVelocity += accelerration * Time.fixedDeltaTime;
+        return accelerration;
+    }
+
+    void ApplyTargetFriction()
+    {
+        if (!target)
+            return;
+
+        Vector2 toTarget = target.transform.position - transform.position;
+        float sqrDist = toTarget.sqrMagnitude;
+
+        if (sqrDist > target.SqrRadius)
+            return;
+
+        rb.linearVelocity *= 1 - targetFriction * Time.fixedDeltaTime;
+    }
+
+    void UpdateIsLanded()
+    {
+        SetIsLanded(target && 
+                    (target.transform.position - transform.position).sqrMagnitude < target.SqrRadius &&
+                    rb.linearVelocity.sqrMagnitude < landMaxSpeed * landMaxSpeed &&
+                    (!target.Rigidbody2D || target.Rigidbody2D.linearVelocity.sqrMagnitude < landMaxSpeed * landMaxSpeed));
+    }
+
+    void SetTarget(MosquitoTarget target)
+    {
+        if (this.target == target)
+            return;
+
+        if (isLanded)
+            TakeOff();
+
+        this.target = target;
+    }
+
+    void SetIsLanded(bool isLanded, bool calledFromTakeOff = false)
+    {
+        if (this.isLanded == isLanded)
+            return;
+
+        this.isLanded = isLanded;
+        activeOnFlying.SetActive(!isLanded);
+        activeOnLanded.SetActive(isLanded);
+
+        animator.Play(squashAnimName, 0, 0);
+
+        if (!isLanded &&
+            !calledFromTakeOff)
+            TakeOff(true);
+    }
+
+    void TakeOff(bool calledFromSetLanded = false)
+    {
+        if (!isLanded && 
+            !calledFromSetLanded)
+            return;
+
+        Vector2 toTarget = target.transform.position - transform.position;
+        
+        if (toTarget == Vector2.zero)
+            toTarget.y -= 0.001f;
+
+        rb.linearVelocity = -toTarget.normalized * takeOffSpeedRange.RandomInRange();
+
+        target = null;
+
+        takingOff = true;
+        Invoke("SetTakingOffFalse", takingOffTimeRange.RandomInRange());
+
+        if (!calledFromSetLanded)
+            SetIsLanded(false, true);
+    }
+
+    void SetTakingOffFalse() => takingOff = false;
+
+    void SetLookRight(bool lookRight)
+    {
+        if (this.lookRight == lookRight)
+            return;
+
+        this.lookRight = lookRight;
+        spritesParent.transform.SetXScale(lookRight ? 1 : -1);
+        
+        animator.Play(squashAnimName, 0, 0);
+    }
+
+    void UpdateLook()
+    {
+        if (takingOff)
+            return;
+
+        SetLookRight(rb.linearVelocity.x > 0);
     }
 }

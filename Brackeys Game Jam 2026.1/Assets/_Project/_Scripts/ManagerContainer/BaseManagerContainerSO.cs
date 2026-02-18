@@ -4,11 +4,7 @@ using System.Threading.Tasks;
 using UnityEngine;
 
 ////////////////////////////////////////////////////////////
-/// IMPROVED BASE MANAGER CONTAINER
-/// - Separated cleanup interface (ICleanable)
-/// - Better support for nested containers
-/// - Recursive GetManager for nested lookups
-/// - Cleaner organization
+/// BASE MANAGER CONTAINER
 ////////////////////////////////////////////////////////////
 
 public abstract class BaseManagerContainerSO : ScriptableObject,
@@ -32,11 +28,11 @@ public abstract class BaseManagerContainerSO : ScriptableObject,
     protected Dictionary<Type, IManager> _managerCache;
 
     // State
-    protected bool _isInitialized = false;
+
     protected bool _isPaused = false;
 
     // Properties
-    public bool _IsInitialized => _isInitialized;
+
     public virtual string ManagerName => GetType().Name;
 
     public string _ManagerName => GetType().Name;
@@ -46,10 +42,6 @@ public abstract class BaseManagerContainerSO : ScriptableObject,
     ////////////////////////////////////////////////////////////
 
     public virtual async Task Initialize() {
-        if (_isInitialized) {
-            LogWarning("Already initialized");
-            return;
-        }
 
         Log("Initializing container...");
 
@@ -59,7 +51,6 @@ public abstract class BaseManagerContainerSO : ScriptableObject,
         // Initialize managers (skip persistent ones in scene containers)
         await InitializeManagers();
 
-        _isInitialized = true;
         Log("Initialization complete");
     }
 
@@ -135,7 +126,7 @@ public abstract class BaseManagerContainerSO : ScriptableObject,
     ////////////////////////////////////////////////////////////
 
     public virtual void OnUpdate() {
-        if (!_isInitialized || _isPaused) return;
+        if (_isPaused) return;
 
         for (int i = 0; i < _updateables.Count; i++) {
             try {
@@ -147,7 +138,7 @@ public abstract class BaseManagerContainerSO : ScriptableObject,
     }
 
     public virtual void OnFixedUpdate() {
-        if (!_isInitialized || _isPaused) return;
+        if (_isPaused) return;
 
         for (int i = 0; i < _fixedUpdateables.Count; i++) {
             try {
@@ -165,7 +156,7 @@ public abstract class BaseManagerContainerSO : ScriptableObject,
     ////////////////////////////////////////////////////////////
 
     public virtual void OnPause() {
-        if (!_isInitialized || _isPaused) return;
+        if (_isPaused) return;
 
         _isPaused = true;
         for (int i = 0; i < _pausables.Count; i++) {
@@ -180,7 +171,7 @@ public abstract class BaseManagerContainerSO : ScriptableObject,
     }
 
     public virtual void OnResume() {
-        if (!_isInitialized || !_isPaused) return;
+        if (!_isPaused) return;
 
         _isPaused = false;
         for (int i = 0; i < _pausables.Count; i++) {
@@ -201,7 +192,6 @@ public abstract class BaseManagerContainerSO : ScriptableObject,
     ////////////////////////////////////////////////////////////
 
     public virtual void CleanUp() {
-        if (!_isInitialized) return;
 
         Log("Cleaning up container...");
 
@@ -229,7 +219,6 @@ public abstract class BaseManagerContainerSO : ScriptableObject,
         _pausables?.Clear();
         _managerCache?.Clear();
 
-        _isInitialized = false;
         _isPaused = false;
 
         Log("Cleanup complete");
