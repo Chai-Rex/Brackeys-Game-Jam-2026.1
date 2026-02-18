@@ -6,6 +6,10 @@
 				<Property Name="Color" Type="int16" Value="10"/>
 				<Property Name="OverrideColor" Type="bool" Value="True"/>
 			</PropertyList>
+			<ChildrenList>
+				<WorkUnit Name="Vine" ID="{A80FAC1F-5598-46B4-A396-211E88A88EEF}" PersistMode="Reference"/>
+				<WorkUnit Name="Mosquito" ID="{9DC0BC8F-668B-42A2-81E3-9C9EC51F4841}" PersistMode="Reference"/>
+			</ChildrenList>
 		</WorkUnit>
 	</Containers>
 </WwiseDocument>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<WwiseDocument Type="Project" SchemaVersion="133" WwiseVersion="v2025.1.5" WwiseBuild="9095">
+<WwiseDocument Type="Project" SchemaVersion="133" WwiseVersion="v2025.1.4" WwiseBuild="9062">
 	<ProjectInfo>
 		<Project Name="Brackeys Game Jam 2026" ID="{04C6189E-7D20-4AE3-A376-547CA9D7CC4F}">
 			<Platforms>
@@ -713,6 +713,55 @@
 						<Property Name="Weight" Type="Real64">
 							<ValueList>
 								<Value>50</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+				</SharedPropertyList>
+				<SharedPropertyList ClassName="speechEngine Voice" PluginType="2" CompanyID="312" PluginID="1">
+					<PropertyList>
+						<Property Name="Color" Type="int16">
+							<ValueList>
+								<Value>0</Value>
+							</ValueList>
+						</Property>
+						<Property Name="CommaPause" Type="int32">
+							<ValueList>
+								<Value>0</Value>
+							</ValueList>
+						</Property>
+						<Property Name="OverrideColor" Type="bool">
+							<ValueList>
+								<Value>False</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Pause" Type="int32">
+							<ValueList>
+								<Value>0</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>125</Value>
+							</ValueList>
+						</Property>
+						<Property Name="SSML" Type="bool">
+							<ValueList>
+								<Value>False</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Speed" Type="int32">
+							<ValueList>
+								<Value>125</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Text" Type="string">
+							<ValueList>
+								<Value></Value>
+							</ValueList>
+						</Property>
+						<Property Name="Voice" Type="int32">
+							<ValueList>
+								<Value>-1</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
@@ -13337,16 +13386,6 @@
 								<Value>False</Value>
 							</ValueList>
 						</Property>
-						<Property Name="EnableHPF" Type="bool">
-							<ValueList>
-								<Value>False</Value>
-							</ValueList>
-						</Property>
-						<Property Name="EnableLPF" Type="bool">
-							<ValueList>
-								<Value>False</Value>
-							</ValueList>
-						</Property>
 						<Property Name="HPF" Type="int16">
 							<ValueList>
 								<Value>20</Value>
@@ -13367,7 +13406,7 @@
 								<Value>False</Value>
 							</ValueList>
 						</Property>
-						<Property Name="SidechainScope" Type="int16">
+						<Property Name="SidechainScope" Type="int32">
 							<ValueList>
 								<Value>0</Value>
 							</ValueList>
@@ -13386,16 +13425,6 @@
 								<Value>0</Value>
 							</ValueList>
 						</Property>
-						<Property Name="EnableHPF" Type="bool">
-							<ValueList>
-								<Value>False</Value>
-							</ValueList>
-						</Property>
-						<Property Name="EnableLPF" Type="bool">
-							<ValueList>
-								<Value>False</Value>
-							</ValueList>
-						</Property>
 						<Property Name="HPF" Type="int16">
 							<ValueList>
 								<Value>0</Value>
@@ -13416,7 +13445,7 @@
 								<Value>False</Value>
 							</ValueList>
 						</Property>
-						<Property Name="SidechainScope" Type="int16">
+						<Property Name="SidechainScope" Type="int32">
 							<ValueList>
 								<Value>0</Value>
 							</ValueList>

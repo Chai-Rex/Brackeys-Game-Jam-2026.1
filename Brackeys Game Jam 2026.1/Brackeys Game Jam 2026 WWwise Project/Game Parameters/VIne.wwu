@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{764C261B-C567-4CE0-B93D-123AD4FC1CB3}" SchemaVersion="133" RootDocumentID="{BB83B9EE-E870-43DF-9B03-09E650C10305}" ParentDocumentID="{1104F235-17E4-4EF6-9D1F-E4260C2ECEB3}">
+	<GameParameters>
+		<WorkUnit Name="VIne" ID="{764C261B-C567-4CE0-B93D-123AD4FC1CB3}" OwnerID="{1104F235-17E4-4EF6-9D1F-E4260C2ECEB3}" PersistMode="Nested">
+			<ChildrenList>
+				<GameParameter Name="Pull_Tension" ID="{0AA0AA01-C138-4A71-B05D-AB817962BF49}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+					</PropertyList>
+				</GameParameter>
+			</ChildrenList>
+		</WorkUnit>
+	</GameParameters>
+</WwiseDocument>
