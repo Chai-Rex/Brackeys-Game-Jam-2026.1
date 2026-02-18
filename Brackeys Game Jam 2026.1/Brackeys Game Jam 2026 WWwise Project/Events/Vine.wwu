@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{CA44F333-07BC-40EB-B33A-DBFF62ABE241}" SchemaVersion="133" RootDocumentID="{5BB2882E-5704-470E-90AD-9DCD39A5278E}" ParentDocumentID="{5BB2882E-5704-470E-90AD-9DCD39A5278E}">
+	<Events>
+		<WorkUnit Name="Vine" ID="{CA44F333-07BC-40EB-B33A-DBFF62ABE241}" OwnerID="{5BB2882E-5704-470E-90AD-9DCD39A5278E}" PersistMode="Nested">
+			<ChildrenList>
+				<Event Name="Vine_Eating" ID="{12001EBC-3F44-4627-A43D-699A0F9E70F9}">
+					<PropertyList>
+						<Property Name="CooldownTime" Type="Real32">
+							<ValueList>
+								<Value>5</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ChildrenList>
+						<Action Name="" ID="{F6EBDC5D-F6CB-497A-9FFA-AD8B7929D2C1}" ShortID="370062884">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Vine Eating" ID="{77EC9096-A8F1-4E95-947E-F39E499051FD}" WorkUnitID="{A80FAC1F-5598-46B4-A396-211E88A88EEF}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Vine_Snap" ID="{F1A09195-2D22-4971-84AD-4D036EF67649}">
+					<PropertyList>
+						<Property Name="CooldownTime" Type="Real32">
+							<ValueList>
+								<Value>5</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ChildrenList>
+						<Action Name="" ID="{CCCBB288-C838-46DB-BD5E-23C9A0DFBE4B}" ShortID="1028585827">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Vine Eating" ID="{77EC9096-A8F1-4E95-947E-F39E499051FD}" WorkUnitID="{A80FAC1F-5598-46B4-A396-211E88A88EEF}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{37923AB3-F7DC-4EB4-93E6-A3F7F054FB6F}" ShortID="420489468">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Vine Snap" ID="{52C50D5A-CFDF-475C-8C44-C05BDCDC538A}" WorkUnitID="{A80FAC1F-5598-46B4-A396-211E88A88EEF}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Vine_Capture" ID="{E55BEC49-8120-4EEF-8440-E819B650F9F0}">
+					<ChildrenList>
+						<Action Name="" ID="{1DA4B3AB-514F-4A9F-A34F-068E0B377396}" ShortID="779335527">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Vine Hiding" ID="{F9A0CDF9-DFBC-4F17-AFB6-7F5D5C64D46B}" WorkUnitID="{A80FAC1F-5598-46B4-A396-211E88A88EEF}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{86B266F8-D0B8-4D30-82ED-8FD47FDC58D8}" ShortID="234334586">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Vine Capture" ID="{27D0573A-9C9C-4B66-A37B-B986430C829F}" WorkUnitID="{A80FAC1F-5598-46B4-A396-211E88A88EEF}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Vine_Hiding" ID="{961672CD-2575-44DF-8CF4-FD126DD897BD}">
+					<ChildrenList>
+						<Action Name="" ID="{1ED85A91-8624-4D8F-B44C-43A0C61028FA}" ShortID="336476650">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Vine Hiding" ID="{F9A0CDF9-DFBC-4F17-AFB6-7F5D5C64D46B}" WorkUnitID="{A80FAC1F-5598-46B4-A396-211E88A88EEF}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Vine_Hit" ID="{AF7CE75B-1933-47DF-9C2B-91ECACD9B248}">
+					<ChildrenList>
+						<Action Name="" ID="{7F2881E8-B9A5-45CA-8E77-1200F98A7097}" ShortID="212441751">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Vine Hit" ID="{24142604-1423-4E57-8758-F81E8EC668F0}" WorkUnitID="{A80FAC1F-5598-46B4-A396-211E88A88EEF}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>
