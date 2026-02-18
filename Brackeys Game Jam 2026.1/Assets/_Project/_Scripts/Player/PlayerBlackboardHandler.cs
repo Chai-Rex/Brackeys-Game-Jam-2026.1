@@ -58,10 +58,6 @@ public class PlayerBlackboardHandler : MonoBehaviour {
             if (_isFacingRight != value) {
                 _isFacingRight = value;
                 OnDirectionChanged?.Invoke(_isFacingRight);
-
-                if (debugStates) {
-                    Debug.Log($"[Blackboard] Direction changed to: {(_isFacingRight ? "RIGHT" : "LEFT")}");
-                }
             }
         }
     }

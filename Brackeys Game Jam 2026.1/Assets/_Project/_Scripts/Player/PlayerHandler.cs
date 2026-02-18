@@ -117,6 +117,10 @@ public class PlayerHandler : MonoBehaviour {
         _collisionHandler.Initialize(this, _statsHandler, _blackboardHandler);
         Log("Collision initialized");
 
+        _animationHandler.Initialize(_blackboardHandler);
+        Log("Animation initialized");
+
+
         if (_inputManager != null) {
             _inputHandler.Initialize(_inputManager, _blackboardHandler, _statsHandler);
             Log("Input initialized");

@@ -29,9 +29,6 @@ public class PS_WallJumping : BaseHierarchicalState {
         // Play jumping animation
         _stateMachine.Animation.Play(PlayerAnimamationHandler.Jumping, false);
 
-        if (_stateMachine.Blackboard.debugStates) {
-            Debug.Log($"[PS_WallJumping] Jump away direction: {(_jumpAwayDirection > 0 ? "RIGHT" : "LEFT")}");
-        }
     }
 
     public override void InitializeSubState() {

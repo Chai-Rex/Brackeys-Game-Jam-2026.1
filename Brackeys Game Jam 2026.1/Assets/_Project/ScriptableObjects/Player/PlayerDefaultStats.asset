@@ -44,14 +44,14 @@ MonoBehaviour:
   WallJumpTimeTillApex: 0.15
   WallJumpCancelableTime: 0.125
   WallJumpReleaseGravityMultiplier: 2
-  MaxFallSpeed: 30
+  MaxFallSpeed: 20
   DecelerationAfterForce: 5
   GroundLayer:
     serializedVersion: 2
     m_Bits: 1
   GroundDetectionRayLength: 0.02
   HeadDetectionRayLength: 0.02
-  HeadWidth: 0.75
+  HeadWidth: 0.2
   WallDetectionRayLength: 0.02
   WallDetectionRayHeightMultiplier: 0.9
   DodgingCooldown: 0.25

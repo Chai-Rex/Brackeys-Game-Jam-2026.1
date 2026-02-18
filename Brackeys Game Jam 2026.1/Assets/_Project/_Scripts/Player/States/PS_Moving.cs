@@ -30,10 +30,10 @@ public class PS_Moving : BaseHierarchicalState {
 
     public override void FixedUpdate() {
         // Check for turning BEFORE applying movement
-        if (_stateMachine.CheckMovementTurn()) {
-            // Will be handled in CheckSwitchStates
-            return;
-        }
+        //if (_stateMachine.CheckMovementTurn()) {
+        //    // Will be handled in CheckSwitchStates
+        //    return;
+        //}
 
         // Apply ground movement
         _stateMachine.Physics.ApplyHorizontalMovement(
@@ -55,11 +55,11 @@ public class PS_Moving : BaseHierarchicalState {
             return;
         }
 
-        // Check for turning (using reusable check)
-        if (_stateMachine.CheckMovementTurn()) {
-            SwitchState(factory.GetState(PlayerStateFactory.PlayerStates.GroundedTurning));
-            return;
-        }
+        // Check for turning(using reusable check)
+        //if (_stateMachine.CheckMovementTurn()) {
+        //    SwitchState(factory.GetState(PlayerStateFactory.PlayerStates.GroundedTurning));
+        //    return;
+        //}
 
         // Check if stopped moving (using reusable check)
         if (_stateMachine.CheckIdling()) {

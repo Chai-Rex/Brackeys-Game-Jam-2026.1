@@ -17,13 +17,13 @@ MonoBehaviour:
   DampingX: 0.8
   DampingY: 0.8
   LandingSettleDamping: 0.8
-  DeadzoneSize: {x: 10, y: 0}
+  DeadzoneSize: {x: 8, y: 0}
   LockHorizontal: 0
   LockVertical: 0
   LookaheadMinVelocityX: 0.5
   LookaheadMaxVelocityX: 12
   LookaheadMinDistanceX: 0.5
-  LookaheadMaxDistanceX: 20
+  LookaheadMaxDistanceX: 10
   LookaheadCurveX:
     serializedVersion: 2
     m_Curve:
@@ -51,9 +51,9 @@ MonoBehaviour:
   LookaheadDampingX: 0.8
   LookaheadRetractDampingX: 0.8
   LookaheadMinVelocityYDown: 5
-  LookaheadMaxVelocityYDown: 30
+  LookaheadMaxVelocityYDown: 20
   LookaheadMinDistanceYDown: 0.5
-  LookaheadMaxDistanceYDown: 15
+  LookaheadMaxDistanceYDown: 8
   LookaheadCurveYDown:
     serializedVersion: 2
     m_Curve:
@@ -79,9 +79,9 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   LookaheadMinVelocityYUp: 12
-  LookaheadMaxVelocityYUp: 30
+  LookaheadMaxVelocityYUp: 20
   LookaheadMinDistanceYUp: 0.5
-  LookaheadMaxDistanceYUp: 15
+  LookaheadMaxDistanceYUp: 8
   LookaheadCurveYUp:
     serializedVersion: 2
     m_Curve:
