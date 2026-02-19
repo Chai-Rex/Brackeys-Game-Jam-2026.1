@@ -57,6 +57,14 @@ public static class RandomExtension
                 return pnt * radius;
         }
     }
+
+    // Correct Mathf.PerlinNoise1D drift : min = -0.9305f, max = 2-0.9305f
+    public static Vector2 PerlinVector2(Vector2 position, float min = -1, float max = 1) 
+        => Vector2.one * min + new Vector2(Mathf.PerlinNoise1D(position.x), Mathf.PerlinNoise1D(position.y)) * (max - min);
+
+    public static Vector3 PerlinVector3(Vector3 position, float min = -1, float max = 1)
+        => Vector3.one * min + new Vector3(Mathf.PerlinNoise1D(position.x), Mathf.PerlinNoise1D(position.y), Mathf.PerlinNoise1D(position.z)) * (max - min);
+
 }
 
 

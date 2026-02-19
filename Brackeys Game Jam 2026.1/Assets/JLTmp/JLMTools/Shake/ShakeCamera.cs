@@ -30,25 +30,22 @@ public class ShakeCamera : Shake
         instance = this;
     }
 
-    public void Impact(Vector3 position, float radius, float amplitude, float noise = 0)
+    public void Impact(float amplitude, Vector3 position, float radius)
     {
         if (!ShakeCameraListener.Instance)
             return;
 
         float sqrDist = (position - ShakeCameraListener.Instance.transform.position).sqrMagnitude; 
 
-
         if (sqrDist >= radius * radius)
             return;
         
         float dist = Mathf.Sqrt(sqrDist);
         float coef = 1 - dist / radius;
-        amplitude *= coef;
-        noise *= coef;
-        Impact(amplitude, noise);
+        Impact(amplitude * coef);
     }
 
-    public void Impact(Vector2 position, float radius, float amplitude, float noise = 0)
+    public void Impact(float amplitude, Vector2 position, float radius)
     {
         if (!ShakeCameraListener.Instance)
             return;
@@ -60,8 +57,6 @@ public class ShakeCamera : Shake
         
         float dist = Mathf.Sqrt(sqrDist);
         float coef = 1 - dist / radius;
-        amplitude *= coef;
-        noise *= coef;
-        Impact(amplitude, noise);
+        Impact(amplitude * coef);
     }
 }

@@ -1,0 +1,429 @@
+fileFormatVersion: 2
+guid: 32cde5dc7a216fc40aab02ad4276b8ed
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4227263422994613048
+    second: FullDirtTileMap_0
+  - first:
+      213: -5231508373593524378
+    second: FullDirtTileMap_1
+  - first:
+      213: 2647713977701473719
+    second: FullDirtTileMap_2
+  - first:
+      213: -394378299841617650
+    second: FullDirtTileMap_3
+  - first:
+      213: -2544903388305632310
+    second: FullDirtTileMap_4
+  - first:
+      213: -7448816163662078567
+    second: FullDirtTileMap_5
+  - first:
+      213: -8784815608327418049
+    second: FullDirtTileMap_6
+  - first:
+      213: 804624028921885403
+    second: FullDirtTileMap_7
+  - first:
+      213: -7079869492965202424
+    second: FullDirtTileMap_8
+  - first:
+      213: 7253987914365864804
+    second: FullDirtTileMap_9
+  - first:
+      213: 2722295632044744146
+    second: FullDirtTileMap_10
+  - first:
+      213: -2073408259702063627
+    second: FullDirtTileMap_11
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 542
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: FullDirtTileMap_0
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 1179
+        width: 542
+        height: 542
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cc7764505eb555c0800000000000000
+      internalID: -4227263422994613048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FullDirtTileMap_1
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 1179
+        width: 542
+        height: 542
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 667f9781ad2f567b0800000000000000
+      internalID: -5231508373593524378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FullDirtTileMap_2
+      rect:
+        serializedVersion: 2
+        x: 1179
+        y: 1179
+        width: 542
+        height: 542
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bd9bb3a5d19eb420800000000000000
+      internalID: 2647713977701473719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FullDirtTileMap_3
+      rect:
+        serializedVersion: 2
+        x: 1759
+        y: 1179
+        width: 542
+        height: 542
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0161da9603e68af0800000000000000
+      internalID: -394378299841617650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FullDirtTileMap_4
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 599
+        width: 542
+        height: 542
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac3da501adfaeacd0800000000000000
+      internalID: -2544903388305632310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FullDirtTileMap_5
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 599
+        width: 542
+        height: 542
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99ddbb72a2d70a890800000000000000
+      internalID: -7448816163662078567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FullDirtTileMap_6
+      rect:
+        serializedVersion: 2
+        x: 1179
+        y: 599
+        width: 542
+        height: 542
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3f46588fb0161680800000000000000
+      internalID: -8784815608327418049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FullDirtTileMap_7
+      rect:
+        serializedVersion: 2
+        x: 1759
+        y: 599
+        width: 542
+        height: 542
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd2f1ad8a499a2b00800000000000000
+      internalID: 804624028921885403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FullDirtTileMap_8
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 19
+        width: 542
+        height: 542
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8062fa7f4304fbd90800000000000000
+      internalID: -7079869492965202424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FullDirtTileMap_9
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 19
+        width: 542
+        height: 542
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46b01c823975ba460800000000000000
+      internalID: 7253987914365864804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FullDirtTileMap_10
+      rect:
+        serializedVersion: 2
+        x: 1179
+        y: 19
+        width: 542
+        height: 542
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2dddf99347987c520800000000000000
+      internalID: 2722295632044744146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FullDirtTileMap_11
+      rect:
+        serializedVersion: 2
+        x: 1759
+        y: 19
+        width: 542
+        height: 542
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fdf8165c26c933e0800000000000000
+      internalID: -2073408259702063627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      FullDirtTileMap_0: -4227263422994613048
+      FullDirtTileMap_1: -5231508373593524378
+      FullDirtTileMap_10: 2722295632044744146
+      FullDirtTileMap_11: -2073408259702063627
+      FullDirtTileMap_2: 2647713977701473719
+      FullDirtTileMap_3: -394378299841617650
+      FullDirtTileMap_4: -2544903388305632310
+      FullDirtTileMap_5: -7448816163662078567
+      FullDirtTileMap_6: -8784815608327418049
+      FullDirtTileMap_7: 804624028921885403
+      FullDirtTileMap_8: -7079869492965202424
+      FullDirtTileMap_9: 7253987914365864804
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

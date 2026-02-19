@@ -29,6 +29,54 @@ public static class UnityExtension
         return default;
     }
 
+    public static T GetComponentInChildren<T>(this Component from, Predicate<T> filter)
+    {
+        if (filter == null)
+            return from.GetComponentInChildren<T>();
+
+        foreach (T t in from.GetComponentsInChildren<T>())
+            if (filter(t))
+                return t;
+
+        return default;
+    }
+
+    public static T GetComponentInChildren<T>(this GameObject from, Predicate<T> filter)
+    {
+        if (filter == null)
+            return from.GetComponentInChildren<T>();
+
+        foreach (T t in from.GetComponentsInChildren<T>())
+            if (filter(t))
+                return t;
+
+        return default;
+    }
+
+    public static T GetComponentInParent<T>(this Component from, Predicate<T> filter)
+    {
+        if (filter == null)
+            return from.GetComponentInParent<T>();
+
+        foreach (T t in from.GetComponentsInParent<T>())
+            if (filter(t))
+                return t;
+
+        return default;
+    }
+
+    public static T GetComponentInParent<T>(this GameObject from, Predicate<T> filter)
+    {
+        if (filter == null)
+            return from.GetComponentInParent<T>();
+
+        foreach (T t in from.GetComponentsInParent<T>())
+            if (filter(t))
+                return t;
+
+        return default;
+    }
+
     public static bool TryGetComponentInParent<T>(this Component from, out T component, bool includeInactive = true)
     {
         component = from.GetComponentInParent<T>(includeInactive);
