@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{2B4FCDD6-7034-4F03-8455-9DC46B8F8FD0}",
     "Language": "SFX",
-    "Hash": "{A95FEBE3-E19F-3828-28BF-E32E9CEC1B23}",
+    "Hash": "{1EE75A58-A526-E7D4-9099-EE367D01268E}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\SFX",
     "ShortName": "SFX",
     "Path": "SFX.bnk",
@@ -373,7 +373,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Soundly Audio\\MECHClik_SMorph_Mechanism - Click Tight 02.wav",
-      "CachePath": "0F/{0F4ACA4B-6621-C87F-C909-566325E7EFC1}.wem"
+      "CachePath": "B2/{B25403C7-5FC5-BADB-BB1C-A54B44437C76}.wem"
      },
      {
       "Id": "347879832",
@@ -389,7 +389,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Pixel Face Stim 5.wav",
-      "CachePath": "78/{781C8B82-7D11-6465-EDB6-8BC35FC11351}.wem"
+      "CachePath": "F9/{F9B96327-9642-1CBC-457C-E4DC482B873F}.wem"
      },
      {
       "Id": "359429183",
@@ -445,7 +445,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Soundly Audio\\MECHGear_SMorph_Mechanism - Source Counting Machine Chunks Antique 07.wav",
-      "CachePath": "49/{49779784-9669-1BA5-8E58-0F05A5B24B9F}.wem"
+      "CachePath": "F6/{F6BF2314-79CA-4A3C-57A4-33E7E004FE4D}.wem"
      },
      {
       "Id": "385351660",
@@ -853,7 +853,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Pixel Face Stim 3.wav",
-      "CachePath": "81/{811035A0-81C6-A4AA-CE69-D761ABC32862}.wem"
+      "CachePath": "94/{94F6899F-8666-B61A-408C-CBED56AC2BC6}.wem"
      },
      {
       "Id": "651752867",
@@ -997,7 +997,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Pixel Face Stim 4.wav",
-      "CachePath": "AF/{AFFE3E74-5996-98E3-8A66-B3977A51658C}.wem"
+      "CachePath": "C7/{C7D34B22-4F6F-CBFC-8450-DFC78D9B6A89}.wem"
      },
      {
       "Id": "767441298",
@@ -2552,6 +2552,6 @@
     ]
    }
   ],
-  "FileHash": "{08111718-965A-9528-9C68-D15CF93E40A9}"
+  "FileHash": "{9C8A1AF2-2F3A-85A9-1421-ABBDCEA1357F}"
  }
 }
