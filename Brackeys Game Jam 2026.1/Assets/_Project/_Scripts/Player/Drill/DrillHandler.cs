@@ -74,7 +74,7 @@ public class DrillHandler : MonoBehaviour
             return;
         }
         Vector3Int cellPosition = tilemap.WorldToCell(mouseWorldPosition);
-        tileData tileData = GetTileData(tilemap, cellPosition);
+        TileData tileData = GetTileData(tilemap, cellPosition);
         if (tileData == null || tileData.isDestructible == false)
         {
             return;
@@ -92,7 +92,11 @@ public class DrillHandler : MonoBehaviour
             var cellPosition = tilemap.WorldToCell(hit.point);
             //Instantiate(drill, cellPosition, Quaternion.identity);
             Debug.Log("Tile at Cell Position Before: " + tilemap.GetTile(cellPosition)?.name ?? "None");
-            DestroyTile(tilemap, cellPosition);
+            TileData tileData = GetTileData(tilemap, cellPosition);
+            if (tileData != null && tileData.isDestructible)
+            {
+                DestroyTile(tilemap, tileData, cellPosition);
+            }
             Debug.Log("Hit: " + hit.collider.gameObject.name);
             Debug.Log("Hit Point: " + hit.point);
             Debug.Log("Cell Position: " + cellPosition);
@@ -122,11 +126,13 @@ public class DrillHandler : MonoBehaviour
                 else
                 {
                     Debug.Log("No Tile Data found for " + tile.name);
+                    return null;
                 }
         }
         else
         {
             Debug.Log("No tile at " + cellPosition);
+            return null;
         }
     }
 
