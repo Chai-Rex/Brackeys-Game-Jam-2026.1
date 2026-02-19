@@ -15,3 +15,4 @@ MonoBehaviour:
   objectName: SFX
   id: 393239870
   guid: 2B4FCDD6-7034-4F03-8455-9DC46B8F8FD0
+  bank: {fileID: 11400000, guid: b99409b4c69324ef398b1bfdca624fea, type: 2}
