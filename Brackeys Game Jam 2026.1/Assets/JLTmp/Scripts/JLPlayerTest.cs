@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(Rigidbody2D))]
-public class JLPlayerTest : Singleton<JLPlayerTest>, IBarnakTarget
+public class JLPlayerTest : Singleton<JLPlayerTest>, IBarnakTarget, IUmbrelloidTarget
 {
     [Header("Movement")]
     [SerializeField] float groundAcceleration = 10;
@@ -149,6 +149,11 @@ public class JLPlayerTest : Singleton<JLPlayerTest>, IBarnakTarget
             barnakCaught = null;
         }
 
+        //...
+    }
+
+    public void OnUmbrelloidHit()
+    {
         //...
     }
 }

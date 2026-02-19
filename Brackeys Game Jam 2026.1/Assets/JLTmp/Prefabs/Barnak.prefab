@@ -77,13 +77,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b605b57964c94f3487eb64ba3e09529, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Shake
-  axis: {x: 1, y: 1, z: 0}
-  baseAmplitude: 0.1
-  baseNoise: 5
-  addAmplitude: 0
-  addNoise: 0
-  speed: 5
   target: {fileID: 0}
+  baseAmplitude: 0.07
+  impactAmplitude: 0
+  impactSpeed: 5
+  baseNoise: 0
+  noiseWithAmplitude: 50
+  shakeType: 1
+  shakePositionAxis: {x: 1, y: 1, z: 0}
+  shakePositionWithAmplitude: 1
+  shakeRotationAxis: {x: 1, y: 1, z: 0}
+  shakeRotationWithAmplitude: 10
 --- !u!1 &4599671783595160886
 GameObject:
   m_ObjectHideFlags: 0
@@ -323,8 +327,7 @@ MonoBehaviour:
   caughtSpeed: 0.5
   shakeCaughtTarget: {fileID: 7007372411169064080}
   hitsToRelease: 5
-  hitShakeAmplitude: 0.4
-  hitShakeNoise: 10
+  hitShakeAmplitude: 0.2
   eatingTime: 5
   recoveringTime: 5
   notifyAkOnCatch: Vine_Catch

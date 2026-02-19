@@ -81,9 +81,7 @@ public class Mosquito : MonoBehaviour
             (target.transform.position - transform.position).sqrMagnitude < target.SqrRadius)
             return Vector2.zero;
 
-        Vector2 noiseValue = new(Mathf.PerlinNoise1D(noiseOffset.x + Time.time * noiseScale) * 2f - 0.9305f, 
-                                 Mathf.PerlinNoise1D(noiseOffset.y + Time.time * noiseScale) * 2f - 0.9305f);
-
+        Vector2 noiseValue = RandomExtension.PerlinVector2(noiseOffset + noiseScale * Time.time * Vector2.one, -0.9305f, 2-0.9305f);
         Vector2 acceleration = randomAcceleration * noiseValue;
         rb.linearVelocity += acceleration * Time.fixedDeltaTime;
         return acceleration;

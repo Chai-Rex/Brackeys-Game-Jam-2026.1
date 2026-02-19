@@ -15,7 +15,6 @@ public class MadElevator : MonoBehaviour
     [SerializeField] float waitingTime = 3;
     [SerializeField] float shakeRadius = 8;
     [SerializeField] float shakeAmplitude = 5;
-    [SerializeField] float shakeNoise = 5;
 
     Collider2D[] triggers;
 
@@ -72,7 +71,7 @@ public class MadElevator : MonoBehaviour
                     t -= travelTime;
                     travelCount++;
                     t1ToT2 = !t1ToT2;
-                    ShakeCamera.Instance.Impact((Vector2)transform.position, shakeRadius, shakeAmplitude, shakeNoise);
+                    ShakeCamera.Instance.Impact(shakeAmplitude, (Vector2)transform.position, shakeRadius);
 
                     if (travelCount == nbTravels)
                     {
