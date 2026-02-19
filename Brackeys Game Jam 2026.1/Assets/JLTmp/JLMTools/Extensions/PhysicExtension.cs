@@ -4,6 +4,12 @@ using UnityEngine;
 
 public static class PhysicExtension
 {
+    public static bool TryRaycast2D(Vector2 start, Vector2 direction, float length, LayerMask layer, out RaycastHit2D hit)
+    {
+        hit = Physics2D.Raycast(start, direction, length, layer);
+        return hit;
+    }
+
     public static bool TryRaycast2DCircle(Vector2 center, float radius, int nbRaycast, LayerMask layer, out RaycastHit2D hit)
     {
         hit = Raycast2DCircle(center, radius, nbRaycast, layer);

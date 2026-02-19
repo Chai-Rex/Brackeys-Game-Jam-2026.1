@@ -73,4 +73,24 @@ public static class GizmosExtension
 
         Gizmos.DrawLine(center, p2);
     }
+
+    public static void DrawArrow(Vector2 start, Vector2 end, float headLength, float headAngle = 90)
+        => DrawArrow(start, end, Vector3.forward, headLength, headAngle);
+
+    public static void DrawArrow(Vector3 start, Vector3 end, Vector3 normal, float headLength, float headAngle = 90)
+    {
+        if (start == end || 
+            normal == Vector3.zero)
+            return;
+
+        Vector3 endToStartDir = (start - end).normalized;
+        normal.Normalize();
+
+        if (Mathf.Abs(Vector3.Dot(normal, endToStartDir)) > 0.999f)
+            return;
+
+        Gizmos.DrawLine(start, end);
+        Gizmos.DrawLine(end, end + Quaternion.LookRotation(endToStartDir, normal) * Quaternion.Euler(0, headAngle / 2, 0) * Vector3.forward * headLength);
+        Gizmos.DrawLine(end, end + Quaternion.LookRotation(endToStartDir, normal) * Quaternion.Euler(0,-headAngle / 2, 0) * Vector3.forward * headLength);        
+    }
 }

@@ -191,6 +191,48 @@ public static class UnityExtension
         transform.localPosition = position;
     }
 
+    public static void SetXEuler(this Transform transform, float x)
+    {
+        Vector3 euler = transform.eulerAngles;
+        euler.x = x;
+        transform.eulerAngles = euler;
+    }
+    
+    public static void SetYEuler(this Transform transform, float y)
+    {
+        Vector3 euler = transform.eulerAngles;
+        euler.y = y;
+        transform.eulerAngles = euler;
+    }
+
+    public static void SetZEuler(this Transform transform, float z)
+    {
+        Vector3 euler = transform.eulerAngles;
+        euler.z = z;
+        transform.eulerAngles = euler;
+    }
+
+    public static void AddXEuler(this Transform transform, float x)
+    {
+        Vector3 euler = transform.eulerAngles;
+        euler.x += x;
+        transform.eulerAngles = euler;
+    }
+    
+    public static void AddYEuler(this Transform transform, float y)
+    {
+        Vector3 euler = transform.eulerAngles;
+        euler.y += y;
+        transform.eulerAngles = euler;
+    }
+
+    public static void AddZEuler(this Transform transform, float z)
+    {
+        Vector3 euler = transform.eulerAngles;
+        euler.z += z;
+        transform.eulerAngles = euler;
+    }
+
     public static void SetXScale(this Transform transform, float x)
     {
         Vector3 scale = transform.localScale;

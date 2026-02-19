@@ -24,8 +24,7 @@ public class Mosquito : MonoBehaviour
 
     [Space(15)]
     [SerializeField] float groundRepulsion = 1f;
-    [SerializeField] float groundRaycastDistance = 0.5f;
-    [SerializeField] LayerMask groundLayer;
+    [SerializeField] float groundRepulsionRadius = 0.5f;
 
     [Space(15)]
     [SerializeField, ReadOnly] bool lookRight = true;
@@ -41,7 +40,7 @@ public class Mosquito : MonoBehaviour
     void OnDrawGizmosSelected()
     {
         DrawViewTargetRadius();
-        DrawGroundRaycast();
+        DrawGroundRepulsionRadius();
     }
 
     void DrawViewTargetRadius()
@@ -50,10 +49,10 @@ public class Mosquito : MonoBehaviour
         GizmosExtension.DrawCircle(transform.position, Vector3.forward, viewTargetRadius);
     }
 
-    void DrawGroundRaycast()
+    void DrawGroundRepulsionRadius()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawLine(transform.position, transform.position + Vector3.down * groundRaycastDistance);
+        GizmosExtension.DrawCircle(transform.position, groundRepulsionRadius);
     }
 
     void Awake()
@@ -97,11 +96,14 @@ public class Mosquito : MonoBehaviour
 
     Vector2 GroundRepulsion()
     {
+        GroundData groundData = GroundDataGrid.Instance.GetData(transform.position);
+
         if (target ||
-            !Physics2D.Raycast(transform.position, Vector2.down, groundRaycastDistance, groundLayer))
+            !groundData.HasHit ||
+            groundData.GroundDistance > groundRepulsionRadius)
             return Vector2.zero;
 
-        Vector2 acceleration = groundRepulsion * Vector2.up;
+        Vector2 acceleration = groundRepulsion * groundData.OutDirection;
         rb.linearVelocity += acceleration * Time.fixedDeltaTime;
         return acceleration;
     }
