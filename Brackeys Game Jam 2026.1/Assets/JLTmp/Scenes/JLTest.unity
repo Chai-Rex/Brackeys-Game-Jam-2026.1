@@ -507,7 +507,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 131072
-  rotateWithAcceleration: 1
+  rotateWithAcceleration: -10
 --- !u!4 &72124760
 Transform:
   m_ObjectHideFlags: 0
@@ -3663,7 +3663,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 131072
-  rotateWithAcceleration: 1
+  rotateWithAcceleration: -10
 --- !u!4 &1403668350
 Transform:
   m_ObjectHideFlags: 0
@@ -4616,7 +4616,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 131072
-  rotateWithAcceleration: 1
+  rotateWithAcceleration: -10
 --- !u!50 &1987601136
 Rigidbody2D:
   serializedVersion: 5
@@ -4710,7 +4710,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 131072
-  rotateWithAcceleration: 1
+  rotateWithAcceleration: -10
 --- !u!4 &2018072690
 Transform:
   m_ObjectHideFlags: 0
