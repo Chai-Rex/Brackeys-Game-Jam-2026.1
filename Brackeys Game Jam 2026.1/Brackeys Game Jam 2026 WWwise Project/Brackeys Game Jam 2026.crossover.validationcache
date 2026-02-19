@@ -80,8 +80,8 @@
 	<ValidationCacheItem File="Y:\Documents\Brackeys Game Jam 2026\Brackeys Game Jam 2026\Virtual Acoustics\Factory Acoustic Textures.wwu" DateLow="1770916002" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Documents\Brackeys Game Jam 2026\Brackeys-Game-Jam-2026.1\Brackeys Game Jam 2026.1\Brackeys Game Jam 2026 WWwise Project\Attenuations\Default Work Unit.wwu" DateLow="1771460545" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Documents\Brackeys Game Jam 2026\Brackeys-Game-Jam-2026.1\Brackeys Game Jam 2026.1\Brackeys Game Jam 2026 WWwise Project\Attenuations\Factory Attenuations.wwu" DateLow="1771460545" DateHigh="0"/>
-	<ValidationCacheItem File="Y:\Documents\Brackeys Game Jam 2026\Brackeys-Game-Jam-2026.1\Brackeys Game Jam 2026.1\Brackeys Game Jam 2026 WWwise Project\Brackeys Game Jam 2026.crossover.wsettings" DateLow="1771460552" DateHigh="0"/>
-	<ValidationCacheItem File="Y:\Documents\Brackeys Game Jam 2026\Brackeys-Game-Jam-2026.1\Brackeys Game Jam 2026.1\Brackeys Game Jam 2026 WWwise Project\Brackeys Game Jam 2026.wproj" DateLow="1771465330" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Documents\Brackeys Game Jam 2026\Brackeys-Game-Jam-2026.1\Brackeys Game Jam 2026.1\Brackeys Game Jam 2026 WWwise Project\Brackeys Game Jam 2026.crossover.wsettings" DateLow="1771491680" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Documents\Brackeys Game Jam 2026\Brackeys-Game-Jam-2026.1\Brackeys Game Jam 2026.1\Brackeys Game Jam 2026 WWwise Project\Brackeys Game Jam 2026.wproj" DateLow="1771491959" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Documents\Brackeys Game Jam 2026\Brackeys-Game-Jam-2026.1\Brackeys Game Jam 2026.1\Brackeys Game Jam 2026 WWwise Project\Busses\Default Work Unit.wwu" DateLow="1771460545" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Documents\Brackeys Game Jam 2026\Brackeys-Game-Jam-2026.1\Brackeys Game Jam 2026.1\Brackeys Game Jam 2026 WWwise Project\Containers\Ambience.wwu" DateLow="1771460545" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Documents\Brackeys Game Jam 2026\Brackeys-Game-Jam-2026.1\Brackeys Game Jam 2026.1\Brackeys Game Jam 2026 WWwise Project\Containers\Credits.wwu" DateLow="1771460545" DateHigh="0"/>
@@ -165,5 +165,5 @@
 	<ValidationCacheItem File="Y:\Documents\Brackeys Game Jam 2026\Brackeys-Game-Jam-2026.1\Brackeys Game Jam 2026.1\Brackeys Game Jam 2026 WWwise Project\Triggers\Default Work Unit.wwu" DateLow="1771460545" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Documents\Brackeys Game Jam 2026\Brackeys-Game-Jam-2026.1\Brackeys Game Jam 2026.1\Brackeys Game Jam 2026 WWwise Project\Virtual Acoustics\Default Work Unit.wwu" DateLow="1771460545" DateHigh="0"/>
 	<ValidationCacheItem File="Y:\Documents\Brackeys Game Jam 2026\Brackeys-Game-Jam-2026.1\Brackeys Game Jam 2026.1\Brackeys Game Jam 2026 WWwise Project\Virtual Acoustics\Factory Acoustic Textures.wwu" DateLow="1771460545" DateHigh="0"/>
-	<ValidationCacheItem File="Y:\Library\Application Support\Audiokinetic\MediaPool\2\MediaPoolQuery.wsettings" DateLow="1771465127" DateHigh="0"/>
+	<ValidationCacheItem File="Y:\Library\Application Support\Audiokinetic\MediaPool\2\MediaPoolQuery.wsettings" DateLow="1771491680" DateHigh="0"/>
 </ValidationCache>

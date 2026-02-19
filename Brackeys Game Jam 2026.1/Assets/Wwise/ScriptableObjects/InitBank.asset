@@ -12,8 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9289c9e765809ec408877f7c7b8d296d, type: 3}
   m_Name: InitBank
   m_EditorClassIdentifier: AK.Wwise.Unity.Addressables::AK.Wwise.Unity.WwiseAddressables.WwiseInitBankReference
-<<<<<<< Updated upstream
-  AddressableBank: {fileID: 11400000, guid: c7cc5868819af8a4d9359dd2c5fa6cf4, type: 2}
-=======
   AddressableBank: {fileID: 11400000, guid: a5312191b30a745539fe2cac42faad03, type: 2}
->>>>>>> Stashed changes

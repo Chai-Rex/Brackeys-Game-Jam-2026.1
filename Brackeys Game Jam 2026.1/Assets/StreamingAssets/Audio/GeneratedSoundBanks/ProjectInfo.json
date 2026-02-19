@@ -3,7 +3,7 @@
   "Project": {
    "Name": "Brackeys Game Jam 2026",
    "GUID": "{04C6189E-7D20-4AE3-A376-547CA9D7CC4F}",
-   "Generator": "2025.1.4.9062"
+   "Generator": "2025.1.5.9095"
   },
   "CacheRoot": "../../../../Brackeys Game Jam 2026 WWwise Project/.cache",
   "Platforms": [
@@ -38,6 +38,6 @@
     "UseAsStandIn": "true"
    }
   ],
-  "FileHash": "{3856A22C-30A0-FD54-1F61-0AC1FA0E91EF}"
+  "FileHash": "{79AB44B5-6241-D739-6216-E02FCAA95799}"
  }
 }
