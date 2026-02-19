@@ -23,6 +23,13 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
+						<Action Name="" ID="{3350CBD5-F350-467A-8926-5A93FAEA27E9}" ShortID="578371155">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Jump_Stim" ID="{3B1EDD71-55EE-4E4A-95D6-FC3BF8E0FCF0}" WorkUnitID="{3ECFDC21-BC11-4FE3-954C-F43EAD4EBE72}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 					</ChildrenList>
 				</Event>
 				<Event Name="Player_Land" ID="{D5FAADD1-2EFB-4432-A434-1CF7F916DCD0}">
@@ -31,6 +38,13 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Land" ID="{9A3B2ED9-1262-4EDB-BB44-DEFE348C4235}" WorkUnitID="{3ECFDC21-BC11-4FE3-954C-F43EAD4EBE72}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{35152253-7448-49EF-A39A-DBBE62EC2742}" ShortID="61681993">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Land_Stim" ID="{1DE5797C-0DCA-4A29-8618-6CD3559D0F24}" WorkUnitID="{3ECFDC21-BC11-4FE3-954C-F43EAD4EBE72}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

@@ -6,24 +6,56 @@
 				<SoundcasterSession Name="Testing" ID="{BA460DA4-9B4F-4465-A92C-085A2BE421DD}">
 					<ModuleList>
 						<Module>
-							<ObjectRef Name="Player_Movement" ID="{DD56A193-7B0E-44F1-94F6-A26B9C41BDC1}" WorkUnitID="{554DF8A6-00DD-4132-9FB0-B200859DCB4B}"/>
+							<ObjectRef Name="Play_Emotion" ID="{DD1DD1E9-C390-41EC-B2AE-4C611F4791F6}" WorkUnitID="{007AB0A8-09F8-43A3-9C89-BDE705F6A2B0}"/>
 							<Position X="0" Y="0"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Vine_Eating" ID="{12001EBC-3F44-4627-A43D-699A0F9E70F9}" WorkUnitID="{CA44F333-07BC-40EB-B33A-DBFF62ABE241}"/>
-							<Position X="0" Y="1"/>
-						</Module>
-						<Module>
-							<ObjectRef Name="Vine_LastHit" ID="{F1A09195-2D22-4971-84AD-4D036EF67649}" WorkUnitID="{CA44F333-07BC-40EB-B33A-DBFF62ABE241}"/>
+							<ObjectRef Name="Umbrella_Close" ID="{27AE33D3-8BDD-4488-9DEB-4DDAF14BCE28}" WorkUnitID="{5FAB3C5B-461F-41A2-AFA9-D0E7D16E8837}"/>
 							<Position X="0" Y="2"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Vine_Catch" ID="{E55BEC49-8120-4EEF-8440-E819B650F9F0}" WorkUnitID="{CA44F333-07BC-40EB-B33A-DBFF62ABE241}"/>
+							<ObjectRef Name="Elevator_Arrive" ID="{C3F7CF04-8743-4BA2-9873-003CEC1F566B}" WorkUnitID="{9DC15B11-0837-419C-BBB6-5F47BCD9A295}"/>
+							<Position X="0" Y="4"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Tank_Fill" ID="{F54FAC6E-2FF8-4846-8E6F-48C1700A1D88}" WorkUnitID="{022F35BE-CE25-4D91-8A77-BAB21BD91083}"/>
 							<Position X="1" Y="0"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Vine_Hit" ID="{AF7CE75B-1933-47DF-9C2B-91ECACD9B248}" WorkUnitID="{CA44F333-07BC-40EB-B33A-DBFF62ABE241}"/>
+							<ObjectRef Name="Player_Jump" ID="{2552BA06-D665-4E83-98C8-1B3460BDEC65}" WorkUnitID="{554DF8A6-00DD-4132-9FB0-B200859DCB4B}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Umbrella_Open" ID="{BD1E4134-6717-499D-8F7F-8F16622F38FC}" WorkUnitID="{5FAB3C5B-461F-41A2-AFA9-D0E7D16E8837}"/>
 							<Position X="1" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Elevator_Doors_Close" ID="{9807A9EE-D888-4FE7-B865-F99256DAB524}" WorkUnitID="{9DC15B11-0837-419C-BBB6-5F47BCD9A295}"/>
+							<Position X="1" Y="4"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Tank_Full" ID="{AC884EC7-8916-4B46-A0A1-2F3BF1748CDD}" WorkUnitID="{022F35BE-CE25-4D91-8A77-BAB21BD91083}"/>
+							<Position X="2" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Player_Land" ID="{D5FAADD1-2EFB-4432-A434-1CF7F916DCD0}" WorkUnitID="{554DF8A6-00DD-4132-9FB0-B200859DCB4B}"/>
+							<Position X="2" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Clock_Close" ID="{DE061B01-AD3B-4E81-8DF6-47AE28EF9844}" WorkUnitID="{9A063BF4-7242-4F17-AE57-FC6490DD3F4D}"/>
+							<Position X="2" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Elevator_Moving" ID="{CE51E119-D4E0-4B8D-8A2A-5E327EB8F1F8}" WorkUnitID="{9DC15B11-0837-419C-BBB6-5F47BCD9A295}"/>
+							<Position X="2" Y="4"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Clock_Open" ID="{BDAC2A93-FDEE-48A9-8D9C-0E8B4850AFC1}" WorkUnitID="{9A063BF4-7242-4F17-AE57-FC6490DD3F4D}"/>
+							<Position X="3" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Clock_Tick" ID="{A63A5CCB-8CBE-4B71-A447-C206091AFB43}" WorkUnitID="{9A063BF4-7242-4F17-AE57-FC6490DD3F4D}"/>
+							<Position X="4" Y="3"/>
 						</Module>
 					</ModuleList>
 				</SoundcasterSession>

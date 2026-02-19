@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{9A063BF4-7242-4F17-AE57-FC6490DD3F4D}" SchemaVersion="133" RootDocumentID="{AF08D2E5-B87B-40C5-8E32-6F0E8F795133}" ParentDocumentID="{AF08D2E5-B87B-40C5-8E32-6F0E8F795133}">
+	<Events>
+		<WorkUnit Name="Cuckoo Clock" ID="{9A063BF4-7242-4F17-AE57-FC6490DD3F4D}" OwnerID="{AF08D2E5-B87B-40C5-8E32-6F0E8F795133}" PersistMode="Nested">
+			<ChildrenList>
+				<Event Name="Clock_Tick" ID="{A63A5CCB-8CBE-4B71-A447-C206091AFB43}">
+					<ChildrenList>
+						<Action Name="" ID="{843CA897-D410-4A7D-85C5-288EE3586CF8}" ShortID="741052263">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ticking Clock" ID="{D29CB667-25C1-4F11-99E6-73DD9FC7A246}" WorkUnitID="{11C41816-BB81-4D5E-AB01-A01C8800C032}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Clock_Open" ID="{BDAC2A93-FDEE-48A9-8D9C-0E8B4850AFC1}">
+					<ChildrenList>
+						<Action Name="" ID="{A473DCA8-3A83-491B-B6B3-6BBC71C3DCEB}" ShortID="563051642">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ticking Clock" ID="{D29CB667-25C1-4F11-99E6-73DD9FC7A246}" WorkUnitID="{11C41816-BB81-4D5E-AB01-A01C8800C032}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{7B1D2CE7-499F-4176-87E7-C1AA41B9932E}" ShortID="554066382">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Clock Open" ID="{A3A701D8-4E80-4C63-A47C-DFCFEAB72DC8}" WorkUnitID="{11C41816-BB81-4D5E-AB01-A01C8800C032}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Clock_Close" ID="{DE061B01-AD3B-4E81-8DF6-47AE28EF9844}">
+					<ChildrenList>
+						<Action Name="" ID="{559D7291-0B92-4702-BED0-7754F42C045A}" ShortID="589820422">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Clock Open" ID="{A3A701D8-4E80-4C63-A47C-DFCFEAB72DC8}" WorkUnitID="{11C41816-BB81-4D5E-AB01-A01C8800C032}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{CCBBC36A-2216-43E1-A645-610A04273E6B}" ShortID="436222686">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Clock Close" ID="{5796FABE-15F1-4E87-BB03-2BCE16C9C213}" WorkUnitID="{11C41816-BB81-4D5E-AB01-A01C8800C032}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

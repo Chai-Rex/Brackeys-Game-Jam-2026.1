@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{80871154-ECAD-4EBF-A9F2-88B52B1A667C}" SchemaVersion="133" RootDocumentID="{C5BE94EB-CFE7-4974-AD84-1EA50F78F7F1}" ParentDocumentID="{C5BE94EB-CFE7-4974-AD84-1EA50F78F7F1}">
 	<Containers>
-		<WorkUnit Name="NPC" ID="{80871154-ECAD-4EBF-A9F2-88B52B1A667C}" OwnerID="{C5BE94EB-CFE7-4974-AD84-1EA50F78F7F1}" PersistMode="Nested"/>
+		<WorkUnit Name="NPC" ID="{80871154-ECAD-4EBF-A9F2-88B52B1A667C}" OwnerID="{C5BE94EB-CFE7-4974-AD84-1EA50F78F7F1}" PersistMode="Nested">
+			<ChildrenList>
+				<WorkUnit Name="Pixel Face" ID="{B59255B2-A2B3-45BD-B7A7-F383909545C1}" PersistMode="Reference"/>
+			</ChildrenList>
+		</WorkUnit>
 	</Containers>
 </WwiseDocument>

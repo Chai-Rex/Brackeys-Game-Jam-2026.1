@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{022F35BE-CE25-4D91-8A77-BAB21BD91083}" SchemaVersion="133" RootDocumentID="{AF08D2E5-B87B-40C5-8E32-6F0E8F795133}" ParentDocumentID="{AF08D2E5-B87B-40C5-8E32-6F0E8F795133}">
+	<Events>
+		<WorkUnit Name="Oxygen Tank" ID="{022F35BE-CE25-4D91-8A77-BAB21BD91083}" OwnerID="{AF08D2E5-B87B-40C5-8E32-6F0E8F795133}" PersistMode="Nested">
+			<ChildrenList>
+				<Event Name="Tank_Fill" ID="{F54FAC6E-2FF8-4846-8E6F-48C1700A1D88}">
+					<ChildrenList>
+						<Action Name="" ID="{784C0D9E-914F-4849-A0E1-3268F689796C}" ShortID="592138227">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Tank FIll" ID="{06A1480E-A9D3-458C-A9B8-A39A220DCDE8}" WorkUnitID="{11C41816-BB81-4D5E-AB01-A01C8800C032}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Tank_Full" ID="{AC884EC7-8916-4B46-A0A1-2F3BF1748CDD}">
+					<ChildrenList>
+						<Action Name="" ID="{B43C1430-1D04-4ED1-BE37-A85F11FF1D80}" ShortID="141237883">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Tank FIll" ID="{06A1480E-A9D3-458C-A9B8-A39A220DCDE8}" WorkUnitID="{11C41816-BB81-4D5E-AB01-A01C8800C032}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

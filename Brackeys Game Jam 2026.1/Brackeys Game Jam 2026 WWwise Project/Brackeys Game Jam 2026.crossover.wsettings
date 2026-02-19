@@ -15,14 +15,23 @@
 				<Property Name="Event Action List\{2AEDA264-929A-4736-B984-F58160E2545C}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{8F1FE686-7674-4066-B327-54A1D423C7AE}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{961672CD-2575-44DF-8CF4-FD126DD897BD}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{9807A9EE-D888-4FE7-B865-F99256DAB524}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{99114310-2CC4-4090-A08D-C16D25BA7F11}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{A63A5CCB-8CBE-4B71-A447-C206091AFB43}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{A872FAE8-06FF-4387-8025-B342A87F5D37}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{AC884EC7-8916-4B46-A0A1-2F3BF1748CDD}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{AF7CE75B-1933-47DF-9C2B-91ECACD9B248}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{BD1E4134-6717-499D-8F7F-8F16622F38FC}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{BDAC2A93-FDEE-48A9-8D9C-0E8B4850AFC1}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{C3F7CF04-8743-4BA2-9873-003CEC1F566B}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{CE51E119-D4E0-4B8D-8A2A-5E327EB8F1F8}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{D5FAADD1-2EFB-4432-A434-1CF7F916DCD0}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{DD1DD1E9-C390-41EC-B2AE-4C611F4791F6}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{DD56A193-7B0E-44F1-94F6-A26B9C41BDC1}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{DE061B01-AD3B-4E81-8DF6-47AE28EF9844}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{E55BEC49-8120-4EEF-8440-E819B650F9F0}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{F1A09195-2D22-4971-84AD-4D036EF67649}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{F54FAC6E-2FF8-4846-8E6F-48C1700A1D88}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="EventView\FilterMode1" Type="int32" Value="2"/>
 				<Property Name="EventView\FilterMode2" Type="int32" Value="2"/>
 				<Property Name="ExternalSourcesInputPath" Type="string">
@@ -66,13 +75,13 @@
 				<Property Name="OverrideOriginalFolder\Path" Type="string" Value="Originals"/>
 				<Property Name="ProjectExplorer\SelectionChannel_1\Audio_FocusedObject" Type="string" Value="{8EE133DB-0E3B-47FE-AFF5-26B28D9CA8E1}"/>
 				<Property Name="ProjectExplorer\SelectionChannel_1\CurrentSearch" Type="string" Value=""/>
-				<Property Name="ProjectExplorer\SelectionChannel_1\CurrentTab" Type="int32" Value="1"/>
-				<Property Name="ProjectExplorer\SelectionChannel_1\Events_FocusedObject" Type="string" Value="{70E8E79F-5553-432E-897B-F136E5BE2FFA}"/>
+				<Property Name="ProjectExplorer\SelectionChannel_1\CurrentTab" Type="int32" Value="2"/>
+				<Property Name="ProjectExplorer\SelectionChannel_1\Events_FocusedObject" Type="string" Value="{0FE70C19-896A-4938-88C5-2B77CDD3A42E}"/>
 				<Property Name="ProjectExplorer\SelectionChannel_1\Game Syncs_FocusedObject" Type="string" Value="{CB6175F1-6080-4A23-92EF-0807E304D0C1}"/>
 				<Property Name="ProjectExplorer\SelectionChannel_1\Queries_FocusedObject" Type="string" Value="{23EC2DE3-3ED8-4B82-AC99-92E25F2E4C6B}"/>
 				<Property Name="ProjectExplorer\SelectionChannel_1\Sessions_FocusedObject" Type="string" Value="{BA460DA4-9B4F-4465-A92C-085A2BE421DD}"/>
 				<Property Name="ProjectExplorer\SelectionChannel_1\ShareSets_FocusedObject" Type="string" Value="{F8C4934F-08F6-441F-AC38-92E297D16BBD}"/>
-				<Property Name="ProjectExplorer\SelectionChannel_1\SoundBanks_FocusedObject" Type="string" Value="{79478083-7C63-4BEF-BDC8-A1D6FFF5EE52}"/>
+				<Property Name="ProjectExplorer\SelectionChannel_1\SoundBanks_FocusedObject" Type="string" Value="{2B4FCDD6-7034-4F03-8455-9DC46B8F8FD0}"/>
 				<Property Name="ProjectExplorer\SelectionChannel_1\x64_Audio_LastExpandedState" Type="string" Value="iC8JJ1oiVBFnJcijTz1Ego6IIlN53hxBsRktui+hyzjq2ogjdZfGRqLtxSIqOXdWoYH7mEiGBEiLupxNXtj9qNikFBWmHSpBoX51ygwhSfP4u6dewGRQSoghoH6L4h1o65S+xefPdEmthB6lD3j38QzChvgvHeVFrywOt9FwMqWPiOJieJbXR6O3C7L4UnPZj7zAnYtmokKB45yexR9IQR+sD6iYVbRGo5YhHoioju9HTISFlsH5SZr/JrchDasAOlfQJ5ycZkuje7mGQwyCn55a0xw2m7lGgJYOVlBlzruWkOx38aiVTpR+855JkFH9FhjEEYG7Xk2rAaAciADAMl12dNY7jstPrEtXu3FpFDYh3M8+EbzjT5VM9D6tTr5ypgih7WaGyk6Pgy72Ooi6ew=="/>
 				<Property Name="ProjectExplorer\SelectionChannel_1\x64_Events_LastExpandedState" Type="string" Value="/PCbpkrYfEir3Vb3HLKhJi6IslsEVw5HkK2dzTmlJ47ZiuvM/1pUQYF+0Yt8nGELXjuqE+HgC02pTRqhppbdnTPzRMq8B+tAszrb/2Kr4kHl0give7jFQI4ybw6PeVEz3vWaMB8D4Eybm8ClNidTQw=="/>
 				<Property Name="ProjectExplorer\SelectionChannel_1\x64_Game Syncs_LastExpandedState" Type="string" Value="8XVhy4BgI0qS7wgH4wTQwUoYxqmp0BRGm3h9Xg+4dI3xmL1GFVHIQ6+2TnDzT3E97HKW26r5F0GP1lgT/G4WrbnnqVnJYRpGqW9Jl7VBpZyOgSVAfwlySraSuKLiZj3L7rmDu3Do30ObAwnmUMEDBTXyBBHkF/ZOnR/kJgwuzrPt92BMNOEeRIZCukz+oHS8GyZMdmfF4Ey5PRI61Pwcs/xXdmxYR0FNvUxosJ+R2yk="/>
@@ -158,6 +167,7 @@
 					</ValueList>
 				</Property>
 				<Property Name="Soundcaster\PreviousSession" Type="string" Value="{BA460DA4-9B4F-4465-A92C-085A2BE421DD}"/>
+				<Property Name="SwitchContainerEditorLocation\{16AB2C22-416A-44C1-84E3-801BC2FBA4ED}\x64_Collapsed States" Type="string" Value=""/>
 				<Property Name="SwitchContainerEditorLocation\{45F8A6B4-9DA7-4F37-804A-01811B7F543F}\x64_Collapsed States" Type="string" Value=""/>
 				<Property Name="SwitchContainerEditorLocation\{4F873DAB-B90F-426E-A58B-B94CF013F09A}\x64_Collapsed States" Type="string" Value=""/>
 				<Property Name="SwitchContainerEditorLocation\{53997450-A1CB-4D4A-9221-8FB7FADD7A48}\x64_Collapsed States" Type="string" Value=""/>

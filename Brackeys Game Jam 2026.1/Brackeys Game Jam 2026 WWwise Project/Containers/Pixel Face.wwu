@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{B59255B2-A2B3-45BD-B7A7-F383909545C1}" SchemaVersion="133" RootDocumentID="{C5BE94EB-CFE7-4974-AD84-1EA50F78F7F1}" ParentDocumentID="{80871154-ECAD-4EBF-A9F2-88B52B1A667C}">
+	<Containers>
+		<WorkUnit Name="Pixel Face" ID="{B59255B2-A2B3-45BD-B7A7-F383909545C1}" OwnerID="{80871154-ECAD-4EBF-A9F2-88B52B1A667C}" PersistMode="Nested">
+			<ChildrenList>
+				<RandomSequenceContainer Name="Emotions" ID="{B843C4AA-B460-46DE-B9EB-E5FFC7423F01}" ShortID="973601202">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-14</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="Distant_Attenuation" ID="{F8C4934F-08F6-441F-AC38-92E297D16BBD}" WorkUnitID="{4D1AF88C-570E-4823-A48A-8F0B5156508D}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFX" ID="{C0901958-AA0D-4450-9846-B896800D3928}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Pixel Face Stim 1" ID="{5F13AC98-C07F-496C-8F9B-4B8F187CD175}" ShortID="1068623780">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Pixel Face Stim 1" ID="{9AB20F31-A0DD-4C6A-A4B8-76FA028F83B4}">
+									<Language>SFX</Language>
+									<AudioFile>Pixel Face Stim 1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="538347164"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Pixel Face Stim 1" ID="{9AB20F31-A0DD-4C6A-A4B8-76FA028F83B4}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Pixel Face Stim 3" ID="{EC51E91D-EA52-4080-ADBC-43E5C448F281}" ShortID="256425825">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Pixel Face Stim 3" ID="{4D8A47D4-F561-4F95-8263-F540FF4501A1}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.179648345830489"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.135406589021488"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Pixel Face Stim 3.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="649936251"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Pixel Face Stim 3" ID="{4D8A47D4-F561-4F95-8263-F540FF4501A1}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Pixel Face Stim 4" ID="{5344E500-B3D0-4476-B40A-A892CEC86C96}" ShortID="917794813">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Pixel Face Stim 4" ID="{4A653F2E-A5B6-4637-A67E-85BE080E7F47}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.015677655323334"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.101120876835504"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Pixel Face Stim 4.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="754177649"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Pixel Face Stim 4" ID="{4A653F2E-A5B6-4637-A67E-85BE080E7F47}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Pixel Face Stim 5" ID="{95371779-1798-4187-9FBB-C3F449D93DD9}" ShortID="483805390">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Pixel Face Stim 5" ID="{91C197F9-6553-4249-9AA7-363D8BEDCC72}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0447252753016713"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.0740000009536743"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Pixel Face Stim 5.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="355140699"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Pixel Face Stim 5" ID="{91C197F9-6553-4249-9AA7-363D8BEDCC72}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
+			</ChildrenList>
+		</WorkUnit>
+	</Containers>
+</WwiseDocument>

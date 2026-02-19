@@ -13,13 +13,22 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID CLOCK_CLOSE = 2563575728U;
+        static const AkUniqueID CLOCK_OPEN = 2846897348U;
+        static const AkUniqueID CLOCK_TICK = 2719257531U;
         static const AkUniqueID CRICKET_JUMP = 515483981U;
         static const AkUniqueID CRICKET_LAND = 3381550706U;
+        static const AkUniqueID ELEVATOR_ARRIVE = 3929235283U;
+        static const AkUniqueID ELEVATOR_DOORS_CLOSE = 4216832672U;
+        static const AkUniqueID ELEVATOR_MOVING = 2518616252U;
         static const AkUniqueID FLOORVINE_EATING = 2689584014U;
+        static const AkUniqueID PLAY_EMOTION = 1222141441U;
         static const AkUniqueID PLAY_MOSQUITO = 1534211419U;
         static const AkUniqueID PLAYER_JUMP = 1305133589U;
         static const AkUniqueID PLAYER_LAND = 3629196698U;
         static const AkUniqueID PLAYER_MOVEMENT = 541470702U;
+        static const AkUniqueID TANK_FILL = 3580624671U;
+        static const AkUniqueID TANK_FULL = 4112977187U;
         static const AkUniqueID UMBRELLA_CLOSE = 3217770052U;
         static const AkUniqueID UMBRELLA_OPEN = 89220416U;
         static const AkUniqueID VINE_CATCH = 1532741045U;

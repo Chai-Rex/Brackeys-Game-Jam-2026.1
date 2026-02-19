@@ -3,28 +3,10 @@
 	<Events>
 		<WorkUnit Name="Items" ID="{AF08D2E5-B87B-40C5-8E32-6F0E8F795133}" PersistMode="Standalone">
 			<ChildrenList>
-				<Event Name="Umbrella_Open" ID="{BD1E4134-6717-499D-8F7F-8F16622F38FC}">
-					<ChildrenList>
-						<Action Name="" ID="{89802A72-7D6A-4794-BDCE-4E59346459AA}" ShortID="1014806183">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Umbrella Open" ID="{06C4EE7B-81BF-4AB5-9FA9-A66C06F241EB}" WorkUnitID="{11C41816-BB81-4D5E-AB01-A01C8800C032}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Umbrella_Close" ID="{27AE33D3-8BDD-4488-9DEB-4DDAF14BCE28}">
-					<ChildrenList>
-						<Action Name="" ID="{A8ACB5AC-1AA4-4769-B3E1-504272DFD6A7}" ShortID="393933283">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Umbrella Close" ID="{A1C99289-C962-4021-99D0-5BC1953EFB1A}" WorkUnitID="{11C41816-BB81-4D5E-AB01-A01C8800C032}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
+				<WorkUnit Name="Umbrella" ID="{5FAB3C5B-461F-41A2-AFA9-D0E7D16E8837}" PersistMode="Reference"/>
+				<WorkUnit Name="Oxygen Tank" ID="{022F35BE-CE25-4D91-8A77-BAB21BD91083}" PersistMode="Reference"/>
+				<WorkUnit Name="Cuckoo Clock" ID="{9A063BF4-7242-4F17-AE57-FC6490DD3F4D}" PersistMode="Reference"/>
+				<WorkUnit Name="Elevator" ID="{9DC15B11-0837-419C-BBB6-5F47BCD9A295}" PersistMode="Reference"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

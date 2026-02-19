@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{2B4FCDD6-7034-4F03-8455-9DC46B8F8FD0}",
     "Language": "SFX",
-    "Hash": "{2DF66C87-AF83-8503-72A0-BF738AB25044}",
+    "Hash": "{A95FEBE3-E19F-3828-28BF-E32E9CEC1B23}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\SFX",
     "ShortName": "SFX",
     "Path": "SFX.bnk",
@@ -40,6 +40,14 @@
       "CachePath": "32/{32FEF8BD-A3CA-1A2B-BD41-B2CB39BC653A}.wem"
      },
      {
+      "Id": "26192481",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Clock Whir.wav",
+      "CachePath": "3C/{3CE7DC90-E8F9-818D-6E2E-05BEDCAA25D6}.wem"
+     },
+     {
       "Id": "29898209",
       "Language": "SFX",
       "Streaming": "false",
@@ -54,6 +62,30 @@
       "Location": "Memory",
       "ShortName": "Vine Capture.wav",
       "CachePath": "1B/{1B4C6C3B-2F9C-23FD-E17F-C367C245A9B8}.wem"
+     },
+     {
+      "Id": "44741399",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Land Grunt 1.wav",
+      "CachePath": "39/{39D0C393-4BCD-4999-1943-DD610C070ACD}.wem"
+     },
+     {
+      "Id": "49100587",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Oxygen Tank Fill Up.wav",
+      "CachePath": "E5/{E54D1208-8150-BDA4-9724-9D82F44CC337}.wem"
+     },
+     {
+      "Id": "73084760",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Land Grunt 3.wav",
+      "CachePath": "EE/{EEF4F033-F28B-5676-1755-2069E4EFE232}.wem"
      },
      {
       "Id": "73412954",
@@ -94,6 +126,14 @@
       "Location": "Memory",
       "ShortName": "Dirt Run 1.wav",
       "CachePath": "84/{8487A3A4-3B69-3351-3A6D-D0679DEA5A42}.wem"
+     },
+     {
+      "Id": "122619185",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Clock Rattle.wav",
+      "CachePath": "0A/{0A7FC003-30B3-AE9D-E094-4E10AB73258F}.wem"
      },
      {
       "Id": "138220742",
@@ -328,12 +368,28 @@
       "CachePath": "7E/{7EEB55FE-1BDD-52CA-6451-96AC1D9CF6A8}.wem"
      },
      {
+      "Id": "346398684",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Soundly Audio\\MECHClik_SMorph_Mechanism - Click Tight 02.wav",
+      "CachePath": "0F/{0F4ACA4B-6621-C87F-C909-566325E7EFC1}.wem"
+     },
+     {
       "Id": "347879832",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Glass Walk 9.wav",
       "CachePath": "9F/{9FEFD662-5FA0-8929-385F-6AFCFD4B7572}.wem"
+     },
+     {
+      "Id": "355140699",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Pixel Face Stim 5.wav",
+      "CachePath": "78/{781C8B82-7D11-6465-EDB6-8BC35FC11351}.wem"
      },
      {
       "Id": "359429183",
@@ -368,12 +424,28 @@
       "CachePath": "6C/{6C6987EC-4184-E1D4-DA60-8285972F3BE5}.wem"
      },
      {
+      "Id": "375392163",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Jump Grunt 1.wav",
+      "CachePath": "E0/{E06CB1F0-0651-08F2-6971-B891EB7B711C}.wem"
+     },
+     {
       "Id": "382022843",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Metal Run 7.wav",
       "CachePath": "93/{9398DAD7-7578-3A9F-70C2-CD6455D8FB97}.wem"
+     },
+     {
+      "Id": "382524943",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Soundly Audio\\MECHGear_SMorph_Mechanism - Source Counting Machine Chunks Antique 07.wav",
+      "CachePath": "49/{49779784-9669-1BA5-8E58-0F05A5B24B9F}.wem"
      },
      {
       "Id": "385351660",
@@ -430,6 +502,14 @@
       "Location": "Memory",
       "ShortName": "Grass Walk 10.wav",
       "CachePath": "64/{64D0A806-9100-349B-08E2-EA4BD5D0D52A}.wem"
+     },
+     {
+      "Id": "423357366",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Clock Ticking.wav",
+      "CachePath": "27/{27EA1A04-6D98-AFDA-0BD0-CD9E5647857A}.wem"
      },
      {
       "Id": "423523880",
@@ -552,12 +632,28 @@
       "CachePath": "0A/{0A8866CF-6534-00DC-13A4-623DDEC27255}.wem"
      },
      {
+      "Id": "522015025",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Jump Grunt 3.wav",
+      "CachePath": "10/{1091C192-065F-C3E4-9A3C-CF7823FD7371}.wem"
+     },
+     {
       "Id": "531220136",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Soundly Audio\\Umbrella_Unfold_Open_01_G1Wav.wav",
       "CachePath": "61/{61E6FDD8-8E64-6D71-90EE-80938A8A7113}.wem"
+     },
+     {
+      "Id": "538347164",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Pixel Face Stim 1.wav",
+      "CachePath": "C0/{C05D6C87-9DBD-ABFE-80B6-B2B1350B977A}.wem"
      },
      {
       "Id": "541092370",
@@ -638,6 +734,14 @@
       "Location": "Memory",
       "ShortName": "Cobble Walk 8.wav",
       "CachePath": "66/{668A2B01-E571-2B2D-FECC-23DA4329EEDA}.wem"
+     },
+     {
+      "Id": "588414716",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Elevator Doors Shut.wav",
+      "CachePath": "30/{30918A2F-D85B-4EFB-B150-59A52993FC4E}.wem"
      },
      {
       "Id": "591245596",
@@ -744,6 +848,14 @@
       "CachePath": "AE/{AE1C4555-3455-7D11-7426-57027092E197}.wem"
      },
      {
+      "Id": "649936251",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Pixel Face Stim 3.wav",
+      "CachePath": "81/{811035A0-81C6-A4AA-CE69-D761ABC32862}.wem"
+     },
+     {
       "Id": "651752867",
       "Language": "SFX",
       "Streaming": "false",
@@ -840,6 +952,14 @@
       "CachePath": "52/{52F75E3E-5AB8-8F35-0310-98E611583101}.wem"
      },
      {
+      "Id": "723642543",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Cuckoo CLock.wav",
+      "CachePath": "2F/{2F6BDF7E-09C8-7A23-F82F-D0BABCF7FBD9}.wem"
+     },
+     {
       "Id": "736287973",
       "Language": "SFX",
       "Streaming": "false",
@@ -870,6 +990,14 @@
       "Location": "Memory",
       "ShortName": "Dirt Jump 2.wav",
       "CachePath": "E5/{E5BF2D98-0935-4BFB-AA26-D5C49DA819F6}.wem"
+     },
+     {
+      "Id": "754177649",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Pixel Face Stim 4.wav",
+      "CachePath": "AF/{AFFE3E74-5996-98E3-8A66-B3977A51658C}.wem"
      },
      {
       "Id": "767441298",
@@ -928,6 +1056,14 @@
       "CachePath": "12/{12C84176-D8D6-DC47-C9C5-1419FBA11E18}.wem"
      },
      {
+      "Id": "821300049",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Elevator Running_2.wav",
+      "CachePath": "35/{3506B786-9221-1C3C-5A78-15657987D914}.wem"
+     },
+     {
       "Id": "825692604",
       "Language": "SFX",
       "Streaming": "false",
@@ -936,12 +1072,28 @@
       "CachePath": "C7/{C73FDF34-0BFC-A5FC-9C31-0009436D7EF0}.wem"
      },
      {
+      "Id": "839377454",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Land Grunt 2.wav",
+      "CachePath": "D5/{D5A8D8CC-1010-7FE9-7EF6-EB92CE670FBE}.wem"
+     },
+     {
       "Id": "845128239",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Grass Run 6.wav",
       "CachePath": "9A/{9AC95CD7-6EE6-BD5A-D65D-06D70A46403D}.wem"
+     },
+     {
+      "Id": "846109237",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Land Grunt 4.wav",
+      "CachePath": "B2/{B2D194F7-8154-99FF-C06A-C12D396366F3}.wem"
      },
      {
       "Id": "848897566",
@@ -984,12 +1136,28 @@
       "CachePath": "5C/{5C123571-4446-11E2-5AA0-C331C45BC8B1}.wem"
      },
      {
+      "Id": "876752176",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Land Grunt 5.wav",
+      "CachePath": "2F/{2FFCF962-38DB-0F4C-8B90-8CABFECFB93F}.wem"
+     },
+     {
       "Id": "892218766",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Glass Walk 5.wav",
       "CachePath": "DE/{DEEA3497-3670-4E1B-1238-6B9A1126B150}.wem"
+     },
+     {
+      "Id": "915129765",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Elevator Arrive.wav",
+      "CachePath": "19/{19875BCC-DE48-D464-62EA-2F1D40A370D6}.wem"
      },
      {
       "Id": "918244861",
@@ -1152,6 +1320,14 @@
       "CachePath": "E9/{E9758DF0-1311-0A5C-5992-F61ED50FF0D1}.wem"
      },
      {
+      "Id": "1001815010",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Cuckoo CLock Close.wav",
+      "CachePath": "EB/{EB23387B-09E7-5F57-B354-3FAC73B36DFA}.wem"
+     },
+     {
       "Id": "1002606011",
       "Language": "SFX",
       "Streaming": "false",
@@ -1208,6 +1384,14 @@
       "CachePath": "81/{81D8C2B2-0741-A925-D5EB-0D6919DA4524}.wem"
      },
      {
+      "Id": "1037334960",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Jump Grunt 2.wav",
+      "CachePath": "83/{83B2650D-5788-BA4F-C065-25B4A1118003}.wem"
+     },
+     {
       "Id": "1040240039",
       "Language": "SFX",
       "Streaming": "false",
@@ -1258,6 +1442,55 @@
     ],
     "Events": [
      {
+      "Id": "2563575728",
+      "Name": "Clock_Close",
+      "ObjectPath": "\\Events\\Items\\Cuckoo Clock\\Clock_Close",
+      "GUID": "{DE061B01-AD3B-4E81-8DF6-47AE28EF9844}",
+      "MaxAttenuation": "50",
+      "DurationType": "OneShot",
+      "DurationMin": "1",
+      "DurationMax": "1",
+      "MediaRefs": [
+       {
+        "Id": "1001815010"
+       }
+      ]
+     },
+     {
+      "Id": "2846897348",
+      "Name": "Clock_Open",
+      "ObjectPath": "\\Events\\Items\\Cuckoo Clock\\Clock_Open",
+      "GUID": "{BDAC2A93-FDEE-48A9-8D9C-0E8B4850AFC1}",
+      "MaxAttenuation": "50",
+      "DurationType": "OneShot",
+      "DurationMin": "9.216666",
+      "DurationMax": "9.216666",
+      "MediaRefs": [
+       {
+        "Id": "723642543"
+       }
+      ]
+     },
+     {
+      "Id": "2719257531",
+      "Name": "Clock_Tick",
+      "ObjectPath": "\\Events\\Items\\Cuckoo Clock\\Clock_Tick",
+      "GUID": "{A63A5CCB-8CBE-4B71-A447-C206091AFB43}",
+      "MaxAttenuation": "50",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "26192481"
+       },
+       {
+        "Id": "122619185"
+       },
+       {
+        "Id": "423357366"
+       }
+      ]
+     },
+     {
       "Id": "515483981",
       "Name": "Cricket_Jump",
       "ObjectPath": "\\Events\\Enemy\\Cricket\\Cricket_Jump",
@@ -1286,6 +1519,51 @@
       ]
      },
      {
+      "Id": "3929235283",
+      "Name": "Elevator_Arrive",
+      "ObjectPath": "\\Events\\Items\\Elevator\\Elevator_Arrive",
+      "GUID": "{C3F7CF04-8743-4BA2-9873-003CEC1F566B}",
+      "MaxAttenuation": "50",
+      "DurationType": "OneShot",
+      "DurationMin": "3.9",
+      "DurationMax": "3.9",
+      "MediaRefs": [
+       {
+        "Id": "915129765"
+       }
+      ]
+     },
+     {
+      "Id": "4216832672",
+      "Name": "Elevator_Doors_Close",
+      "ObjectPath": "\\Events\\Items\\Elevator\\Elevator_Doors_Close",
+      "GUID": "{9807A9EE-D888-4FE7-B865-F99256DAB524}",
+      "MaxAttenuation": "50",
+      "DurationType": "OneShot",
+      "DurationMin": "2.1833334",
+      "DurationMax": "2.1833334",
+      "MediaRefs": [
+       {
+        "Id": "588414716"
+       }
+      ]
+     },
+     {
+      "Id": "2518616252",
+      "Name": "Elevator_Moving",
+      "ObjectPath": "\\Events\\Items\\Elevator\\Elevator_Moving",
+      "GUID": "{CE51E119-D4E0-4B8D-8A2A-5E327EB8F1F8}",
+      "MaxAttenuation": "50",
+      "DurationType": "OneShot",
+      "DurationMin": "7.9",
+      "DurationMax": "7.9",
+      "MediaRefs": [
+       {
+        "Id": "821300049"
+       }
+      ]
+     },
+     {
       "Id": "2689584014",
       "Name": "FloorVine_Eating",
       "ObjectPath": "\\Events\\Enemy\\Vine\\FloorVine_Eating",
@@ -1299,6 +1577,30 @@
        },
        {
         "Id": "545669700"
+       }
+      ]
+     },
+     {
+      "Id": "1222141441",
+      "Name": "Play_Emotion",
+      "ObjectPath": "\\Events\\Enemy\\Pixel Face\\Play_Emotion",
+      "GUID": "{DD1DD1E9-C390-41EC-B2AE-4C611F4791F6}",
+      "MaxAttenuation": "50",
+      "DurationType": "OneShot",
+      "DurationMin": "0.39821246",
+      "DurationMax": "0.7185934",
+      "MediaRefs": [
+       {
+        "Id": "355140699"
+       },
+       {
+        "Id": "538347164"
+       },
+       {
+        "Id": "649936251"
+       },
+       {
+        "Id": "754177649"
        }
       ]
      },
@@ -1326,8 +1628,19 @@
       "ObjectPath": "\\Events\\Movement\\Player_Jump",
       "GUID": "{2552BA06-D665-4E83-98C8-1B3460BDEC65}",
       "DurationType": "OneShot",
-      "DurationMin": "0.3",
+      "DurationMin": "0.40523666",
       "DurationMax": "0.8",
+      "MediaRefs": [
+       {
+        "Id": "375392163"
+       },
+       {
+        "Id": "522015025"
+       },
+       {
+        "Id": "1037334960"
+       }
+      ],
       "SwitchContainers": [
        {
         "SwitchValue": {
@@ -1441,8 +1754,25 @@
       "ObjectPath": "\\Events\\Movement\\Player_Land",
       "GUID": "{D5FAADD1-2EFB-4432-A434-1CF7F916DCD0}",
       "DurationType": "OneShot",
-      "DurationMin": "0.26666668",
+      "DurationMin": "0.347975",
       "DurationMax": "15.36",
+      "MediaRefs": [
+       {
+        "Id": "44741399"
+       },
+       {
+        "Id": "73084760"
+       },
+       {
+        "Id": "839377454"
+       },
+       {
+        "Id": "846109237"
+       },
+       {
+        "Id": "876752176"
+       }
+      ],
       "SwitchContainers": [
        {
         "SwitchValue": {
@@ -1999,9 +2329,33 @@
       ]
      },
      {
+      "Id": "3580624671",
+      "Name": "Tank_Fill",
+      "ObjectPath": "\\Events\\Items\\Oxygen Tank\\Tank_Fill",
+      "GUID": "{F54FAC6E-2FF8-4846-8E6F-48C1700A1D88}",
+      "DurationType": "OneShot",
+      "DurationMin": "4.9166665",
+      "DurationMax": "4.9166665",
+      "MediaRefs": [
+       {
+        "Id": "49100587"
+       }
+      ]
+     },
+     {
+      "Id": "4112977187",
+      "Name": "Tank_Full",
+      "ObjectPath": "\\Events\\Items\\Oxygen Tank\\Tank_Full",
+      "GUID": "{AC884EC7-8916-4B46-A0A1-2F3BF1748CDD}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
       "Id": "3217770052",
       "Name": "Umbrella_Close",
-      "ObjectPath": "\\Events\\Items\\Umbrella_Close",
+      "ObjectPath": "\\Events\\Items\\Umbrella\\Umbrella_Close",
       "GUID": "{27AE33D3-8BDD-4488-9DEB-4DDAF14BCE28}",
       "DurationType": "OneShot",
       "DurationMin": "0.45241976",
@@ -2015,12 +2369,18 @@
      {
       "Id": "89220416",
       "Name": "Umbrella_Open",
-      "ObjectPath": "\\Events\\Items\\Umbrella_Open",
+      "ObjectPath": "\\Events\\Items\\Umbrella\\Umbrella_Open",
       "GUID": "{BD1E4134-6717-499D-8F7F-8F16622F38FC}",
       "DurationType": "OneShot",
       "DurationMin": "0.6028019",
       "DurationMax": "0.6028019",
       "MediaRefs": [
+       {
+        "Id": "346398684"
+       },
+       {
+        "Id": "382524943"
+       },
        {
         "Id": "531220136"
        }
@@ -2192,6 +2552,6 @@
     ]
    }
   ],
-  "FileHash": "{A7286446-48E3-78EC-CA31-8440A7233707}"
+  "FileHash": "{08111718-965A-9528-9C68-D15CF93E40A9}"
  }
 }

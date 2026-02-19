@@ -110,7 +110,7 @@
 								</Sound>
 							</ChildrenList>
 						</RandomSequenceContainer>
-						<RandomSequenceContainer Name="Umbrella Open" ID="{06C4EE7B-81BF-4AB5-9FA9-A66C06F241EB}" ShortID="412359033">
+						<BlendContainer Name="Umbrella Open" ID="{E9303504-C1F3-4252-8379-289EA26C47FD}" ShortID="202982950">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
@@ -120,22 +120,92 @@
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<Sound Name="Umbrella Open 1" ID="{C9DDBBC8-59FE-4041-A284-B3AC9AD6D0D1}" ShortID="229849545">
+								<RandomSequenceContainer Name="Umbrella Pop" ID="{06C4EE7B-81BF-4AB5-9FA9-A66C06F241EB}" ShortID="412359033">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-3</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="SFX" ID="{C0901958-AA0D-4450-9846-B896800D3928}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="Umbrella Open 1" ID="{C9DDBBC8-59FE-4041-A284-B3AC9AD6D0D1}" ShortID="229849545">
+											<PropertyList>
+												<Property Name="Soundly:ActiveChannels" Type="string" Value="[]"/>
+												<Property Name="Soundly:FileID" Type="string" Value="1770301998GTktihqYpz"/>
+												<Property Name="Soundly:FileName" Type="string" Value="/Volumes/B2 DRIVE/Stephen Sound Library/Ben Maughan SFX/Sound Ideas/The General/6021/Umbrella_Unfold_Open_01_G1.Wav.wav"/>
+												<Property Name="Soundly:HandleStartTime" Type="string" Value="0"/>
+												<Property Name="Soundly:HandleStopTime" Type="string" Value="6.4053125"/>
+												<Property Name="Soundly:LibraryID" Type="string" Value="1770300385vVf_K-zXrg"/>
+												<Property Name="Soundly:LibraryLocation" Type="string" Value="Local"/>
+												<Property Name="Soundly:PlaybackSpeed" Type="string" Value="1.0"/>
+												<Property Name="Soundly:ProcessList" Type="string" Value="[]"/>
+												<Property Name="Soundly:RenderedFileBitRate" Type="string" Value="2"/>
+												<Property Name="Soundly:RenderedFilePath" Type="string" Value="/Users/stephenlunn/Documents/Soundly Audio/Umbrella_Unfold_Open_01_G1Wav.wav"/>
+												<Property Name="Soundly:RenderedFileSampleRate" Type="string" Value="48000"/>
+												<Property Name="Soundly:SelectionStartTime" Type="string" Value="0.4583615436696005"/>
+												<Property Name="Soundly:SelectionStopTime" Type="string" Value="0.5524712254570074"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Umbrella_Unfold_Open_01_G1Wav" ID="{2831EECE-6111-4D58-B01C-3213BB6EECA6}">
+													<PropertyList>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.140776099739494"/>
+														<Property Name="LoopBegin" Type="Real64" Value="2.93594892518619"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="Soundly:FileIDForAudioSource" Type="string" Value="1770301998GTktihqYpz"/>
+														<Property Name="TrimBegin" Type="Real64" Value="2.93594892518619"/>
+														<Property Name="TrimEnd" Type="Real64" Value="3.53875084631009"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>Soundly Audio\Umbrella_Unfold_Open_01_G1Wav.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="531220136"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ActiveSourceList>
+												<ActiveSource Name="Umbrella_Unfold_Open_01_G1Wav" ID="{2831EECE-6111-4D58-B01C-3213BB6EECA6}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+								</RandomSequenceContainer>
+								<Sound Name="Cog" ID="{4DAA6176-B419-4A02-B19D-25A415184246}" ShortID="1064330410">
 									<PropertyList>
 										<Property Name="Soundly:ActiveChannels" Type="string" Value="[]"/>
-										<Property Name="Soundly:FileID" Type="string" Value="1770301998GTktihqYpz"/>
-										<Property Name="Soundly:FileName" Type="string" Value="/Volumes/B2 DRIVE/Stephen Sound Library/Ben Maughan SFX/Sound Ideas/The General/6021/Umbrella_Unfold_Open_01_G1.Wav.wav"/>
+										<Property Name="Soundly:FileID" Type="string" Value="17703082233F-rM4Nd3A"/>
+										<Property Name="Soundly:FileName" Type="string" Value="/Volumes/B2 DRIVE/Stephen Sound Library/SoundMorph - Mechanism/1. Mechanism/Mechanism - Designed/MECHClik_SMorph_Mechanism - Click Tight 02.wav"/>
 										<Property Name="Soundly:HandleStartTime" Type="string" Value="0"/>
-										<Property Name="Soundly:HandleStopTime" Type="string" Value="6.4053125"/>
+										<Property Name="Soundly:HandleStopTime" Type="string" Value="0.7846875"/>
 										<Property Name="Soundly:LibraryID" Type="string" Value="1770300385vVf_K-zXrg"/>
 										<Property Name="Soundly:LibraryLocation" Type="string" Value="Local"/>
 										<Property Name="Soundly:PlaybackSpeed" Type="string" Value="1.0"/>
 										<Property Name="Soundly:ProcessList" Type="string" Value="[]"/>
 										<Property Name="Soundly:RenderedFileBitRate" Type="string" Value="2"/>
-										<Property Name="Soundly:RenderedFilePath" Type="string" Value="/Users/stephenlunn/Documents/Soundly Audio/Umbrella_Unfold_Open_01_G1Wav.wav"/>
+										<Property Name="Soundly:RenderedFilePath" Type="string" Value="/Users/stephenlunn/Documents/Soundly Audio/MECHClik_SMorph_Mechanism - Click Tight 02.wav"/>
 										<Property Name="Soundly:RenderedFileSampleRate" Type="string" Value="48000"/>
-										<Property Name="Soundly:SelectionStartTime" Type="string" Value="0.4583615436696005"/>
-										<Property Name="Soundly:SelectionStopTime" Type="string" Value="0.5524712254570074"/>
+										<Property Name="Soundly:SelectionStartTime" Type="string" Value="0.046716316858496955"/>
+										<Property Name="Soundly:SelectionStopTime" Type="string" Value="0.5714285714285714"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-6</Value>
+											</ValueList>
+										</Property>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
@@ -146,27 +216,513 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<AudioFileSource Name="Umbrella_Unfold_Open_01_G1Wav" ID="{2831EECE-6111-4D58-B01C-3213BB6EECA6}">
+										<AudioFileSource Name="MECHClik_SMorph_Mechanism - Click Tight 02" ID="{9B0AA9FD-286B-4494-9378-A1A96E84546F}">
 											<PropertyList>
-												<Property Name="FadeOutDuration" Type="Real64" Value="0.140776099739494"/>
-												<Property Name="LoopBegin" Type="Real64" Value="2.93594892518619"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0468102444659222"/>
 												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-												<Property Name="Soundly:FileIDForAudioSource" Type="string" Value="1770301998GTktihqYpz"/>
-												<Property Name="TrimBegin" Type="Real64" Value="2.93594892518619"/>
-												<Property Name="TrimEnd" Type="Real64" Value="3.53875084631009"/>
+												<Property Name="Soundly:FileIDForAudioSource" Type="string" Value="17703082233F-rM4Nd3A"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0366577098849018"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.338758337209513"/>
 											</PropertyList>
 											<Language>SFX</Language>
-											<AudioFile>Soundly Audio\Umbrella_Unfold_Open_01_G1Wav.wav</AudioFile>
+											<AudioFile>Soundly Audio\MECHClik_SMorph_Mechanism - Click Tight 02.wav</AudioFile>
 											<MediaIDList>
-												<MediaID ID="531220136"/>
+												<MediaID ID="346398684"/>
 											</MediaIDList>
 										</AudioFileSource>
 									</ChildrenList>
 									<ActiveSourceList>
-										<ActiveSource Name="Umbrella_Unfold_Open_01_G1Wav" ID="{2831EECE-6111-4D58-B01C-3213BB6EECA6}" Platform="Linked"/>
+										<ActiveSource Name="MECHClik_SMorph_Mechanism - Click Tight 02" ID="{9B0AA9FD-286B-4494-9378-A1A96E84546F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Sping COg" ID="{418E3EC2-72DB-4D95-BCEB-869CE82021E9}" ShortID="431365419">
+									<PropertyList>
+										<Property Name="Soundly:ActiveChannels" Type="string" Value="[]"/>
+										<Property Name="Soundly:FileID" Type="string" Value="1770308226FAJuzvF6-0"/>
+										<Property Name="Soundly:FileName" Type="string" Value="/Volumes/B2 DRIVE/Stephen Sound Library/SoundMorph - Mechanism/1. Mechanism/Mechanism - Source/MECHGear_SMorph_Mechanism - Source Counting Machine Chunks Antique 07.wav"/>
+										<Property Name="Soundly:HandleStartTime" Type="string" Value="0"/>
+										<Property Name="Soundly:HandleStopTime" Type="string" Value="23.061333333333334"/>
+										<Property Name="Soundly:LibraryID" Type="string" Value="1770300385vVf_K-zXrg"/>
+										<Property Name="Soundly:LibraryLocation" Type="string" Value="Local"/>
+										<Property Name="Soundly:PlaybackSpeed" Type="string" Value="1.0"/>
+										<Property Name="Soundly:ProcessList" Type="string" Value="[]"/>
+										<Property Name="Soundly:RenderedFileBitRate" Type="string" Value="3"/>
+										<Property Name="Soundly:RenderedFilePath" Type="string" Value="/Users/stephenlunn/Documents/Soundly Audio/MECHGear_SMorph_Mechanism - Source Counting Machine Chunks Antique 07.wav"/>
+										<Property Name="Soundly:RenderedFileSampleRate" Type="string" Value="96000"/>
+										<Property Name="Soundly:SelectionStartTime" Type="string" Value="0.15436696005416384"/>
+										<Property Name="Soundly:SelectionStopTime" Type="string" Value="0.1909275558564658"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-11</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="MECHGear_SMorph_Mechanism - Source Counting Machine Chunks Antique 07" ID="{4BB74985-2D5F-489B-903C-B0650A6D3607}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.10381862114409"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0692124140960599"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="Soundly:FileIDForAudioSource" Type="string" Value="1770308226FAJuzvF6-0"/>
+												<Property Name="TrimBegin" Type="Real64" Value="3.55990792146242"/>
+												<Property Name="TrimEnd" Type="Real64" Value="4.03391113294559"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Soundly Audio\MECHGear_SMorph_Mechanism - Source Counting Machine Chunks Antique 07.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="382524943"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="MECHGear_SMorph_Mechanism - Source Counting Machine Chunks Antique 07" ID="{4BB74985-2D5F-489B-903C-B0650A6D3607}" Platform="Linked"/>
 									</ActiveSourceList>
 								</Sound>
 							</ChildrenList>
+							<BlendTrackList>
+								<BlendTrack Name="New Blend Track" ID="{3AE08CB1-C23F-4533-9928-57EEDA7744C6}" ShortID="917620278">
+									<BlendTrackAssocList>
+										<BlendTrackAssoc>
+											<ItemRef Name="Cog" ID="{4DAA6176-B419-4A02-B19D-25A415184246}"/>
+										</BlendTrackAssoc>
+										<BlendTrackAssoc>
+											<ItemRef Name="Umbrella Pop" ID="{06C4EE7B-81BF-4AB5-9FA9-A66C06F241EB}"/>
+										</BlendTrackAssoc>
+										<BlendTrackAssoc>
+											<ItemRef Name="Sping COg" ID="{418E3EC2-72DB-4D95-BCEB-869CE82021E9}"/>
+										</BlendTrackAssoc>
+									</BlendTrackAssocList>
+								</BlendTrack>
+							</BlendTrackList>
+						</BlendContainer>
+					</ChildrenList>
+				</PropertyContainer>
+				<PropertyContainer Name="Oxygen Tank" ID="{D9C49952-C87D-4526-BD9B-E82F3CDB35F1}" ShortID="224653080">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFX" ID="{C0901958-AA0D-4450-9846-B896800D3928}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<BlendContainer Name="Tank FIll" ID="{06A1480E-A9D3-458C-A9B8-A39A220DCDE8}" ShortID="415159064">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Oxygen Tank Fill Up" ID="{220E3EB6-7D9E-4D60-98E0-DD7C3E5D6ED4}" ShortID="559569577">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Oxygen Tank Fill Up" ID="{81F24F2C-D81C-42AC-99E4-F3DA82B803DE}">
+											<Language>SFX</Language>
+											<AudioFile>Oxygen Tank Fill Up.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="49100587"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Oxygen Tank Fill Up" ID="{81F24F2C-D81C-42AC-99E4-F3DA82B803DE}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</BlendContainer>
+					</ChildrenList>
+				</PropertyContainer>
+				<PropertyContainer Name="Cuckoo Clock" ID="{E6B67279-CB70-4358-87DD-CC358FE5EE25}" ShortID="384852967">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="Distant_Attenuation" ID="{F8C4934F-08F6-441F-AC38-92E297D16BBD}" WorkUnitID="{4D1AF88C-570E-4823-A48A-8F0B5156508D}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFX" ID="{C0901958-AA0D-4450-9846-B896800D3928}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<BlendContainer Name="Ticking Clock" ID="{D29CB667-25C1-4F11-99E6-73DD9FC7A246}" ShortID="758920071">
+							<PropertyList>
+								<Property Name="BlendBehavior" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Clock Rattle" ID="{3FE9B7BF-630D-4594-971E-D488F68245D3}" ShortID="694213779">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-17</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Clock Rattle" ID="{B2CD8FE7-411A-4FEC-AF25-59894B956C7C}">
+											<Language>SFX</Language>
+											<AudioFile>Clock Rattle.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="122619185"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Clock Rattle" ID="{B2CD8FE7-411A-4FEC-AF25-59894B956C7C}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Clock Ticking" ID="{310E29F9-3E1A-469A-8B13-3DA9E01A5D1E}" ShortID="1012892505">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Clock Ticking" ID="{262F2296-6D66-4717-8CF0-BF297998F0B6}">
+											<Language>SFX</Language>
+											<AudioFile>Clock Ticking.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="423357366"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Clock Ticking" ID="{262F2296-6D66-4717-8CF0-BF297998F0B6}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Clock Whir" ID="{CD1F751A-0CD7-4086-B157-5B3090A6909F}" ShortID="449121388">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-10</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Clock Whir" ID="{C02948A8-D94F-4040-BF51-4101BF02EB8C}">
+											<Language>SFX</Language>
+											<AudioFile>Clock Whir.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="26192481"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Clock Whir" ID="{C02948A8-D94F-4040-BF51-4101BF02EB8C}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<BlendTrackList>
+								<BlendTrack Name="New Blend Track" ID="{81A63C07-357D-472A-9946-3B7552FC92E7}" ShortID="961204898">
+									<BlendTrackAssocList>
+										<BlendTrackAssoc>
+											<ItemRef Name="Clock Ticking" ID="{310E29F9-3E1A-469A-8B13-3DA9E01A5D1E}"/>
+										</BlendTrackAssoc>
+										<BlendTrackAssoc>
+											<ItemRef Name="Clock Rattle" ID="{3FE9B7BF-630D-4594-971E-D488F68245D3}"/>
+											<CrossfadingInfo>
+												<LeftEdgePos>0</LeftEdgePos>
+												<LeftFadingMode>Automatic</LeftFadingMode>
+												<RightEdgePos>0</RightEdgePos>
+												<RightFadingMode>Automatic</RightFadingMode>
+											</CrossfadingInfo>
+										</BlendTrackAssoc>
+										<BlendTrackAssoc>
+											<ItemRef Name="Clock Whir" ID="{CD1F751A-0CD7-4086-B157-5B3090A6909F}"/>
+											<CrossfadingInfo>
+												<LeftEdgePos>0</LeftEdgePos>
+												<LeftFadingMode>Automatic</LeftFadingMode>
+												<RightEdgePos>0</RightEdgePos>
+												<RightFadingMode>Automatic</RightFadingMode>
+											</CrossfadingInfo>
+										</BlendTrackAssoc>
+									</BlendTrackAssocList>
+								</BlendTrack>
+							</BlendTrackList>
+						</BlendContainer>
+						<BlendContainer Name="Clock Open" ID="{A3A701D8-4E80-4C63-A47C-DFCFEAB72DC8}" ShortID="659517494">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Cuckoo CLock" ID="{1BE7B48F-9B49-4A87-A8C7-4D6019BF1B13}" ShortID="1059791985">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Cuckoo CLock" ID="{FA7DEC4A-72EE-4F5C-9EEF-B0CD1C23E17D}">
+											<Language>SFX</Language>
+											<AudioFile>Cuckoo CLock.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="723642543"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Cuckoo CLock" ID="{FA7DEC4A-72EE-4F5C-9EEF-B0CD1C23E17D}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</BlendContainer>
+						<BlendContainer Name="Clock Close" ID="{5796FABE-15F1-4E87-BB03-2BCE16C9C213}" ShortID="934734123">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Cuckoo CLock Close" ID="{4CBDD6BA-2B48-49FA-9781-488CF4BEB46F}" ShortID="97659867">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Cuckoo CLock Close" ID="{5BEB4714-8898-4D00-9822-FF810F5F4F56}">
+											<Language>SFX</Language>
+											<AudioFile>Cuckoo CLock Close.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1001815010"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Cuckoo CLock Close" ID="{5BEB4714-8898-4D00-9822-FF810F5F4F56}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</BlendContainer>
+					</ChildrenList>
+				</PropertyContainer>
+				<PropertyContainer Name="Elevator" ID="{70509ABD-EFBE-4765-A618-9BA29F3FEEE7}" ShortID="954689744">
+					<PropertyList>
+						<Property Name="3DSpatialization" Type="int16" Value="1"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Attenuation">
+							<ObjectRef Name="Distant_Attenuation" ID="{F8C4934F-08F6-441F-AC38-92E297D16BBD}" WorkUnitID="{4D1AF88C-570E-4823-A48A-8F0B5156508D}"/>
+						</Reference>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFX" ID="{C0901958-AA0D-4450-9846-B896800D3928}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<RandomSequenceContainer Name="Doors Opening" ID="{CE63CB76-5A15-43DC-A64A-F0ED89E95DF8}" ShortID="78406310">
+							<PropertyList>
+								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Elevator Arrive" ID="{EEDA496D-8D54-44C7-BB5B-A26814C7907E}" ShortID="523940583">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Elevator Arrive" ID="{AC2F36E3-7504-443E-9300-E62AAAA3CD64}">
+											<Language>SFX</Language>
+											<AudioFile>Elevator Arrive.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="915129765"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Elevator Arrive" ID="{AC2F36E3-7504-443E-9300-E62AAAA3CD64}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Playlist">
+									<PluginInnerObject Name="" ID="{B0DD45A5-2BC5-4AFE-B1C8-67402EBD77A9}" PluginName="PlaylistSlot" CompanyID="0" PluginID="86">
+										<ReferenceList>
+											<Reference Name="PlaylistObject">
+												<ObjectRef Name="Elevator Arrive" ID="{EEDA496D-8D54-44C7-BB5B-A26814C7907E}" WorkUnitID="{11C41816-BB81-4D5E-AB01-A01C8800C032}"/>
+											</Reference>
+										</ReferenceList>
+									</PluginInnerObject>
+								</ObjectList>
+							</ObjectLists>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Doors Closing" ID="{323E3DFB-1D48-4DCC-B239-8513E54C4D93}" ShortID="676641223">
+							<PropertyList>
+								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Elevator Doors Shut" ID="{132F4695-DDBA-4CB5-9BA1-F72DB264CE65}" ShortID="228384581">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Elevator Doors Shut" ID="{2D334B5D-E1E8-4819-871F-C9A9329895BD}">
+											<Language>SFX</Language>
+											<AudioFile>Elevator Doors Shut.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="588414716"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Elevator Doors Shut" ID="{2D334B5D-E1E8-4819-871F-C9A9329895BD}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Playlist">
+									<PluginInnerObject Name="" ID="{F93A1550-5F1C-4179-B741-04F0DF5AAA98}" PluginName="PlaylistSlot" CompanyID="0" PluginID="86">
+										<ReferenceList>
+											<Reference Name="PlaylistObject">
+												<ObjectRef Name="Elevator Doors Shut" ID="{132F4695-DDBA-4CB5-9BA1-F72DB264CE65}" WorkUnitID="{11C41816-BB81-4D5E-AB01-A01C8800C032}"/>
+											</Reference>
+										</ReferenceList>
+									</PluginInnerObject>
+								</ObjectList>
+							</ObjectLists>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Elevator Moving" ID="{302D06A9-99C5-4550-B9BB-516A94B7403C}" ShortID="962966390">
+							<PropertyList>
+								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Elevator Running_2" ID="{1672C156-800D-4AA5-9915-8487216E55A3}" ShortID="324850250">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Elevator Running_2" ID="{5A1317AD-1B71-4E5E-B3A0-EFABF2F27367}">
+											<Language>SFX</Language>
+											<AudioFile>Elevator Running_2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="821300049"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Elevator Running_2" ID="{5A1317AD-1B71-4E5E-B3A0-EFABF2F27367}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<ObjectLists>
+								<ObjectList Name="Playlist">
+									<PluginInnerObject Name="" ID="{744D53EA-3A2B-4460-B469-467E8BB7D0CB}" PluginName="PlaylistSlot" CompanyID="0" PluginID="86">
+										<ReferenceList>
+											<Reference Name="PlaylistObject">
+												<ObjectRef Name="Elevator Running_2" ID="{1672C156-800D-4AA5-9915-8487216E55A3}" WorkUnitID="{11C41816-BB81-4D5E-AB01-A01C8800C032}"/>
+											</Reference>
+										</ReferenceList>
+									</PluginInnerObject>
+								</ObjectList>
+							</ObjectLists>
 						</RandomSequenceContainer>
 					</ChildrenList>
 				</PropertyContainer>

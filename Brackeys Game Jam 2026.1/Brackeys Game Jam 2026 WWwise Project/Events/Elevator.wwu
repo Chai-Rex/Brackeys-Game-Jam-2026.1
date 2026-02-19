@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{9DC15B11-0837-419C-BBB6-5F47BCD9A295}" SchemaVersion="133" RootDocumentID="{AF08D2E5-B87B-40C5-8E32-6F0E8F795133}" ParentDocumentID="{AF08D2E5-B87B-40C5-8E32-6F0E8F795133}">
+	<Events>
+		<WorkUnit Name="Elevator" ID="{9DC15B11-0837-419C-BBB6-5F47BCD9A295}" OwnerID="{AF08D2E5-B87B-40C5-8E32-6F0E8F795133}" PersistMode="Nested">
+			<ChildrenList>
+				<Event Name="Elevator_Arrive" ID="{C3F7CF04-8743-4BA2-9873-003CEC1F566B}">
+					<ChildrenList>
+						<Action Name="" ID="{C670442A-2594-47A5-B6DB-56D83CCEC7E1}" ShortID="398593077">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Elevator Moving" ID="{302D06A9-99C5-4550-B9BB-516A94B7403C}" WorkUnitID="{11C41816-BB81-4D5E-AB01-A01C8800C032}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{D5F49B48-3F09-4CC0-9749-A7EB00193082}" ShortID="546355335">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Doors Opening" ID="{CE63CB76-5A15-43DC-A64A-F0ED89E95DF8}" WorkUnitID="{11C41816-BB81-4D5E-AB01-A01C8800C032}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Elevator_Doors_Close" ID="{9807A9EE-D888-4FE7-B865-F99256DAB524}">
+					<ChildrenList>
+						<Action Name="" ID="{9C121EAB-AAC6-43C2-A85E-A3F1AC5EF92B}" ShortID="842215073">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Doors Closing" ID="{323E3DFB-1D48-4DCC-B239-8513E54C4D93}" WorkUnitID="{11C41816-BB81-4D5E-AB01-A01C8800C032}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Elevator_Moving" ID="{CE51E119-D4E0-4B8D-8A2A-5E327EB8F1F8}">
+					<ChildrenList>
+						<Action Name="" ID="{910CC3DB-1002-41B7-97CA-435B742980E9}" ShortID="909320860">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Elevator Moving" ID="{302D06A9-99C5-4550-B9BB-516A94B7403C}" WorkUnitID="{11C41816-BB81-4D5E-AB01-A01C8800C032}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>
