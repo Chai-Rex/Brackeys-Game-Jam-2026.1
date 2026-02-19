@@ -17,13 +17,13 @@ MonoBehaviour:
   DampingX: 0.8
   DampingY: 0.8
   LandingSettleDamping: 0.8
-  DeadzoneSize: {x: 8, y: 0}
+  DeadzoneSize: {x: 4, y: 0}
   LockHorizontal: 0
   LockVertical: 0
   LookaheadMinVelocityX: 0.5
   LookaheadMaxVelocityX: 12
   LookaheadMinDistanceX: 0.5
-  LookaheadMaxDistanceX: 10
+  LookaheadMaxDistanceX: 8
   LookaheadCurveX:
     serializedVersion: 2
     m_Curve:
@@ -50,10 +50,10 @@ MonoBehaviour:
     m_RotationOrder: 4
   LookaheadDampingX: 0.8
   LookaheadRetractDampingX: 0.8
-  LookaheadMinVelocityYDown: 5
+  LookaheadMinVelocityYDown: 2
   LookaheadMaxVelocityYDown: 20
   LookaheadMinDistanceYDown: 0.5
-  LookaheadMaxDistanceYDown: 8
+  LookaheadMaxDistanceYDown: 20
   LookaheadCurveYDown:
     serializedVersion: 2
     m_Curve:
@@ -78,10 +78,10 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  LookaheadMinVelocityYUp: 12
-  LookaheadMaxVelocityYUp: 20
+  LookaheadMinVelocityYUp: 5
+  LookaheadMaxVelocityYUp: 12
   LookaheadMinDistanceYUp: 0.5
-  LookaheadMaxDistanceYUp: 8
+  LookaheadMaxDistanceYUp: 6
   LookaheadCurveYUp:
     serializedVersion: 2
     m_Curve:
@@ -108,8 +108,8 @@ MonoBehaviour:
     m_RotationOrder: 4
   LookaheadDampingY: 0.5
   LookaheadRetractDampingY: 0.8
-  JumpVerticalLockBoundsTop: 8
-  JumpVerticalLockBoundsBottom: 4
+  JumpVerticalLockBoundsTop: 4
+  JumpVerticalLockBoundsBottom: 1
   InfluenceMaxWeight: 0.4
   InfluenceDamping: 0.1
   UseCameraBounds: 0
