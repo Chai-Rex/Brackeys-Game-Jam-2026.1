@@ -47,7 +47,7 @@ public class PlayerStateMachineHandler : MonoBehaviour, IStateMachineContext {
         _factory.InitializeStates();
 
         // Set initial state
-        _factory.SetState(PlayerStateFactory.PlayerStates.Grounded);
+        _factory.SetState(PlayerStateFactory.PlayerStates.Airborne);
 
         if (_debugStates) {
             Debug.Log($"[{_ManagerName}] State machine initialized with state: {_currentState.GetType().Name}");
