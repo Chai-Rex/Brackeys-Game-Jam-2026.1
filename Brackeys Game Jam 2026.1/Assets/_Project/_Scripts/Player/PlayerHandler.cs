@@ -11,7 +11,7 @@ public class PlayerHandler : MonoBehaviour {
 
     [Header("Handler Components")]
     [SerializeField] private PlayerPhysicsHandler _physicsHandler;
-    [SerializeField] private PlayerAnimamationHandler _animationHandler;
+    [SerializeField] private PlayerAnimationHandler _animationHandler;
     [SerializeField] private PlayerStateMachineHandler _stateMachineHandler;
     [SerializeField] private PlayerCollisionHandler _collisionHandler;
     [SerializeField] private PlayerStatsHandler _statsHandler;
@@ -30,7 +30,7 @@ public class PlayerHandler : MonoBehaviour {
 
     public SceneContainerSO SceneContainer => _sceneContainer;
     public PlayerPhysicsHandler Physics => _physicsHandler;
-    public PlayerAnimamationHandler Animation => _animationHandler;
+    public PlayerAnimationHandler Animation => _animationHandler;
     public PlayerStateMachineHandler StateMachine => _stateMachineHandler;
     public PlayerCollisionHandler Collision => _collisionHandler;
     public PlayerStatsHandler Stats => _statsHandler;

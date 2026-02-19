@@ -1,76 +1,58 @@
 using UnityEngine;
 
 /// <summary>
-/// Grounded substate: Player is turning around while moving at speed
-/// Handles the deceleration when changing direction
+/// Grounded substate: Player is turning around at speed.
+/// Applies stronger deceleration until velocity drops below TurnBuffer.
 /// </summary>
 public class PS_GroundedTurning : BaseHierarchicalState {
-    private PlayerStateMachineHandler _stateMachine;
+    private PlayerStateMachineHandler _sm;
 
-    public PS_GroundedTurning(PlayerStateMachineHandler stateMachine)
-        : base(stateMachine) {
-        _stateMachine = stateMachine;
+    public PS_GroundedTurning(PlayerStateMachineHandler stateMachine) : base(stateMachine) {
+        _sm = stateMachine;
     }
 
     public override void EnterState() {
-        if (_stateMachine.Blackboard.debugStates) {
-            Debug.Log("[PS_GroundedTurning] Entered");
-        }
+        if (_sm.Blackboard.debugStates) Debug.Log("[PS_GroundedTurning] Entered");
 
-        // Play turning animation
-        _stateMachine.Animation.Play(PlayerAnimamationHandler.Turning, false);
+        _sm.Animation.Play(PlayerAnimationHandler.Turning, false);
     }
 
-    public override void InitializeSubState() {
-        // Turning has no substates
-    }
+    public override void InitializeSubState() { }
 
     public override void Update() {
-        // Update facing direction immediately
-        if (_stateMachine.Blackboard.MoveInput.x > 0) {
-            _stateMachine.Blackboard.IsFacingRight = true;
-        } else if (_stateMachine.Blackboard.MoveInput.x < 0) {
-            _stateMachine.Blackboard.IsFacingRight = false;
-        }
+        // Flip facing direction immediately so visuals snap to input
+        if      (_sm.Blackboard.MoveInput.x > 0) _sm.Blackboard.IsFacingRight = true;
+        else if (_sm.Blackboard.MoveInput.x < 0) _sm.Blackboard.IsFacingRight = false;
     }
 
     public override void FixedUpdate() {
-        // Apply stronger deceleration when turning
-        _stateMachine.Physics.ApplyHorizontalMovement(
-            _stateMachine.Stats.GroundTargetSpeed,
-            _stateMachine.Stats.GroundAcceleration,
-            _stateMachine.Stats.TurnDeceleration
-        );
+        _sm.Physics.ApplyHorizontalMovement(
+            _sm.Stats.GroundTargetSpeed,
+            _sm.Stats.GroundAcceleration,
+            _sm.Stats.TurnDeceleration);
     }
 
     public override void CheckSwitchStates() {
-        var factory = _stateMachine.GetFactory();
+        var factory = _sm.GetFactory();
 
-        // Check for jump input
-        if (_stateMachine.Blackboard.JumpBufferTimer > 0 && _stateMachine.Blackboard.CanJump) {
+        if (_sm.CheckJump()) {
             SwitchState(factory.GetState(PlayerStateFactory.PlayerStates.GroundedJump));
             return;
         }
 
-        // Check if velocity is low enough to exit turn state
-        if (Mathf.Abs(_stateMachine.Blackboard.Velocity.x) < _stateMachine.Stats.TurnBuffer) {
-            // Transition to moving in the new direction
-            if (Mathf.Abs(_stateMachine.Blackboard.MoveInput.x) > _stateMachine.Stats.MoveThreshold) {
-                SwitchState(factory.GetState(PlayerStateFactory.PlayerStates.Moving));
-            } else {
-                SwitchState(factory.GetState(PlayerStateFactory.PlayerStates.Idling));
-            }
-            return;
-        }
-
-        // If player stopped inputting movement, go to idle
-        if (Mathf.Abs(_stateMachine.Blackboard.MoveInput.x) < _stateMachine.Stats.MoveThreshold) {
+        if (Mathf.Abs(_sm.Blackboard.MoveInput.x) < _sm.Stats.MoveThreshold) {
             SwitchState(factory.GetState(PlayerStateFactory.PlayerStates.Idling));
             return;
         }
+
+        if (Mathf.Abs(_sm.Blackboard.Velocity.x) < _sm.Stats.TurnBuffer) {
+            var next = _sm.CheckForInputMovement()
+                ? PlayerStateFactory.PlayerStates.Moving
+                : PlayerStateFactory.PlayerStates.Idling;
+            SwitchState(factory.GetState(next));
+            return;
+        }
     }
 
-    public override void ExitState() {
-
-    }
+    public override void ExitState() { }
 }

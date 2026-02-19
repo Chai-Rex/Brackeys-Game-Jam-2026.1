@@ -17,6 +17,15 @@ public class PlayerCollisionHandler : MonoBehaviour {
     [Header("Collider References")]
     [SerializeField] private CapsuleCollider2D _bodyCollider;
 
+    [Header("Collision Detection")]
+    [SerializeField] private LayerMask GroundLayer;
+    [SerializeField] private float GroundDetectionRayLength = 0.02f;
+    [SerializeField] private float HeadDetectionRayLength = 0.02f;
+    [SerializeField] private float HeadWidth = 0.75f;
+    [SerializeField] private float WallDetectionRayLength = 0.02f;
+    [Range(0.01f, 2f)][SerializeField] private float WallDetectionRayHeightMultiplier = 0.9f;
+    [Range(0.01f, 1f)][SerializeField] private float GroundBodyWidthMultiplier = 0.9f;
+
     [Header("Ledge Forgiveness")]
     [SerializeField] private bool _enableLedgeForgiveness = true;
     [SerializeField] private float _ledgeSnapThreshold = 0.4f;
@@ -44,18 +53,18 @@ public class PlayerCollisionHandler : MonoBehaviour {
         if (_bodyCollider == null) return;
 
         _groundCheckSize = new Vector2(
-            _bodyCollider.size.x * 0.9f,
-            _stats.GroundDetectionRayLength
+            _bodyCollider.size.x * GroundBodyWidthMultiplier,
+            GroundDetectionRayLength
         );
 
         _wallCheckSize = new Vector2(
-            _stats.WallDetectionRayLength,
-            _bodyCollider.size.y * _stats.WallDetectionRayHeightMultiplier
+            WallDetectionRayLength,
+            _bodyCollider.size.y * WallDetectionRayHeightMultiplier
         );
 
         _headCheckSize = new Vector2(
-            _stats.HeadWidth,
-            _stats.HeadDetectionRayLength
+            HeadWidth,
+            HeadDetectionRayLength
         );
     }
 
@@ -100,8 +109,8 @@ public class PlayerCollisionHandler : MonoBehaviour {
             _groundCheckSize,
             0f,
             Vector2.down,
-            _stats.GroundDetectionRayLength,
-            _stats.GroundLayer
+            GroundDetectionRayLength,
+            GroundLayer
         );
     }
 
@@ -120,8 +129,8 @@ public class PlayerCollisionHandler : MonoBehaviour {
             _wallCheckSize,
             0f,
             facingDir,
-            _stats.WallDetectionRayLength,
-            _stats.GroundLayer
+            WallDetectionRayLength,
+            GroundLayer
         );
 
         _blackboard.IsAgainstWall = hitWall;
@@ -140,13 +149,13 @@ public class PlayerCollisionHandler : MonoBehaviour {
             _headCheckSize,
             0f,
             Vector2.up,
-            _stats.HeadDetectionRayLength,
-            _stats.GroundLayer
+            HeadDetectionRayLength,
+            GroundLayer
         );
     }
 
     private void CheckLedgeForgiveness() {
-        if (_blackboard.IsGrounded || _blackboard.Velocity.y > 0f || _blackboard.MoveInput.x < _stats.MoveThreshold || _isledgeSnapOnCooldown) return;
+        if (_blackboard.IsGrounded || _blackboard.IsJumping || _blackboard.Velocity.y > 0f || _blackboard.MoveInput.x < _stats.MoveThreshold || _isledgeSnapOnCooldown) return;
 
         float facingSign = _blackboard.IsFacingRight ? 1f : -1f;
 
@@ -154,7 +163,7 @@ public class PlayerCollisionHandler : MonoBehaviour {
             (Vector2)_ledgeCheckPoint.position,
             Vector2.down,
             _ledgeRayLength,
-            _stats.GroundLayer
+            GroundLayer
         );
 
         if (hit.collider == null) return;
@@ -193,8 +202,8 @@ public class PlayerCollisionHandler : MonoBehaviour {
         return !Physics2D.Raycast(
             origin,
             Vector2.down,
-            _stats.GroundDetectionRayLength * 2f,
-            _stats.GroundLayer
+            GroundDetectionRayLength * 2f,
+            GroundLayer
         );
     }
 

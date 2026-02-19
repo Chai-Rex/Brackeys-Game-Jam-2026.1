@@ -1,57 +1,33 @@
 using UnityEngine;
 
 /// <summary>
-/// Airborne substate: Player performs a "coyote time" jump
-/// Allows jumping shortly after leaving the ground for better game feel
+/// Airborne substate: Coyote-time ground jump.
+/// Allows the player to jump shortly after walking off a ledge.
+/// Immediately transitions to GroundJumping after applying force.
 /// </summary>
 public class PS_CoyoteGroundJump : BaseHierarchicalState {
-    private PlayerStateMachineHandler _stateMachine;
+    private PlayerStateMachineHandler _sm;
 
-    public PS_CoyoteGroundJump(PlayerStateMachineHandler stateMachine)
-        : base(stateMachine) {
-        _stateMachine = stateMachine;
+    public PS_CoyoteGroundJump(PlayerStateMachineHandler stateMachine) : base(stateMachine) {
+        _sm = stateMachine;
     }
 
     public override void EnterState() {
-        if (_stateMachine.Blackboard.debugStates) {
-            Debug.Log("[PS_CoyoteGroundJump] Entered - Coyote Jump!");
-        }
+        if (_sm.Blackboard.debugStates) Debug.Log("[PS_CoyoteGroundJump] Entered - Coyote Jump!");
 
-        // Consume the jump buffer and coyote time
-        _stateMachine.Input.ConsumeJumpBuffer();
-        _stateMachine.Blackboard.CoyoteTimer = 0f;
+        _sm.Input.ConsumeJumpBuffer();
+        _sm.Blackboard.CoyoteTimer = 0f;
+        _sm.Blackboard.IsJumping   = true;
 
-        // Set jumping flag
-        _stateMachine.Blackboard.IsJumping = true;
+        _sm.Physics.ApplyVerticalForce(_sm.Stats.InitialGroundJumpVelocity);
+        _sm.Animation.Play(PlayerAnimationHandler.Jump, false);
 
-        // Apply jump force (same as ground jump)
-        _stateMachine.Physics.ApplyVerticalForce(_stateMachine.Stats.InitialGroundJumpVelocity);
-
-        // Play jump animation
-        _stateMachine.Animation.Play(PlayerAnimamationHandler.Jump, false);
-
-        // Immediately transition to ground jumping state
-        var factory = _stateMachine.GetFactory();
-        SwitchState(factory.GetState(PlayerStateFactory.PlayerStates.GroundJumping));
+        SwitchState(_sm.GetFactory().GetState(PlayerStateFactory.PlayerStates.GroundJumping));
     }
 
-    public override void InitializeSubState() {
-        // No substates - this is a transition state
-    }
-
-    public override void Update() {
-        // This state transitions immediately
-    }
-
-    public override void FixedUpdate() {
-        // Jump force already applied in EnterState
-    }
-
-    public override void CheckSwitchStates() {
-        // State switches immediately in EnterState
-    }
-
-    public override void ExitState() {
-
-    }
+    public override void InitializeSubState() { }
+    public override void Update()             { }
+    public override void FixedUpdate()        { }
+    public override void CheckSwitchStates()  { }
+    public override void ExitState()          { }
 }

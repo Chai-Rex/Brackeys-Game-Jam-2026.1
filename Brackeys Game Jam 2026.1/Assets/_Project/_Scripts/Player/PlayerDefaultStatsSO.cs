@@ -68,18 +68,6 @@ public class PlayerDefaultStatsSO : ScriptableObject {
 
     #endregion
 
-    #region Collision Stats
-
-    [Header("Collision Detection")]
-    public LayerMask GroundLayer;
-    public float GroundDetectionRayLength = 0.02f;
-    public float HeadDetectionRayLength = 0.02f;
-    public float HeadWidth = 0.75f;
-    public float WallDetectionRayLength = 0.02f;
-    [Range(0.01f, 2f)] public float WallDetectionRayHeightMultiplier = 0.9f;
-
-    #endregion
-
     #region Special Abilities
 
     [Header("Dodging")]

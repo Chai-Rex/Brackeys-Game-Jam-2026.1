@@ -1,74 +1,58 @@
 using UnityEngine;
 
 /// <summary>
-/// Grounded substate: Player is pushing against a wall while on the ground
-/// Can transition to wall climb or wall jump if implemented
+/// Grounded substate: Player is pushing against a wall while on the ground.
+/// Decelerates horizontal movement; transitions to a jump or back to Moving/Idling.
 /// </summary>
 public class PS_GroundedWallPressing : BaseHierarchicalState {
-    private PlayerStateMachineHandler _stateMachine;
+    private PlayerStateMachineHandler _sm;
 
-    public PS_GroundedWallPressing(PlayerStateMachineHandler stateMachine)
-        : base(stateMachine) {
-        _stateMachine = stateMachine;
+    public PS_GroundedWallPressing(PlayerStateMachineHandler stateMachine) : base(stateMachine) {
+        _sm = stateMachine;
     }
 
     public override void EnterState() {
-        if (_stateMachine.Blackboard.debugStates) {
-            Debug.Log("[PS_GroundedWallPressing] Entered");
-        }
+        if (_sm.Blackboard.debugStates) Debug.Log("[PS_GroundedWallPressing] Entered");
 
-        // TODO: Play wall press animation
-        // For now, use idle animation
-        _stateMachine.Animation.Play(PlayerAnimamationHandler.Idle, false);
+        // TODO: swap for a dedicated wall-press animation when available
+        _sm.Animation.Play(PlayerAnimationHandler.Idle, false);
     }
 
-    public override void InitializeSubState() {
-        // Wall pressing has no substates
-    }
+    public override void InitializeSubState() { }
 
-    public override void Update() {
-        // Handle wall pressing logic
-    }
+    public override void Update() { }
 
     public override void FixedUpdate() {
-        // Apply deceleration to slow down horizontal movement
-        _stateMachine.Physics.ApplyHorizontalMovement(
-            0f, // Target speed is 0 when pressing against wall
-            _stateMachine.Stats.GroundAcceleration,
-            _stateMachine.Stats.GroundDeceleration * 2f // Faster deceleration against wall
-        );
+        // Halt horizontal movement against the wall
+        _sm.Physics.ApplyHorizontalMovement(
+            0f,
+            _sm.Stats.GroundAcceleration,
+            _sm.Stats.GroundDeceleration * 2f);
     }
 
     public override void CheckSwitchStates() {
-        var factory = _stateMachine.GetFactory();
+        var factory = _sm.GetFactory();
 
-        // Check for jump input (could do wall jump from ground)
-        if (_stateMachine.Blackboard.JumpBufferTimer > 0 && _stateMachine.Blackboard.CanJump) {
-            // Could transition to wall jump here if desired
+        if (_sm.Blackboard.JumpBufferTimer > 0 && _sm.Blackboard.CanJump) {
             SwitchState(factory.GetState(PlayerStateFactory.PlayerStates.GroundedJump));
             return;
         }
 
-        // Check if no longer pressing against wall
-        if (!_stateMachine.Blackboard.IsAgainstWall) {
+        if (!_sm.Blackboard.IsAgainstWall) {
             SwitchState(factory.GetState(PlayerStateFactory.PlayerStates.Moving));
             return;
         }
 
-        // Check if player stopped inputting toward wall
-        int inputDirection = _stateMachine.Blackboard.MoveInput.x > 0 ? 1 : -1;
-        if (inputDirection != _stateMachine.Blackboard.WallDirection) {
-            // Player moved away from wall
-            if (Mathf.Abs(_stateMachine.Blackboard.MoveInput.x) > _stateMachine.Stats.MoveThreshold) {
-                SwitchState(factory.GetState(PlayerStateFactory.PlayerStates.Moving));
-            } else {
-                SwitchState(factory.GetState(PlayerStateFactory.PlayerStates.Idling));
-            }
+        // Player redirected input away from the wall
+        int inputDir = _sm.Blackboard.MoveInput.x > 0 ? 1 : -1;
+        if (inputDir != _sm.Blackboard.WallDirection) {
+            var next = _sm.CheckForInputMovement()
+                ? PlayerStateFactory.PlayerStates.Moving
+                : PlayerStateFactory.PlayerStates.Idling;
+            SwitchState(factory.GetState(next));
             return;
         }
     }
 
-    public override void ExitState() {
-
-    }
+    public override void ExitState() { }
 }

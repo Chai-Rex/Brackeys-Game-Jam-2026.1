@@ -16,10 +16,10 @@ MonoBehaviour:
   GroundTargetSpeed: 8
   GroundMaxSpeed: 100
   GroundAcceleration: 3
-  GroundDeceleration: 12
-  AirborneTargetSpeed: 10
-  AirborneAcceleration: 10
-  AirborneDeceleration: 10
+  GroundDeceleration: 16
+  AirborneTargetSpeed: 8
+  AirborneAcceleration: 3
+  AirborneDeceleration: 8
   WallSlideTargetSpeed: 4
   WallSlideDeceleration: 4
   TurnThreshold: 8
@@ -29,30 +29,22 @@ MonoBehaviour:
   CoyoteTime: 0.1
   ApexThreshold: 0.97
   ApexHangTime: 0.075
-  ApexHangTargetSpeed: 16
-  ApexHangAcceleration: 16
-  ApexHangDeceleration: 16
+  ApexHangTargetSpeed: 10
+  ApexHangAcceleration: 6
+  ApexHangDeceleration: 10
   GroundJumpHeight: 3
-  GroundJumpTimeTillApex: 0.3
-  GroundJumpCancelableTime: 0.028
+  GroundJumpTimeTillApex: 0.4
+  GroundJumpCancelableTime: 0.1
   GroundJumpReleaseGravityMultiplier: 2
   AirJumpHeight: 3
-  AirJumpTimeTillApex: 0.3
-  AirJumpCancelableTime: 0.028
+  AirJumpTimeTillApex: 0.4
+  AirJumpCancelableTime: 0.1
   AirJumpReleaseGravityMultiplier: 2
   WallJumpDirection: {x: 10, y: 1.5}
-  WallJumpTimeTillApex: 0.15
-  WallJumpCancelableTime: 0.125
+  WallJumpTimeTillApex: 0.2
+  WallJumpCancelableTime: 0.1
   WallJumpReleaseGravityMultiplier: 2
-  MaxFallSpeed: 20
-  DecelerationAfterForce: 5
-  GroundLayer:
-    serializedVersion: 2
-    m_Bits: 131072
-  GroundDetectionRayLength: 0.02
-  HeadDetectionRayLength: 0.02
-  HeadWidth: 0.2
-  WallDetectionRayLength: 0.02
-  WallDetectionRayHeightMultiplier: 0.9
-  DodgingCooldown: 0.25
-  DodgingDistance: 5
+  MaxFallSpeed: 30
+  DecelerationAfterForce: 16
+  DodgingCooldown: 1
+  DodgingDistance: 10

@@ -74,8 +74,6 @@ public class PlayerBlackboardHandler : MonoBehaviour {
     /// Called when player lands on ground
     /// </summary>
     public void OnLanded() {
-        IsJumping = false;
-        IsWallJumping = false;
         LastGroundedTime = Time.time;
         CoyoteTimer = 0; // Reset coyote timer on landing
     }

@@ -1,99 +1,81 @@
 using UnityEngine;
 
 /// <summary>
-/// Airborne substate: Player is in the ascending phase of a ground jump
-/// Handles variable jump height (release button early for lower jump)
+/// Airborne substate: Ascending phase of a ground jump.
+/// Handles variable jump height and transitions to AirHanging at apex.
 /// </summary>
 public class PS_GroundJumping : BaseHierarchicalState {
-    private PlayerStateMachineHandler _stateMachine;
+    private PlayerStateMachineHandler _sm;
     private float _jumpTimer;
     private bool _isCancelable;
 
-    public PS_GroundJumping(PlayerStateMachineHandler stateMachine)
-        : base(stateMachine) {
-        _stateMachine = stateMachine;
+    public PS_GroundJumping(PlayerStateMachineHandler stateMachine) : base(stateMachine) {
+        _sm = stateMachine;
     }
 
     public override void EnterState() {
-        if (_stateMachine.Blackboard.debugStates) {
-            Debug.Log("[PS_GroundJumping] Entered");
-        }
+        if (_sm.Blackboard.debugStates) Debug.Log("[PS_GroundJumping] Entered");
 
-        _jumpTimer = 0f;
+        _jumpTimer   = 0f;
         _isCancelable = false;
 
-        // Play jumping animation
-        _stateMachine.Animation.Play(PlayerAnimamationHandler.Jumping, false);
+        _sm.Animation.Play(PlayerAnimationHandler.Jumping, false);
     }
 
-    public override void InitializeSubState() {
-        // GroundJumping has no substates
-    }
+    public override void InitializeSubState() { }
 
     public override void Update() {
         _jumpTimer += Time.deltaTime;
 
-        // Enable canceling after minimum jump time
-        if (!_isCancelable && _jumpTimer >= _stateMachine.Stats.GroundJumpCancelableTime) {
+        if (!_isCancelable && _jumpTimer >= _sm.Stats.GroundJumpCancelableTime)
             _isCancelable = true;
-        }
     }
 
     public override void FixedUpdate() {
-        // Apply jump gravity during ascent
-        float gravityToApply = _stateMachine.Stats.GroundJumpGravity;
+        float gravity = _sm.Stats.GroundJumpGravity;
+        bool jumpReleased = !_sm.CheckJumpSustained() && _isCancelable;
 
-        // VARIABLE JUMP HEIGHT: Check if player released jump button early
-        if (!_stateMachine.CheckJumpSustained() && _isCancelable) {
-            // Apply stronger gravity multiplier for shorter jump
-            gravityToApply *= _stateMachine.Stats.GroundJumpReleaseGravityMultiplier;
-
-            // Apply horizontal air control
-            _stateMachine.Physics.ApplyHorizontalMovement(
-                _stateMachine.Stats.ApexHangTargetSpeed,
-                _stateMachine.Stats.ApexHangAcceleration,
-                _stateMachine.Stats.ApexHangDeceleration
-            );
+        if (jumpReleased) {
+            gravity *= _sm.Stats.GroundJumpReleaseGravityMultiplier;
+            _sm.Physics.ApplyHorizontalMovement(
+                _sm.Stats.ApexHangTargetSpeed,
+                _sm.Stats.ApexHangAcceleration,
+                _sm.Stats.ApexHangDeceleration);
         } else {
-            // Apply horizontal air control
-            _stateMachine.Physics.ApplyHorizontalMovement(
-                _stateMachine.Stats.AirborneTargetSpeed,
-                _stateMachine.Stats.AirborneAcceleration,
-                _stateMachine.Stats.AirborneDeceleration
-            );
+            _sm.Physics.ApplyHorizontalMovement(
+                _sm.Stats.AirborneTargetSpeed,
+                _sm.Stats.AirborneAcceleration,
+                _sm.Stats.AirborneDeceleration);
         }
 
-        // Update facing direction
-        _stateMachine.CheckForTurning(_stateMachine.Blackboard.MoveInput);
-
-        // Apply gravity
-        _stateMachine.Physics.ApplyGravityForce(gravityToApply);
+        _sm.CheckForTurning(_sm.Blackboard.MoveInput);
+        _sm.Physics.ApplyGravityForce(gravity);
     }
 
     public override void CheckSwitchStates() {
-        var factory = _stateMachine.GetFactory();
+        var factory = _sm.GetFactory();
 
-        // Check if hit head on ceiling
-        if (_stateMachine.CheckHeadHit()) {
-            _stateMachine.Blackboard.Velocity.y = 0;
+        // Head collision — kill vertical momentum and fall
+        if (_sm.CheckHeadHit()) {
+            _sm.Blackboard.Velocity.y = 0;
             SwitchState(factory.GetState(PlayerStateFactory.PlayerStates.Falling));
             return;
         }
 
-        // Check if we've reached apex for hang time
-        if (_stateMachine.CheckAtApex(_stateMachine.Stats.InitialGroundJumpVelocity)) {
+        // Reached apex — enter hang time
+        if (_isCancelable && _sm.CheckAtApex(_sm.Stats.InitialGroundJumpVelocity)) {
             SwitchState(factory.GetState(PlayerStateFactory.PlayerStates.AirHanging));
             return;
         }
 
-        // Check if started falling (shouldn't happen before apex, but safety check)
-        if (_stateMachine.Blackboard.Velocity.y <= 0) {
+        // Safety: already falling (e.g. jump canceled very early)
+        if (_sm.Blackboard.Velocity.y <= 0) {
             SwitchState(factory.GetState(PlayerStateFactory.PlayerStates.Falling));
             return;
         }
     }
 
     public override void ExitState() {
-        _stateMachine.Blackboard.IsJumping = false;
+        _sm.Blackboard.IsJumping = false;
     }
 }

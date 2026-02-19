@@ -1,80 +1,56 @@
 using UnityEngine;
 
 /// <summary>
-/// Airborne substate: Player is at the apex of a jump (hang time)
-/// Provides a brief moment of reduced gravity for better jump feel
+/// Airborne substate: Player is at the apex of a jump (hang time).
+/// Applies reduced gravity for a brief period to give the jump a floaty, satisfying feel.
 /// </summary>
 public class PS_AirHanging : BaseHierarchicalState {
-    private PlayerStateMachineHandler _stateMachine;
+    private PlayerStateMachineHandler _sm;
     private float _hangTimer;
 
-    public PS_AirHanging(PlayerStateMachineHandler stateMachine)
-        : base(stateMachine) {
-        _stateMachine = stateMachine;
+    public PS_AirHanging(PlayerStateMachineHandler stateMachine) : base(stateMachine) {
+        _sm = stateMachine;
     }
 
     public override void EnterState() {
-        if (_stateMachine.Blackboard.debugStates) {
-            Debug.Log("[PS_AirHanging] Entered - Apex Hang Time");
-        }
+        if (_sm.Blackboard.debugStates) Debug.Log("[PS_AirHanging] Entered - Apex Hang");
 
         _hangTimer = 0f;
+        _sm.Blackboard.Velocity.y = 0f; // Flatten velocity for hang feel
 
-        // Play hang animation
-        _stateMachine.Animation.Play(PlayerAnimamationHandler.AirHanging, false);
-
-        // IMPORTANT: Set vertical velocity to near-zero for hang effect
-        _stateMachine.Blackboard.Velocity.y = 0f;
+        _sm.Animation.Play(PlayerAnimationHandler.AirHanging, false);
     }
 
-    public override void InitializeSubState() {
-        // AirHanging has no substates
-    }
+    public override void InitializeSubState() { }
 
     public override void Update() {
         _hangTimer += Time.deltaTime;
     }
 
     public override void FixedUpdate() {
-        // Apply MINIMAL gravity during hang time for "floaty" feel
-        // This is what makes the hang time feel good!
-        if (_hangTimer < _stateMachine.Stats.ApexHangTime) {
-            // Very light gravity during hang period (30% of normal)
-            float reducedGravity = _stateMachine.Stats.GroundJumpGravity * 0.3f;
-            _stateMachine.Physics.ApplyGravityForce(reducedGravity);
+        if (_hangTimer < _sm.Stats.ApexHangTime) {
+            // Reduced gravity (30%) during the hang window
+            _sm.Physics.ApplyGravityForce(_sm.Stats.GroundJumpGravity * 0.3f);
         } else {
-            // After hang time expires, start falling with a small initial velocity
-            _stateMachine.Blackboard.Velocity.y = -0.1f;
+            // Kick-start falling after hang expires
+            _sm.Blackboard.Velocity.y = -0.1f;
         }
 
-        // Allow full air control during hang time
-        _stateMachine.Physics.ApplyHorizontalMovement(
-            _stateMachine.Stats.ApexHangTargetSpeed,
-            _stateMachine.Stats.ApexHangAcceleration,
-            _stateMachine.Stats.ApexHangDeceleration
-        );
-
-        // Update facing direction
-        _stateMachine.CheckForTurning(_stateMachine.Blackboard.MoveInput);
+        _sm.Physics.ApplyHorizontalMovement(
+            _sm.Stats.ApexHangTargetSpeed,
+            _sm.Stats.ApexHangAcceleration,
+            _sm.Stats.ApexHangDeceleration);
+        _sm.CheckForTurning(_sm.Blackboard.MoveInput);
     }
 
     public override void CheckSwitchStates() {
-        var factory = _stateMachine.GetFactory();
+        var factory = _sm.GetFactory();
 
-        // Exit hang state after hang duration OR if velocity increases significantly
-        if (_hangTimer >= _stateMachine.Stats.ApexHangTime ||
-            _stateMachine.Blackboard.Velocity.y < -1f) {
-            // Transition to falling
+        if (_hangTimer >= _sm.Stats.ApexHangTime || _sm.Blackboard.Velocity.y < -1f) {
             SwitchState(factory.GetState(PlayerStateFactory.PlayerStates.Falling));
             return;
         }
-
-        // Note: Could add double jump here if desired
-        // if (_stateMachine.CheckJump() && _hasDoubleJump) { ... }
     }
 
-    public override void ExitState() {
-
-
-    }
+    public override void ExitState() { }
 }

@@ -1,75 +1,53 @@
 using UnityEngine;
 
 /// <summary>
-/// OnWall substate: Player is sliding down a wall
+/// OnWall substate: Player is sliding down a wall.
+/// Applies reduced downward gravity for a controlled slide feel.
 /// </summary>
 public class PS_WallSliding : BaseHierarchicalState {
-    private PlayerStateMachineHandler _stateMachine;
+    private PlayerStateMachineHandler _sm;
 
-    public PS_WallSliding(PlayerStateMachineHandler stateMachine)
-        : base(stateMachine) {
-        _stateMachine = stateMachine;
+    public PS_WallSliding(PlayerStateMachineHandler stateMachine) : base(stateMachine) {
+        _sm = stateMachine;
     }
 
     public override void EnterState() {
-        if (_stateMachine.Blackboard.debugStates) {
-            Debug.Log("[PS_WallSliding] Entered");
-        }
+        if (_sm.Blackboard.debugStates) Debug.Log("[PS_WallSliding] Entered");
 
-        // Play wall sliding animation
-        _stateMachine.Animation.Play(PlayerAnimamationHandler.WallSliding, false);
-
-        // Update facing direction (face the wall)
-        _stateMachine.Blackboard.IsFacingRight = _stateMachine.Blackboard.WallDirection > 0;
+        _sm.Blackboard.IsFacingRight = _sm.Blackboard.WallDirection > 0; // Face the wall
+        _sm.Animation.Play(PlayerAnimationHandler.WallSliding, false);
     }
 
-    public override void InitializeSubState() {
-        // Wall sliding has no substates
-    }
+    public override void InitializeSubState() { }
 
-    public override void Update() {
-        // Handle wall sliding logic
-    }
+    public override void Update() { }
 
     public override void FixedUpdate() {
-
-        // Only apply wall slide physics if player is moving downwards (prevents sticking to wall when moving upwards)
-        if (_stateMachine.Blackboard.Velocity.y <= 0) {
-            // Apply wall slide physics (slower fall than normal)
-            _stateMachine.Physics.ApplyWallSlide(
-                _stateMachine.Stats.WallSlideTargetSpeed,
-                _stateMachine.Stats.WallSlideDeceleration
-            );
+        // Only apply slide physics when moving downward (don't stick on upward arc)
+        if (_sm.Blackboard.Velocity.y <= 0) {
+            _sm.Physics.ApplyWallSlide(
+                _sm.Stats.WallSlideTargetSpeed,
+                _sm.Stats.WallSlideDeceleration);
         }
 
-        // Apply ground movement (Move off wall)
-        _stateMachine.Physics.ApplyHorizontalMovement(
-            _stateMachine.Stats.GroundTargetSpeed,
-            _stateMachine.Stats.GroundAcceleration,
-            _stateMachine.Stats.GroundDeceleration
-        );
+        // Allow the player to move horizontally away from the wall
+        _sm.Physics.ApplyHorizontalMovement(
+            _sm.Stats.GroundTargetSpeed,
+            _sm.Stats.GroundAcceleration,
+            _sm.Stats.GroundDeceleration);
     }
 
     public override void CheckSwitchStates() {
-        var factory = _stateMachine.GetFactory();
+        var factory = _sm.GetFactory();
 
-        // Check for wall jump input
-        if (_stateMachine.Blackboard.JumpBufferTimer > 0 && _stateMachine.Blackboard.CanJump) {
+        if (_sm.Blackboard.JumpBufferTimer > 0 && _sm.Blackboard.CanJump) {
             SwitchState(factory.GetState(PlayerStateFactory.PlayerStates.WallJump));
             return;
         }
 
-        // Check if player is moving away from wall
-        int inputDirection = _stateMachine.Blackboard.MoveInput.x > 0 ? 1 : -1;
-        if (Mathf.Abs(_stateMachine.Blackboard.MoveInput.x) > _stateMachine.Stats.MoveThreshold) {
-            if (inputDirection != _stateMachine.Blackboard.WallDirection) {
-                // Player pushing away from wall - fall off
-                // The parent OnWall state will handle transition to Airborne
-            }
-        }
+        // Pushing away from wall — parent OnWall will detect loss of IsAgainstWall
+        // and transition to Airborne automatically; nothing to do here.
     }
 
-    public override void ExitState() {
-
-    }
+    public override void ExitState() { }
 }

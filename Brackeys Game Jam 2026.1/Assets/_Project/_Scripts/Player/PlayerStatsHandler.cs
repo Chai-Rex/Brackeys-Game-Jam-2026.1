@@ -75,18 +75,6 @@ public class PlayerStatsHandler : MonoBehaviour {
 
     #endregion
 
-    #region Collision Stats
-
-    [Header("Collision Detection")]
-    public LayerMask GroundLayer;
-    public float GroundDetectionRayLength = 0.02f;
-    public float HeadDetectionRayLength = 0.02f;
-    public float HeadWidth = 0.75f;
-    public float WallDetectionRayLength = 0.02f;
-    [Range(0.01f, 2f)] public float WallDetectionRayHeightMultiplier = 0.9f;
-
-    #endregion
-
     #region Special Abilities
 
     [Header("Dodging")]
@@ -186,14 +174,6 @@ public class PlayerStatsHandler : MonoBehaviour {
         // Dodging
         DodgingCooldown = defaultStats.DodgingCooldown;
         DodgingDistance = defaultStats.DodgingDistance;
-
-        // Collision
-        GroundLayer = defaultStats.GroundLayer;
-        GroundDetectionRayLength = defaultStats.GroundDetectionRayLength;
-        HeadDetectionRayLength = defaultStats.HeadDetectionRayLength;
-        HeadWidth = defaultStats.HeadWidth;
-        WallDetectionRayLength = defaultStats.WallDetectionRayLength;
-        WallDetectionRayHeightMultiplier = defaultStats.WallDetectionRayHeightMultiplier;
 
         CalculateJumpValues();
     }

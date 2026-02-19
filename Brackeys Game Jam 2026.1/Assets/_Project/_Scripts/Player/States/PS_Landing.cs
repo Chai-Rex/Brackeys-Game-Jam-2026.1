@@ -7,7 +7,7 @@ using UnityEngine;
 public class PS_Landing : BaseHierarchicalState {
     private PlayerStateMachineHandler _stateMachine;
     private float _landingTimer;
-    private const float LANDING_DURATION = 0.1f; // Brief landing state
+    private const float LANDING_DURATION = 0.2f; // Brief landing state
 
     public PS_Landing(PlayerStateMachineHandler stateMachine)
         : base(stateMachine) {
@@ -24,10 +24,10 @@ public class PS_Landing : BaseHierarchicalState {
         // Determine landing type based on fall velocity
         if (Mathf.Abs(_stateMachine.Blackboard.Velocity.y) > 15f) { // Replace Magic Number
             // Hard landing
-            _stateMachine.Animation.Play(PlayerAnimamationHandler.LandingHard, false);
+            _stateMachine.Animation.Play(PlayerAnimationHandler.LandingHard, false);
         } else {
             // Soft landing
-            _stateMachine.Animation.Play(PlayerAnimamationHandler.LandingSoft, false);
+            _stateMachine.Animation.Play(PlayerAnimationHandler.LandingSoft, false);
         }
 
         // Reset vertical velocity on landing
@@ -45,9 +45,9 @@ public class PS_Landing : BaseHierarchicalState {
     public override void FixedUpdate() {
         // Apply ground deceleration during landing
         _stateMachine.Physics.ApplyHorizontalMovement(
-            _stateMachine.Stats.GroundTargetSpeed,
+            _stateMachine.Stats.GroundTargetSpeed * 0.5f,
             _stateMachine.Stats.GroundAcceleration,
-            _stateMachine.Stats.GroundDeceleration * 0.5f // Reduced deceleration during landing
+            _stateMachine.Stats.GroundDeceleration 
         );
     }
 

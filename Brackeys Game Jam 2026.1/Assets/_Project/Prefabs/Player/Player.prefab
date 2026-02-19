@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 1008696693170930987}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.33, y: 1, z: 0}
+  m_LocalPosition: {x: 0.3, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -86,7 +86,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerHandler
   _sceneContainer: {fileID: 11400000, guid: 65c9f2595d5c30c4798015d12c436ef3, type: 2}
   _physicsHandler: {fileID: 7689519159607885051}
-  _animationHandler: {fileID: 6475234786190257254}
+  _animationHandler: {fileID: 595402856982295566}
   _stateMachineHandler: {fileID: 6439155220111374215}
   _collisionHandler: {fileID: 7061885710586945066}
   _statsHandler: {fileID: 6088752286152335885}
@@ -183,7 +183,7 @@ Transform:
   m_GameObject: {fileID: 1780813506179096520}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.971, z: 0}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -389,7 +389,7 @@ Transform:
   m_GameObject: {fileID: 3396191424271741116}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.379, y: 1, z: 0}
+  m_LocalPosition: {x: 0.275, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -405,7 +405,7 @@ GameObject:
   m_Component:
   - component: {fileID: 111442277544435256}
   - component: {fileID: 8004719981359593947}
-  - component: {fileID: 6475234786190257254}
+  - component: {fileID: 595402856982295566}
   m_Layer: 18
   m_Name: Visuals
   m_TagString: Untagged
@@ -452,7 +452,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &6475234786190257254
+--- !u!114 &595402856982295566
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -461,9 +461,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 3422359408583133400}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d3a1de7aa2d11446825631bad8ef76a, type: 3}
+  m_Script: {fileID: 11500000, guid: adc1d4cad7afc3f469c77e14b1d7f0bf, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerAnimamationHandler
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerAnimationHandler
   animator: {fileID: 8004719981359593947}
   spineAnimator: {fileID: 8080704145313933904}
 --- !u!1 &4714965002475698211
@@ -491,7 +491,7 @@ Transform:
   m_GameObject: {fileID: 4714965002475698211}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.042, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -669,6 +669,15 @@ MonoBehaviour:
   _headCheckPoint: {fileID: 6432518208431990153}
   _ledgeCheckPoint: {fileID: 7330600760219537918}
   _bodyCollider: {fileID: 1032540880346355792}
+  GroundLayer:
+    serializedVersion: 2
+    m_Bits: 131072
+  GroundDetectionRayLength: 0.02
+  HeadDetectionRayLength: 0.02
+  HeadWidth: 0.4
+  WallDetectionRayLength: 0.02
+  WallDetectionRayHeightMultiplier: 0.9
+  GroundBodyWidthMultiplier: 0.9
   _enableLedgeForgiveness: 1
   _ledgeSnapThreshold: 0.3
   _ledgeRayLength: 1
@@ -706,8 +715,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.03944832, y: 0.96942127}
-  m_Size: {x: 0.46438253, y: 1.9388425}
+  m_Offset: {x: 0, y: 1}
+  m_Size: {x: 0.55, y: 2}
   m_Direction: 0
 --- !u!1 &8669688089914981708
 GameObject:
@@ -883,13 +892,5 @@ MonoBehaviour:
   WallJumpReleaseGravityMultiplier: 1
   MaxFallSpeed: 20
   DecelerationAfterForce: 5
-  GroundLayer:
-    serializedVersion: 2
-    m_Bits: 0
-  GroundDetectionRayLength: 0.02
-  HeadDetectionRayLength: 0.02
-  HeadWidth: 0.75
-  WallDetectionRayLength: 0.02
-  WallDetectionRayHeightMultiplier: 0.9
   DodgingCooldown: 0.25
   DodgingDistance: 5

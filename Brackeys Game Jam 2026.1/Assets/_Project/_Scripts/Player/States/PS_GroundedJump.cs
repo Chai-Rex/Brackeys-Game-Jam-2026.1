@@ -1,52 +1,29 @@
 using UnityEngine;
 
 /// <summary>
-/// Grounded substate: Player initiates jump from ground
-/// This is the "jump start" state that immediately transitions to airborne
+/// Grounded substate: Player initiates a jump from the ground.
+/// Single-frame transition state — applies jump force then immediately lets
+/// PS_Grounded.CheckSwitchStates() detect IsJumping and move to Airborne.
 /// </summary>
 public class PS_GroundedJump : BaseHierarchicalState {
-    private PlayerStateMachineHandler _stateMachine;
+    private PlayerStateMachineHandler _sm;
 
-    public PS_GroundedJump(PlayerStateMachineHandler stateMachine)
-        : base(stateMachine) {
-        _stateMachine = stateMachine;
+    public PS_GroundedJump(PlayerStateMachineHandler stateMachine) : base(stateMachine) {
+        _sm = stateMachine;
     }
 
     public override void EnterState() {
-        if (_stateMachine.Blackboard.debugStates) {
-            Debug.Log("[PS_GroundedJump] Entered - Executing Jump");
-        }
+        if (_sm.Blackboard.debugStates) Debug.Log("[PS_GroundedJump] Entered - Executing Jump");
 
-        // Consume the jump buffer
-        _stateMachine.Input.ConsumeJumpBuffer();
-
-        // Set jumping flag
-        _stateMachine.Blackboard.IsJumping = true;
-
-        // Apply jump force
-        _stateMachine.Physics.ApplyVerticalForce(_stateMachine.Stats.InitialGroundJumpVelocity);
-
-        // Play jump animation
-        _stateMachine.Animation.Play(PlayerAnimamationHandler.Jump, false);
+        _sm.Input.ConsumeJumpBuffer();
+        _sm.Blackboard.IsJumping = true;
+        _sm.Physics.ApplyVerticalForce(_sm.Stats.InitialGroundJumpVelocity);
+        _sm.Animation.Play(PlayerAnimationHandler.Jump, false);
     }
 
-    public override void InitializeSubState() {
-        // No substates - this is a transition state
-    }
-
-    public override void Update() {
-        // This state is only active for one frame
-    }
-
-    public override void FixedUpdate() {
-        // Jump force already applied in EnterState
-    }
-
-    public override void CheckSwitchStates() {
-        // State switches immediately in EnterState
-    }
-
-    public override void ExitState() {
-
-    }
+    public override void InitializeSubState() { }
+    public override void Update()             { }
+    public override void FixedUpdate()        { }
+    public override void CheckSwitchStates()  { }
+    public override void ExitState()          { }
 }
