@@ -46,10 +46,10 @@ public class Umbrelloid : MonoBehaviour
 
     void FixedUpdate()
     {
-        ApplyRandomAcceleration();
+        Vector2 randomAccelerationApplied = ApplyRandomAcceleration();
+        transform.SetZEuler(randomAccelerationApplied.x * rotateWithAcceleration);
         GroundRepulsion();
         ApplyFriction();
-        transform.SetZEuler(rb.linearVelocity.x * rotateWithAcceleration);
     }
 
     Vector2 ApplyRandomAcceleration()
