@@ -19,6 +19,7 @@ public class DrillHandler : MonoBehaviour
     private bool coroutineRunning = false;
     //Only for Point To Click Drilling
     [SerializeField]private Tilemap tilemap;
+    private TileDatabase tileDatabase;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -29,6 +30,7 @@ public class DrillHandler : MonoBehaviour
             Debug.LogError("PlayerInput Not found");
 
         }
+        tileDatabase = tilemap.GetComponent<TileDatabase>();
         playerInput.actions["Drill"].performed += ctx => isDrilling = true;
         playerInput.actions["Drill"].canceled += ctx => { isDrilling = false; previousCellSelected = Vector3Int.zero; };
     }
@@ -98,6 +100,31 @@ public class DrillHandler : MonoBehaviour
         }
     }
 
+    private void GetTileData(Tilemap tilemap, Vector3Int cellPosition)
+    {
+        TileBase tile = tilemap.GetTile(cellPosition);
+        if (tile != null)
+        {
+            Debug.Log("Tile at " + cellPosition + ": " + tile.name);
+            Debug.Log("Tile Instance ID: " + tile.GetInstanceID());
+                if (tileDatabase.tileDatabase.TryGetValue(tile.name, out TileData tileData))
+                {
+                    Debug.Log("Tile Data for " + tile.name + ":");
+                    Debug.Log("Is Destructible: " + tileData.isDestructible);
+                    Debug.Log("Durability: " + tileData.durability);
+                    Debug.Log("Physical Material: " + tileData.physicalMaterial);
+                }
+                else
+                {
+                    Debug.Log("No Tile Data found for " + tile.name);
+                }
+        }
+        else
+        {
+            Debug.Log("No tile at " + cellPosition);
+        }
+    }
+
     private void DestroyTile(Tilemap tilemap, Vector3Int cellPosition)
     {
         tilemap.SetTile(cellPosition, null);
@@ -121,6 +148,7 @@ public class DrillHandler : MonoBehaviour
             }
             yield return null; //or WaitForEndOfFrame() etc
         }
+        GetTileData(tilemap, cellPosition);
         DestroyTile(tilemap, cellPosition);
         coroutineRunning = false;
         //Debug.Log("Wait function completed");
