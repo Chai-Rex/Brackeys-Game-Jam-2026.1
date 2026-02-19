@@ -654,12 +654,6 @@
 										</BlendTrackAssoc>
 										<BlendTrackAssoc>
 											<ItemRef Name="Vine Eating_01" ID="{F037DB74-4829-4C07-BF92-585DC29B5DD0}"/>
-											<CrossfadingInfo>
-												<LeftEdgePos>0</LeftEdgePos>
-												<LeftFadingMode>Automatic</LeftFadingMode>
-												<RightEdgePos>0</RightEdgePos>
-												<RightFadingMode>Automatic</RightFadingMode>
-											</CrossfadingInfo>
 										</BlendTrackAssoc>
 									</BlendTrackAssocList>
 								</BlendTrack>

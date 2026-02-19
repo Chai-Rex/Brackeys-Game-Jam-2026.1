@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{2B4FCDD6-7034-4F03-8455-9DC46B8F8FD0}",
     "Language": "SFX",
-    "Hash": "{3E99E754-EE8E-3251-C86C-F474FCA373C8}",
+    "Hash": "{2DF66C87-AF83-8503-72A0-BF738AB25044}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\SFX",
     "ShortName": "SFX",
     "Path": "SFX.bnk",
@@ -45,7 +45,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Vine Eating .wav",
-      "CachePath": "36/{36CD9535-68BB-3F35-E163-88D459E56F04}.wem"
+      "CachePath": "8F/{8F59C06B-FB2F-0191-289C-05D918958661}.wem"
      },
      {
       "Id": "36096113",
@@ -53,7 +53,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Vine Capture.wav",
-      "CachePath": "83/{83F7274B-C53C-E066-15D2-2C625CC052FC}.wem"
+      "CachePath": "1B/{1B4C6C3B-2F9C-23FD-E17F-C367C245A9B8}.wem"
      },
      {
       "Id": "73412954",
@@ -557,7 +557,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Soundly Audio\\Umbrella_Unfold_Open_01_G1Wav.wav",
-      "CachePath": "8B/{8B237B2A-6845-92B4-48B5-A5AC9C7FEC1B}.wem"
+      "CachePath": "61/{61E6FDD8-8E64-6D71-90EE-80938A8A7113}.wem"
      },
      {
       "Id": "541092370",
@@ -693,7 +693,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Soundly Audio\\Objects, Umbrella, Open and Close, Automatic, Fast SND6671.wav",
-      "CachePath": "46/{4679DFCE-1D21-F5E2-0722-C41C254DF366}.wem"
+      "CachePath": "F5/{F5C41698-5446-6F39-4199-9E65BA862BCF}.wem"
      },
      {
       "Id": "628138148",
@@ -1141,7 +1141,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "VIne Open.wav",
-      "CachePath": "3B/{3B7B1338-23B1-DD97-5A35-20E80B82772B}.wem"
+      "CachePath": "37/{371967C2-38DC-C635-FC01-956CEBF6C6F6}.wem"
      },
      {
       "Id": "999894426",
@@ -2192,6 +2192,6 @@
     ]
    }
   ],
-  "FileHash": "{DA521617-0679-5CAD-51F5-EF12D175526E}"
+  "FileHash": "{7BE5517E-89B6-C3F9-6268-212CA0FB132D}"
  }
 }

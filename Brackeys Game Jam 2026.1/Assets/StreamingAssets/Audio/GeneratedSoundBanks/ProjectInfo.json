@@ -15,6 +15,13 @@
     "Path": "../../../../Brackeys Game Jam 2026 WWwise Project/GeneratedSoundBanks/Mac"
    },
    {
+    "Name": "Web",
+    "GUID": "{76D67237-C59C-4F57-8727-97FAC17458DC}",
+    "BasePlatform": "Web",
+    "BasePlatformGUID": "{639AD233-23F2-4C0F-9127-79F44C15E1DA}",
+    "Path": "../../../../Brackeys Game Jam 2026 WWwise Project/GeneratedSoundBanks/Web"
+   },
+   {
     "Name": "Windows",
     "GUID": "{975EAF49-BC8F-4F42-80DB-A2D948FEDA08}",
     "BasePlatform": "Windows",
@@ -31,6 +38,6 @@
     "UseAsStandIn": "true"
    }
   ],
-  "FileHash": "{89BF1933-F688-2ED4-7175-6074A9256C8E}"
+  "FileHash": "{3856A22C-30A0-FD54-1F61-0AC1FA0E91EF}"
  }
 }

@@ -1,240 +1,698 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{277C1678-8C0D-4F19-8C5C-32F5FB4FC5FB}" SchemaVersion="133">
 	<Effects>
-		<WorkUnit Name="Factory Custom Panner" ID="{277C1678-8C0D-4F19-8C5C-32F5FB4FC5FB}" PersistMode="Standalone">
+		<WorkUnit Name="Factory AK Custom Panner" ID="{277C1678-8C0D-4F19-8C5C-32F5FB4FC5FB}" PersistMode="Standalone">
 			<ChildrenList>
-				<Effect Name="AkCustomPanner_714" ID="{BFE12590-C567-430B-AE2D-3D210AD40A85}" PluginName="AK Custom Panner" CompanyID="0" PluginID="208" PluginType="3">
-					<PluginData/>
+				<Effect Name="AkCustomPanner_714" ID="{BFE12590-C567-430B-AE2D-3D210AD40A85}" PluginName="AK Custom Panner" CompanyID="0" PluginID="208" PluginType="3">					<PluginData><PluginData/></PluginData>
 					<PluginInnerObjectList>
 						<List Name="SpeakerPositionList">
 							<PluginInnerObject Name="" ID="{D391B854-2D36-4610-A230-00F15380AD5C}" PluginName="SpeakerPosition" CompanyID="0" PluginID="209">
 								<PropertyList>
-									<Property Name="Azimuth" Type="Real32" Value="45"/>
-									<Property Name="Channel" Type="string" Value="1"/>
-									<Property Name="Name" Type="string" Value="FL"/>
+									<Property Name="Azimuth" Type="Real32">
+										<ValueList>
+											<Value>45</Value>
+										</ValueList>
+									</Property>
+									<Property Name="Channel" Type="string">
+										<ValueList>
+											<Value>1</Value>
+										</ValueList>
+									</Property>
+									<Property Name="Name" Type="string">
+										<ValueList>
+											<Value>FL</Value>
+										</ValueList>
+									</Property>
 								</PropertyList>
 							</PluginInnerObject>
 							<PluginInnerObject Name="" ID="{4AF4761A-9AB1-4E30-921F-8BD258A6D490}" PluginName="SpeakerPosition" CompanyID="0" PluginID="209">
 								<PropertyList>
-									<Property Name="Azimuth" Type="Real32" Value="-45"/>
-									<Property Name="Channel" Type="string" Value="2"/>
-									<Property Name="ID" Type="Uint32" Value="1"/>
-									<Property Name="Name" Type="string" Value="FR"/>
+									<Property Name="Azimuth" Type="Real32">
+										<ValueList>
+											<Value>-45</Value>
+										</ValueList>
+									</Property>
+									<Property Name="Channel" Type="string">
+										<ValueList>
+											<Value>2</Value>
+										</ValueList>
+									</Property>
+									<Property Name="ID" Type="Uint32">
+										<ValueList>
+											<Value>1</Value>
+										</ValueList>
+									</Property>
+									<Property Name="Name" Type="string">
+										<ValueList>
+											<Value>FR</Value>
+										</ValueList>
+									</Property>
 								</PropertyList>
 							</PluginInnerObject>
 							<PluginInnerObject Name="" ID="{7DA7980A-E77C-45FC-8B24-C4F883B5AA17}" PluginName="SpeakerPosition" CompanyID="0" PluginID="209">
 								<PropertyList>
-									<Property Name="Channel" Type="string" Value="3"/>
-									<Property Name="ID" Type="Uint32" Value="2"/>
-									<Property Name="Name" Type="string" Value="C"/>
+									<Property Name="Channel" Type="string">
+										<ValueList>
+											<Value>3</Value>
+										</ValueList>
+									</Property>
+									<Property Name="ID" Type="Uint32">
+										<ValueList>
+											<Value>2</Value>
+										</ValueList>
+									</Property>
+									<Property Name="Name" Type="string">
+										<ValueList>
+											<Value>C</Value>
+										</ValueList>
+									</Property>
 								</PropertyList>
 							</PluginInnerObject>
 							<PluginInnerObject Name="" ID="{6146DDAA-4158-48C5-B015-A59449DD4D06}" PluginName="SpeakerPosition" CompanyID="0" PluginID="209">
 								<PropertyList>
-									<Property Name="Azimuth" Type="Real32" Value="135"/>
-									<Property Name="Channel" Type="string" Value="4"/>
-									<Property Name="ID" Type="Uint32" Value="3"/>
-									<Property Name="Name" Type="string" Value="BL"/>
+									<Property Name="Azimuth" Type="Real32">
+										<ValueList>
+											<Value>135</Value>
+										</ValueList>
+									</Property>
+									<Property Name="Channel" Type="string">
+										<ValueList>
+											<Value>4</Value>
+										</ValueList>
+									</Property>
+									<Property Name="ID" Type="Uint32">
+										<ValueList>
+											<Value>3</Value>
+										</ValueList>
+									</Property>
+									<Property Name="Name" Type="string">
+										<ValueList>
+											<Value>BL</Value>
+										</ValueList>
+									</Property>
 								</PropertyList>
 							</PluginInnerObject>
 							<PluginInnerObject Name="" ID="{3858AC3A-0A69-4639-A70D-D038B3876ADC}" PluginName="SpeakerPosition" CompanyID="0" PluginID="209">
 								<PropertyList>
-									<Property Name="Azimuth" Type="Real32" Value="-135"/>
-									<Property Name="Channel" Type="string" Value="5"/>
-									<Property Name="ID" Type="Uint32" Value="4"/>
-									<Property Name="Name" Type="string" Value="BR"/>
+									<Property Name="Azimuth" Type="Real32">
+										<ValueList>
+											<Value>-135</Value>
+										</ValueList>
+									</Property>
+									<Property Name="Channel" Type="string">
+										<ValueList>
+											<Value>5</Value>
+										</ValueList>
+									</Property>
+									<Property Name="ID" Type="Uint32">
+										<ValueList>
+											<Value>4</Value>
+										</ValueList>
+									</Property>
+									<Property Name="Name" Type="string">
+										<ValueList>
+											<Value>BR</Value>
+										</ValueList>
+									</Property>
 								</PropertyList>
 							</PluginInnerObject>
 							<PluginInnerObject Name="" ID="{A14E05EF-1B60-4AF1-9FA2-5D2787C86DF1}" PluginName="SpeakerPosition" CompanyID="0" PluginID="209">
 								<PropertyList>
-									<Property Name="Azimuth" Type="Real32" Value="90"/>
-									<Property Name="Channel" Type="string" Value="6"/>
-									<Property Name="ID" Type="Uint32" Value="5"/>
-									<Property Name="Name" Type="string" Value="SL"/>
+									<Property Name="Azimuth" Type="Real32">
+										<ValueList>
+											<Value>90</Value>
+										</ValueList>
+									</Property>
+									<Property Name="Channel" Type="string">
+										<ValueList>
+											<Value>6</Value>
+										</ValueList>
+									</Property>
+									<Property Name="ID" Type="Uint32">
+										<ValueList>
+											<Value>5</Value>
+										</ValueList>
+									</Property>
+									<Property Name="Name" Type="string">
+										<ValueList>
+											<Value>SL</Value>
+										</ValueList>
+									</Property>
 								</PropertyList>
 							</PluginInnerObject>
 							<PluginInnerObject Name="" ID="{0B5C39CF-7B54-4D85-8B2C-29082D1AC13D}" PluginName="SpeakerPosition" CompanyID="0" PluginID="209">
 								<PropertyList>
-									<Property Name="Azimuth" Type="Real32" Value="-90"/>
-									<Property Name="Channel" Type="string" Value="7"/>
-									<Property Name="ID" Type="Uint32" Value="6"/>
-									<Property Name="Name" Type="string" Value="SR"/>
+									<Property Name="Azimuth" Type="Real32">
+										<ValueList>
+											<Value>-90</Value>
+										</ValueList>
+									</Property>
+									<Property Name="Channel" Type="string">
+										<ValueList>
+											<Value>7</Value>
+										</ValueList>
+									</Property>
+									<Property Name="ID" Type="Uint32">
+										<ValueList>
+											<Value>6</Value>
+										</ValueList>
+									</Property>
+									<Property Name="Name" Type="string">
+										<ValueList>
+											<Value>SR</Value>
+										</ValueList>
+									</Property>
 								</PropertyList>
 							</PluginInnerObject>
 							<PluginInnerObject Name="" ID="{72C23CA1-B7C7-4B71-A799-68BDF06802F5}" PluginName="SpeakerPosition" CompanyID="0" PluginID="209">
 								<PropertyList>
-									<Property Name="Azimuth" Type="Real32" Value="45"/>
-									<Property Name="Channel" Type="string" Value="8"/>
-									<Property Name="Elevation" Type="Real32" Value="45"/>
-									<Property Name="ID" Type="Uint32" Value="7"/>
-									<Property Name="Name" Type="string" Value="HFL"/>
+									<Property Name="Azimuth" Type="Real32">
+										<ValueList>
+											<Value>45</Value>
+										</ValueList>
+									</Property>
+									<Property Name="Channel" Type="string">
+										<ValueList>
+											<Value>8</Value>
+										</ValueList>
+									</Property>
+									<Property Name="Elevation" Type="Real32">
+										<ValueList>
+											<Value>45</Value>
+										</ValueList>
+									</Property>
+									<Property Name="ID" Type="Uint32">
+										<ValueList>
+											<Value>7</Value>
+										</ValueList>
+									</Property>
+									<Property Name="Name" Type="string">
+										<ValueList>
+											<Value>HFL</Value>
+										</ValueList>
+									</Property>
 								</PropertyList>
 							</PluginInnerObject>
 							<PluginInnerObject Name="" ID="{F0C5E6E9-C581-4114-97F8-2D77418093DC}" PluginName="SpeakerPosition" CompanyID="0" PluginID="209">
 								<PropertyList>
-									<Property Name="Azimuth" Type="Real32" Value="-45"/>
-									<Property Name="Channel" Type="string" Value="9"/>
-									<Property Name="Elevation" Type="Real32" Value="45"/>
-									<Property Name="ID" Type="Uint32" Value="8"/>
-									<Property Name="Name" Type="string" Value="HFR"/>
+									<Property Name="Azimuth" Type="Real32">
+										<ValueList>
+											<Value>-45</Value>
+										</ValueList>
+									</Property>
+									<Property Name="Channel" Type="string">
+										<ValueList>
+											<Value>9</Value>
+										</ValueList>
+									</Property>
+									<Property Name="Elevation" Type="Real32">
+										<ValueList>
+											<Value>45</Value>
+										</ValueList>
+									</Property>
+									<Property Name="ID" Type="Uint32">
+										<ValueList>
+											<Value>8</Value>
+										</ValueList>
+									</Property>
+									<Property Name="Name" Type="string">
+										<ValueList>
+											<Value>HFR</Value>
+										</ValueList>
+									</Property>
 								</PropertyList>
 							</PluginInnerObject>
 							<PluginInnerObject Name="" ID="{AED88C38-0615-4F55-BF19-2E641A81587C}" PluginName="SpeakerPosition" CompanyID="0" PluginID="209">
 								<PropertyList>
-									<Property Name="Azimuth" Type="Real32" Value="135"/>
-									<Property Name="Channel" Type="string" Value="10"/>
-									<Property Name="Elevation" Type="Real32" Value="45"/>
-									<Property Name="ID" Type="Uint32" Value="9"/>
-									<Property Name="Name" Type="string" Value="HBL"/>
+									<Property Name="Azimuth" Type="Real32">
+										<ValueList>
+											<Value>135</Value>
+										</ValueList>
+									</Property>
+									<Property Name="Channel" Type="string">
+										<ValueList>
+											<Value>10</Value>
+										</ValueList>
+									</Property>
+									<Property Name="Elevation" Type="Real32">
+										<ValueList>
+											<Value>45</Value>
+										</ValueList>
+									</Property>
+									<Property Name="ID" Type="Uint32">
+										<ValueList>
+											<Value>9</Value>
+										</ValueList>
+									</Property>
+									<Property Name="Name" Type="string">
+										<ValueList>
+											<Value>HBL</Value>
+										</ValueList>
+									</Property>
 								</PropertyList>
 							</PluginInnerObject>
 							<PluginInnerObject Name="" ID="{0D53AFB9-6EC3-4648-8AC2-8B0A6C3C950C}" PluginName="SpeakerPosition" CompanyID="0" PluginID="209">
 								<PropertyList>
-									<Property Name="Azimuth" Type="Real32" Value="-135"/>
-									<Property Name="Channel" Type="string" Value="11"/>
-									<Property Name="Elevation" Type="Real32" Value="45"/>
-									<Property Name="ID" Type="Uint32" Value="10"/>
-									<Property Name="Name" Type="string" Value="HBR"/>
+									<Property Name="Azimuth" Type="Real32">
+										<ValueList>
+											<Value>-135</Value>
+										</ValueList>
+									</Property>
+									<Property Name="Channel" Type="string">
+										<ValueList>
+											<Value>11</Value>
+										</ValueList>
+									</Property>
+									<Property Name="Elevation" Type="Real32">
+										<ValueList>
+											<Value>45</Value>
+										</ValueList>
+									</Property>
+									<Property Name="ID" Type="Uint32">
+										<ValueList>
+											<Value>10</Value>
+										</ValueList>
+									</Property>
+									<Property Name="Name" Type="string">
+										<ValueList>
+											<Value>HBR</Value>
+										</ValueList>
+									</Property>
 								</PropertyList>
 							</PluginInnerObject>
 							<PluginInnerObject Name="" ID="{34587C18-DA78-4DAE-85A4-F55CF0B45C00}" PluginName="SpeakerPosition" CompanyID="0" PluginID="209">
 								<PropertyList>
-									<Property Name="Channel" Type="string" Value="12"/>
-									<Property Name="ID" Type="Uint32" Value="11"/>
-									<Property Name="LFE" Type="bool" Value="True"/>
-									<Property Name="Name" Type="string" Value="LFE"/>
+									<Property Name="Channel" Type="string">
+										<ValueList>
+											<Value>12</Value>
+										</ValueList>
+									</Property>
+									<Property Name="ID" Type="Uint32">
+										<ValueList>
+											<Value>11</Value>
+										</ValueList>
+									</Property>
+									<Property Name="LFE" Type="bool">
+										<ValueList>
+											<Value>True</Value>
+										</ValueList>
+									</Property>
+									<Property Name="Name" Type="string">
+										<ValueList>
+											<Value>LFE</Value>
+										</ValueList>
+									</Property>
 								</PropertyList>
 							</PluginInnerObject>
 						</List>
 					</PluginInnerObjectList>
 				</Effect>
-				<Effect Name="AkCustomPanner_5153" ID="{B7C48148-E2DF-4644-8A6E-5E17ED12BCB8}" PluginName="AK Custom Panner" CompanyID="0" PluginID="208" PluginType="3">
-					<PluginData/>
+				<Effect Name="AkCustomPanner_5153" ID="{B7C48148-E2DF-4644-8A6E-5E17ED12BCB8}" PluginName="AK Custom Panner" CompanyID="0" PluginID="208" PluginType="3">					<PluginData><PluginData/></PluginData>
 					<PluginInnerObjectList>
 						<List Name="SpeakerPositionList">
 							<PluginInnerObject Name="" ID="{0AF3E432-48E2-4304-A36D-89BFC0C5903E}" PluginName="SpeakerPosition" CompanyID="0" PluginID="209">
 								<PropertyList>
-									<Property Name="Azimuth" Type="Real32" Value="30"/>
-									<Property Name="Channel" Type="string" Value="1"/>
-									<Property Name="Name" Type="string" Value="FL"/>
+									<Property Name="Azimuth" Type="Real32">
+										<ValueList>
+											<Value>30</Value>
+										</ValueList>
+									</Property>
+									<Property Name="Channel" Type="string">
+										<ValueList>
+											<Value>1</Value>
+										</ValueList>
+									</Property>
+									<Property Name="Name" Type="string">
+										<ValueList>
+											<Value>FL</Value>
+										</ValueList>
+									</Property>
 								</PropertyList>
 							</PluginInnerObject>
 							<PluginInnerObject Name="" ID="{609E11BB-C6A2-4931-A186-6B6E793FED22}" PluginName="SpeakerPosition" CompanyID="0" PluginID="209">
 								<PropertyList>
-									<Property Name="Azimuth" Type="Real32" Value="-30"/>
-									<Property Name="Channel" Type="string" Value="2"/>
-									<Property Name="ID" Type="Uint32" Value="1"/>
-									<Property Name="Name" Type="string" Value="FR"/>
+									<Property Name="Azimuth" Type="Real32">
+										<ValueList>
+											<Value>-30</Value>
+										</ValueList>
+									</Property>
+									<Property Name="Channel" Type="string">
+										<ValueList>
+											<Value>2</Value>
+										</ValueList>
+									</Property>
+									<Property Name="ID" Type="Uint32">
+										<ValueList>
+											<Value>1</Value>
+										</ValueList>
+									</Property>
+									<Property Name="Name" Type="string">
+										<ValueList>
+											<Value>FR</Value>
+										</ValueList>
+									</Property>
 								</PropertyList>
 							</PluginInnerObject>
 							<PluginInnerObject Name="" ID="{EDEEB431-658E-444D-BCDE-668D55836AC5}" PluginName="SpeakerPosition" CompanyID="0" PluginID="209">
 								<PropertyList>
-									<Property Name="Channel" Type="string" Value="3"/>
-									<Property Name="ID" Type="Uint32" Value="2"/>
-									<Property Name="Name" Type="string" Value="FC"/>
+									<Property Name="Channel" Type="string">
+										<ValueList>
+											<Value>3</Value>
+										</ValueList>
+									</Property>
+									<Property Name="ID" Type="Uint32">
+										<ValueList>
+											<Value>2</Value>
+										</ValueList>
+									</Property>
+									<Property Name="Name" Type="string">
+										<ValueList>
+											<Value>FC</Value>
+										</ValueList>
+									</Property>
 								</PropertyList>
 							</PluginInnerObject>
 							<PluginInnerObject Name="" ID="{7754355A-B6F1-4DEE-92FC-7D6C64A320A2}" PluginName="SpeakerPosition" CompanyID="0" PluginID="209">
 								<PropertyList>
-									<Property Name="Azimuth" Type="Real32" Value="30"/>
-									<Property Name="Channel" Type="string" Value="4"/>
-									<Property Name="Elevation" Type="Real32" Value="-20"/>
-									<Property Name="ID" Type="Uint32" Value="3"/>
-									<Property Name="Name" Type="string" Value="LFL"/>
+									<Property Name="Azimuth" Type="Real32">
+										<ValueList>
+											<Value>30</Value>
+										</ValueList>
+									</Property>
+									<Property Name="Channel" Type="string">
+										<ValueList>
+											<Value>4</Value>
+										</ValueList>
+									</Property>
+									<Property Name="Elevation" Type="Real32">
+										<ValueList>
+											<Value>-20</Value>
+										</ValueList>
+									</Property>
+									<Property Name="ID" Type="Uint32">
+										<ValueList>
+											<Value>3</Value>
+										</ValueList>
+									</Property>
+									<Property Name="Name" Type="string">
+										<ValueList>
+											<Value>LFL</Value>
+										</ValueList>
+									</Property>
 								</PropertyList>
 							</PluginInnerObject>
 							<PluginInnerObject Name="" ID="{FB08229C-9AE8-42C1-B365-D48FE073C70C}" PluginName="SpeakerPosition" CompanyID="0" PluginID="209">
 								<PropertyList>
-									<Property Name="Azimuth" Type="Real32" Value="-30"/>
-									<Property Name="Channel" Type="string" Value="5"/>
-									<Property Name="Elevation" Type="Real32" Value="-20"/>
-									<Property Name="ID" Type="Uint32" Value="4"/>
-									<Property Name="Name" Type="string" Value="LFR"/>
+									<Property Name="Azimuth" Type="Real32">
+										<ValueList>
+											<Value>-30</Value>
+										</ValueList>
+									</Property>
+									<Property Name="Channel" Type="string">
+										<ValueList>
+											<Value>5</Value>
+										</ValueList>
+									</Property>
+									<Property Name="Elevation" Type="Real32">
+										<ValueList>
+											<Value>-20</Value>
+										</ValueList>
+									</Property>
+									<Property Name="ID" Type="Uint32">
+										<ValueList>
+											<Value>4</Value>
+										</ValueList>
+									</Property>
+									<Property Name="Name" Type="string">
+										<ValueList>
+											<Value>LFR</Value>
+										</ValueList>
+									</Property>
 								</PropertyList>
 							</PluginInnerObject>
 							<PluginInnerObject Name="" ID="{AD3792F5-9FB1-462D-B784-9BD92674A93B}" PluginName="SpeakerPosition" CompanyID="0" PluginID="209">
 								<PropertyList>
-									<Property Name="Azimuth" Type="Real32" Value="110"/>
-									<Property Name="Channel" Type="string" Value="6"/>
-									<Property Name="ID" Type="Uint32" Value="5"/>
-									<Property Name="Name" Type="string" Value="SL"/>
+									<Property Name="Azimuth" Type="Real32">
+										<ValueList>
+											<Value>110</Value>
+										</ValueList>
+									</Property>
+									<Property Name="Channel" Type="string">
+										<ValueList>
+											<Value>6</Value>
+										</ValueList>
+									</Property>
+									<Property Name="ID" Type="Uint32">
+										<ValueList>
+											<Value>5</Value>
+										</ValueList>
+									</Property>
+									<Property Name="Name" Type="string">
+										<ValueList>
+											<Value>SL</Value>
+										</ValueList>
+									</Property>
 								</PropertyList>
 							</PluginInnerObject>
 							<PluginInnerObject Name="" ID="{355D5038-EC6F-462A-BDE0-90E22363B77F}" PluginName="SpeakerPosition" CompanyID="0" PluginID="209">
 								<PropertyList>
-									<Property Name="Azimuth" Type="Real32" Value="-110"/>
-									<Property Name="Channel" Type="string" Value="7"/>
-									<Property Name="ID" Type="Uint32" Value="6"/>
-									<Property Name="Name" Type="string" Value="SR"/>
+									<Property Name="Azimuth" Type="Real32">
+										<ValueList>
+											<Value>-110</Value>
+										</ValueList>
+									</Property>
+									<Property Name="Channel" Type="string">
+										<ValueList>
+											<Value>7</Value>
+										</ValueList>
+									</Property>
+									<Property Name="ID" Type="Uint32">
+										<ValueList>
+											<Value>6</Value>
+										</ValueList>
+									</Property>
+									<Property Name="Name" Type="string">
+										<ValueList>
+											<Value>SR</Value>
+										</ValueList>
+									</Property>
 								</PropertyList>
 							</PluginInnerObject>
 							<PluginInnerObject Name="" ID="{B61F6801-1075-45D5-A384-B6E6654B0C09}" PluginName="SpeakerPosition" CompanyID="0" PluginID="209">
 								<PropertyList>
-									<Property Name="Azimuth" Type="Real32" Value="30"/>
-									<Property Name="Channel" Type="string" Value="8"/>
-									<Property Name="Elevation" Type="Real32" Value="35"/>
-									<Property Name="ID" Type="Uint32" Value="7"/>
-									<Property Name="Name" Type="string" Value="HFL"/>
+									<Property Name="Azimuth" Type="Real32">
+										<ValueList>
+											<Value>30</Value>
+										</ValueList>
+									</Property>
+									<Property Name="Channel" Type="string">
+										<ValueList>
+											<Value>8</Value>
+										</ValueList>
+									</Property>
+									<Property Name="Elevation" Type="Real32">
+										<ValueList>
+											<Value>35</Value>
+										</ValueList>
+									</Property>
+									<Property Name="ID" Type="Uint32">
+										<ValueList>
+											<Value>7</Value>
+										</ValueList>
+									</Property>
+									<Property Name="Name" Type="string">
+										<ValueList>
+											<Value>HFL</Value>
+										</ValueList>
+									</Property>
 								</PropertyList>
 							</PluginInnerObject>
 							<PluginInnerObject Name="" ID="{34AB5AA3-28E5-43F3-83B9-3216733452E0}" PluginName="SpeakerPosition" CompanyID="0" PluginID="209">
 								<PropertyList>
-									<Property Name="Channel" Type="string" Value="9"/>
-									<Property Name="Elevation" Type="Real32" Value="35"/>
-									<Property Name="ID" Type="Uint32" Value="8"/>
-									<Property Name="Name" Type="string" Value="HFC"/>
+									<Property Name="Channel" Type="string">
+										<ValueList>
+											<Value>9</Value>
+										</ValueList>
+									</Property>
+									<Property Name="Elevation" Type="Real32">
+										<ValueList>
+											<Value>35</Value>
+										</ValueList>
+									</Property>
+									<Property Name="ID" Type="Uint32">
+										<ValueList>
+											<Value>8</Value>
+										</ValueList>
+									</Property>
+									<Property Name="Name" Type="string">
+										<ValueList>
+											<Value>HFC</Value>
+										</ValueList>
+									</Property>
 								</PropertyList>
 							</PluginInnerObject>
 							<PluginInnerObject Name="" ID="{C6523CC8-F31D-46E8-B401-218C7DD84CE9}" PluginName="SpeakerPosition" CompanyID="0" PluginID="209">
 								<PropertyList>
-									<Property Name="Azimuth" Type="Real32" Value="-30"/>
-									<Property Name="Channel" Type="string" Value="10"/>
-									<Property Name="Elevation" Type="Real32" Value="35"/>
-									<Property Name="ID" Type="Uint32" Value="9"/>
-									<Property Name="Name" Type="string" Value="HFR"/>
+									<Property Name="Azimuth" Type="Real32">
+										<ValueList>
+											<Value>-30</Value>
+										</ValueList>
+									</Property>
+									<Property Name="Channel" Type="string">
+										<ValueList>
+											<Value>10</Value>
+										</ValueList>
+									</Property>
+									<Property Name="Elevation" Type="Real32">
+										<ValueList>
+											<Value>35</Value>
+										</ValueList>
+									</Property>
+									<Property Name="ID" Type="Uint32">
+										<ValueList>
+											<Value>9</Value>
+										</ValueList>
+									</Property>
+									<Property Name="Name" Type="string">
+										<ValueList>
+											<Value>HFR</Value>
+										</ValueList>
+									</Property>
 								</PropertyList>
 							</PluginInnerObject>
 							<PluginInnerObject Name="" ID="{4B5EBBFD-69E2-49BC-9EB8-1CDC19A00FD5}" PluginName="SpeakerPosition" CompanyID="0" PluginID="209">
 								<PropertyList>
-									<Property Name="Azimuth" Type="Real32" Value="110"/>
-									<Property Name="Channel" Type="string" Value="11"/>
-									<Property Name="Elevation" Type="Real32" Value="35"/>
-									<Property Name="ID" Type="Uint32" Value="10"/>
-									<Property Name="Name" Type="string" Value="HBL"/>
+									<Property Name="Azimuth" Type="Real32">
+										<ValueList>
+											<Value>110</Value>
+										</ValueList>
+									</Property>
+									<Property Name="Channel" Type="string">
+										<ValueList>
+											<Value>11</Value>
+										</ValueList>
+									</Property>
+									<Property Name="Elevation" Type="Real32">
+										<ValueList>
+											<Value>35</Value>
+										</ValueList>
+									</Property>
+									<Property Name="ID" Type="Uint32">
+										<ValueList>
+											<Value>10</Value>
+										</ValueList>
+									</Property>
+									<Property Name="Name" Type="string">
+										<ValueList>
+											<Value>HBL</Value>
+										</ValueList>
+									</Property>
 								</PropertyList>
 							</PluginInnerObject>
 							<PluginInnerObject Name="" ID="{9A2582AC-7F25-4C11-934E-0A3FF47D782A}" PluginName="SpeakerPosition" CompanyID="0" PluginID="209">
 								<PropertyList>
-									<Property Name="Azimuth" Type="Real32" Value="-110"/>
-									<Property Name="Channel" Type="string" Value="12"/>
-									<Property Name="Elevation" Type="Real32" Value="35"/>
-									<Property Name="ID" Type="Uint32" Value="11"/>
-									<Property Name="Name" Type="string" Value="HBR"/>
+									<Property Name="Azimuth" Type="Real32">
+										<ValueList>
+											<Value>-110</Value>
+										</ValueList>
+									</Property>
+									<Property Name="Channel" Type="string">
+										<ValueList>
+											<Value>12</Value>
+										</ValueList>
+									</Property>
+									<Property Name="Elevation" Type="Real32">
+										<ValueList>
+											<Value>35</Value>
+										</ValueList>
+									</Property>
+									<Property Name="ID" Type="Uint32">
+										<ValueList>
+											<Value>11</Value>
+										</ValueList>
+									</Property>
+									<Property Name="Name" Type="string">
+										<ValueList>
+											<Value>HBR</Value>
+										</ValueList>
+									</Property>
 								</PropertyList>
 							</PluginInnerObject>
 							<PluginInnerObject Name="" ID="{42DA0258-B06B-4171-B235-68C588193708}" PluginName="SpeakerPosition" CompanyID="0" PluginID="209">
 								<PropertyList>
-									<Property Name="Channel" Type="string" Value="13"/>
-									<Property Name="Elevation" Type="Real32" Value="-20"/>
-									<Property Name="ID" Type="Uint32" Value="12"/>
-									<Property Name="Name" Type="string" Value="LFC"/>
+									<Property Name="Channel" Type="string">
+										<ValueList>
+											<Value>13</Value>
+										</ValueList>
+									</Property>
+									<Property Name="Elevation" Type="Real32">
+										<ValueList>
+											<Value>-20</Value>
+										</ValueList>
+									</Property>
+									<Property Name="ID" Type="Uint32">
+										<ValueList>
+											<Value>12</Value>
+										</ValueList>
+									</Property>
+									<Property Name="Name" Type="string">
+										<ValueList>
+											<Value>LFC</Value>
+										</ValueList>
+									</Property>
 								</PropertyList>
 							</PluginInnerObject>
 							<PluginInnerObject Name="" ID="{2CE4EA12-DF27-4CCE-869A-F4E6D654F06F}" PluginName="SpeakerPosition" CompanyID="0" PluginID="209">
 								<PropertyList>
-									<Property Name="Channel" Type="string" Value="14"/>
-									<Property Name="ID" Type="Uint32" Value="13"/>
-									<Property Name="LFE" Type="bool" Value="True"/>
-									<Property Name="Name" Type="string" Value="LFE"/>
+									<Property Name="Channel" Type="string">
+										<ValueList>
+											<Value>14</Value>
+										</ValueList>
+									</Property>
+									<Property Name="ID" Type="Uint32">
+										<ValueList>
+											<Value>13</Value>
+										</ValueList>
+									</Property>
+									<Property Name="LFE" Type="bool">
+										<ValueList>
+											<Value>True</Value>
+										</ValueList>
+									</Property>
+									<Property Name="Name" Type="string">
+										<ValueList>
+											<Value>LFE</Value>
+										</ValueList>
+									</Property>
 								</PropertyList>
 							</PluginInnerObject>
 							<PluginInnerObject Name="" ID="{E181B594-0D7B-44A6-9C9D-5745E6AC088D}" PluginName="SpeakerPosition" CompanyID="0" PluginID="209">
 								<PropertyList>
-									<Property Name="Channel" Type="string" Value="-"/>
-									<Property Name="ID" Type="Uint32" Value="14"/>
-									<Property Name="Name" Type="string" Value="NADIR"/>
-									<Property Name="Virtual" Type="bool" Value="True"/>
-									<Property Name="Elevation" Type="Real32" Value="-90"/>
+									<Property Name="Channel" Type="string">
+										<ValueList>
+											<Value>-</Value>
+										</ValueList>
+									</Property>
+									<Property Name="Elevation" Type="Real32">
+										<ValueList>
+											<Value>-90</Value>
+										</ValueList>
+									</Property>
+									<Property Name="ID" Type="Uint32">
+										<ValueList>
+											<Value>14</Value>
+										</ValueList>
+									</Property>
+									<Property Name="Name" Type="string">
+										<ValueList>
+											<Value>NADIR</Value>
+										</ValueList>
+									</Property>
+									<Property Name="Virtual" Type="bool">
+										<ValueList>
+											<Value>True</Value>
+										</ValueList>
+									</Property>
 								</PropertyList>
 							</PluginInnerObject>
 						</List>
