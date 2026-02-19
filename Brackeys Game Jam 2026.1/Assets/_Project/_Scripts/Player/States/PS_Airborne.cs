@@ -58,7 +58,8 @@ public class PS_Airborne : BaseHierarchicalState {
         if (_stateMachine.Blackboard.IsAgainstWall &&
             !_stateMachine.Blackboard.IsGrounded &&
             _stateMachine.Blackboard.Velocity.y <= 0 && // Only if moving down or stationary
-            !_stateMachine.Blackboard.IsWallJumping) 
+            !_stateMachine.Blackboard.IsWallJumping && 
+            Mathf.Abs(_stateMachine.Blackboard.MoveInput.x) > _stateMachine.Stats.MoveThreshold) 
         {
             SwitchState(factory.GetState(PlayerStateFactory.PlayerStates.OnWall));
             return;

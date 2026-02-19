@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b557f7cb76d9a0147b68289da768ecaa, type: 3}
+  m_Name: GameplayContainerScene
+  m_EditorClassIdentifier: Assembly-CSharp::SceneContainerSO
+  _managers:
+  - {fileID: 11400000, guid: baad1b09049dc69479e3f008241a4772, type: 2}
+  - {fileID: 11400000, guid: 060aa07aca206d345830d3de39888317, type: 2}
+  - {fileID: 11400000, guid: 6ac33709902ba4042b0e633cfa7ca1dc, type: 2}
+  - {fileID: 11400000, guid: afd9e7b049d45c941b64df0eb71ace5f, type: 2}
+  - {fileID: 11400000, guid: 7762dcc57d51dd24081275eec62de0aa, type: 2}
+  - {fileID: 11400000, guid: abeb74464f1c37144bdefc8e55a66fb2, type: 2}
+  _enableDebugLogs: 0
+  _iSceneName: GameplayScene

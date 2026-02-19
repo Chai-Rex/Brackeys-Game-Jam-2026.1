@@ -13,15 +13,15 @@ MonoBehaviour:
   m_Name: PlayerDefaultStats
   m_EditorClassIdentifier: Assembly-CSharp::PlayerDefaultStatsSO
   MoveThreshold: 0.1
-  GroundTargetSpeed: 12
+  GroundTargetSpeed: 8
   GroundMaxSpeed: 100
-  GroundAcceleration: 6
+  GroundAcceleration: 3
   GroundDeceleration: 12
-  AirborneTargetSpeed: 12
-  AirborneAcceleration: 12
-  AirborneDeceleration: 12
-  WallSlideTargetSpeed: 5
-  WallSlideDeceleration: 5
+  AirborneTargetSpeed: 10
+  AirborneAcceleration: 10
+  AirborneDeceleration: 10
+  WallSlideTargetSpeed: 4
+  WallSlideDeceleration: 4
   TurnThreshold: 8
   TurnDeceleration: 4
   TurnBuffer: 0.1
@@ -32,15 +32,15 @@ MonoBehaviour:
   ApexHangTargetSpeed: 16
   ApexHangAcceleration: 16
   ApexHangDeceleration: 16
-  GroundJumpHeight: 6
+  GroundJumpHeight: 3
   GroundJumpTimeTillApex: 0.3
   GroundJumpCancelableTime: 0.028
   GroundJumpReleaseGravityMultiplier: 2
-  AirJumpHeight: 6
+  AirJumpHeight: 3
   AirJumpTimeTillApex: 0.3
   AirJumpCancelableTime: 0.028
   AirJumpReleaseGravityMultiplier: 2
-  WallJumpDirection: {x: 30, y: 3}
+  WallJumpDirection: {x: 10, y: 1.5}
   WallJumpTimeTillApex: 0.15
   WallJumpCancelableTime: 0.125
   WallJumpReleaseGravityMultiplier: 2
@@ -48,7 +48,7 @@ MonoBehaviour:
   DecelerationAfterForce: 5
   GroundLayer:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 131072
   GroundDetectionRayLength: 0.02
   HeadDetectionRayLength: 0.02
   HeadWidth: 0.2

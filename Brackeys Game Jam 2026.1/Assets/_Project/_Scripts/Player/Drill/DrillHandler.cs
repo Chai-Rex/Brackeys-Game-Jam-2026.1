@@ -24,7 +24,11 @@ public class DrillHandler : MonoBehaviour
     {
         //For Drill Based on Collider
         //drillCollider = drill.GetComponent<PolygonCollider2D>();
-        playerInput = GetComponent<PlayerInput>();
+        playerInput = FindFirstObjectByType<PlayerInput>();
+        if (playerInput == null) {
+            Debug.LogError("PlayerInput Not found");
+
+        }
         playerInput.actions["Drill"].performed += ctx => isDrilling = true;
         playerInput.actions["Drill"].canceled += ctx => { isDrilling = false; previousCellSelected = Vector3Int.zero; };
     }
@@ -58,7 +62,7 @@ public class DrillHandler : MonoBehaviour
 
     private void PointToClickDrill()
     {
-        Vector3 mouseWorldPosition = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
+        Vector3 mouseWorldPosition = GetWorldPositionOnPlane();
         if(Vector3.Distance(transform.position, mouseWorldPosition) > drillRange)
         {
             return;
@@ -68,6 +72,7 @@ public class DrillHandler : MonoBehaviour
             return;
         }
         Vector3Int cellPosition = tilemap.WorldToCell(mouseWorldPosition);
+
         StartCoroutine(DrillDelay(tilemap, cellPosition));
     }
 
@@ -96,11 +101,12 @@ public class DrillHandler : MonoBehaviour
     private void DestroyTile(Tilemap tilemap, Vector3Int cellPosition)
     {
         tilemap.SetTile(cellPosition, null);
+        //Debug.Log($"{cellPosition} destroyed");
     }
 
     private System.Collections.IEnumerator DrillDelay(Tilemap tilemap, Vector3Int cellPosition)
     {
-        Debug.Log("Wait function started");
+        //Debug.Log("Wait function started");
         coroutineRunning = true;
         float startTime = Time.time;
         Vector3Int startingCellPosition = cellPosition;
@@ -108,7 +114,7 @@ public class DrillHandler : MonoBehaviour
         {
             if (isDrilling == false || cellPosition != startingCellPosition)
             {
-                Debug.Log("Interupted Wait");
+                //Debug.Log("Interupted Wait");
                 startTime = Time.time;
                 coroutineRunning = false;
                 yield break;
@@ -117,6 +123,24 @@ public class DrillHandler : MonoBehaviour
         }
         DestroyTile(tilemap, cellPosition);
         coroutineRunning = false;
-        Debug.Log("Wait function completed");
+        //Debug.Log("Wait function completed");
     }
+
+    public Vector3 GetWorldPositionOnPlane(float z = 0f) {
+        Camera cam = Camera.main;
+
+        // Mouse position MUST stay in screen space
+        Vector2 mouseScreenPos = Mouse.current.position.ReadValue();
+
+        Ray ray = cam.ScreenPointToRay(mouseScreenPos);
+
+        Plane plane = new Plane(Vector3.forward, new Vector3(0f, 0f, z));
+
+        if (plane.Raycast(ray, out float distance)) {
+            return ray.GetPoint(distance);
+        }
+
+        return Vector3.zero;
+    }
+
 }

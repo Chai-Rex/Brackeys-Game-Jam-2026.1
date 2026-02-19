@@ -48,7 +48,8 @@ public class PS_OnWall : BaseHierarchicalState {
         // Check if player left the wall
         if (!_stateMachine.Blackboard.IsAgainstWall ||
             _stateMachine.Blackboard.IsJumping ||
-            _stateMachine.Blackboard.IsWallJumping) {
+            _stateMachine.Blackboard.IsWallJumping ||
+            Mathf.Abs(_stateMachine.Blackboard.MoveInput.x) < _stateMachine.Stats.MoveThreshold) {
             SwitchState(factory.GetState(PlayerStateFactory.PlayerStates.Airborne));
             return;
         }

@@ -115,7 +115,7 @@ MonoBehaviour:
   UseCameraBounds: 0
   WorldBounds:
     m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 50, y: 50, z: 0}
+    m_Extent: {x: 11.1, y: 1000, z: 0}
   ShakeMaxOffset: 0.3
   ShakeMaxRotation: 1.5
   TraumaDecayRate: 1.2

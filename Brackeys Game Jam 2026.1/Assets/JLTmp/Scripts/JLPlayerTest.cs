@@ -13,6 +13,7 @@ public class JLPlayerTest : Singleton<JLPlayerTest>, IBarnakTarget
     [SerializeField] float jumpSpeed = 1;
 
     [Header("Input")]
+    [SerializeField] private bool UseTestInput = true;
     [SerializeField] Key leftKey = Key.A;
     [SerializeField] Key rightKey = Key.D;
     [SerializeField] Key jumpKey = Key.Space;
@@ -65,15 +66,15 @@ public class JLPlayerTest : Singleton<JLPlayerTest>, IBarnakTarget
 
     void Update()
     {
-        CheckJump();
+        if (UseTestInput) CheckJump();
         CheckHitBarnak();
     }
 
     void FixedUpdate()
     {
-        UpdateIsGrounded();
-        ApplyAcceleration();
-        ApplyFriction();
+        if (UseTestInput) UpdateIsGrounded();
+        if (UseTestInput) ApplyAcceleration();
+        if (UseTestInput) ApplyFriction();
     }
 
     void UpdateIsGrounded()
