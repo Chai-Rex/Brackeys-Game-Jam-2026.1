@@ -36,7 +36,7 @@ public class PlayerAnimamationHandler : MonoBehaviour {
     public static readonly string Falling = "falling";
     public static readonly string Jumping = "jump2";
     public static readonly string Jump = "jump1";
-    public static readonly string AirHanging = "jump2"; 
+    public static readonly string AirHanging = "falling"; 
     public static readonly string WallSliding = "falling";
     public static readonly string Turning = "idle";
     public static readonly string Dodging = "idle";
