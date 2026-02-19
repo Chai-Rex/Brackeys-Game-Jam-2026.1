@@ -4674,6 +4674,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MadElevatorPack
       objectReference: {fileID: 0}
+    - target: {fileID: 1720856134371389665, guid: 83a52c467fed84cc4a21197fac6deb55, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5687549129216445953, guid: 83a52c467fed84cc4a21197fac6deb55, type: 3}
       propertyPath: m_LocalScale.y
       value: 1.5

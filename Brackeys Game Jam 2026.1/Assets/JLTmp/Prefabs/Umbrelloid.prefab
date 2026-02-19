@@ -108,7 +108,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3330623462368916169}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b605b57964c94f3487eb64ba3e09529, type: 3}
   m_Name: 
@@ -407,7 +407,7 @@ MonoBehaviour:
   gravity: 1
   opened: 1
   grounded: 0
-  freeGroundTimeRange: {x: 2, y: 4}
+  freeGroundTimeRange: {x: 1.5, y: 2.5}
   freeGroundShakeCurve:
     serializedVersion: 2
     m_Curve:
@@ -452,7 +452,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   shake: {fileID: 880030761633322725}
   justFreedGround: 0
-  justFreedGroundTime: 1
+  justFreedGroundTime: 2
 --- !u!114 &4129403931325175632
 MonoBehaviour:
   m_ObjectHideFlags: 0

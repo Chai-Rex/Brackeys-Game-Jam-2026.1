@@ -76,7 +76,9 @@ public class Barnak : MonoBehaviour
         hitsCount = 0;
         target.OnBarnakCaught(this);        
         animator.SetInteger("state", 1);
-        //AkUnitySoundEngine.PostEvent(notifyAkOnCatch, gameObject);
+
+        if (notifyAkOnCatch != "")
+            AkUnitySoundEngine.PostEvent(notifyAkOnCatch, gameObject);
     }
 
     void SetVineLength(float length)
@@ -128,7 +130,10 @@ public class Barnak : MonoBehaviour
             caughtTarget.OnBarnakEat(this, null);
             caughtTarget = null;
             animator.SetInteger("state", 2);
-            //AkUnitySoundEngine.PostEvent(notifyAkOnStartEating, gameObject);
+            
+            if (notifyAkOnStartEating != "")
+                AkUnitySoundEngine.PostEvent(notifyAkOnStartEating, gameObject);
+
             Invoke("StopEating", eatingTime);
         }
     }
@@ -141,7 +146,9 @@ public class Barnak : MonoBehaviour
         state = State.Waiting;
         trigger.enabled = true;
         animator.SetInteger("state", 0);
-        //AkUnitySoundEngine.PostEvent(notifyAkOnStopEating, gameObject);
+
+        if (notifyAkOnStopEating != "")
+            AkUnitySoundEngine.PostEvent(notifyAkOnStopEating, gameObject);
     }
 
     public void HitToRelease()
@@ -150,12 +157,19 @@ public class Barnak : MonoBehaviour
 
         if (hitsCount < hitsToRelease)
         {
-            //AkUnitySoundEngine.PostEvent(notifyAkOnHit, gameObject);
+            if (notifyAkOnHit != "")
+                AkUnitySoundEngine.PostEvent(notifyAkOnHit, gameObject);
+            
             shakeCaughtTarget.Impact(hitShakeAmplitude);
         }
 
-        else {
-            //AkUnitySoundEngine.PostEvent(notifyAkOnLastHit, gameObject);
+        else {        
+            if (notifyAkOnLastHit != "")
+                AkUnitySoundEngine.PostEvent(notifyAkOnLastHit, gameObject);
+
+            else if (notifyAkOnHit != "")
+                AkUnitySoundEngine.PostEvent(notifyAkOnHit, gameObject);
+
             ReleaseTarget();
         } 
     }
@@ -186,8 +200,10 @@ public class Barnak : MonoBehaviour
 
         state = State.Waiting;
         trigger.enabled = true;
-        animator.SetInteger("state", 0);
-        //AkUnitySoundEngine.PostEvent(notifyAkOnStopRecovering, gameObject);
+        animator.SetInteger("state", 0);        
+        
+        if (notifyAkOnStopRecovering != "")
+            AkUnitySoundEngine.PostEvent(notifyAkOnStopRecovering, gameObject);
     }
 }
 
