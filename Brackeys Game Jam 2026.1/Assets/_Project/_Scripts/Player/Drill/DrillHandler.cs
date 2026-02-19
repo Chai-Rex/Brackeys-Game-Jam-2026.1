@@ -74,8 +74,12 @@ public class DrillHandler : MonoBehaviour
             return;
         }
         Vector3Int cellPosition = tilemap.WorldToCell(mouseWorldPosition);
-
-        StartCoroutine(DrillDelay(tilemap, cellPosition));
+        tileData tileData = GetTileData(tilemap, cellPosition);
+        if (tileData == null || tileData.isDestructible == false)
+        {
+            return;
+        }
+        StartCoroutine(DrillDelay(tilemap, tileData, cellPosition));
     }
 
     private void DrillRaycast()
@@ -100,7 +104,7 @@ public class DrillHandler : MonoBehaviour
         }
     }
 
-    private void GetTileData(Tilemap tilemap, Vector3Int cellPosition)
+    private TileData GetTileData(Tilemap tilemap, Vector3Int cellPosition)
     {
         TileBase tile = tilemap.GetTile(cellPosition);
         if (tile != null)
@@ -113,6 +117,7 @@ public class DrillHandler : MonoBehaviour
                     Debug.Log("Is Destructible: " + tileData.isDestructible);
                     Debug.Log("Durability: " + tileData.durability);
                     Debug.Log("Physical Material: " + tileData.physicalMaterial);
+                    return tileData;
                 }
                 else
                 {
@@ -125,19 +130,19 @@ public class DrillHandler : MonoBehaviour
         }
     }
 
-    private void DestroyTile(Tilemap tilemap, Vector3Int cellPosition)
+    private void DestroyTile(Tilemap tilemap, TileData tileData, Vector3Int cellPosition)
     {
         tilemap.SetTile(cellPosition, null);
         //Debug.Log($"{cellPosition} destroyed");
     }
 
-    private System.Collections.IEnumerator DrillDelay(Tilemap tilemap, Vector3Int cellPosition)
+    private System.Collections.IEnumerator DrillDelay(Tilemap tilemap, TileData tileData, Vector3Int cellPosition)
     {
         //Debug.Log("Wait function started");
         coroutineRunning = true;
         float startTime = Time.time;
         Vector3Int startingCellPosition = cellPosition;
-        while (Time.time - startTime < drillDelay)
+        while (Time.time - startTime < (drillDelay * tileData.durability))
         {
             if (isDrilling == false || cellPosition != startingCellPosition)
             {
@@ -148,8 +153,7 @@ public class DrillHandler : MonoBehaviour
             }
             yield return null; //or WaitForEndOfFrame() etc
         }
-        GetTileData(tilemap, cellPosition);
-        DestroyTile(tilemap, cellPosition);
+        DestroyTile(tilemap, tileData, cellPosition);
         coroutineRunning = false;
         //Debug.Log("Wait function completed");
     }
