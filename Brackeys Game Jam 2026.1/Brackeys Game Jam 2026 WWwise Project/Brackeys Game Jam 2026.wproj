@@ -44,9 +44,9 @@
         <Property Name="SoundBankHeaderFilePath" Type="string" Value="../Assets/StreamingAssets/Audio/GeneratedSoundBanks/" />
         <Property Name="SoundBankPaths" Type="string">
           <ValueList>
-            <Value Platform="Mac">GeneratedSoundBanks/Mac/</Value>
-            <Value Platform="Windows">GeneratedSoundBanks/Windows/</Value>
-            <Value Platform="Web">GeneratedSoundBanks/Web/</Value>
+            <Value Platform="Mac">../Assets/StreamingAssets/Audio/GeneratedSoundBanks/Mac/</Value>
+            <Value Platform="Windows">../Assets/StreamingAssets/Audio/GeneratedSoundBanks/Windows/</Value>
+            <Value Platform="Web">../Assets/StreamingAssets/Audio/GeneratedSoundBanks/Web/</Value>
           </ValueList>
         </Property>
         <Property Name="SoundBankPostGenerateCustomCmdDescription" Type="string">
@@ -1182,7 +1182,7 @@
             </Property>
             <Property Name="SoundBankPaths" Type="string">
               <ValueList>
-                <Value>GeneratedSoundBanks/</Value>
+                <Value>../Assets/StreamingAssets/Audio/GeneratedSoundBanks/</Value>
               </ValueList>
             </Property>
             <Property Name="SoundBankPostGenerateCustomCmdDescription" Type="string">
@@ -7143,7 +7143,7 @@
             </Property>
             <Property Name="SoundBankPaths" Type="string">
               <ValueList>
-                <Value>GeneratedSoundBanks/</Value>
+                <Value>../Assets/StreamingAssets/Audio/GeneratedSoundBanks/</Value>
               </ValueList>
             </Property>
             <Property Name="SoundBankPostGenerateCustomCmdDescription" Type="string">

@@ -813,7 +813,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed39f2b237e573f4f85990bb5d1440ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: AK.Wwise.Unity.Addressables::AK.Wwise.Unity.WwiseAddressables.InitBankHolder
-  InitBank: {fileID: 0}
+  InitBank: {fileID: 11400000, guid: 0c51ed8f808964634a5ace6c02c392f7, type: 2}
 --- !u!114 &1573778317
 MonoBehaviour:
   m_ObjectHideFlags: 0

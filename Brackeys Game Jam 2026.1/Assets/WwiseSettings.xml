@@ -22,7 +22,7 @@
   <InstallationWasRequested>false</InstallationWasRequested>
   <UseGitRepository>true</UseGitRepository>
   <PackageSource />
-  <AddressableBankFolder>WwiseData/Bank</AddressableBankFolder>
+  <AddressableBankFolder>StreamingAssets/Audio/GeneratedSoundBanks</AddressableBankFolder>
   <UseCustomBuildScript>false</UseCustomBuildScript>
   <AddressableAssetBuilderPath>Assets/AddressableAssetsData/DataBuilders/BuildScriptWwisePacked.asset</AddressableAssetBuilderPath>
   <AutomaticallyUpdateExternalSourcesPath>false</AutomaticallyUpdateExternalSourcesPath>
