@@ -1931,7 +1931,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed39f2b237e573f4f85990bb5d1440ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: AK.Wwise.Unity.Addressables::AK.Wwise.Unity.WwiseAddressables.InitBankHolder
-  InitBank: {fileID: 0}
+  InitBank: {fileID: 11400000, guid: 83aa40d91de72b74a947a142b1c56c70, type: 2}
 --- !u!1 &1704456806
 GameObject:
   m_ObjectHideFlags: 0
