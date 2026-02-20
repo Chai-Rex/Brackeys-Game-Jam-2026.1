@@ -2,9 +2,11 @@ using UnityEngine;
 
 public class DeathMenu : MonoBehaviour
 {
-    void OnEnable()
+    [SerializeField] private GameObject deathMenuUI;
+    public void OpenMenu()
     {
         Time.timeScale = 0f; // Pause the game
+        deathMenuUI.SetActive(true);
     }
 
     public void RestartGame()

@@ -13,7 +13,7 @@ public class Health : Progressive, IDrainable, IRefillable
     {
         Current -= amount;
         OnChange?.Invoke();
-        if(Current<=0f){/*OnDie.Invoke*/SceneManager.LoadScene(SceneManager.GetActiveScene().name);}
+        if(Current<=0f){OnDie.Invoke();}
     }
 
     public void Refill(float amount)
