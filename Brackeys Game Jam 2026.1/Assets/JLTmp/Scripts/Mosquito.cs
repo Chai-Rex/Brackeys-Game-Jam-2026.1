@@ -12,6 +12,7 @@ public class Mosquito : MonoBehaviour
 
     [Space(15)]
     [SerializeField, ReadOnly] MosquitoTarget target = null;
+    [SerializeField, ReadOnly] Health targetHealth = null;
     [SerializeField] float viewTargetRadius = 3;
     [SerializeField] float accelerationToTarget = 1;
     [SerializeField] float targetFriction = 2;
@@ -31,6 +32,9 @@ public class Mosquito : MonoBehaviour
     [SerializeField] Transform lookRightTransform;
     [SerializeField] Animator squashAnimator;
     Animator animator;
+
+    [Space(15)]
+    [SerializeField] float dmgPerSec = 0.1f;
 
     Rigidbody2D rb;
 
@@ -70,6 +74,13 @@ public class Mosquito : MonoBehaviour
         takingOff = false;
         rb.linearVelocity = Vector2.zero;
     }
+
+    void Update()
+    {
+        if (isLanded &&
+            targetHealth)
+            targetHealth.Drain(dmgPerSec * Time.deltaTime);
+    } 
 
     void FixedUpdate()
     {
@@ -194,6 +205,7 @@ public class Mosquito : MonoBehaviour
             TakeOff();
 
         this.target = target;
+        targetHealth = target ? target.GetComponentInParent<Health>() : null;
     }
 
     void SetIsLanded(bool isLanded, bool calledFromTakeOff = false)

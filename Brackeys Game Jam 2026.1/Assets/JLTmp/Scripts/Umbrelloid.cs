@@ -41,6 +41,9 @@ public class Umbrelloid : MonoBehaviour
     [SerializeField, ReadOnly] bool justFreedGround = false;
     [SerializeField] float justFreedGroundTime = 1;
 
+    [Space(15)]
+    [SerializeField] float dmg = 1;
+
     Rigidbody2D rb;
 
     void OnDrawGizmosSelected()
@@ -112,7 +115,7 @@ public class Umbrelloid : MonoBehaviour
         }
 
         else {
-            target.OnUmbrelloidHit();
+            target.OnUmbrelloidHit(dmg);
         }
     }
 
@@ -245,5 +248,5 @@ public class Umbrelloid : MonoBehaviour
 
 public interface IUmbrelloidTarget
 {
-    public void OnUmbrelloidHit();
+    public void OnUmbrelloidHit(float dmg);
 }

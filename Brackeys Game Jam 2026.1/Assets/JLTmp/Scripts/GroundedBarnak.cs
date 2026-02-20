@@ -6,6 +6,7 @@ public class GroundedBarnak : MonoBehaviour
 {
     [SerializeField, ReadOnly] bool isEating;
     [SerializeField] float eatingTime = 5;
+    [SerializeField] float dmg = 1;
 
     Collider2D trigger;
     Animator animator;
@@ -34,7 +35,7 @@ public class GroundedBarnak : MonoBehaviour
         isEating = true;
         trigger.enabled = false;
         animator.SetBool("isEating", isEating);
-        target.OnBarnakEat(null, this);
+        target.OnBarnakEat(null, this, dmg);
         Invoke("StopEating", eatingTime);
     }
 

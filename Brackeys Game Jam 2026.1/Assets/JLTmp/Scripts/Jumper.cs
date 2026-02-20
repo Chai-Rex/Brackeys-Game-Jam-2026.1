@@ -4,6 +4,8 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class Jumper : MonoBehaviour, IBarnakTarget
 {
+    [SerializeField] float dmg = 1;
+
     [Header("Animation")]
     [SerializeField, ReadOnly] bool lookRight = true;
     [SerializeField] Transform lookRightTransform;
@@ -105,7 +107,7 @@ public class Jumper : MonoBehaviour, IBarnakTarget
         print("Jumper.OnTriggerEnter2D : Hit...");
         //Check if player
         //if is player, damage player
-        collision.GetComponent<Health>().Drain(4);
+        collision.GetComponentInParent<Health>()?.Drain(dmg);
     }
 
     void UpdateIsGrounded()
@@ -184,7 +186,7 @@ public class Jumper : MonoBehaviour, IBarnakTarget
         barnakCaught = null;
     }
     
-    public void OnBarnakEat(Barnak barnak, GroundedBarnak groundedBarnak)
+    public void OnBarnakEat(Barnak barnak, GroundedBarnak groundedBarnak, float dmg)
     {
         Destroy(gameObject);
     }

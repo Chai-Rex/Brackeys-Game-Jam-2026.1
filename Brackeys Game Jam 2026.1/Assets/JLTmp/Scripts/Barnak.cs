@@ -20,6 +20,8 @@ public class Barnak : MonoBehaviour
     [SerializeField] float eatingTime = 5;
     [SerializeField] float recoveringTime = 5;
 
+    [SerializeField] float dmg = 1;
+
     [Space(15)]
     [SerializeField] string notifyAkOnCatch = "Vine_Catch";
     [SerializeField] string notifyAkOnStartEating = "Vine_StartEating";
@@ -150,7 +152,7 @@ public class Barnak : MonoBehaviour
             shakeCaughtTarget.Target = null;
 
             hitsCount = 0;
-            caughtTarget.OnBarnakEat(this, null);
+            caughtTarget.OnBarnakEat(this, null, dmg);
             caughtTarget = null;
             animator.SetInteger("state", 2);
             
@@ -238,7 +240,7 @@ public interface IBarnakTarget
 {
     public void OnBarnakCaught(Barnak barnak);
     public void OnBarnakRelease(Barnak barnak);
-    public void OnBarnakEat(Barnak barnak, GroundedBarnak groundedBarnak);
+    public void OnBarnakEat(Barnak barnak, GroundedBarnak groundedBarnak, float dmg);
     public Transform transform { get; }
     public float BarnakTargetRadius { get; }
 }
