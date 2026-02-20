@@ -26,10 +26,13 @@ public class Jumper : MonoBehaviour, IBarnakTarget
     [SerializeField] protected Vector2 dtJumpRange = new Vector2(0, 3);
     protected bool isGroundedLocked = false;
     
-
     [Header("Barnak")]
     [SerializeField] float barnakTargetRadius = 0.6f;
     Barnak barnakCaught = null;
+
+    [Header("Sounds")]
+    [SerializeField] string notifyAkOnJump = "Jumper_Jump";
+    [SerializeField] string notifyAkOnLand = "Jumper_Land";
 
 
     protected Rigidbody2D rb;
@@ -99,8 +102,15 @@ public class Jumper : MonoBehaviour, IBarnakTarget
         squashAnimator.Play("Squash", 0, 0);
         SpriteMatchIsGrounded();
         
-        if (isGrounded) Invoke("Jump", dtJumpRange.RandomInRange());
-        else            CancelInvoke("Jump");
+        if (isGrounded)
+        {
+            Invoke("Jump", dtJumpRange.RandomInRange());
+            
+            if (notifyAkOnLand != "")
+                AkUnitySoundEngine.PostEvent(notifyAkOnLand, gameObject);
+        } 
+
+        else CancelInvoke("Jump");
     }
 
     protected void LockIsGrounded() => isGroundedLocked = true;
@@ -113,6 +123,9 @@ public class Jumper : MonoBehaviour, IBarnakTarget
         float angle = Random.Range(-jumpMaxAngle, jumpMaxAngle);
         Vector2 direction = Quaternion.Euler(0, 0, angle) * Vector2.up;
         rb.linearVelocity = direction * jumpSpeed;
+
+        if (notifyAkOnJump != "")
+            AkUnitySoundEngine.PostEvent(notifyAkOnJump, gameObject);
 
         SetLookRight(rb.linearVelocity.x > 0);
         SetIsGrounded(false);

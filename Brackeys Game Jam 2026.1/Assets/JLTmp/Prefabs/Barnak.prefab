@@ -289,7 +289,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4185673799793587208
 Transform:
   m_ObjectHideFlags: 0
@@ -331,11 +331,12 @@ MonoBehaviour:
   eatingTime: 5
   recoveringTime: 5
   notifyAkOnCatch: Vine_Catch
-  notifyAkOnStartEating: Vine_StartEating
-  notifyAkOnStopEating: Vine_StopEating
+  notifyAkOnStartEating: Vine_Eating
+  notifyAkOnStopEating: 
   notifyAkOnHit: Vine_Hit
   notifyAkOnLastHit: Vine_LastHit
   notifyAkOnStopRecovering: Vine_StopRecovering
+  notifyAkCaughtProgress: Pull_Tension
 --- !u!61 &6736504683414707074
 BoxCollider2D:
   m_ObjectHideFlags: 0

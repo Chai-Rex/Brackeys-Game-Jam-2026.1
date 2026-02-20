@@ -134,7 +134,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &25946563
 Transform:
   m_ObjectHideFlags: 0
@@ -4489,7 +4489,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1001 &4541516502385600338
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4598,10 +4598,6 @@ PrefabInstance:
     - target: {fileID: 5652510724377365988, guid: e312c91e77909448a9b7331a88e97502, type: 3}
       propertyPath: m_Name
       value: Barnak
-      objectReference: {fileID: 0}
-    - target: {fileID: 5652510724377365988, guid: e312c91e77909448a9b7331a88e97502, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
