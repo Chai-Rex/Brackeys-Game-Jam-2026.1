@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3002847396169944429}
   - component: {fileID: 5896835420201570088}
   - component: {fileID: 8240339178945524363}
+  - component: {fileID: -6261668862424658570}
   m_Layer: 21
   m_Name: Mosquito
   m_TagString: Untagged
@@ -63,10 +64,7 @@ MonoBehaviour:
   takingOffTimeRange: {x: 0.8, y: 1.2}
   takeOffSpeedRange: {x: 1.5, y: 2}
   groundRepulsion: 1
-  groundRaycastDistance: 0.5
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 131072
+  groundRepulsionRadius: 0.5
   lookRight: 1
   lookRightTransform: {fileID: 4327444723660409408}
   squashAnimator: {fileID: 70349387408483244}
@@ -134,6 +132,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-6261668862424658570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160719268286597735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca4c1083000be45348d3c668dba7aa91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ActiveInCameraView
 --- !u!1 &892164951057860232
 GameObject:
   m_ObjectHideFlags: 0

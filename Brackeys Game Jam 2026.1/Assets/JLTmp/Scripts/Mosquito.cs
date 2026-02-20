@@ -63,6 +63,14 @@ public class Mosquito : MonoBehaviour
         animator.SetBool("isLanded", isLanded);
     }
 
+    void OnDisable()
+    {
+        SetTarget(null);
+        CancelInvoke("SetTakingOffFalse");
+        takingOff = false;
+        rb.linearVelocity = Vector2.zero;
+    }
+
     void FixedUpdate()
     {
         ApplyRandomAcceleration();
@@ -196,7 +204,9 @@ public class Mosquito : MonoBehaviour
         this.isLanded = isLanded;
         
         animator.SetBool("isLanded", isLanded);
-        squashAnimator.Play("Squash", 0, 0);
+
+        if (gameObject.activeInHierarchy)
+            squashAnimator.Play("Squash", 0, 0);
 
         if (isLanded)   Invoke("TakeOff", landTimeRange.RandomInRange());
         else            CancelInvoke("TakeOff");

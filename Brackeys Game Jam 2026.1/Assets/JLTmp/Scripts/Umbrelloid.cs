@@ -65,6 +65,28 @@ public class Umbrelloid : MonoBehaviour
         noiseOffset = RandomExtension.RandomVector2() * 1000;
     }
 
+    void OnDisable()
+    {
+        CancelInvoke("SetJustFreedGroundFalse");
+        SetJustFreedGroundFalse();
+
+        if (grounded)
+        {
+            shake.enabled = false;
+            shake.BaseAmplitude = 0;
+
+            SetGrounded(false);
+            SetOpened(true);
+        }
+
+        else if (!opened)
+        {
+            StopCoroutine("RotateBack");
+            spriteRenderer.transform.up = Vector2.up;
+            SetOpened(true);
+        }
+    }
+
     void FixedUpdate()
     {
         if (opened)

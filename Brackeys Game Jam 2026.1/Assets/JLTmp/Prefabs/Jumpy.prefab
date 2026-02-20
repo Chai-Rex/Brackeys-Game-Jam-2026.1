@@ -11,8 +11,11 @@ GameObject:
   - component: {fileID: 5831255662825009913}
   - component: {fileID: 568163560345825117}
   - component: {fileID: 2677909988154972868}
+  - component: {fileID: -2086244253968915863}
   - component: {fileID: 4800991322579046972}
   - component: {fileID: 7675622965273531319}
+  - component: {fileID: -2137542045084100856}
+  - component: {fileID: 8688109208076868526}
   m_Layer: 19
   m_Name: Jumpy
   m_TagString: Untagged
@@ -66,6 +69,8 @@ MonoBehaviour:
   jumpMaxAngle: 30
   dtJumpRange: {x: 0.5, y: 2}
   barnakTargetRadius: 0.18
+  notifyAkOnJump: Cricket_Jump
+  notifyAkOnLand: Cricket_Land
   dtJumpRangePlayerDetected: {x: 0, y: 0.5}
   playerCheckRadius: 3
   playerCheckLayer:
@@ -86,6 +91,42 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MosquitoTarget
   rigidbody2D: {fileID: 4800991322579046972}
   radius: 0.18
+--- !u!58 &-2086244253968915863
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1678481030055239886}
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 0.225
 --- !u!50 &4800991322579046972
 Rigidbody2D:
   serializedVersion: 5
@@ -128,6 +169,42 @@ MonoBehaviour:
   lvlRange: {x: -5, y: 5}
   orderPerLvl: 100
   addOrder: 20
+--- !u!114 &-2137542045084100856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1678481030055239886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83661c9394bf24015acefec4013dcc82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: AK.Wwise.Unity.MonoBehaviour::AkGameObj
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 1
+  isStaticObject: 0
+  usePositionOffsetData: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  scalingFactor: 1
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
+--- !u!114 &8688109208076868526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1678481030055239886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca4c1083000be45348d3c668dba7aa91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ActiveArroundCamera
 --- !u!1 &3545697869635611058
 GameObject:
   m_ObjectHideFlags: 0
@@ -347,7 +424,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7162917274050714415}
   - component: {fileID: 1867460550217711218}
-  m_Layer: 19
+  m_Layer: 25
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}

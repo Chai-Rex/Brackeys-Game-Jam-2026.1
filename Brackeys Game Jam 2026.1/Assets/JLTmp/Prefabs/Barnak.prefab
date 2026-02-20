@@ -283,13 +283,14 @@ GameObject:
   - component: {fileID: 6736504683414707074}
   - component: {fileID: 3702199883439577042}
   - component: {fileID: 7550437363336149182}
+  - component: {fileID: -5593857803062874910}
   m_Layer: 20
   m_Name: Barnak
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4185673799793587208
 Transform:
   m_ObjectHideFlags: 0
@@ -331,11 +332,12 @@ MonoBehaviour:
   eatingTime: 5
   recoveringTime: 5
   notifyAkOnCatch: Vine_Catch
-  notifyAkOnStartEating: Vine_StartEating
-  notifyAkOnStopEating: Vine_StopEating
+  notifyAkOnStartEating: Vine_Eating
+  notifyAkOnStopEating: 
   notifyAkOnHit: Vine_Hit
   notifyAkOnLastHit: Vine_LastHit
   notifyAkOnStopRecovering: Vine_StopRecovering
+  notifyAkCaughtProgress: Pull_Tension
 --- !u!61 &6736504683414707074
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -428,6 +430,18 @@ MonoBehaviour:
   scalingFactor: 1
   m_posOffsetData: {fileID: 0}
   listenerMask: 1
+--- !u!114 &-5593857803062874910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5652510724377365988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca4c1083000be45348d3c668dba7aa91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ActiveArroundCamera
 --- !u!1 &6439293126340116846
 GameObject:
   m_ObjectHideFlags: 0

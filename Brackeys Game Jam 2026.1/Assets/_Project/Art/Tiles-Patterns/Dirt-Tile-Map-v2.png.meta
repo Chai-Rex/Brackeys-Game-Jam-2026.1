@@ -1,0 +1,546 @@
+fileFormatVersion: 2
+guid: 5670c89d455c54f54a2e2a19cdd05e53
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2746034623201098303
+    second: Dirt-Tile-Map-v2_0
+  - first:
+      213: -6892590429938957818
+    second: Dirt-Tile-Map-v2_1
+  - first:
+      213: -7467973319430564819
+    second: Dirt-Tile-Map-v2_2
+  - first:
+      213: -6822836713847904359
+    second: Dirt-Tile-Map-v2_3
+  - first:
+      213: -226700130954203257
+    second: Dirt-Tile-Map-v2_4
+  - first:
+      213: -714989324335953948
+    second: Dirt-Tile-Map-v2_5
+  - first:
+      213: -999060736280462938
+    second: Dirt-Tile-Map-v2_6
+  - first:
+      213: -6449080769709304606
+    second: Dirt-Tile-Map-v2_7
+  - first:
+      213: -7802323508182993625
+    second: Dirt-Tile-Map-v2_8
+  - first:
+      213: -4775924267003819148
+    second: Dirt-Tile-Map-v2_9
+  - first:
+      213: -3482758055399263271
+    second: Dirt-Tile-Map-v2_10
+  - first:
+      213: -4399981656660399013
+    second: Dirt-Tile-Map-v2_11
+  - first:
+      213: 4715657408866221041
+    second: Dirt-Tile-Map-v2_12
+  - first:
+      213: -7333280714920676556
+    second: Dirt-Tile-Map-v2_13
+  - first:
+      213: 4265023495683070642
+    second: Dirt-Tile-Map-v2_14
+  - first:
+      213: -5517625524246643872
+    second: Dirt-Tile-Map-v2_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 272
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Dirt-Tile-Map-v2_0
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 1308
+        width: 272
+        height: 272
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3a33d0d0ffdb1620800000000000000
+      internalID: 2746034623201098303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dirt-Tile-Map-v2_1
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 1308
+        width: 272
+        height: 272
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6024b31c5899850a0800000000000000
+      internalID: -6892590429938957818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dirt-Tile-Map-v2_2
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 1308
+        width: 272
+        height: 272
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d241f3f35dd6c5890800000000000000
+      internalID: -7467973319430564819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dirt-Tile-Map-v2_3
+      rect:
+        serializedVersion: 2
+        x: 1540
+        y: 1308
+        width: 272
+        height: 272
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9972a9e582a6051a0800000000000000
+      internalID: -6822836713847904359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dirt-Tile-Map-v2_4
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 998
+        width: 272
+        height: 272
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78fa0f79e699adcf0800000000000000
+      internalID: -226700130954203257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dirt-Tile-Map-v2_5
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 998
+        width: 272
+        height: 272
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e742c86ff8d316f0800000000000000
+      internalID: -714989324335953948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dirt-Tile-Map-v2_6
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 998
+        width: 272
+        height: 272
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a976f8bd8f9222f0800000000000000
+      internalID: -999060736280462938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dirt-Tile-Map-v2_7
+      rect:
+        serializedVersion: 2
+        x: 1230
+        y: 998
+        width: 272
+        height: 272
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e49ca965334086a0800000000000000
+      internalID: -6449080769709304606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dirt-Tile-Map-v2_8
+      rect:
+        serializedVersion: 2
+        x: 1850
+        y: 998
+        width: 272
+        height: 272
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 725b2189b1498b390800000000000000
+      internalID: -7802323508182993625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dirt-Tile-Map-v2_9
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 688
+        width: 272
+        height: 272
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47bc11fde2288bdb0800000000000000
+      internalID: -4775924267003819148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dirt-Tile-Map-v2_10
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 688
+        width: 272
+        height: 272
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d3fb454002caafc0800000000000000
+      internalID: -3482758055399263271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dirt-Tile-Map-v2_11
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 688
+        width: 272
+        height: 272
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5ca580deff10f2c0800000000000000
+      internalID: -4399981656660399013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dirt-Tile-Map-v2_12
+      rect:
+        serializedVersion: 2
+        x: 1540
+        y: 688
+        width: 272
+        height: 272
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fbf8e1cd61617140800000000000000
+      internalID: 4715657408866221041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dirt-Tile-Map-v2_13
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 237
+        width: 272
+        height: 272
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4333eec0b04fa3a90800000000000000
+      internalID: -7333280714920676556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dirt-Tile-Map-v2_14
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 237
+        width: 272
+        height: 272
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ba52e2b548603b30800000000000000
+      internalID: 4265023495683070642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dirt-Tile-Map-v2_15
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 237
+        width: 272
+        height: 272
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06b76afb1d47d63b0800000000000000
+      internalID: -5517625524246643872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Dirt-Tile-Map-v2_0: 2746034623201098303
+      Dirt-Tile-Map-v2_1: -6892590429938957818
+      Dirt-Tile-Map-v2_10: -3482758055399263271
+      Dirt-Tile-Map-v2_11: -4399981656660399013
+      Dirt-Tile-Map-v2_12: 4715657408866221041
+      Dirt-Tile-Map-v2_13: -7333280714920676556
+      Dirt-Tile-Map-v2_14: 4265023495683070642
+      Dirt-Tile-Map-v2_15: -5517625524246643872
+      Dirt-Tile-Map-v2_2: -7467973319430564819
+      Dirt-Tile-Map-v2_3: -6822836713847904359
+      Dirt-Tile-Map-v2_4: -226700130954203257
+      Dirt-Tile-Map-v2_5: -714989324335953948
+      Dirt-Tile-Map-v2_6: -999060736280462938
+      Dirt-Tile-Map-v2_7: -6449080769709304606
+      Dirt-Tile-Map-v2_8: -7802323508182993625
+      Dirt-Tile-Map-v2_9: -4775924267003819148
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

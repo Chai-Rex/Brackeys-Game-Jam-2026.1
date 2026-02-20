@@ -103,6 +103,7 @@ GameObject:
   - component: {fileID: 4336571171215273137}
   - component: {fileID: 3017348475107392433}
   - component: {fileID: 6806578867122480625}
+  - component: {fileID: 5426339012109216393}
   m_Layer: 20
   m_Name: GroundedBarnak
   m_TagString: Untagged
@@ -198,3 +199,15 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5426339012109216393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7080444576918445747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca4c1083000be45348d3c668dba7aa91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ActiveArroundCamera

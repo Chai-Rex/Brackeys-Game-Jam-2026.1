@@ -20,12 +20,14 @@ public class Barnak : MonoBehaviour
     [SerializeField] float eatingTime = 5;
     [SerializeField] float recoveringTime = 5;
 
+    [Space(15)]
     [SerializeField] string notifyAkOnCatch = "Vine_Catch";
     [SerializeField] string notifyAkOnStartEating = "Vine_StartEating";
     [SerializeField] string notifyAkOnStopEating = "Vine_StopEating";
     [SerializeField] string notifyAkOnHit = "Vine_Hit";
     [SerializeField] string notifyAkOnLastHit = "Vine_LastHit";
     [SerializeField] string notifyAkOnStopRecovering = "Vine_StopRecovering";
+    [SerializeField] string notifyAkCaughtProgress = "Pull_Tension";
 
     BoxCollider2D trigger;
     Animator animator;
@@ -47,6 +49,24 @@ public class Barnak : MonoBehaviour
 
         maxVineLength = -vine.localPosition.y;
         SetVineLength(maxVineLength);        
+    }
+
+    void OnDisable()
+    {
+        if (state == State.Caught)
+            ReleaseTarget();
+
+        if (state == State.Recovering)
+        {
+            CancelInvoke("StopRecovering");
+            StopRecovering();
+        }
+
+        else if (state == State.Eating)
+        {
+            CancelInvoke("StopEating");
+            StopEating();
+        }
     }
 
     void FixedUpdate()
@@ -113,9 +133,13 @@ public class Barnak : MonoBehaviour
         if (transform.position.y - caughtTarget.transform.position.y > caughtTarget.BarnakTargetRadius)
         {
             shakeCaughtTarget.transform.AddYPosition(caughtSpeed * Time.fixedDeltaTime);
-            float dist = transform.position.y - shakeCaughtTarget.transform.position.y;
-            float progress = 1 - dist / maxVineLength;
-            //AkUnitySoundEngine.SetRTPCValue("Pull_Tension", progress * 100, gameObject);
+
+            if (notifyAkCaughtProgress != "")
+            {
+                float dist = transform.position.y - shakeCaughtTarget.transform.position.y;
+                float progress = 1 - dist / maxVineLength;
+                AkUnitySoundEngine.SetRTPCValue(notifyAkCaughtProgress, progress * 100, gameObject);
+            }
         }
 
         else {
@@ -147,7 +171,8 @@ public class Barnak : MonoBehaviour
         trigger.enabled = true;
         animator.SetInteger("state", 0);
 
-        if (notifyAkOnStopEating != "")
+        if (notifyAkOnStopEating != "" &&
+            gameObject.activeInHierarchy)
             AkUnitySoundEngine.PostEvent(notifyAkOnStopEating, gameObject);
     }
 
@@ -174,7 +199,7 @@ public class Barnak : MonoBehaviour
         } 
     }
 
-    void ReleaseTarget()
+    public void ReleaseTarget()
     {
         if (state != State.Caught)
             return;
@@ -182,7 +207,7 @@ public class Barnak : MonoBehaviour
         state = State.Recovering;
 
         caughtTarget.transform.SetParent(shakeCaughtTarget.transform.parent);
-        shakeCaughtTarget.transform.SetParent(transform);
+        shakeCaughtTarget.transform.SetParent(gameObject.activeInHierarchy ? transform : null);
         shakeCaughtTarget.transform.localPosition = Vector3.zero;
         shakeCaughtTarget.Target = null;
 
@@ -202,7 +227,8 @@ public class Barnak : MonoBehaviour
         trigger.enabled = true;
         animator.SetInteger("state", 0);        
         
-        if (notifyAkOnStopRecovering != "")
+        if (notifyAkOnStopRecovering != "" &&
+            gameObject.activeInHierarchy)
             AkUnitySoundEngine.PostEvent(notifyAkOnStopRecovering, gameObject);
     }
 }

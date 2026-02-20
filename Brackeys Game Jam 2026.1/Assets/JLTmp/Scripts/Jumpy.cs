@@ -46,8 +46,15 @@ public class Jumpy : Jumper
         this.isGrounded = isGrounded;
         SpriteMatchIsGrounded();
 
-        if (isGrounded) Invoke("Jump", (playerDetected ? dtJumpRangePlayerDetected : dtJumpRange).RandomInRange());
-        else            CancelInvoke("Jump");
+        if (isGrounded)
+        {
+            Invoke("Jump", (playerDetected ? dtJumpRangePlayerDetected : dtJumpRange).RandomInRange());
+            
+            if (notifyAkOnLand != "")
+                AkUnitySoundEngine.PostEvent(notifyAkOnLand, gameObject);            
+        } 
+
+        else CancelInvoke("Jump");
     }
 
     protected override void Jump()
@@ -59,6 +66,9 @@ public class Jumpy : Jumper
             float angle = (JLPlayerTest.Instance.transform.position.x < transform.position.x ? jumpMaxAngle : -jumpMaxAngle) * Random.value;
             Vector2 direction = Quaternion.Euler(0, 0, angle) * Vector2.up;
             rb.linearVelocity = direction * jumpSpeed;
+
+            if (notifyAkOnJump != "")
+                AkUnitySoundEngine.PostEvent(notifyAkOnJump, gameObject);
 
             SetLookRight(rb.linearVelocity.x > 0);
             SetIsGrounded(false);
