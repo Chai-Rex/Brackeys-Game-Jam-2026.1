@@ -103,6 +103,9 @@ public class Jumper : MonoBehaviour, IBarnakTarget
             return;
 
         print("Jumper.OnTriggerEnter2D : Hit...");
+        //Check if player
+        //if is player, damage player
+        collision.GetComponent<Health>().Drain(4);
     }
 
     void UpdateIsGrounded()
