@@ -5,8 +5,8 @@ using UnityEngine;
 /// Acts as a facade and delegates to specialized handlers
 /// Update/FixedUpdate are called by PlayerManager to ensure proper timing with other managers
 /// </summary>
-public class PlayerHandler : MonoBehaviour, IBarnakTarget, IUmbrelloidTarget
-{
+public class PlayerHandler : Singleton<PlayerHandler>, IBarnakTarget, IUmbrelloidTarget
+{    
     [Header("Scene References")]
     [SerializeField] private SceneContainerSO _sceneContainer;
 
@@ -25,6 +25,8 @@ public class PlayerHandler : MonoBehaviour, IBarnakTarget, IUmbrelloidTarget
 
     private PlayerManager _playerManager;
     private InputManager _inputManager;
+    private Health _health;
+
     private bool _isInitialized = false;
 
     #region Public Accessors
@@ -137,6 +139,8 @@ public class PlayerHandler : MonoBehaviour, IBarnakTarget, IUmbrelloidTarget
 
         _isInitialized = true;
         Log("All systems initialized successfully!");
+
+        _health = GetComponentInParent<Health>();
     }
 
     #endregion
@@ -237,24 +241,33 @@ public class PlayerHandler : MonoBehaviour, IBarnakTarget, IUmbrelloidTarget
         Debug.LogError($"[PlayerHandler] {i_message}");
     }
 
+    #endregion
+
+    #region JLM
+
     public void OnBarnakCaught(Barnak barnak)
     {
-        throw new System.NotImplementedException();
+        // stop rigidbody...
     }
 
     public void OnBarnakRelease(Barnak barnak)
     {
-        throw new System.NotImplementedException();
+        // restart rigidbody...
     }
 
     public void OnBarnakEat(Barnak barnak, GroundedBarnak groundedBarnak, float dmg)
     {
-        throw new System.NotImplementedException();
+        _health?.Drain(dmg);
+
+        if (barnak)
+        {
+            // restart rigidbody...
+        }
     }
 
     public void OnUmbrelloidHit(float dmg)
     {
-        throw new System.NotImplementedException();
+        _health?.Drain(dmg);
     }
 
     #endregion

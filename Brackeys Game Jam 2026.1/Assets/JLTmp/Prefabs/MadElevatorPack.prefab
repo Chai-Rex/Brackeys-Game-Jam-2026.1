@@ -76,8 +76,9 @@ MonoBehaviour:
     m_RotationOrder: 4
   nbTravels: 9
   waitingTime: 2
-  shakeRadius: 10
-  shakeAmplitude: 0.3
+  shakeRadius: 20
+  shakeAmplitude: 0.25
+  dmg: 15
 --- !u!61 &2826528530013715535
 BoxCollider2D:
   m_ObjectHideFlags: 0

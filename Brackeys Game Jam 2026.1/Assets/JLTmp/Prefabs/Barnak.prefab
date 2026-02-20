@@ -331,6 +331,7 @@ MonoBehaviour:
   hitShakeAmplitude: 0.2
   eatingTime: 5
   recoveringTime: 5
+  dmg: 10
   notifyAkOnCatch: Vine_Catch
   notifyAkOnStartEating: Vine_Eating
   notifyAkOnStopEating: 

@@ -10,6 +10,8 @@ public class Jumpy : Jumper
     [SerializeField] LayerMask playerCheckLayer;
     [SerializeField, ReadOnly] bool playerDetected = false;
 
+    Transform Target => PlayerHandler.Instance ? PlayerHandler.Instance.transform : JLPlayerTest.Instance.transform;
+
     protected override void OnDrawGizmosSelected()
     {
         base.OnDrawGizmosSelected();
@@ -31,7 +33,7 @@ public class Jumpy : Jumper
     void UpdatePlayerDetected()
     {
         float sqrRadius = playerCheckRadius * playerCheckRadius;
-        Vector3 toPlayer = JLPlayerTest.Instance.transform.position - transform.position;
+        Vector3 toPlayer = Target.position - transform.position;
 
         playerDetected = toPlayer.sqrMagnitude <= sqrRadius &&
                          !Physics2D.Raycast(transform.position, toPlayer, toPlayer.magnitude, playerCheckLayer);
@@ -63,7 +65,7 @@ public class Jumpy : Jumper
             base.Jump();
 
         else {
-            float angle = (JLPlayerTest.Instance.transform.position.x < transform.position.x ? jumpMaxAngle : -jumpMaxAngle) * Random.value;
+            float angle = (Target.position.x < transform.position.x ? jumpMaxAngle : -jumpMaxAngle) * Random.value;
             Vector2 direction = Quaternion.Euler(0, 0, angle) * Vector2.up;
             rb.linearVelocity = direction * jumpSpeed;
 

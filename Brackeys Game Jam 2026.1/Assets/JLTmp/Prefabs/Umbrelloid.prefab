@@ -454,6 +454,7 @@ MonoBehaviour:
   shake: {fileID: 880030761633322725}
   justFreedGround: 0
   justFreedGroundTime: 2
+  dmg: 15
 --- !u!114 &4129403931325175632
 MonoBehaviour:
   m_ObjectHideFlags: 0
