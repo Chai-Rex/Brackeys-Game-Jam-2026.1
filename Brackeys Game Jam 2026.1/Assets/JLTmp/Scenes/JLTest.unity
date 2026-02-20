@@ -134,7 +134,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &25946563
 Transform:
   m_ObjectHideFlags: 0
@@ -1065,7 +1065,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &262637198
 Transform:
   m_ObjectHideFlags: 0
@@ -1966,7 +1966,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &836587174
 Transform:
   m_ObjectHideFlags: 0
@@ -3525,7 +3525,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1880364451
 Transform:
   m_ObjectHideFlags: 0
@@ -4632,6 +4632,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3381900945127731881, guid: e312c91e77909448a9b7331a88e97502, type: 3}
+      propertyPath: notifyAkOnStopEating
+      value: Vine_StopRecovering
+      objectReference: {fileID: 0}
     - target: {fileID: 4185673799793587208, guid: e312c91e77909448a9b7331a88e97502, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.32
@@ -4678,7 +4682,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5652510724377365988, guid: e312c91e77909448a9b7331a88e97502, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4739,7 +4743,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1720856134371389665, guid: 83a52c467fed84cc4a21197fac6deb55, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5687549129216445953, guid: 83a52c467fed84cc4a21197fac6deb55, type: 3}
       propertyPath: m_LocalScale.y
@@ -4870,7 +4874,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7080444576918445747, guid: fe368f28b2d134554a19b1bf3d5e04d0, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

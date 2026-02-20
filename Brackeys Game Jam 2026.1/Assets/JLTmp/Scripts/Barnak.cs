@@ -136,8 +136,7 @@ public class Barnak : MonoBehaviour
 
             if (notifyAkCaughtProgress != "")
             {
-                float dist = transform.position.y - shakeCaughtTarget.transform.position.y;
-                float progress = 1 - dist / maxVineLength;
+                float progress = 1 - vineLength / maxVineLength;
                 AkUnitySoundEngine.SetRTPCValue(notifyAkCaughtProgress, progress * 100, gameObject);
             }
         }
