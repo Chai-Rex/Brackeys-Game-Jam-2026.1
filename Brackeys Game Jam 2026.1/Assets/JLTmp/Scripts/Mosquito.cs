@@ -97,7 +97,7 @@ public class Mosquito : MonoBehaviour
     Vector2 ApplyRandomAcceleration()
     {
         if (target && 
-            (target.transform.position - transform.position).sqrMagnitude < target.SqrRadius)
+            target.PointInRect(transform.position))
             return Vector2.zero;
 
         Vector2 noiseValue = RandomExtension.PerlinVector2(noiseOffset + noiseScale * Time.time * Vector2.one, -0.9305f, 2-0.9305f);
@@ -166,7 +166,7 @@ public class Mosquito : MonoBehaviour
 
         Vector2 toTarget = target.transform.position - transform.position;
 
-        if (toTarget.sqrMagnitude < target.SqrRadius) 
+        if (target.PointInRect(transform.position)) 
             return Vector2.zero;
 
         Vector2 accelerration = accelerationToTarget * toTarget.normalized;
@@ -182,7 +182,7 @@ public class Mosquito : MonoBehaviour
         Vector2 toTarget = target.transform.position - transform.position;
         float sqrDist = toTarget.sqrMagnitude;
 
-        if (sqrDist > target.SqrRadius)
+        if (!target.PointInRect(transform.position))
             return;
 
         rb.linearVelocity *= 1 - targetFriction * Time.fixedDeltaTime;
@@ -190,10 +190,23 @@ public class Mosquito : MonoBehaviour
 
     void UpdateIsLanded()
     {
-        SetIsLanded(target && 
-                    (target.transform.position - transform.position).sqrMagnitude < target.SqrRadius &&
-                    rb.linearVelocity.sqrMagnitude < landMaxSpeed * landMaxSpeed &&
-                    (!target.Rigidbody2D || target.Rigidbody2D.linearVelocity.sqrMagnitude < landMaxSpeed * landMaxSpeed));
+        if (!target ||
+            !target.PointInRect(transform.position))
+            return;
+
+        float targetSqrSpeed;
+        float sqrMaxSpeed = landMaxSpeed * landMaxSpeed;
+
+        if (!target.Rigidbody2D) 
+            targetSqrSpeed = 0;
+
+        else if (target.Rigidbody2D.linearVelocity.y == -1)
+            targetSqrSpeed = target.Rigidbody2D.linearVelocity.x * target.Rigidbody2D.linearVelocity.x;
+
+        else targetSqrSpeed = target.Rigidbody2D.linearVelocity.sqrMagnitude;
+
+        SetIsLanded(rb.linearVelocity.sqrMagnitude < sqrMaxSpeed &&
+                    targetSqrSpeed < sqrMaxSpeed);
     }
 
     void SetTarget(MosquitoTarget target)
