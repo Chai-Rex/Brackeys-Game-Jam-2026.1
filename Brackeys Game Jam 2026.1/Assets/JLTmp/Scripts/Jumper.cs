@@ -83,6 +83,14 @@ public class Jumper : MonoBehaviour, IBarnakTarget
         UpdateIsGrounded();
     }
 
+    protected virtual void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (isGrounded)
+            return;
+
+        print("Jumper.OnTriggerEnter2D : Hit...");
+    }
+
     void UpdateIsGrounded()
     {
         if (isGroundedLocked)

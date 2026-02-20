@@ -149,11 +149,11 @@ public class JLPlayerTest : Singleton<JLPlayerTest>, IBarnakTarget, IUmbrelloidT
             barnakCaught = null;
         }
 
-        //...
+        print("JLPlayerTest.OnBarnakEat...");
     }
 
     public void OnUmbrelloidHit()
     {
-        //...
+        print("JLPlayerTest.OnUmbrelloidHit...");
     }
 }

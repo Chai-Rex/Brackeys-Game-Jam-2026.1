@@ -43,6 +43,7 @@ public class MadElevator : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
+        print("MadElevator.OnTriggerEnter2D : Hit...");
     }
 
     IEnumerator TravelLoop()
