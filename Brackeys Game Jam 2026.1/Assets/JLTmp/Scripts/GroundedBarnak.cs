@@ -19,6 +19,12 @@ public class GroundedBarnak : MonoBehaviour
         trigger.enabled = true;
     }
 
+    void OnDisable()
+    {
+        if (isEating)
+            StopEating();
+    }
+
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (isEating ||

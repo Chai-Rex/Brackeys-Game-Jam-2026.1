@@ -307,6 +307,7 @@ GameObject:
   - component: {fileID: 2169491642867914876}
   - component: {fileID: 5901576327998543516}
   - component: {fileID: 5135521605024774364}
+  - component: {fileID: 7793568040125600802}
   m_Layer: 23
   m_Name: Umbrelloid
   m_TagString: Untagged
@@ -587,3 +588,15 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.22, y: 0.93}
   m_EdgeRadius: 0
+--- !u!114 &7793568040125600802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8633615414699014261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca4c1083000be45348d3c668dba7aa91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ActiveArroundCamera

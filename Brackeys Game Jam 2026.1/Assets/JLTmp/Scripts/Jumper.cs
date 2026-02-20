@@ -31,8 +31,8 @@ public class Jumper : MonoBehaviour, IBarnakTarget
     Barnak barnakCaught = null;
 
     [Header("Sounds")]
-    [SerializeField] string notifyAkOnJump = "Jumper_Jump";
-    [SerializeField] string notifyAkOnLand = "Jumper_Land";
+    [SerializeField] protected string notifyAkOnJump = "Jumper_Jump";
+    [SerializeField] protected string notifyAkOnLand = "Jumper_Land";
 
 
     protected Rigidbody2D rb;
@@ -76,6 +76,20 @@ public class Jumper : MonoBehaviour, IBarnakTarget
     protected virtual void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        SpriteMatchIsGrounded();
+    }
+
+    void OnDisable()
+    {
+        if (barnakCaught)
+        {
+            barnakCaught.ReleaseTarget();
+            barnakCaught = null;
+        }
+
+        CancelInvoke("UnlockIsGrounded");
+        UnlockIsGrounded();
+        SetIsGrounded(false);
     }
 
     protected virtual void FixedUpdate()
@@ -107,7 +121,9 @@ public class Jumper : MonoBehaviour, IBarnakTarget
 
         this.isGrounded = isGrounded;
 
-        squashAnimator.Play("Squash", 0, 0);
+        if (gameObject.activeInHierarchy)
+            squashAnimator.Play("Squash", 0, 0);
+        
         SpriteMatchIsGrounded();
         
         if (isGrounded)
@@ -156,10 +172,14 @@ public class Jumper : MonoBehaviour, IBarnakTarget
     {
         rb.simulated = false;
         rb.linearVelocity = Vector2.zero;
-        CancelInvoke("Jump");
+        barnakCaught = barnak;
     }
 
-    public void OnBarnakRelease(Barnak barnak) {}
+    public void OnBarnakRelease(Barnak barnak)
+    {
+        rb.simulated = true;
+        barnakCaught = null;
+    }
     
     public void OnBarnakEat(Barnak barnak, GroundedBarnak groundedBarnak)
     {

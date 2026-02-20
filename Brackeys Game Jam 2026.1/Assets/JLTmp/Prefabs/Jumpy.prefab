@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4800991322579046972}
   - component: {fileID: 7675622965273531319}
   - component: {fileID: -2137542045084100856}
+  - component: {fileID: 8688109208076868526}
   m_Layer: 19
   m_Name: Jumpy
   m_TagString: Untagged
@@ -192,6 +193,18 @@ MonoBehaviour:
   scalingFactor: 1
   m_posOffsetData: {fileID: 0}
   listenerMask: 1
+--- !u!114 &8688109208076868526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1678481030055239886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca4c1083000be45348d3c668dba7aa91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ActiveArroundCamera
 --- !u!1 &3545697869635611058
 GameObject:
   m_ObjectHideFlags: 0

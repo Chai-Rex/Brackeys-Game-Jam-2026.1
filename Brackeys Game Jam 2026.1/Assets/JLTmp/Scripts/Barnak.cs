@@ -51,6 +51,24 @@ public class Barnak : MonoBehaviour
         SetVineLength(maxVineLength);        
     }
 
+    void OnDisable()
+    {
+        if (state == State.Caught)
+            ReleaseTarget();
+
+        if (state == State.Recovering)
+        {
+            CancelInvoke("StopRecovering");
+            StopRecovering();
+        }
+
+        else if (state == State.Eating)
+        {
+            CancelInvoke("StopEating");
+            StopEating();
+        }
+    }
+
     void FixedUpdate()
     {
         if (state == State.Caught)
@@ -153,7 +171,8 @@ public class Barnak : MonoBehaviour
         trigger.enabled = true;
         animator.SetInteger("state", 0);
 
-        if (notifyAkOnStopEating != "")
+        if (notifyAkOnStopEating != "" &&
+            gameObject.activeInHierarchy)
             AkUnitySoundEngine.PostEvent(notifyAkOnStopEating, gameObject);
     }
 
@@ -180,7 +199,7 @@ public class Barnak : MonoBehaviour
         } 
     }
 
-    void ReleaseTarget()
+    public void ReleaseTarget()
     {
         if (state != State.Caught)
             return;
@@ -188,7 +207,7 @@ public class Barnak : MonoBehaviour
         state = State.Recovering;
 
         caughtTarget.transform.SetParent(shakeCaughtTarget.transform.parent);
-        shakeCaughtTarget.transform.SetParent(transform);
+        shakeCaughtTarget.transform.SetParent(gameObject.activeInHierarchy ? transform : null);
         shakeCaughtTarget.transform.localPosition = Vector3.zero;
         shakeCaughtTarget.Target = null;
 
@@ -208,7 +227,8 @@ public class Barnak : MonoBehaviour
         trigger.enabled = true;
         animator.SetInteger("state", 0);        
         
-        if (notifyAkOnStopRecovering != "")
+        if (notifyAkOnStopRecovering != "" &&
+            gameObject.activeInHierarchy)
             AkUnitySoundEngine.PostEvent(notifyAkOnStopRecovering, gameObject);
     }
 }
