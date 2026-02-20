@@ -53,6 +53,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2d8c4c43c4f84c6e85539cd679ff95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Jumpy
+  dmg: 1
   lookRight: 1
   lookRightTransform: {fileID: 939472898893088188}
   squashAnimator: {fileID: 2917440396357792026}
@@ -90,7 +91,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MosquitoTarget
   rigidbody2D: {fileID: 4800991322579046972}
-  radius: 0.18
+  size: {x: 0.64, y: 0.31}
 --- !u!58 &-2086244253968915863
 CircleCollider2D:
   m_ObjectHideFlags: 0

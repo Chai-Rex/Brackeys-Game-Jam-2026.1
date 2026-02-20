@@ -19,12 +19,15 @@ public class MosquitoTarget : MonoBehaviour
 
 
     [SerializeField] new Rigidbody2D rigidbody2D;
-    [SerializeField] float radius = 0.6f;
+    [SerializeField] Vector2 size = new Vector2(1, 1);
 
 
     public Rigidbody2D Rigidbody2D => rigidbody2D;
-    public float Radius => radius;
-    public float SqrRadius => radius * radius;
+    public Vector2 Size => size;
+    public bool PointInRect(Vector2 position) => position.x >= transform.position.x - size.x / 2 &&
+                                                 position.x <= transform.position.x + size.x / 2 &&
+                                                 position.y >= transform.position.y - size.y / 2 &&
+                                                 position.y <= transform.position.y + size.y / 2;
 
 
     void Reset()
@@ -34,13 +37,13 @@ public class MosquitoTarget : MonoBehaviour
 
     void OnDrawGizmosSelected()
     {
-        DrawRadius();
+        DrawRect();
     }
 
-    void DrawRadius()
+    void DrawRect()
     {
         Gizmos.color = Color.red;
-        GizmosExtension.DrawCircle(transform.position, Vector3.forward, radius);
+        Gizmos.DrawWireCube(transform.position, size);
     }
 
     void OnEnable()
