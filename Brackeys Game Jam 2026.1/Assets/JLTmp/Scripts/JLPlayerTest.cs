@@ -141,7 +141,7 @@ public class JLPlayerTest : Singleton<JLPlayerTest>, IBarnakTarget, IUmbrelloidT
         barnakCaught = null;
     }
 
-    public void OnBarnakEat(Barnak barnak, GroundedBarnak groundedBarnak)
+    public void OnBarnakEat(Barnak barnak, GroundedBarnak groundedBarnak, float dmg)
     {
         if (barnak)
         {
@@ -152,7 +152,7 @@ public class JLPlayerTest : Singleton<JLPlayerTest>, IBarnakTarget, IUmbrelloidT
         print("JLPlayerTest.OnBarnakEat...");
     }
 
-    public void OnUmbrelloidHit()
+    public void OnUmbrelloidHit(float dmg)
     {
         print("JLPlayerTest.OnUmbrelloidHit...");
     }

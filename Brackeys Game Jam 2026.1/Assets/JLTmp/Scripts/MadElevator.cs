@@ -15,7 +15,7 @@ public class MadElevator : MonoBehaviour
     [SerializeField] float waitingTime = 3;
     [SerializeField] float shakeRadius = 8;
     [SerializeField] float shakeAmplitude = 5;
-
+    [SerializeField] float dmg = 1;
     Collider2D[] triggers;
 
     void OnDrawGizmosSelected()
@@ -44,6 +44,7 @@ public class MadElevator : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision)
     {
         print("MadElevator.OnTriggerEnter2D : Hit...");
+        collision.GetComponentInParent<Health>()?.Drain(dmg);
     }
 
     IEnumerator TravelLoop()

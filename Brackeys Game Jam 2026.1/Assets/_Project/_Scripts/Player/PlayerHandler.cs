@@ -5,7 +5,8 @@ using UnityEngine;
 /// Acts as a facade and delegates to specialized handlers
 /// Update/FixedUpdate are called by PlayerManager to ensure proper timing with other managers
 /// </summary>
-public class PlayerHandler : MonoBehaviour {
+public class PlayerHandler : MonoBehaviour, IBarnakTarget, IUmbrelloidTarget
+{
     [Header("Scene References")]
     [SerializeField] private SceneContainerSO _sceneContainer;
 
@@ -37,6 +38,8 @@ public class PlayerHandler : MonoBehaviour {
     public PlayerBlackboardHandler Blackboard => _blackboardHandler;
     public PlayerInputHandler Input => _inputHandler;
     public Transform CameraFollowPlayer => _cameraFollowPlayerTransform;
+
+    public float BarnakTargetRadius => throw new System.NotImplementedException();
 
     #endregion
 
@@ -232,6 +235,26 @@ public class PlayerHandler : MonoBehaviour {
 
     private void LogError(string i_message) {
         Debug.LogError($"[PlayerHandler] {i_message}");
+    }
+
+    public void OnBarnakCaught(Barnak barnak)
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public void OnBarnakRelease(Barnak barnak)
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public void OnBarnakEat(Barnak barnak, GroundedBarnak groundedBarnak, float dmg)
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public void OnUmbrelloidHit(float dmg)
+    {
+        throw new System.NotImplementedException();
     }
 
     #endregion
