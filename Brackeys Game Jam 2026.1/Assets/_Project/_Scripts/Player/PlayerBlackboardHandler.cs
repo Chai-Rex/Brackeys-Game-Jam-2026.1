@@ -36,6 +36,7 @@ public class PlayerBlackboardHandler : MonoBehaviour {
     public bool CanJump = true;
     public bool IsJumping;
     public bool IsWallJumping;
+    public bool IsCaught;
 
     [Header("Animation")]
     public int CurrentAnimationHash;

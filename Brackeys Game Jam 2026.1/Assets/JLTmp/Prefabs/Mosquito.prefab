@@ -55,7 +55,7 @@ MonoBehaviour:
   friction: 1
   target: {fileID: 0}
   targetHealth: {fileID: 0}
-  viewTargetRadius: 3
+  viewTargetRadius: 4.5
   accelerationToTarget: 1
   targetFriction: 2
   isLanded: 0
@@ -69,7 +69,7 @@ MonoBehaviour:
   lookRight: 1
   lookRightTransform: {fileID: 4327444723660409408}
   squashAnimator: {fileID: 70349387408483244}
-  dmgPerSec: 0.3
+  dmgPerSec: 0.5
 --- !u!114 &3002847396169944429
 MonoBehaviour:
   m_ObjectHideFlags: 0
