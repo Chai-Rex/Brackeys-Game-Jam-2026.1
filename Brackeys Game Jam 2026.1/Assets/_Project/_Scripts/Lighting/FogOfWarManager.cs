@@ -251,8 +251,14 @@ public class FogOfWarManager : MonoBehaviour {
         BoundsInt bounds = solidTilemap.cellBounds;
         _cellOffset = new Vector2Int(bounds.xMin, bounds.yMin);
 
+        // CellToWorld returns the bottom-left corner of the cell.
+        // With tile anchor at (0.5, 0.5) the tile center is offset by half a tile.
+        // We add tileSize * 0.5 so the fog texel centres align with tile centres.
         Vector3 originWorld = solidTilemap.CellToWorld(new Vector3Int(bounds.xMin, bounds.yMin, 0));
-        _mapOrigin = new Vector2(originWorld.x, originWorld.y);
+        _mapOrigin = new Vector2(
+            originWorld.x + tileSize * 0.5f,
+            originWorld.y + tileSize * 0.5f
+        );
         _mapSize = new Vector2Int(bounds.size.x, bounds.size.y);
 
         Debug.Log("[FogOfWar] Map detected: origin=" + _mapOrigin +
@@ -494,6 +500,60 @@ public class FogOfWarManager : MonoBehaviour {
     // ===========================================================
     //  Public API
     // ===========================================================
+
+    /// <summary>
+    /// Call this from your drill/mining script whenever a tile is removed.
+    /// Updates the solid cache and immediately re-runs the visibility pass
+    /// so the newly opened space is revealed.
+    ///
+    /// USAGE (from your drill script):
+    ///   Vector3Int cellPos = tilemap.WorldToCell(hitPosition);
+    ///   tilemap.SetTile(cellPos, null);
+    ///   fogManager.OnTileBroken(cellPos);
+    /// </summary>
+    public void OnTileBroken(Vector3Int cellPos) {
+        // Convert cell position to tile-space coords.
+        Vector2Int tile = new Vector2Int(
+            cellPos.x - _cellOffset.x,
+            cellPos.y - _cellOffset.y
+        );
+
+        // Remove from LOS blocking cache.
+        RemoveTileFromCache(tile);
+
+        // Force re-reveal from current player position so the
+        // newly open space is immediately visible.
+        if (player != null) {
+            Vector2Int playerTile = WorldToTile(player.position);
+            ComputeVisibilityAndReveal(playerTile);
+            UploadFogTexture(playerTile);
+
+            // Reset last tile so next Update triggers a full recalculate
+            // even if the player hasn't moved.
+            _lastPlayerTile = new Vector2Int(int.MinValue, int.MinValue);
+        }
+    }
+
+    /// <summary>
+    /// Call this if a tile is placed (e.g. player builds a wall).
+    /// Adds it back to the LOS blocking cache and re-runs visibility
+    /// so anything now hidden behind the new tile goes dark.
+    /// </summary>
+    public void OnTilePlaced(Vector3Int cellPos) {
+        Vector2Int tile = new Vector2Int(
+            cellPos.x - _cellOffset.x,
+            cellPos.y - _cellOffset.y
+        );
+
+        AddTileToCache(tile);
+
+        if (player != null) {
+            Vector2Int playerTile = WorldToTile(player.position);
+            ComputeVisibilityAndReveal(playerTile);
+            UploadFogTexture(playerTile);
+            _lastPlayerTile = new Vector2Int(int.MinValue, int.MinValue);
+        }
+    }
 
     public float GetDiscovery(Vector3 worldPos) {
         Vector2Int t = WorldToTile(worldPos);

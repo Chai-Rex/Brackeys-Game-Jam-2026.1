@@ -21,16 +21,18 @@ public class DrillHandler : MonoBehaviour
     //Only for Point To Click Drilling
     [SerializeField]private Tilemap tilemap;
     private TileDatabase tileDatabase;
+
+    private FogOfWarManager fogOfWarManager;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         //For Drill Based on Collider
         //drillCollider = drill.GetComponent<PolygonCollider2D>();
         playerInput = FindFirstObjectByType<PlayerInput>();
-        if (playerInput == null) {
-            Debug.LogError("PlayerInput Not found");
+        fogOfWarManager = FindFirstObjectByType<FogOfWarManager>();
+        if (playerInput == null) { Debug.LogWarning("PlayerInput Not found"); }
+        if (fogOfWarManager == null) { Debug.LogWarning("FogOfWarManager Not found"); }
 
-        }
         tileDatabase = tilemap.GetComponent<TileDatabase>();
         playerInput.actions["Drill"].performed += ctx => isDrilling = true;
         playerInput.actions["Drill"].canceled += ctx => { isDrilling = false; previousCellSelected = Vector3Int.zero; };
@@ -141,6 +143,7 @@ public class DrillHandler : MonoBehaviour
     {
         tilemap.GetComponent<HitParticleSpawner>().SpawnParticles(tilemap.GetSprite(cellPosition), cellPosition);
         tilemap.SetTile(cellPosition, null);
+        if (fogOfWarManager) { fogOfWarManager.OnTileBroken(cellPosition); }
         //Debug.Log($"{cellPosition} destroyed");
     }
 
