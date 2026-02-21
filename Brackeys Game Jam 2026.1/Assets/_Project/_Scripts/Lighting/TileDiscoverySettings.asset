@@ -14,34 +14,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TileDiscoverySettings
   entries:
   - tile: {fileID: 11400000, guid: a83166ac4a5212e47a4ea5dcdb71e47d, type: 2}
-    exploredBrightness: 0.263
-    blocksLineOfSight: 0
+    exploredBrightness: 0.8
+    losOpacity: 0.75
     alwaysVisible: 0
   - tile: {fileID: 11400000, guid: 2c346f028856d1146b3c6e6173668de6, type: 2}
-    exploredBrightness: 0.269
-    blocksLineOfSight: 0
+    exploredBrightness: 0.8
+    losOpacity: 0.75
     alwaysVisible: 0
   - tile: {fileID: 11400000, guid: 38a5514b1013be148b83f6fc8e90db35, type: 2}
-    exploredBrightness: 0.269
-    blocksLineOfSight: 0
+    exploredBrightness: 0.8
+    losOpacity: 0.75
     alwaysVisible: 0
   - tile: {fileID: 11400000, guid: 388cda7c8e0645843a9eb34f8f3a2d90, type: 2}
-    exploredBrightness: 0.266
-    blocksLineOfSight: 0
+    exploredBrightness: 0.8
+    losOpacity: 0.75
     alwaysVisible: 0
   - tile: {fileID: 11400000, guid: db0a515318721c5428e27c4f8f2e44c7, type: 2}
-    exploredBrightness: 0.26
-    blocksLineOfSight: 0
+    exploredBrightness: 0.8
+    losOpacity: 0.75
     alwaysVisible: 0
   - tile: {fileID: 11400000, guid: b172cf8a13f11ac4a9d86efede4f1840, type: 2}
-    exploredBrightness: 0.282
-    blocksLineOfSight: 0
+    exploredBrightness: 0.8
+    losOpacity: 0.75
     alwaysVisible: 0
   - tile: {fileID: 11400000, guid: 27e06f580031d1640ab4ed097be3796b, type: 2}
-    exploredBrightness: 0.289
-    blocksLineOfSight: 0
+    exploredBrightness: 0.8
+    losOpacity: 0.75
     alwaysVisible: 0
   - tile: {fileID: 0}
-    exploredBrightness: 0.325
-    blocksLineOfSight: 0
+    exploredBrightness: 0.8
+    losOpacity: 0
     alwaysVisible: 0

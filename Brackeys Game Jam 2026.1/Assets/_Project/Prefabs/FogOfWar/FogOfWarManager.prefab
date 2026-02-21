@@ -12,8 +12,6 @@ GameObject:
   - component: {fileID: 617263317177953754}
   - component: {fileID: 6515245643041175845}
   - component: {fileID: 3338044611554872910}
-  - component: {fileID: 96064590995969987}
-  - component: {fileID: 6042353116467586378}
   m_Layer: 0
   m_Name: FogOfWarManager
   m_TagString: Untagged
@@ -115,34 +113,8 @@ MonoBehaviour:
   visibleRadius: 8
   diffusionWidth: 3
   revealSurfaceOnStart: 1
-  surfaceRevealPaddingTiles: 0
+  surfaceRevealPaddingTiles: 3
+  useOpacityLOS: 1
+  losStrengthThreshold: 0.05
+  defaultTileOpacity: 0.75
   textureDownscale: 1
---- !u!114 &96064590995969987
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4945539218837478142}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c1ee73cdf1320f4a9314fa9bad14db4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::FogOfWarDiagnostic
-  fogManager: {fileID: 3338044611554872910}
-  fogMaterial: {fileID: 2100000, guid: f621fee81f2f7fe4bbfd5213939e36ec, type: 2}
-  diagnosticKey: 34
---- !u!114 &6042353116467586378
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4945539218837478142}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d95a66bff4dd88d44b8822e5ceef0cfa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::FogOfWarSaveLoad
-  fogManager: {fileID: 3338044611554872910}
-  saveSlot: slot0_fog.dat

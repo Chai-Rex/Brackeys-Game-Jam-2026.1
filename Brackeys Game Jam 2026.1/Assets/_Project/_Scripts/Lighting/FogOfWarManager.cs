@@ -62,6 +62,23 @@ public class FogOfWarManager : MonoBehaviour {
              "0 = only air above ground. 1 = surface tile + air. Default 0.")]
     public int surfaceRevealPaddingTiles = 0;
 
+    [Header("Line of Sight")]
+    [Tooltip("If false: binary LOS - solid tiles fully block sight (fast).\n" +
+             "If true: opacity LOS - light strength falls off as it passes through tiles.\n" +
+             "Configure per-tile opacity in TileDiscoverySettings.")]
+    public bool useOpacityLOS = false;
+
+    [Tooltip("LOS strength starts at 1.0. Each tile crossed reduces it by its losOpacity.\n" +
+             "When strength reaches 0, the ray stops. Higher = light penetrates more tiles.\n" +
+             "Only used when useOpacityLOS is enabled.")]
+    [Range(0f, 1f)]
+    public float losStrengthThreshold = 0.05f;
+
+    [Tooltip("Default opacity for solid tiles not listed in TileDiscoverySettings.\n" +
+             "1.0 = fully opaque (default). Lower values let light bleed through all solid tiles.")]
+    [Range(0f, 1f)]
+    public float defaultTileOpacity = 1f;
+
     [Header("Performance")]
     [Range(1, 4)]
     public int textureDownscale = 1;
@@ -88,8 +105,10 @@ public class FogOfWarManager : MonoBehaviour {
 
     private Vector2Int _lastPlayerTile = new Vector2Int(int.MinValue, int.MinValue);
     private List<Vector2Int> _lineBuffer = new List<Vector2Int>(256);
-    private HashSet<Vector2Int> _solidCache = new HashSet<Vector2Int>();
     private List<SceneLightSource> _sceneLights = new List<SceneLightSource>();
+
+    // Per-tile LOS opacity [0,1]. 0 = transparent, 1 = fully opaque.
+    private Dictionary<Vector2Int, float> _tileOpacity = new Dictionary<Vector2Int, float>();
 
     private Camera _cam;
     private MeshRenderer _meshRenderer;
@@ -243,9 +262,11 @@ public class FogOfWarManager : MonoBehaviour {
                 float dy = ty - originTile.y;
                 float dist = Mathf.Sqrt(dx * dx + dy * dy);
                 if (dist > outerRadius) continue;
-                if (!HasLineOfSight(originTile, new Vector2Int(tx, ty))) continue;
 
-                float vis = CalculateVisibility(dist, radius, diffusion);
+                float losStrength = GetLineOfSightStrength(originTile, new Vector2Int(tx, ty));
+                if (losStrength <= 0f) continue;
+
+                float vis = CalculateVisibility(dist, radius, diffusion) * losStrength;
                 if (vis <= 0f) continue;
 
                 int idx = Index(tx, ty);
@@ -392,7 +413,7 @@ public class FogOfWarManager : MonoBehaviour {
             // Find the highest solid tile in this column.
             int surfaceY = -1;
             for (int ty = _mapSize.y - 1; ty >= 0; ty--) {
-                if (_solidCache.Contains(new Vector2Int(tx, ty))) {
+                if (_tileOpacity.ContainsKey(new Vector2Int(tx, ty))) {
                     surfaceY = ty;
                     break;
                 }
@@ -451,18 +472,22 @@ public class FogOfWarManager : MonoBehaviour {
     // ===========================================================
 
     public void RebuildSolidCache() {
-        _solidCache.Clear();
+        _tileOpacity.Clear();
         if (solidTilemap == null) return;
         BoundsInt bounds = solidTilemap.cellBounds;
         foreach (Vector3Int cell in bounds.allPositionsWithin) {
             if (!solidTilemap.HasTile(cell)) continue;
-            _solidCache.Add(new Vector2Int(cell.x - _cellOffset.x, cell.y - _cellOffset.y));
+            Vector2Int t = new Vector2Int(cell.x - _cellOffset.x, cell.y - _cellOffset.y);
+            float opacity = defaultTileOpacity;
+            if (tileSettings != null)
+                opacity = tileSettings.GetLosOpacity(solidTilemap.GetTile(cell), defaultTileOpacity);
+            _tileOpacity[t] = opacity;
         }
-        Debug.Log("[FogOfWar] Solid cache: " + _solidCache.Count + " tiles.");
+        Debug.Log("[FogOfWar] Opacity cache: " + _tileOpacity.Count + " solid tiles.");
     }
 
-    public void RemoveTileFromCache(Vector2Int tile) { _solidCache.Remove(tile); }
-    public void AddTileToCache(Vector2Int tile) { _solidCache.Add(tile); }
+    public void RemoveTileFromCache(Vector2Int tile) { _tileOpacity.Remove(tile); }
+    public void AddTileToCache(Vector2Int tile) { _tileOpacity[tile] = defaultTileOpacity; }
 
     // ===========================================================
     //  Array and Texture Init
@@ -540,11 +565,33 @@ public class FogOfWarManager : MonoBehaviour {
     //  Line of Sight
     // ===========================================================
 
-    bool HasLineOfSight(Vector2Int from, Vector2Int to) {
+    /// <summary>
+    /// Returns the LOS visibility strength [0,1] from 'from' to 'to'.
+    /// In binary mode: returns 1 if clear, 0 if blocked.
+    /// In opacity mode: returns remaining light strength after passing through tiles.
+    /// </summary>
+    float GetLineOfSightStrength(Vector2Int from, Vector2Int to) {
         GetBresenhamLine(from, to, _lineBuffer);
-        for (int i = 1; i < _lineBuffer.Count - 1; i++)
-            if (_solidCache.Contains(_lineBuffer[i])) return false;
-        return true;
+
+        if (!useOpacityLOS) {
+            // Binary mode: any tile with opacity > 0 in the path blocks LOS.
+            for (int i = 1; i < _lineBuffer.Count - 1; i++) {
+                float op;
+                if (_tileOpacity.TryGetValue(_lineBuffer[i], out op) && op > 0f)
+                    return 0f;
+            }
+            return 1f;
+        } else {
+            // Opacity mode: accumulate opacity, stop when strength drops below threshold.
+            float strength = 1f;
+            for (int i = 1; i < _lineBuffer.Count - 1; i++) {
+                float op;
+                if (!_tileOpacity.TryGetValue(_lineBuffer[i], out op)) continue;
+                strength *= (1f - op);
+                if (strength <= losStrengthThreshold) return 0f;
+            }
+            return strength;
+        }
     }
 
     void GetBresenhamLine(Vector2Int from, Vector2Int to, List<Vector2Int> result) {
