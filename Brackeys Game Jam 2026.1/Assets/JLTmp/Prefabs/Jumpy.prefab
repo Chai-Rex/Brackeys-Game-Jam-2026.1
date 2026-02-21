@@ -61,7 +61,7 @@ MonoBehaviour:
   isGroundedSprite: {fileID: 21300000, guid: 9600f7f421dbc4376b3e9c9b851c7319, type: 3}
   isInAirSprite: {fileID: 21300000, guid: f72204623a1bc4764a4332c0c9083866, type: 3}
   groundCheck: {fileID: 5062566547858146407}
-  groundCheckSize: {x: 0.59, y: 0.1}
+  groundCheckSize: {x: 0.62, y: 0.1}
   groundLayer:
     serializedVersion: 2
     m_Bits: 131072
@@ -72,6 +72,8 @@ MonoBehaviour:
   barnakTargetRadius: 0.18
   notifyAkOnJump: Cricket_Jump
   notifyAkOnLand: Cricket_Land
+  notifyAkLandSpeed: Jumper_LandSpeed
+  speedToMaxLandVolume: 8
   dtJumpRangePlayerDetected: {x: 0, y: 0.5}
   playerCheckRadius: 3
   playerCheckLayer:

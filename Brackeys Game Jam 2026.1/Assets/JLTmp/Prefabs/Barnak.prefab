@@ -290,7 +290,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4185673799793587208
 Transform:
   m_ObjectHideFlags: 0
@@ -334,10 +334,10 @@ MonoBehaviour:
   dmg: 10
   notifyAkOnCatch: Vine_Catch
   notifyAkOnStartEating: Vine_Eating
-  notifyAkOnStopEating: 
+  notifyAkOnStopEating: Vine_Regrow
   notifyAkOnHit: Vine_Hit
   notifyAkOnLastHit: Vine_LastHit
-  notifyAkOnStopRecovering: Vine_StopRecovering
+  notifyAkOnStopRecovering: Vine_Regrow
   notifyAkCaughtProgress: Pull_Tension
 --- !u!61 &6736504683414707074
 BoxCollider2D:

@@ -21,12 +21,6 @@ public class Jumper : MonoBehaviour, IBarnakTarget
     [SerializeField] Vector2 groundCheckSize = new Vector2(0.95f, 0.1f);
     [SerializeField] LayerMask groundLayer;
     [SerializeField, ReadOnly] protected bool isGrounded = false;
-
-    [Header("Jump")]
-    [SerializeField] protected float jumpSpeed = 8;
-    [SerializeField, Range(0, 90)] protected float jumpMaxAngle = 30;
-    [SerializeField] protected Vector2 dtJumpRange = new Vector2(0, 3);
-    protected bool isGroundedLocked = false;
     
     [Header("Barnak")]
     [SerializeField] float barnakTargetRadius = 0.6f;
@@ -35,6 +29,15 @@ public class Jumper : MonoBehaviour, IBarnakTarget
     [Header("Sounds")]
     [SerializeField] protected string notifyAkOnJump = "Jumper_Jump";
     [SerializeField] protected string notifyAkOnLand = "Jumper_Land";
+    [SerializeField] protected string notifyAkLandSpeed = "Jumper_LandSpeed";
+    [SerializeField] protected float speedToMaxLandVolume = 4;
+    float trackYVelocityOnJump = 0;
+
+    [Header("Jump")]
+    [SerializeField] protected float jumpSpeed = 8;
+    [SerializeField, Range(0, 90)] protected float jumpMaxAngle = 30;
+    [SerializeField] protected Vector2 dtJumpRange = new Vector2(0, 3);
+    protected bool isGroundedLocked = false;
 
 
     protected Rigidbody2D rb;
@@ -96,6 +99,10 @@ public class Jumper : MonoBehaviour, IBarnakTarget
 
     protected virtual void FixedUpdate()
     {
+        if (!isGrounded &&
+            rb.linearVelocityY != 0)
+            trackYVelocityOnJump = rb.linearVelocityY;
+
         UpdateIsGrounded();
     }
 
@@ -135,6 +142,11 @@ public class Jumper : MonoBehaviour, IBarnakTarget
         {
             Invoke("Jump", dtJumpRange.RandomInRange());
             
+            if (notifyAkLandSpeed != "")
+                AkUnitySoundEngine.SetRTPCValue(notifyAkLandSpeed, Mathf.Clamp01(Mathf.Abs(trackYVelocityOnJump) / speedToMaxLandVolume), gameObject);
+
+            trackYVelocityOnJump = 0;
+
             if (notifyAkOnLand != "")
                 AkUnitySoundEngine.PostEvent(notifyAkOnLand, gameObject);
         } 
