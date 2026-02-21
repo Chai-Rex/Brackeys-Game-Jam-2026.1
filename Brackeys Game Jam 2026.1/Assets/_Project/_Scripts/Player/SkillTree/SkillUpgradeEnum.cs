@@ -68,5 +68,8 @@ public enum SkillUpgradeEnum
     DodgingDistance,
     
     //Drill
-    DrillDurationNeeded
+    DrillDurationNeeded,
+    
+    //Health
+    MaxHealthIncrease
 }

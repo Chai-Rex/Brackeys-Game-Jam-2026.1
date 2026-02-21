@@ -75,6 +75,7 @@ public class PlayerHandler : Singleton<PlayerHandler>, IBarnakTarget, IUmbrelloi
     {
         base.OnDestroy();
         _inputManager._PlayerJumpAction.started -= OnJumpAction;
+        SkillTreeNode.upgradeHealth -= _health.SetNewInitial;
     }
 
     #endregion
@@ -164,6 +165,8 @@ public class PlayerHandler : Singleton<PlayerHandler>, IBarnakTarget, IUmbrelloi
         _health = GetComponentInParent<Health>();
         _rigidbody = GetComponent<Rigidbody2D>();
         _inputManager._PlayerJumpAction.started += OnJumpAction;
+        
+        SkillTreeNode.upgradeHealth += _health.SetNewInitial;
     }
 
     #endregion

@@ -15,8 +15,8 @@ MonoBehaviour:
   SkillUpgradeName: Air Speed 1
   SkillUpgrades:
   - SkillUpgradeEnum: 5
-    UpgradeAmount: 3
+    UpgradeAmount: 5
   - SkillUpgradeEnum: 6
-    UpgradeAmount: 1
+    UpgradeAmount: 2
   - SkillUpgradeEnum: 7
-    UpgradeAmount: 1
+    UpgradeAmount: 2

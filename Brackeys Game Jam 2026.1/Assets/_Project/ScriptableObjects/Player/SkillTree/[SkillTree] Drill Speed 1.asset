@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: '[SkillTree] Drill Speed 1'
   m_EditorClassIdentifier: Assembly-CSharp::SkillUpgradeSO
   SkillUpgradeName: Drill Speed 1
+  classification: 2
   SkillUpgrades:
   - SkillUpgradeEnum: 42
     UpgradeAmount: 0.01

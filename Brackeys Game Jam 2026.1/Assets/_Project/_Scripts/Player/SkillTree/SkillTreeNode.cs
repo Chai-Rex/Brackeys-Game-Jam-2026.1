@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using JetBrains.Annotations;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,13 +10,19 @@ public class SkillTreeNode : MonoBehaviour
     [SerializeField] private SkillUpgradeSO skillUpgrade;
     
     private bool unlocked=false, activated=false;
+    
+    [Header("Nodes")]
     public List<SkillTreeNode> precedingNodes;
     public List<SkillTreeNode> nextNodes;
     
-    [SerializeField] private TextMeshProUGUI _nameText;
+    [Header("Button")]
+    [SerializeField] private TextMeshProUGUI _nameText, resourceCostText;
     [SerializeField] private Image buttonImage;
     [SerializeField] private Color buttonDefault;
-
+    [SerializeField] private Image iconImage;
+    [SerializeField] private Sprite movementIcon, drillIcon, healthIcon;
+    
+    [Header("Connector UI")]
     [SerializeField] private GameObject connectorUIPrefab;
     public Transform connectorParent;
     public List<SkillNodeConnector> connectedConnectors;
@@ -25,7 +30,7 @@ public class SkillTreeNode : MonoBehaviour
 
     private void Awake()
     {
-        _nameText.text = skillUpgrade.SkillUpgradeName;
+        AdjustToScriptableObject();
     }
 
     private void Start()
@@ -59,7 +64,28 @@ public class SkillTreeNode : MonoBehaviour
 
     private void ChangeButtonColor(Color changeTo)
     {
-        buttonImage.color = changeTo;
+        timer = 0f;
+        isLerping = true;
+        startColor = buttonImage.color;
+        endColor = changeTo;
+        //buttonImage.color = changeTo;
+    }
+
+    private bool isLerping = false;
+    private float timer = 0f;
+    private Color startColor, endColor;
+    private float duration = 0.5f;
+    private void Update()
+    {
+        if (!isLerping) return;
+
+        timer += Time.deltaTime;
+        float t = timer / duration;
+
+        buttonImage.color = Color.Lerp(startColor, endColor, t);
+
+        if (t >= 1f)
+            isLerping = false;
     }
 
     public void OnClicked()
@@ -72,25 +98,25 @@ public class SkillTreeNode : MonoBehaviour
 
     }
 
-    public static event Action<SkillUpgradeSO> upgradeActivation, upgradeDrill;
+    public static event Action<SkillUpgradeSO> upgradeMovement, upgradeDrill, upgradeHealth;
     private void ActivateUpgrade()
     {
         if(activated)return;
         activated = true;
+        
 
-        //check if the scriptable object has the drill upgrade
-        bool hasDrillUpgrade 
-            = skillUpgrade.SkillUpgrades.Any
-                (u => u.SkillUpgradeEnum == SkillUpgradeEnum.DrillDurationNeeded);
-
-        //Send signal
-        if (hasDrillUpgrade)
+        //Send event assuming the SO classifications are accurate and the SOs only have that type of upgrade
+        switch (skillUpgrade.classification)
         {
-            upgradeDrill?.Invoke(skillUpgrade);
-        }
-        else
-        {
-            upgradeActivation?.Invoke(skillUpgrade);
+            case UpgradeGeneralClassification.Drill:
+                upgradeDrill?.Invoke(skillUpgrade);
+                break;
+            case UpgradeGeneralClassification.Health:
+                upgradeHealth?.Invoke(skillUpgrade);
+                break;
+            case UpgradeGeneralClassification.Movement:
+                upgradeMovement?.Invoke(skillUpgrade);
+                break;
         }
         //
         
@@ -98,7 +124,26 @@ public class SkillTreeNode : MonoBehaviour
         CheckUnlocks();
     }
 
-
+    public void AdjustToScriptableObject()
+    {
+        if (skillUpgrade == null) return;
+        
+        _nameText.text = skillUpgrade.SkillUpgradeName;
+        
+        switch (skillUpgrade.classification)
+        {
+            case UpgradeGeneralClassification.Drill:
+                iconImage.sprite = drillIcon;
+                break;
+            case UpgradeGeneralClassification.Health:
+                iconImage.sprite = healthIcon;
+                break;
+            case UpgradeGeneralClassification.Movement:
+                iconImage.sprite = movementIcon;
+                break;
+        }
+    }
+    
     #region Editor Functions
     
     public void SpawnNextNode()
@@ -141,14 +186,7 @@ public class SkillTreeNode : MonoBehaviour
 #endif
     }
 
-    public void AdjustToScriptableObject()
-    {
-#if UNITY_EDITOR
-        if (skillUpgrade == null) return;
-        
-        _nameText.text = skillUpgrade.SkillUpgradeName;
-#endif
-    }
+    
 
     #endregion
 }

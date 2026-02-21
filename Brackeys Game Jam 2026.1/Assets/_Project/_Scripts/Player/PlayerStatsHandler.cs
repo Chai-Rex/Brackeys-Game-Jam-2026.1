@@ -211,12 +211,12 @@ public class PlayerStatsHandler : MonoBehaviour {
 
     private void Awake()
     {
-        SkillTreeNode.upgradeActivation += ApplyUpgrade;
+        SkillTreeNode.upgradeMovement += ApplyUpgrade;
     }
 
     private void OnDestroy()
     {
-        SkillTreeNode.upgradeActivation -= ApplyUpgrade;
+        SkillTreeNode.upgradeMovement -= ApplyUpgrade;
     }
 
     public void ApplyUpgrade(SkillUpgradeSO upgradeSO)

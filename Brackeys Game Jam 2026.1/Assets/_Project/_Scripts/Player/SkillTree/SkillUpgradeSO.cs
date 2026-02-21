@@ -4,5 +4,7 @@ using UnityEngine;
 public class SkillUpgradeSO : ScriptableObject
 {
    public string SkillUpgradeName;
+   public UpgradeGeneralClassification classification;
    public SkillUpgradeDataObject[] SkillUpgrades;
+   
 }
