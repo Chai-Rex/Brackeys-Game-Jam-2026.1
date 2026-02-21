@@ -1,0 +1,79 @@
+cat.png
+size:2048,2048
+filter:Linear,Linear
+pma:true
+beard L
+bounds:1004,939,356,307
+offsets:42,228,1002,1002
+beard R
+bounds:1504,1739,369,307
+offsets:611,237,1002,1002
+cat_back
+bounds:2,224,964,820
+offsets:0,181,1002,1002
+chin close
+bounds:968,451,311,232
+offsets:1,1,334,234
+chin opening
+bounds:1875,1645,401,171
+offsets:289,198,1002,1002
+rotate:90
+fish
+bounds:1004,1583,475,240
+offsets:280,201,1002,1002
+hair 1
+bounds:1481,1481,257,256
+offsets:85,438,1002,1002
+hair 2
+bounds:968,232,217,281
+offsets:93,319,1002,1002
+rotate:90
+hair 3
+bounds:1004,1248,379,333
+offsets:187,123,1002,1002
+hair 4
+bounds:968,685,326,252
+offsets:486,174,1002,1002
+hair 5
+bounds:1467,1327,152,232
+offsets:715,227,1002,1002
+rotate:90
+hair 6
+bounds:1296,718,139,219
+offsets:793,319,1002,1002
+hair 7
+bounds:1251,256,193,168
+offsets:753,507,1002,1002
+rotate:90
+lower teeth
+bounds:1385,1309,272,80
+offsets:352,299,1002,1002
+rotate:90
+mouth_back
+bounds:707,79,246,143
+offsets:369,303,1002,1002
+nose
+bounds:1740,1668,99,69
+offsets:441,430,1002,1002
+paw L
+bounds:357,4,348,218
+offsets:1,138,1002,1002
+paw R
+bounds:2,2,353,220
+offsets:607,123,1002,1002
+tongue
+bounds:707,6,113,71
+offsets:436,320,1002,1002
+upper mouth
+bounds:1004,1825,498,221
+offsets:242,301,1002,1002
+upper tooth L
+bounds:1740,1584,65,82
+offsets:424,332,1002,1002
+upper tooth R
+bounds:822,9,68,91
+offsets:486,328,1002,1002
+rotate:90
+背景
+bounds:2,1046,1000,1000
+offsets:1,1,1002,1002

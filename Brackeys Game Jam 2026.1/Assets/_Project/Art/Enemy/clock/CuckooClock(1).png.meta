@@ -1,0 +1,715 @@
+fileFormatVersion: 2
+guid: 375d9361887d93e44b8d73234de5d49f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8591847202565473940
+    second: CuckooClock(1)_0
+  - first:
+      213: -7863061982155360848
+    second: CuckooClock(1)_1
+  - first:
+      213: 1845169675654209195
+    second: CuckooClock(1)_2
+  - first:
+      213: -8021986038786678698
+    second: CuckooClock(1)_3
+  - first:
+      213: -3047973309421708694
+    second: CuckooClock(1)_4
+  - first:
+      213: 5323264551208450564
+    second: CuckooClock(1)_5
+  - first:
+      213: 2512548052275024469
+    second: CuckooClock(1)_6
+  - first:
+      213: 3732049554422950122
+    second: CuckooClock(1)_7
+  - first:
+      213: 1305035879555219749
+    second: CuckooClock(1)_8
+  - first:
+      213: 3608620153663515867
+    second: CuckooClock(1)_9
+  - first:
+      213: -916616479296554987
+    second: CuckooClock(1)_10
+  - first:
+      213: 264939651790796787
+    second: CuckooClock(1)_11
+  - first:
+      213: -406294929113610029
+    second: CuckooClock(1)_12
+  - first:
+      213: 3150053233710855950
+    second: CuckooClock(1)_13
+  - first:
+      213: 4317539979923611427
+    second: CuckooClock(1)_14
+  - first:
+      213: -8838715694228956980
+    second: CuckooClock(1)_15
+  - first:
+      213: -214822116502735098
+    second: CuckooClock(1)_16
+  - first:
+      213: 2125950893011223494
+    second: CuckooClock(1)_17
+  - first:
+      213: 2380046203456843059
+    second: CuckooClock(1)_18
+  - first:
+      213: 6102557409788058273
+    second: CuckooClock(1)_19
+  - first:
+      213: 5384291289669422245
+    second: CuckooClock(1)_20
+  - first:
+      213: 6642471547088065791
+    second: CuckooClock(1)_21
+  - first:
+      213: 1704892120471098666
+    second: CuckooClock(1)_22
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 0
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: CuckooClock(1)_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 990
+        width: 210
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4964959528f5c3770800000000000000
+      internalID: 8591847202565473940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CuckooClock(1)_1
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1
+        width: 685
+        height: 989
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b530ca99cac0e290800000000000000
+      internalID: -7863061982155360848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CuckooClock(1)_2
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 990
+        width: 266
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bae11bb3b0c5b9910800000000000000
+      internalID: 1845169675654209195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CuckooClock(1)_3
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 990
+        width: 119
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6502af4333e2ca090800000000000000
+      internalID: -8021986038786678698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CuckooClock(1)_4
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 782
+        width: 91
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6a1c078c6c63b5d0800000000000000
+      internalID: -3047973309421708694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CuckooClock(1)_5
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 957
+        width: 58
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40a753cc7e800e940800000000000000
+      internalID: 5323264551208450564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CuckooClock(1)_6
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 782
+        width: 59
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 552d3f8342d5ed220800000000000000
+      internalID: 2512548052275024469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CuckooClock(1)_7
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 912
+        width: 64
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae8e887eb47eac330800000000000000
+      internalID: 3732049554422950122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CuckooClock(1)_8
+      rect:
+        serializedVersion: 2
+        x: 845
+        y: 795
+        width: 72
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5214704d73b6c1210800000000000000
+      internalID: 1305035879555219749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CuckooClock(1)_9
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 857
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdced6419e4641230800000000000000
+      internalID: 3608620153663515867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CuckooClock(1)_10
+      rect:
+        serializedVersion: 2
+        x: 879
+        y: 790
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51872442b268743f0800000000000000
+      internalID: -916616479296554987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CuckooClock(1)_11
+      rect:
+        serializedVersion: 2
+        x: 942
+        y: 783
+        width: 47
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f7f7e7a5314da300800000000000000
+      internalID: 264939651790796787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CuckooClock(1)_12
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 536
+        width: 116
+        height: 246
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d804242aec8c5af0800000000000000
+      internalID: -406294929113610029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CuckooClock(1)_13
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 536
+        width: 97
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e07f7e2f9bc37bb20800000000000000
+      internalID: 3150053233710855950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CuckooClock(1)_14
+      rect:
+        serializedVersion: 2
+        x: 914
+        y: 679
+        width: 39
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32fd4e68cbbfaeb30800000000000000
+      internalID: 4317539979923611427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CuckooClock(1)_15
+      rect:
+        serializedVersion: 2
+        x: 903
+        y: 541
+        width: 37
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc810d6d7e2965580800000000000000
+      internalID: -8838715694228956980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CuckooClock(1)_16
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 295
+        width: 191
+        height: 231
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 607f4f75c6cc40df0800000000000000
+      internalID: -214822116502735098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CuckooClock(1)_17
+      rect:
+        serializedVersion: 2
+        x: 913
+        y: 280
+        width: 53
+        height: 248
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c3cbdbc215e08d10800000000000000
+      internalID: 2125950893011223494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CuckooClock(1)_18
+      rect:
+        serializedVersion: 2
+        x: 851
+        y: 273
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33def0a796f970120800000000000000
+      internalID: 2380046203456843059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CuckooClock(1)_19
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 11
+        width: 176
+        height: 249
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1aa58d7a1a3a0b450800000000000000
+      internalID: 6102557409788058273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CuckooClock(1)_20
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 257
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5acc9f79668d8ba40800000000000000
+      internalID: 5384291289669422245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CuckooClock(1)_21
+      rect:
+        serializedVersion: 2
+        x: 926
+        y: 1
+        width: 68
+        height: 263
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff4d2d2cdacce2c50800000000000000
+      internalID: 6642471547088065791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CuckooClock(1)_22
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 194
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a25da05c95ef8a710800000000000000
+      internalID: 1704892120471098666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      CuckooClock(1)_0: 8591847202565473940
+      CuckooClock(1)_1: -7863061982155360848
+      CuckooClock(1)_10: -916616479296554987
+      CuckooClock(1)_11: 264939651790796787
+      CuckooClock(1)_12: -406294929113610029
+      CuckooClock(1)_13: 3150053233710855950
+      CuckooClock(1)_14: 4317539979923611427
+      CuckooClock(1)_15: -8838715694228956980
+      CuckooClock(1)_16: -214822116502735098
+      CuckooClock(1)_17: 2125950893011223494
+      CuckooClock(1)_18: 2380046203456843059
+      CuckooClock(1)_19: 6102557409788058273
+      CuckooClock(1)_2: 1845169675654209195
+      CuckooClock(1)_20: 5384291289669422245
+      CuckooClock(1)_21: 6642471547088065791
+      CuckooClock(1)_22: 1704892120471098666
+      CuckooClock(1)_3: -8021986038786678698
+      CuckooClock(1)_4: -3047973309421708694
+      CuckooClock(1)_5: 5323264551208450564
+      CuckooClock(1)_6: 2512548052275024469
+      CuckooClock(1)_7: 3732049554422950122
+      CuckooClock(1)_8: 1305035879555219749
+      CuckooClock(1)_9: 3608620153663515867
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

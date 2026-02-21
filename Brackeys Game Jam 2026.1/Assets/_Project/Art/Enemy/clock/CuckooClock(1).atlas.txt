@@ -1,0 +1,65 @@
+CuckooClock(1).png
+size:1024,1024
+filter:Linear,Linear
+pma:true
+bird_body
+bounds:687,489,225,254
+offsets:632,518,1002,1002
+board L
+bounds:932,761,61,261
+offsets:458,488,1002,1002
+board R
+bounds:803,244,95,243
+offsets:636,538,1002,1002
+branch
+bounds:2,2,208,31
+offsets:565,538,1002,1002
+clock
+bounds:2,35,683,987
+offsets:152,10,1002,1002
+feather1
+bounds:842,40,103,85
+offsets:726,709,1002,1002
+feather2
+bounds:842,127,115,88
+offsets:656,727,1002,1002
+rotate:90
+feather3
+bounds:900,371,116,39
+offsets:644,723,1002,1002
+rotate:90
+feather4
+bounds:900,260,109,67
+offsets:631,693,1002,1002
+rotate:90
+feather5
+bounds:932,162,96,57
+offsets:630,670,1002,1002
+rotate:90
+pointer- short
+bounds:783,22,52,44
+offsets:550,390,1002,1002
+pointer-long
+bounds:478,5,28,117
+offsets:578,380,1002,1002
+rotate:90
+side L
+bounds:212,11,22,264
+offsets:499,488,1002,1002
+rotate:90
+side R
+bounds:914,497,51,246
+offsets:692,536,1002,1002
+window part
+bounds:783,68,173,57
+offsets:477,513,1002,1002
+rotate:90
+window- close L
+bounds:687,243,114,244
+offsets:475,511,1002,1002
+window- close R
+bounds:687,16,94,225
+offsets:573,536,1002,1002
+window- inner
+bounds:687,745,243,277
+offsets:476,501,1002,1002
