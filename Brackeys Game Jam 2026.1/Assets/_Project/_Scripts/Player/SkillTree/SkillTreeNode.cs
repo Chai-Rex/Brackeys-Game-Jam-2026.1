@@ -10,16 +10,18 @@ public class SkillTreeNode : MonoBehaviour
 {
     [SerializeField] private SkillUpgradeSO skillUpgrade;
     
-    private bool unlocked, activated;
+    private bool unlocked=false, activated=false;
     public List<SkillTreeNode> precedingNodes;
     public List<SkillTreeNode> nextNodes;
     
     [SerializeField] private TextMeshProUGUI _nameText;
     [SerializeField] private Image buttonImage;
+    [SerializeField] private Color buttonDefault;
 
     [SerializeField] private GameObject connectorUIPrefab;
     public Transform connectorParent;
     public List<SkillNodeConnector> connectedConnectors;
+
 
     private void Awake()
     {
@@ -34,7 +36,7 @@ public class SkillTreeNode : MonoBehaviour
     private void IsThisUnlocked()
     {
         unlocked = true;
-        ChangeButtonColor(Color.white);
+        ChangeButtonColor(buttonDefault);
 
         foreach (var node in precedingNodes)
         {
@@ -62,8 +64,12 @@ public class SkillTreeNode : MonoBehaviour
 
     public void OnClicked()
     {
-        if(unlocked && !activated)
+        //Debug.Log($"Clicked unlocked:{unlocked} activated{activated}");
+        if (unlocked && !activated)
+        {
             ActivateUpgrade();
+        }
+
     }
 
     public static event Action<SkillUpgradeSO> upgradeActivation, upgradeDrill;

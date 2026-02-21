@@ -15,6 +15,6 @@ MonoBehaviour:
   SkillUpgradeName: Wall Slide 1
   SkillUpgrades:
   - SkillUpgradeEnum: 8
-    UpgradeAmount: -1
+    UpgradeAmount: -2
   - SkillUpgradeEnum: 9
-    UpgradeAmount: 1
+    UpgradeAmount: 2

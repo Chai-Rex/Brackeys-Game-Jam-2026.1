@@ -15,10 +15,10 @@ MonoBehaviour:
   SkillUpgradeName: Ground Speed 2
   SkillUpgrades:
   - SkillUpgradeEnum: 1
-    UpgradeAmount: 0.5
+    UpgradeAmount: 2
   - SkillUpgradeEnum: 2
-    UpgradeAmount: 3
+    UpgradeAmount: 5
   - SkillUpgradeEnum: 3
-    UpgradeAmount: 0.5
+    UpgradeAmount: 1
   - SkillUpgradeEnum: 4
-    UpgradeAmount: 0.5
+    UpgradeAmount: 1

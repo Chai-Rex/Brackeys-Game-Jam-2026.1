@@ -109,7 +109,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2010191531070016760
 RectTransform:
   m_ObjectHideFlags: 0
@@ -306,6 +306,7 @@ MonoBehaviour:
   - {fileID: 0}
   _nameText: {fileID: 1260223586231649140}
   buttonImage: {fileID: 2880214921271528518}
+  buttonDefault: {r: 1, g: 0.65882355, b: 0.44705883, a: 1}
   connectorUIPrefab: {fileID: 8316621678201043073, guid: ee9b181e8e67bad4fb9ccdce4c336e27, type: 3}
   connectorParent: {fileID: 0}
   connectedConnectors: []
@@ -414,7 +415,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 38.95
+  m_fontSize: 33.75
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
