@@ -22,12 +22,16 @@ public class PS_Falling : BaseHierarchicalState {
     public override void Update() { }
 
     public override void FixedUpdate() {
-        _sm.Physics.ApplyGravityForce(_sm.Stats.GroundJumpGravity);
-        _sm.Physics.ApplyHorizontalMovement(
-            _sm.Stats.AirborneTargetSpeed,
-            _sm.Stats.AirborneAcceleration,
-            _sm.Stats.AirborneDeceleration);
-        _sm.CheckForTurning(_sm.Blackboard.MoveInput);
+        if (!_sm.Blackboard.IsCaught)
+        {
+            _sm.Physics.ApplyGravityForce(_sm.Stats.GroundJumpGravity);
+
+            _sm.Physics.ApplyHorizontalMovement(
+                _sm.Stats.AirborneTargetSpeed,
+                _sm.Stats.AirborneAcceleration,
+                _sm.Stats.AirborneDeceleration);
+            _sm.CheckForTurning(_sm.Blackboard.MoveInput);
+        }
     }
 
     public override void CheckSwitchStates() {

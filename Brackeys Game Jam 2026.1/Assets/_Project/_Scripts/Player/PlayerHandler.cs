@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 /// <summary>
 /// Main MonoBehaviour that holds all player subsystems
@@ -23,9 +24,14 @@ public class PlayerHandler : Singleton<PlayerHandler>, IBarnakTarget, IUmbrelloi
     [Header("Debug Settings")]
     [SerializeField] private bool _iEnableDebugLogs = false;
 
+    [Header("Barnak")]
+    [SerializeField] float barnakTargetRadius = 1.9f;
+    Barnak _barnakCaught = null;
+
     private PlayerManager _playerManager;
     private InputManager _inputManager;
     private Health _health;
+    private Rigidbody2D _rigidbody;
 
     private bool _isInitialized = false;
 
@@ -40,12 +46,21 @@ public class PlayerHandler : Singleton<PlayerHandler>, IBarnakTarget, IUmbrelloi
     public PlayerBlackboardHandler Blackboard => _blackboardHandler;
     public PlayerInputHandler Input => _inputHandler;
     public Transform CameraFollowPlayer => _cameraFollowPlayerTransform;
-
-    public float BarnakTargetRadius => throw new System.NotImplementedException();
+    public float BarnakTargetRadius => barnakTargetRadius;
 
     #endregion
 
     #region Unity Lifecycle
+    void OnDrawGizmosSelected()
+    {
+        DrawBarnakTargetRadius();
+    }
+
+    void DrawBarnakTargetRadius()
+    {
+        Gizmos.color = Color.yellow;
+        GizmosExtension.DrawCircle(transform.position, barnakTargetRadius);
+    }
 
     private void Start() {
         ValidateComponents();
@@ -55,6 +70,12 @@ public class PlayerHandler : Singleton<PlayerHandler>, IBarnakTarget, IUmbrelloi
     // NOTE: Update and FixedUpdate are NOT used here!
     // They are called by PlayerManager via OnUpdate() and OnFixedUpdate()
     // This ensures timing is synchronized with other managers in the game
+
+    protected override void OnDestroy()
+    {
+        base.OnDestroy();
+        _inputManager._PlayerJumpAction.started -= OnJumpAction;
+    }
 
     #endregion
 
@@ -141,6 +162,8 @@ public class PlayerHandler : Singleton<PlayerHandler>, IBarnakTarget, IUmbrelloi
         Log("All systems initialized successfully!");
 
         _health = GetComponentInParent<Health>();
+        _rigidbody = GetComponent<Rigidbody2D>();
+        _inputManager._PlayerJumpAction.started += OnJumpAction;
     }
 
     #endregion
@@ -244,15 +267,26 @@ public class PlayerHandler : Singleton<PlayerHandler>, IBarnakTarget, IUmbrelloi
     #endregion
 
     #region JLM
+    void OnJumpAction(InputAction.CallbackContext context)
+    {
+        if (_barnakCaught)
+            _barnakCaught.HitToRelease();
+    }
 
     public void OnBarnakCaught(Barnak barnak)
     {
-        // stop rigidbody...
+        //_rigidbody.simulated = false;
+        _blackboardHandler.IsCaught = true;
+        _blackboardHandler.Velocity = Vector2.zero;
+        _barnakCaught = barnak;
     }
 
     public void OnBarnakRelease(Barnak barnak)
     {
-        // restart rigidbody...
+        // _rigidbody.simulated = true;
+        _blackboardHandler.IsCaught = false;
+        _blackboardHandler.Velocity = Vector2.zero;
+        _barnakCaught = null;
     }
 
     public void OnBarnakEat(Barnak barnak, GroundedBarnak groundedBarnak, float dmg)
@@ -261,7 +295,10 @@ public class PlayerHandler : Singleton<PlayerHandler>, IBarnakTarget, IUmbrelloi
 
         if (barnak)
         {
-            // restart rigidbody...
+            // _rigidbody.simulated = true;
+            _blackboardHandler.IsCaught = false;
+            _blackboardHandler.Velocity = Vector2.zero;
+            _barnakCaught = null;
         }
     }
 
