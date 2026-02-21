@@ -111,9 +111,11 @@ MonoBehaviour:
   tileSettings: {fileID: 11400000, guid: 5567880252f2d62448c6e59e1d32b836, type: 2}
   additionalTilemaps: []
   tileSize: 0.5
-  exploredBrightness: 0.35
+  exploredBrightness: 0.9
   visibleRadius: 8
   diffusionWidth: 3
+  revealSurfaceOnStart: 1
+  surfaceRevealPaddingTiles: 0
   textureDownscale: 1
 --- !u!114 &96064590995969987
 MonoBehaviour:

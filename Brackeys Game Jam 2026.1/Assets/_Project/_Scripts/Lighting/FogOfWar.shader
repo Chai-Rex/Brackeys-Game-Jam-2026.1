@@ -35,8 +35,16 @@ Shader "Custom/FogOfWar"
             TEXTURE2D(_FogTex);
             SAMPLER(sampler_FogTex);
 
+            // x = map world left (bottom-left corner of tile 0)
+            // y = map world bottom
+            // z = map world width  (mapSize.x * tileSize)
+            // w = map world height (mapSize.y * tileSize)
             float4 _FogWorldRect;
+
+            // x = quad world left, y = quad world bottom
+            // z = quad world width, w = quad world height
             float4 _QuadWorldRect;
+
             float4 _UnseenColor;
             float4 _ExploredTint;
             float  _BlurRadius;
@@ -94,17 +102,27 @@ Shader "Custom/FogOfWar"
 
             half4 Frag(Varyings IN) : SV_Target
             {
+                // Convert quad UV to world position.
                 float worldX = _QuadWorldRect.x + IN.uv.x * _QuadWorldRect.z;
                 float worldY = _QuadWorldRect.y + IN.uv.y * _QuadWorldRect.w;
 
+                // Convert world position to fog texture UV.
+                // _FogWorldRect.xy is the bottom-left corner of tile 0 (CellToWorld origin).
+                // The fog texture has one texel per tile, so texel N covers the tile
+                // whose bottom-left corner is at origin + N * tileSize.
+                // UV = (worldPos - origin) / totalWorldSize maps tile N to [N/mapSize, (N+1)/mapSize].
+                // The texel CENTER is at UV = (N + 0.5) / mapSize, which Unity samples correctly
+                // when FilterMode is Bilinear and we sample at the texel center.
                 float2 fogUV = float2(
                     (worldX - _FogWorldRect.x) / _FogWorldRect.z,
                     (worldY - _FogWorldRect.y) / _FogWorldRect.w
                 );
 
+                // Outside the map -> fully dark.
                 if (fogUV.x < 0.0 || fogUV.x > 1.0 || fogUV.y < 0.0 || fogUV.y > 1.0)
                     return half4(_UnseenColor.rgb, 1.0);
 
+                // Get texture dimensions for blur offset.
                 float texW, texH;
                 _FogTex.GetDimensions(texW, texH);
                 float2 texelSize = float2(1.0 / texW, 1.0 / texH);

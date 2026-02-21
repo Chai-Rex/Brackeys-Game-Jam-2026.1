@@ -54,6 +54,14 @@ public class FogOfWarManager : MonoBehaviour {
     [Tooltip("Extra tiles beyond visibleRadius where player light fades to 0.")]
     public float diffusionWidth = 3f;
 
+    [Header("Surface")]
+    [Tooltip("If true, all tiles above the topmost solid tile in each column start fully explored.")]
+    public bool revealSurfaceOnStart = true;
+
+    [Tooltip("How many solid tiles below the surface top to also reveal. " +
+             "0 = only air above ground. 1 = surface tile + air. Default 0.")]
+    public int surfaceRevealPaddingTiles = 0;
+
     [Header("Performance")]
     [Range(1, 4)]
     public int textureDownscale = 1;
@@ -102,6 +110,7 @@ public class FogOfWarManager : MonoBehaviour {
         InitFogTexture();
         BuildOverlayQuad();
         CollectSceneLights();
+        RevealSurface();
     }
 
     void OnDestroy() {
@@ -176,7 +185,8 @@ public class FogOfWarManager : MonoBehaviour {
         // Starts with just the player, grows as lights chain-activate.
         // Each entry is (worldPos, outerRadius).
         List<Vector4> activeSources = new List<Vector4>();
-        Vector3 playerWorld = player.position;
+        // Snap player to tile center so the reveal is always symmetric.
+        Vector2 playerWorld = TileToWorld(playerTile);
         float playerOuter = (visibleRadius + diffusionWidth) * tileSize;
         activeSources.Add(new Vector4(playerWorld.x, playerWorld.y, playerOuter, 0));
 
@@ -190,33 +200,23 @@ public class FogOfWarManager : MonoBehaviour {
                 if (light.isActivated) continue;
 
                 float lightOuter = (light.radius + light.diffusionWidth) * tileSize;
-                Vector3 lightPos = light.transform.position;
+                Vector2Int lightTile = WorldToTile(light.transform.position);
+                Vector2 lightCenter = TileToWorld(lightTile);
 
-                // Check distance against every currently active source.
                 bool triggered = false;
                 foreach (Vector4 src in activeSources) {
-                    float dx = lightPos.x - src.x;
-                    float dy = lightPos.y - src.y;
+                    float dx = lightCenter.x - src.x;
+                    float dy = lightCenter.y - src.y;
                     float dist = Mathf.Sqrt(dx * dx + dy * dy);
-
-                    // Activate if the two outer radii are touching or overlapping.
-                    if (dist <= lightOuter + src.z) {
-                        triggered = true;
-                        break;
-                    }
+                    if (dist <= lightOuter + src.z) { triggered = true; break; }
                 }
 
                 if (!triggered) continue;
 
-                // Permanently activate this light and reveal from it.
                 light.isActivated = true;
                 anyNew = true;
-
-                Vector2Int lightTile = WorldToTile(lightPos);
                 RevealFromPoint(lightTile, light.radius, light.diffusionWidth);
-
-                // Add this light as a new active source so it can trigger others.
-                activeSources.Add(new Vector4(lightPos.x, lightPos.y, (light.radius + light.diffusionWidth) * tileSize, 0));
+                activeSources.Add(new Vector4(lightCenter.x, lightCenter.y, lightOuter, 0));
             }
         }
 
@@ -366,9 +366,57 @@ public class FogOfWarManager : MonoBehaviour {
 
         if (fogMaterial != null) {
             fogMaterial.SetTexture(ShaderFogTex, _fogRT);
-            fogMaterial.SetVector(ShaderFogWorldRect, new Vector4(_mapOrigin.x, _mapOrigin.y, _mapSize.x * tileSize, _mapSize.y * tileSize));
+            fogMaterial.SetVector(ShaderFogWorldRect, new Vector4(
+                _mapOrigin.x,
+                _mapOrigin.y,
+                _mapSize.x * tileSize,
+                _mapSize.y * tileSize));
             fogMaterial.SetVector(ShaderQuadWorldRect, new Vector4(left, bottom, w, h));
         }
+    }
+
+    // ===========================================================
+    //  Surface Reveal
+    // ===========================================================
+
+    /// <summary>
+    /// Scans each column of the tilemap top-down to find the highest solid tile.
+    /// Everything above that tile (plus surfaceRevealPaddingTiles) is marked as
+    /// fully discovered so the player can see the sky and surface on start.
+    /// </summary>
+    void RevealSurface() {
+        if (!revealSurfaceOnStart) return;
+
+        int revealed = 0;
+        for (int tx = 0; tx < _mapSize.x; tx++) {
+            // Find the highest solid tile in this column.
+            int surfaceY = -1;
+            for (int ty = _mapSize.y - 1; ty >= 0; ty--) {
+                if (_solidCache.Contains(new Vector2Int(tx, ty))) {
+                    surfaceY = ty;
+                    break;
+                }
+            }
+
+            // Reveal all air above the surface (surfaceY+1 to top).
+            int airStart = (surfaceY >= 0) ? surfaceY + 1 : 0;
+            for (int ty = airStart; ty < _mapSize.y; ty++) {
+                _discoveryMap[Index(tx, ty)] = 1f;
+                revealed++;
+            }
+
+            // Optionally reveal the surface tile itself plus N tiles below it.
+            if (surfaceY >= 0) {
+                int solidEnd = Mathf.Max(0, surfaceY - surfaceRevealPaddingTiles);
+                for (int ty = surfaceY; ty >= solidEnd; ty--) {
+                    _discoveryMap[Index(tx, ty)] = 1f;
+                    revealed++;
+                }
+            }
+        }
+
+        Debug.Log("[FogOfWar] Surface reveal: " + revealed + " tiles.");
+        UploadFogTexture();
     }
 
     // ===========================================================
@@ -386,13 +434,16 @@ public class FogOfWarManager : MonoBehaviour {
         BoundsInt bounds = solidTilemap.cellBounds;
         _cellOffset = new Vector2Int(bounds.xMin, bounds.yMin);
 
-        // CellToWorld returns the bottom-left corner of the cell.
-        // Tile anchor (0.5, 0.5) means the sprite center is half a tile further right and up.
-        Vector3 originWorld = solidTilemap.CellToWorld(new Vector3Int(bounds.xMin, bounds.yMin, 0));
-        _mapOrigin = new Vector2(originWorld.x + tileSize * 0.5f, originWorld.y + tileSize * 0.5f);
+        Vector3 firstCellCenter = solidTilemap.GetCellCenterWorld(new Vector3Int(bounds.xMin, bounds.yMin, 0));
+        // _mapOrigin is the world-space bottom-left edge of tile (0,0).
+        // Used for the shader FogWorldRect. CellCenterWorld - 0.5*tileSize = bottom-left corner.
+        _mapOrigin = new Vector2(firstCellCenter.x - tileSize * 0.5f, firstCellCenter.y - tileSize * 0.5f);
         _mapSize = new Vector2Int(bounds.size.x, bounds.size.y);
 
-        Debug.Log("[FogOfWar] Map: origin=" + _mapOrigin + " size=" + _mapSize);
+        Debug.Log("[FogOfWar] Map: cellOffset=" + _cellOffset +
+                  " firstCellCenter=" + firstCellCenter +
+                  " mapOrigin(bottom-left)=" + _mapOrigin +
+                  " size=" + _mapSize + " tileSize=" + tileSize);
     }
 
     // ===========================================================
@@ -517,14 +568,19 @@ public class FogOfWarManager : MonoBehaviour {
     // ===========================================================
 
     public Vector2Int WorldToTile(Vector3 worldPos) {
-        return new Vector2Int(
-            Mathf.FloorToInt((worldPos.x - _mapOrigin.x) / tileSize),
-            Mathf.FloorToInt((worldPos.y - _mapOrigin.y) / tileSize)
-        );
+        Vector3Int cell = solidTilemap.WorldToCell(worldPos);
+        return new Vector2Int(cell.x - _cellOffset.x, cell.y - _cellOffset.y);
     }
 
     int Index(int x, int y) => y * _mapSize.x + x;
     bool InBounds(Vector2Int t) => t.x >= 0 && t.y >= 0 && t.x < _mapSize.x && t.y < _mapSize.y;
+
+    // Returns the world-space center of a tile.
+    Vector2 TileToWorld(Vector2Int tile) {
+        Vector3 center = solidTilemap.GetCellCenterWorld(
+            new Vector3Int(tile.x + _cellOffset.x, tile.y + _cellOffset.y, 0));
+        return new Vector2(center.x, center.y);
+    }
 
     // ===========================================================
     //  Public API
@@ -591,30 +647,37 @@ public class FogOfWarManager : MonoBehaviour {
     void OnDrawGizmosSelected() {
         if (player == null) return;
 
-        // Player inner radius.
+        // Player light radii.
         Gizmos.color = new Color(1f, 1f, 0f, 0.4f);
         DrawCircle(player.position, visibleRadius * tileSize);
-
-        // Player outer radius (the trigger boundary).
         Gizmos.color = new Color(1f, 0.5f, 0f, 0.25f);
         DrawCircle(player.position, (visibleRadius + diffusionWidth) * tileSize);
 
-        // Draw all scene lights found in the scene.
+        // Draw small crosses at tile centers near the player to verify fog alignment.
+        // Each cross sits exactly at where a fog texel center should be.
+        if (Application.isPlaying && solidTilemap != null) {
+            Vector2Int pt = WorldToTile(player.position);
+            Gizmos.color = new Color(0f, 1f, 1f, 0.6f);
+            float s = tileSize * 0.15f;
+            for (int dx = -3; dx <= 3; dx++) {
+                for (int dy = -3; dy <= 3; dy++) {
+                    Vector2Int t = new Vector2Int(pt.x + dx, pt.y + dy);
+                    if (!InBounds(t)) continue;
+                    Vector2 c = TileToWorld(t);
+                    Gizmos.DrawLine(new Vector3(c.x - s, c.y, 0), new Vector3(c.x + s, c.y, 0));
+                    Gizmos.DrawLine(new Vector3(c.x, c.y - s, 0), new Vector3(c.x, c.y + s, 0));
+                }
+            }
+        }
+
+        // Scene lights.
         SceneLightSource[] lights = UnityEngine.Object.FindObjectsByType<SceneLightSource>(FindObjectsSortMode.None);
         foreach (SceneLightSource light in lights) {
             if (light == null) continue;
             bool on = light.isActivated || light.alwaysActive;
-
-            // Inner radius.
-            Gizmos.color = on
-                ? new Color(1f, 0.8f, 0f, 0.5f)
-                : new Color(0.4f, 0.4f, 0.4f, 0.4f);
+            Gizmos.color = on ? new Color(1f, 0.8f, 0f, 0.5f) : new Color(0.4f, 0.4f, 0.4f, 0.4f);
             DrawCircle(light.transform.position, light.radius * tileSize);
-
-            // Outer radius - this is the edge that triggers activation.
-            Gizmos.color = on
-                ? new Color(1f, 0.8f, 0f, 0.2f)
-                : new Color(0.4f, 0.4f, 0.4f, 0.2f);
+            Gizmos.color = on ? new Color(1f, 0.8f, 0f, 0.2f) : new Color(0.4f, 0.4f, 0.4f, 0.2f);
             DrawCircle(light.transform.position, (light.radius + light.diffusionWidth) * tileSize);
         }
     }

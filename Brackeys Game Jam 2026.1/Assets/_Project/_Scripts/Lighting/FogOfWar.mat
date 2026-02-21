@@ -45,14 +45,14 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _BlurRadius: 1
+    - _BlurRadius: 0
     - _DebugMode: 0
     - _EnableExternalAlpha: 0
     - _ZWrite: 0
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _ExploredTint: {r: 0.05, g: 0.05, b: 0.1, a: 1}
-    - _FogWorldRect: {r: -49.75, g: -161.25, b: 101.5, a: 173.5}
+    - _FogWorldRect: {r: -50, g: -161.5, b: 101.5, a: 173.5}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
     - _UnseenColor: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
