@@ -15,7 +15,7 @@ public class PlayerStateMachineHandler : MonoBehaviour, IStateMachineContext {
 
     public string _ManagerName => GetType().Name;
 
-    // ─── Subsystem Accessors ──────────────────────────────────────────────────
+    // --- Subsystem Accessors --------------------------------------------------
 
     public SceneContainerSO SceneContainer => _playerHandler.SceneContainer;
     public PlayerPhysicsHandler Physics     => _playerHandler.Physics;
@@ -26,7 +26,7 @@ public class PlayerStateMachineHandler : MonoBehaviour, IStateMachineContext {
     public PlayerInputHandler Input         => _playerHandler.Input;
     public PlayerHandler Handler            => _playerHandler;
 
-    // ─── Initialization ───────────────────────────────────────────────────────
+    // --- Initialization -------------------------------------------------------
 
     public void Initialize(PlayerHandler playerHandler) {
         _playerHandler = playerHandler;
@@ -41,32 +41,32 @@ public class PlayerStateMachineHandler : MonoBehaviour, IStateMachineContext {
         _factory.SetState(PlayerStateFactory.PlayerStates.Airborne);
 
         if (_debugStates) {
-            Debug.Log($"[{_ManagerName}] Initialized → {_currentState?.GetType().Name}");
+            Debug.Log($"[{_ManagerName}] Initialized -> {_currentState?.GetType().Name}");
         }
     }
 
-    // ─── IStateMachineContext ─────────────────────────────────────────────────
+    // --- IStateMachineContext -------------------------------------------------
 
     public void SetState(BaseHierarchicalState state) {
         if (_debugStates && _currentState != null) {
-            Debug.Log($"[{_ManagerName}] {_currentState.GetType().Name} → {state.GetType().Name}");
+            Debug.Log($"[{_ManagerName}] {_currentState.GetType().Name} -> {state.GetType().Name}");
         }
 
         _currentState = state;
     }
 
-    // ─── State Machine Tick ───────────────────────────────────────────────────
+    // --- State Machine Tick ---------------------------------------------------
 
     public void OnUpdate()      => _currentState?.UpdateStates();
     public void OnFixedUpdate() => _currentState?.FixedUpdateStates();
 
-    // ─── Factory / State Access ───────────────────────────────────────────────
+    // --- Factory / State Access -----------------------------------------------
 
     public PlayerStateFactory GetFactory()             => _factory;
     public BaseHierarchicalState GetCurrentState()     => _currentState;
     public void ForceStateChange(PlayerStateFactory.PlayerStates state) => _factory.SetState(state);
 
-    // ─── Jump Checks ──────────────────────────────────────────────────────────
+    // --- Jump Checks ----------------------------------------------------------
 
     /// <summary>Returns true if the player has a buffered jump and is able to jump.</summary>
     public bool CheckJump() =>
@@ -78,7 +78,7 @@ public class PlayerStateMachineHandler : MonoBehaviour, IStateMachineContext {
     /// <summary>Returns true if the player's head is currently blocked by a ceiling.</summary>
     public bool CheckHeadHit() => Blackboard.IsHeadBlocked;
 
-    // ─── Movement Checks ──────────────────────────────────────────────────────
+    // --- Movement Checks ------------------------------------------------------
 
     /// <summary>Returns true if horizontal move input exceeds the move threshold.</summary>
     public bool CheckForInputMovement() =>
@@ -102,21 +102,21 @@ public class PlayerStateMachineHandler : MonoBehaviour, IStateMachineContext {
         else if (moveInput.x < -Stats.MoveThreshold) Blackboard.IsFacingRight = false;
     }
 
-    // ─── Air State Checks ─────────────────────────────────────────────────────
+    // --- Air State Checks -----------------------------------------------------
 
     /// <summary>Returns true when vertical velocity is meaningfully negative.</summary>
     public bool CheckFalling() => Blackboard.Velocity.y < -0.01f;
 
     /// <summary>
     /// Returns true when the player is near the apex of a jump.
-    /// Uses InverseLerp from initialJumpVelocity → 0 and compares against ApexThreshold.
+    /// Uses InverseLerp from initialJumpVelocity -> 0 and compares against ApexThreshold.
     /// </summary>
     public bool CheckAtApex(float initialJumpVelocity) {
         float apexPoint = Mathf.InverseLerp(initialJumpVelocity, 0f, Blackboard.Velocity.y);
         return apexPoint > Stats.ApexThreshold;
     }
 
-    // ─── Coyote Time Checks ───────────────────────────────────────────────────
+    // --- Coyote Time Checks ---------------------------------------------------
 
     /// <summary>Returns true if a coyote ground jump is valid this frame.</summary>
     public bool CheckCoyoteGroundJump() =>
@@ -131,7 +131,7 @@ public class PlayerStateMachineHandler : MonoBehaviour, IStateMachineContext {
         Blackboard.JumpBufferTimer > 0 &&
         Blackboard.CanJump;
 
-    // ─── Wall Checks ──────────────────────────────────────────────────────────
+    // --- Wall Checks ----------------------------------------------------------
 
     /// <summary>Returns true if the player is against a wall and pushing toward it.</summary>
     public bool CheckPressingAgainstWall() {
@@ -143,7 +143,7 @@ public class PlayerStateMachineHandler : MonoBehaviour, IStateMachineContext {
     public bool IsLastWallRight() => Blackboard.WallDirection > 0;
     public bool IsLastWallLeft()  => Blackboard.WallDirection < 0;
 
-    // ─── Debug Helpers ────────────────────────────────────────────────────────
+    // --- Debug Helpers --------------------------------------------------------
 
     public string GetCurrentStateName() => _currentState?.GetType().Name ?? "None";
 
@@ -154,7 +154,7 @@ public class PlayerStateMachineHandler : MonoBehaviour, IStateMachineContext {
         BaseHierarchicalState sub = _currentState.GetCurrentSubState();
 
         while (sub != null) {
-            sb.Append(" → ").Append(sub.GetType().Name);
+            sb.Append(" -> ").Append(sub.GetType().Name);
             sub = sub.GetCurrentSubState();
         }
 
