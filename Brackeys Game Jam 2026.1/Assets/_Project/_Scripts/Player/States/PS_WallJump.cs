@@ -3,7 +3,7 @@ using UnityEngine;
 /// <summary>
 /// OnWall substate: Player initiates a wall jump.
 /// Single-frame transition — applies velocity away from the wall, then switches
-/// to Airborne → WallJumping via the IsWallJumping flag.
+/// to Airborne -> WallJumping via the IsWallJumping flag.
 /// </summary>
 public class PS_WallJump : BaseHierarchicalState {
     private PlayerStateMachineHandler _sm;
@@ -31,7 +31,7 @@ public class PS_WallJump : BaseHierarchicalState {
         _sm.Blackboard.IsFacingRight = wallDir < 0; // Face away from wall
 
         if (_sm.Blackboard.debugStates)
-            Debug.Log($"[PS_WallJump] Wall {(wallDir > 0 ? "RIGHT" : "LEFT")} → " +
+            Debug.Log($"[PS_WallJump] Wall {(wallDir > 0 ? "RIGHT" : "LEFT")} -> " +
                       $"velocity ({hVel:F2}, {vVel:F2})");
 
         _sm.Animation.Play(PlayerAnimationHandler.Jump, false);

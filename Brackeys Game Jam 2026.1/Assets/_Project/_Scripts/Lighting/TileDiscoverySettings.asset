@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 141f8043e293ef24f823060b47358c65, type: 3}
+  m_Name: TileDiscoverySettings
+  m_EditorClassIdentifier: Assembly-CSharp::TileDiscoverySettings
+  entries:
+  - tile: {fileID: 11400000, guid: a83166ac4a5212e47a4ea5dcdb71e47d, type: 2}
+    exploredBrightness: 0.227
+    blocksLineOfSight: 1
+    alwaysVisible: 0
+  - tile: {fileID: 11400000, guid: 2c346f028856d1146b3c6e6173668de6, type: 2}
+    exploredBrightness: 0.253
+    blocksLineOfSight: 1
+    alwaysVisible: 0
+  - tile: {fileID: 11400000, guid: 38a5514b1013be148b83f6fc8e90db35, type: 2}
+    exploredBrightness: 0.224
+    blocksLineOfSight: 1
+    alwaysVisible: 0
+  - tile: {fileID: 11400000, guid: 388cda7c8e0645843a9eb34f8f3a2d90, type: 2}
+    exploredBrightness: 0.26
+    blocksLineOfSight: 1
+    alwaysVisible: 0
+  - tile: {fileID: 11400000, guid: db0a515318721c5428e27c4f8f2e44c7, type: 2}
+    exploredBrightness: 0.247
+    blocksLineOfSight: 1
+    alwaysVisible: 0
+  - tile: {fileID: 11400000, guid: b172cf8a13f11ac4a9d86efede4f1840, type: 2}
+    exploredBrightness: 0.25
+    blocksLineOfSight: 1
+    alwaysVisible: 0
+  - tile: {fileID: 11400000, guid: 27e06f580031d1640ab4ed097be3796b, type: 2}
+    exploredBrightness: 0.25
+    blocksLineOfSight: 1
+    alwaysVisible: 0
+  - tile: {fileID: 0}
+    exploredBrightness: 1
+    blocksLineOfSight: 1
+    alwaysVisible: 0

@@ -50,7 +50,7 @@ public class PS_Moving : BaseHierarchicalState {
 
     public override void ExitState() { }
 
-    // ─── Private ──────────────────────────────────────────────────────────────
+    // --- Private --------------------------------------------------------------
 
     private void UpdateAnimation() {
         float absVel = Mathf.Abs(_sm.Blackboard.Velocity.x);

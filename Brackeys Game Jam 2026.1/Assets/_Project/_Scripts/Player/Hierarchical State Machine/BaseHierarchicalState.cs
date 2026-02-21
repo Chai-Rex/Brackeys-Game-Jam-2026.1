@@ -20,7 +20,7 @@ public abstract class BaseHierarchicalState {
         _context = context;
     }
 
-    // ─── Abstract Interface ───────────────────────────────────────────────────
+    // --- Abstract Interface ---------------------------------------------------
 
     public abstract void EnterState();
     public abstract void InitializeSubState();
@@ -29,7 +29,7 @@ public abstract class BaseHierarchicalState {
     public abstract void CheckSwitchStates();
     public abstract void ExitState();
 
-    // ─── Update Loop ──────────────────────────────────────────────────────────
+    // --- Update Loop ----------------------------------------------------------
 
     public void UpdateStates() {
         _hasTransitionedThisFrame = false;
@@ -52,7 +52,7 @@ public abstract class BaseHierarchicalState {
         }
     }
 
-    // ─── Exit ─────────────────────────────────────────────────────────────────
+    // --- Exit -----------------------------------------------------------------
 
     public void ExitStates() {
         ExitState();
@@ -62,7 +62,7 @@ public abstract class BaseHierarchicalState {
         }
     }
 
-    // ─── State Switching ──────────────────────────────────────────────────────
+    // --- State Switching ------------------------------------------------------
 
     protected void SwitchState(BaseHierarchicalState newState) {
         _hasTransitionedThisFrame = true;
@@ -81,7 +81,7 @@ public abstract class BaseHierarchicalState {
         }
     }
 
-    // ─── Superstate / Substate Management ────────────────────────────────────
+    // --- Superstate / Substate Management ------------------------------------
 
     protected void SetSuperState(BaseHierarchicalState newSuperState) {
         _currentSuperState = newSuperState;
@@ -101,7 +101,7 @@ public abstract class BaseHierarchicalState {
         newSubState.InitializeSubState();
     }
 
-    // ─── Accessors ────────────────────────────────────────────────────────────
+    // --- Accessors ------------------------------------------------------------
 
     public BaseHierarchicalState GetCurrentSubState() => _currentSubState;
     public BaseHierarchicalState GetCurrentSuperState() => _currentSuperState;

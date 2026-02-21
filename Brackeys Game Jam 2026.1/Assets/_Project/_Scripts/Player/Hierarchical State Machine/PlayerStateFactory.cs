@@ -9,12 +9,12 @@ using UnityEngine;
 public class PlayerStateFactory : IStateFactory<PlayerStateFactory.PlayerStates> {
 
     public enum PlayerStates {
-        // ── Root States ───────────────────────────────────────────────
+        // -- Root States -----------------------------------------------
         Grounded,
         Airborne,
         OnWall,
 
-        // ── Grounded Substates ────────────────────────────────────────
+        // -- Grounded Substates ----------------------------------------
         Idling,
         Moving,
         GroundedJump,
@@ -23,7 +23,7 @@ public class PlayerStateFactory : IStateFactory<PlayerStateFactory.PlayerStates>
         GroundedTurning,
         GroundedWallPressing,
 
-        // ── Airborne Substates ────────────────────────────────────────
+        // -- Airborne Substates ----------------------------------------
         Falling,
         GroundJumping,
         AirHanging,
@@ -32,7 +32,7 @@ public class PlayerStateFactory : IStateFactory<PlayerStateFactory.PlayerStates>
         WallJumping,
         AirDodging,
 
-        // ── OnWall Substates ──────────────────────────────────────────
+        // -- OnWall Substates ------------------------------------------
         WallSliding,
         WallJump,
     }
