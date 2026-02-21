@@ -7,6 +7,7 @@
 				<WorkUnit Name="Oxygen Tank" ID="{022F35BE-CE25-4D91-8A77-BAB21BD91083}" PersistMode="Reference"/>
 				<WorkUnit Name="Cuckoo Clock" ID="{9A063BF4-7242-4F17-AE57-FC6490DD3F4D}" PersistMode="Reference"/>
 				<WorkUnit Name="Elevator" ID="{9DC15B11-0837-419C-BBB6-5F47BCD9A295}" PersistMode="Reference"/>
+				<WorkUnit Name="Drill" ID="{2AFD95FA-204C-46FF-936B-C1FE2A728032}" PersistMode="Reference"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

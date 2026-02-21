@@ -10,6 +10,7 @@
 				<WorkUnit Name="Vine" ID="{A80FAC1F-5598-46B4-A396-211E88A88EEF}" PersistMode="Reference"/>
 				<WorkUnit Name="Mosquito" ID="{9DC0BC8F-668B-42A2-81E3-9C9EC51F4841}" PersistMode="Reference"/>
 				<WorkUnit Name="Cricket" ID="{62E2888F-9678-47D7-A3B7-0BB2F85273D9}" PersistMode="Reference"/>
+				<WorkUnit Name="Cat" ID="{DE4EA31F-C4B5-4781-A782-AA842882A2A3}" PersistMode="Reference"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Containers>

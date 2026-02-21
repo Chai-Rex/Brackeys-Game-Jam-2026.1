@@ -7,6 +7,7 @@
 				<WorkUnit Name="Mosquito" ID="{13AA3B5E-E0E1-4D0B-A94D-1AA1A696DD9D}" PersistMode="Reference"/>
 				<WorkUnit Name="Cricket" ID="{CCEB8AD9-5AFF-4154-817E-D18B7C9C610B}" PersistMode="Reference"/>
 				<WorkUnit Name="Pixel Face" ID="{007AB0A8-09F8-43A3-9C89-BDE705F6A2B0}" PersistMode="Reference"/>
+				<WorkUnit Name="Cat" ID="{3E820860-2FE5-4BC6-A285-E72FB35E25A6}" PersistMode="Reference"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

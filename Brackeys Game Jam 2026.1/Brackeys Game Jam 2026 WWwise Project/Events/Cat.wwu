@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{3E820860-2FE5-4BC6-A285-E72FB35E25A6}" SchemaVersion="133" RootDocumentID="{5BB2882E-5704-470E-90AD-9DCD39A5278E}" ParentDocumentID="{5BB2882E-5704-470E-90AD-9DCD39A5278E}">
+	<Events>
+		<WorkUnit Name="Cat" ID="{3E820860-2FE5-4BC6-A285-E72FB35E25A6}" OwnerID="{5BB2882E-5704-470E-90AD-9DCD39A5278E}" PersistMode="Nested">
+			<ChildrenList>
+				<Event Name="Play_CatPurr" ID="{FB7934BC-E498-4E5D-B391-7ACD477AAB4E}">
+					<ChildrenList>
+						<Action Name="" ID="{799DA0FE-2AEC-40D4-9B75-4028CAC40167}" ShortID="745392179">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Cat Pur" ID="{ADBD753C-F0BE-4F83-81F4-7BF3700EE607}" WorkUnitID="{DE4EA31F-C4B5-4781-A782-AA842882A2A3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{849E8A1D-E3C7-4E8A-B647-5FAF8C2B77E5}" ShortID="943965953">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Cat Eat" ID="{941D87BD-CFFD-40DC-8C52-6C535E7D2823}" WorkUnitID="{DE4EA31F-C4B5-4781-A782-AA842882A2A3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Cat_Attack" ID="{3614DED3-C3AB-444F-90AE-7919A057AC9E}">
+					<ChildrenList>
+						<Action Name="" ID="{BA3F4841-29BA-4183-ACD7-8704E6C49A67}" ShortID="915466224">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Cat Purring" ID="{75DBCD2D-03AA-47C7-86AA-892555922704}" WorkUnitID="{DE4EA31F-C4B5-4781-A782-AA842882A2A3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{377889B7-AFCC-4FEC-85D1-5B91382A427B}" ShortID="534817530">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Cat Attack" ID="{0AF5899E-ACD8-4229-B5F6-229AE6F40CD4}" WorkUnitID="{DE4EA31F-C4B5-4781-A782-AA842882A2A3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Cat_Eat" ID="{3B1A179D-11E8-4B86-B58E-A86FE23D6265}">
+					<ChildrenList>
+						<Action Name="" ID="{C75D0A38-81B1-4842-8116-146DD156BD09}" ShortID="310340876">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Cat Eat" ID="{941D87BD-CFFD-40DC-8C52-6C535E7D2823}" WorkUnitID="{DE4EA31F-C4B5-4781-A782-AA842882A2A3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{6C2ABCD7-B92C-4E02-84B7-B29AE0E08125}" ShortID="841947687">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Cat Pur" ID="{ADBD753C-F0BE-4F83-81F4-7BF3700EE607}" WorkUnitID="{DE4EA31F-C4B5-4781-A782-AA842882A2A3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_Cat" ID="{C38CBDB6-046A-4CE3-8649-1BAB3F6CB355}">
+					<ChildrenList>
+						<Action Name="" ID="{C0977D1C-5C08-4FDA-BF57-3B2C88C67C88}" ShortID="128152888">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Cat Attack" ID="{0AF5899E-ACD8-4229-B5F6-229AE6F40CD4}" WorkUnitID="{DE4EA31F-C4B5-4781-A782-AA842882A2A3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{8B7656D9-F45B-4C45-A68E-A63FE5BE4DED}" ShortID="441789742">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Cat Eat" ID="{941D87BD-CFFD-40DC-8C52-6C535E7D2823}" WorkUnitID="{DE4EA31F-C4B5-4781-A782-AA842882A2A3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{92CEDBA4-7682-40F6-9859-1FFE6BAC82D4}" ShortID="846565551">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Cat Pur" ID="{ADBD753C-F0BE-4F83-81F4-7BF3700EE607}" WorkUnitID="{DE4EA31F-C4B5-4781-A782-AA842882A2A3}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

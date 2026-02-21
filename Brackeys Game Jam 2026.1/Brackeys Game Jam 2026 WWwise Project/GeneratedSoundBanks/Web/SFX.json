@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{2B4FCDD6-7034-4F03-8455-9DC46B8F8FD0}",
     "Language": "SFX",
-    "Hash": "{1EE75A58-A526-E7D4-9099-EE367D01268E}",
+    "Hash": "{8E13EE1F-037F-F08E-5E91-AC2D337C5B30}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\SFX",
     "ShortName": "SFX",
     "Path": "SFX.bnk",
@@ -46,6 +46,14 @@
       "Location": "Memory",
       "ShortName": "Clock Whir.wav",
       "CachePath": "3C/{3CE7DC90-E8F9-818D-6E2E-05BEDCAA25D6}.wem"
+     },
+     {
+      "Id": "26519841",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Slide Loop.wav",
+      "CachePath": "B0/{B0A94C45-41C6-BC6E-F9DD-11328DD98306}.wem"
      },
      {
       "Id": "29898209",
@@ -104,6 +112,14 @@
       "CachePath": "5D/{5DA74C97-3412-78AA-756C-270CDB6BC7AB}.wem"
      },
      {
+      "Id": "100236589",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Oxygen Bubble.wav",
+      "CachePath": "F4/{F4C4E6CF-2D74-BCAD-ABFA-49F1182C13B3}.wem"
+     },
+     {
       "Id": "107416009",
       "Language": "SFX",
       "Streaming": "false",
@@ -134,6 +150,14 @@
       "Location": "Memory",
       "ShortName": "Clock Rattle.wav",
       "CachePath": "0A/{0A7FC003-30B3-AE9D-E094-4E10AB73258F}.wem"
+     },
+     {
+      "Id": "126584430",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Soundly Audio\\Vegetation, Misc, Plant, Vines, Growing, Movement, Creaks, Rubbery Vines SND133890 1.wav",
+      "CachePath": "6D/{6D2D1170-0084-8E90-ACF5-69A21F445062}.wem"
      },
      {
       "Id": "138220742",
@@ -360,6 +384,14 @@
       "CachePath": "DB/{DBA8EF60-5098-4C0A-5091-4D80839BC576}.wem"
      },
      {
+      "Id": "334316350",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Cat Attack 1.wav",
+      "CachePath": "F7/{F76437E4-940D-A657-583D-04A85DC0CAA8}.wem"
+     },
+     {
       "Id": "338076203",
       "Language": "SFX",
       "Streaming": "false",
@@ -406,6 +438,14 @@
       "Location": "Memory",
       "ShortName": "Metal Walk 10.wav",
       "CachePath": "50/{5098AEB5-98C4-EB48-0A00-E914B9AF8E5D}.wem"
+     },
+     {
+      "Id": "370205602",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Soundly Audio\\Vegetation, Misc, Plant, Vines, Growing, Movement, Creaks, Rubbery Vines SND133890 1.wav",
+      "CachePath": "20/{2099A4CA-7299-BAFA-23C7-C389BDC5F68F}.wem"
      },
      {
       "Id": "370718029",
@@ -480,6 +520,14 @@
       "CachePath": "21/{21FD12BA-5653-8F6D-03AD-0D73D48CC2C1}.wem"
      },
      {
+      "Id": "401574535",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Cat Eat 5.wav",
+      "CachePath": "54/{54CDDDBB-EAF3-0611-7D08-938A8E3D490E}.wem"
+     },
+     {
       "Id": "407363137",
       "Language": "SFX",
       "Streaming": "false",
@@ -494,6 +542,14 @@
       "Location": "Memory",
       "ShortName": "Dirt Walk 9.wav",
       "CachePath": "D2/{D2BF7697-ED66-3850-25F3-D38DE7620F18}.wem"
+     },
+     {
+      "Id": "416876522",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Slide 2.wav",
+      "CachePath": "4A/{4A59C857-B782-0F92-599A-3B3550FDE31C}.wem"
      },
      {
       "Id": "417385780",
@@ -598,6 +654,22 @@
       "Location": "Memory",
       "ShortName": "Vine Pull 3.wav",
       "CachePath": "C6/{C656E360-408D-97FB-EE04-42C81006C9B2}.wem"
+     },
+     {
+      "Id": "486826102",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Cat Attack 3.wav",
+      "CachePath": "F4/{F448ECD3-0ADF-380E-7C2D-D4DA19809AED}.wem"
+     },
+     {
+      "Id": "493585596",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Slide 4.wav",
+      "CachePath": "DB/{DBD3579A-0D2D-83B4-A0AF-DE4F527BDC10}.wem"
      },
      {
       "Id": "500121526",
@@ -712,6 +784,14 @@
       "CachePath": "27/{2709864D-1C23-6351-FD6C-802EEAC482B8}.wem"
      },
      {
+      "Id": "567420354",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Cat Pur_Eat.wav",
+      "CachePath": "69/{699933AF-4998-5B6D-9C7C-06E48F0CC458}.wem"
+     },
+     {
       "Id": "570815290",
       "Language": "SFX",
       "Streaming": "false",
@@ -808,6 +888,14 @@
       "CachePath": "9F/{9FC0ADF5-09BC-D5CC-1B1C-95CF54908AB6}.wem"
      },
      {
+      "Id": "629625774",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Slide 3.wav",
+      "CachePath": "E2/{E2F02E1B-8810-E8DE-D90D-BD42A5E217A7}.wem"
+     },
+     {
       "Id": "638738910",
       "Language": "SFX",
       "Streaming": "false",
@@ -864,6 +952,14 @@
       "CachePath": "4C/{4C6193F3-3A4E-4622-635B-C7F78D66F05F}.wem"
      },
      {
+      "Id": "653262788",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Soundly Audio\\Vegetation, Misc, Plant, Vines, Growing, Movement, Creaks, Rubbery Vines SND133890 1.wav",
+      "CachePath": "C2/{C281E6EF-B2A3-A307-EECC-79EE2BE0BCB8}.wem"
+     },
+     {
       "Id": "655803969",
       "Language": "SFX",
       "Streaming": "false",
@@ -886,6 +982,14 @@
       "Location": "Memory",
       "ShortName": "Metal Land 5.wav",
       "CachePath": "E3/{E37E6452-154B-7770-D89E-4BC61DFF0517}.wem"
+     },
+     {
+      "Id": "678768400",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Cat Eat 4.wav",
+      "CachePath": "75/{75895578-A283-C1FF-4DA4-3A8ADCD0E873}.wem"
      },
      {
       "Id": "679536967",
@@ -1056,6 +1160,14 @@
       "CachePath": "12/{12C84176-D8D6-DC47-C9C5-1419FBA11E18}.wem"
      },
      {
+      "Id": "804249687",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Slide 1.wav",
+      "CachePath": "42/{42CCCE40-6A87-2813-7854-A0B75561A719}.wem"
+     },
+     {
       "Id": "821300049",
       "Language": "SFX",
       "Streaming": "false",
@@ -1070,6 +1182,14 @@
       "Location": "Memory",
       "ShortName": "Metal Run 5.wav",
       "CachePath": "C7/{C73FDF34-0BFC-A5FC-9C31-0009436D7EF0}.wem"
+     },
+     {
+      "Id": "827284494",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Cat Purring.wav",
+      "CachePath": "99/{99A20463-A093-7236-61B0-03211A04930A}.wem"
      },
      {
       "Id": "839377454",
@@ -1118,6 +1238,14 @@
       "Location": "Memory",
       "ShortName": "Glass Walk 10.wav",
       "CachePath": "0F/{0F5A0206-1A64-DECB-F91A-27BC24A9C909}.wem"
+     },
+     {
+      "Id": "866357989",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Cat Eat 3.wav",
+      "CachePath": "71/{7118975B-AA6B-4AB4-217D-6F0CB512E068}.wem"
      },
      {
       "Id": "867287046",
@@ -1312,6 +1440,14 @@
       "CachePath": "37/{371967C2-38DC-C635-FC01-956CEBF6C6F6}.wem"
      },
      {
+      "Id": "997895235",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Slide 5.wav",
+      "CachePath": "4C/{4C7B2976-0BCF-F70E-FD57-9FE262D3A09F}.wem"
+     },
+     {
       "Id": "999894426",
       "Language": "SFX",
       "Streaming": "false",
@@ -1368,6 +1504,14 @@
       "CachePath": "06/{06EC0E83-C9B6-D941-43C4-AAE35D223574}.wem"
      },
      {
+      "Id": "1029938476",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Cat Eat 2.wav",
+      "CachePath": "81/{819616A0-BA1A-220F-6A23-C0D3B0391178}.wem"
+     },
+     {
       "Id": "1033335334",
       "Language": "SFX",
       "Streaming": "false",
@@ -1408,6 +1552,22 @@
       "CachePath": "42/{4283C614-6CD9-138E-DD97-C01F6BB6EE32}.wem"
      },
      {
+      "Id": "1058210509",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Cat Attack 2.wav",
+      "CachePath": "55/{555C64D4-E10F-3419-6749-6B89E44630EF}.wem"
+     },
+     {
+      "Id": "1058221280",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Cat Eat 1.wav",
+      "CachePath": "6E/{6E97F6BA-B3E7-F537-A084-511747ED6DD8}.wem"
+     },
+     {
       "Id": "1058625293",
       "Language": "SFX",
       "Streaming": "false",
@@ -1442,11 +1602,75 @@
     ],
     "Events": [
      {
+      "Id": "2101178656",
+      "Name": "Bubble_Collect",
+      "ObjectPath": "\\Events\\Items\\Oxygen Tank\\Bubble_Collect",
+      "GUID": "{DAED48FF-2FBD-4DAB-8FE4-0853492DD518}",
+      "MaxAttenuation": "20",
+      "DurationType": "OneShot",
+      "DurationMin": "0.65",
+      "DurationMax": "0.65",
+      "MediaRefs": [
+       {
+        "Id": "100236589"
+       }
+      ]
+     },
+     {
+      "Id": "3947105714",
+      "Name": "Cat_Attack",
+      "ObjectPath": "\\Events\\Enemy\\Cat\\Cat_Attack",
+      "GUID": "{3614DED3-C3AB-444F-90AE-7919A057AC9E}",
+      "MaxAttenuation": "20",
+      "DurationType": "OneShot",
+      "DurationMin": "1",
+      "DurationMax": "1.6333333",
+      "MediaRefs": [
+       {
+        "Id": "334316350"
+       },
+       {
+        "Id": "486826102"
+       },
+       {
+        "Id": "1058210509"
+       }
+      ]
+     },
+     {
+      "Id": "3455062928",
+      "Name": "Cat_Eat",
+      "ObjectPath": "\\Events\\Enemy\\Cat\\Cat_Eat",
+      "GUID": "{3B1A179D-11E8-4B86-B58E-A86FE23D6265}",
+      "MaxAttenuation": "20",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "401574535"
+       },
+       {
+        "Id": "567420354"
+       },
+       {
+        "Id": "678768400"
+       },
+       {
+        "Id": "866357989"
+       },
+       {
+        "Id": "1029938476"
+       },
+       {
+        "Id": "1058221280"
+       }
+      ]
+     },
+     {
       "Id": "2563575728",
       "Name": "Clock_Close",
       "ObjectPath": "\\Events\\Items\\Cuckoo Clock\\Clock_Close",
       "GUID": "{DE061B01-AD3B-4E81-8DF6-47AE28EF9844}",
-      "MaxAttenuation": "50",
+      "MaxAttenuation": "20",
       "DurationType": "OneShot",
       "DurationMin": "1",
       "DurationMax": "1",
@@ -1461,7 +1685,7 @@
       "Name": "Clock_Open",
       "ObjectPath": "\\Events\\Items\\Cuckoo Clock\\Clock_Open",
       "GUID": "{BDAC2A93-FDEE-48A9-8D9C-0E8B4850AFC1}",
-      "MaxAttenuation": "50",
+      "MaxAttenuation": "20",
       "DurationType": "OneShot",
       "DurationMin": "9.216666",
       "DurationMax": "9.216666",
@@ -1476,7 +1700,7 @@
       "Name": "Clock_Tick",
       "ObjectPath": "\\Events\\Items\\Cuckoo Clock\\Clock_Tick",
       "GUID": "{A63A5CCB-8CBE-4B71-A447-C206091AFB43}",
-      "MaxAttenuation": "50",
+      "MaxAttenuation": "20",
       "DurationType": "Infinite",
       "MediaRefs": [
        {
@@ -1495,6 +1719,7 @@
       "Name": "Cricket_Jump",
       "ObjectPath": "\\Events\\Enemy\\Cricket\\Cricket_Jump",
       "GUID": "{0FE70C19-896A-4938-88C5-2B77CDD3A42E}",
+      "MaxAttenuation": "20",
       "DurationType": "OneShot",
       "DurationMin": "0.6666667",
       "DurationMax": "0.6666667",
@@ -1509,6 +1734,7 @@
       "Name": "Cricket_Land",
       "ObjectPath": "\\Events\\Enemy\\Cricket\\Cricket_Land",
       "GUID": "{A872FAE8-06FF-4387-8025-B342A87F5D37}",
+      "MaxAttenuation": "20",
       "DurationType": "OneShot",
       "DurationMin": "0.7",
       "DurationMax": "0.7",
@@ -1523,7 +1749,7 @@
       "Name": "Elevator_Arrive",
       "ObjectPath": "\\Events\\Items\\Elevator\\Elevator_Arrive",
       "GUID": "{C3F7CF04-8743-4BA2-9873-003CEC1F566B}",
-      "MaxAttenuation": "50",
+      "MaxAttenuation": "20",
       "DurationType": "OneShot",
       "DurationMin": "3.9",
       "DurationMax": "3.9",
@@ -1538,7 +1764,7 @@
       "Name": "Elevator_Doors_Close",
       "ObjectPath": "\\Events\\Items\\Elevator\\Elevator_Doors_Close",
       "GUID": "{9807A9EE-D888-4FE7-B865-F99256DAB524}",
-      "MaxAttenuation": "50",
+      "MaxAttenuation": "20",
       "DurationType": "OneShot",
       "DurationMin": "2.1833334",
       "DurationMax": "2.1833334",
@@ -1553,7 +1779,7 @@
       "Name": "Elevator_Moving",
       "ObjectPath": "\\Events\\Items\\Elevator\\Elevator_Moving",
       "GUID": "{CE51E119-D4E0-4B8D-8A2A-5E327EB8F1F8}",
-      "MaxAttenuation": "50",
+      "MaxAttenuation": "20",
       "DurationType": "OneShot",
       "DurationMin": "7.9",
       "DurationMax": "7.9",
@@ -1568,6 +1794,7 @@
       "Name": "FloorVine_Eating",
       "ObjectPath": "\\Events\\Enemy\\Vine\\FloorVine_Eating",
       "GUID": "{99114310-2CC4-4090-A08D-C16D25BA7F11}",
+      "MaxAttenuation": "20",
       "DurationType": "OneShot",
       "DurationMin": "5.4166665",
       "DurationMax": "5.4166665",
@@ -1581,11 +1808,24 @@
       ]
      },
      {
+      "Id": "1797954987",
+      "Name": "Play_CatPurr",
+      "ObjectPath": "\\Events\\Enemy\\Cat\\Play_CatPurr",
+      "GUID": "{FB7934BC-E498-4E5D-B391-7ACD477AAB4E}",
+      "MaxAttenuation": "20",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "827284494"
+       }
+      ]
+     },
+     {
       "Id": "1222141441",
       "Name": "Play_Emotion",
       "ObjectPath": "\\Events\\Enemy\\Pixel Face\\Play_Emotion",
       "GUID": "{DD1DD1E9-C390-41EC-B2AE-4C611F4791F6}",
-      "MaxAttenuation": "50",
+      "MaxAttenuation": "20",
       "DurationType": "OneShot",
       "DurationMin": "0.39821246",
       "DurationMax": "0.7185934",
@@ -1609,6 +1849,7 @@
       "Name": "Play_Mosquito",
       "ObjectPath": "\\Events\\Enemy\\Mosquito\\Play_Mosquito",
       "GUID": "{2AB893C6-4C6B-48C4-98F9-E93C2272117A}",
+      "MaxAttenuation": "20",
       "DurationType": "Infinite",
       "MediaRefs": [
        {
@@ -2329,6 +2570,55 @@
       ]
      },
      {
+      "Id": "2537560909",
+      "Name": "Player_Sliding",
+      "ObjectPath": "\\Events\\Movement\\Player_Sliding",
+      "GUID": "{DE9FC441-9055-4E68-B302-E554B179F6FD}",
+      "DurationType": "OneShot",
+      "DurationMin": "9.5",
+      "DurationMax": "9.5",
+      "MediaRefs": [
+       {
+        "Id": "26519841"
+       },
+       {
+        "Id": "416876522"
+       },
+       {
+        "Id": "493585596"
+       },
+       {
+        "Id": "629625774"
+       },
+       {
+        "Id": "804249687"
+       },
+       {
+        "Id": "997895235"
+       }
+      ]
+     },
+     {
+      "Id": "704609316",
+      "Name": "Stop_Cat",
+      "ObjectPath": "\\Events\\Enemy\\Cat\\Stop_Cat",
+      "GUID": "{C38CBDB6-046A-4CE3-8649-1BAB3F6CB355}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "761271875",
+      "Name": "Stop_PlayerSliding",
+      "ObjectPath": "\\Events\\Movement\\Stop_PlayerSliding",
+      "GUID": "{11BDE0F9-B686-497D-9751-7A0408131914}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
       "Id": "3580624671",
       "Name": "Tank_Fill",
       "ObjectPath": "\\Events\\Items\\Oxygen Tank\\Tank_Fill",
@@ -2357,6 +2647,7 @@
       "Name": "Umbrella_Close",
       "ObjectPath": "\\Events\\Items\\Umbrella\\Umbrella_Close",
       "GUID": "{27AE33D3-8BDD-4488-9DEB-4DDAF14BCE28}",
+      "MaxAttenuation": "20",
       "DurationType": "OneShot",
       "DurationMin": "0.45241976",
       "DurationMax": "0.45241976",
@@ -2371,6 +2662,7 @@
       "Name": "Umbrella_Open",
       "ObjectPath": "\\Events\\Items\\Umbrella\\Umbrella_Open",
       "GUID": "{BD1E4134-6717-499D-8F7F-8F16622F38FC}",
+      "MaxAttenuation": "20",
       "DurationType": "OneShot",
       "DurationMin": "0.6028019",
       "DurationMax": "0.6028019",
@@ -2391,6 +2683,7 @@
       "Name": "Vine_Catch",
       "ObjectPath": "\\Events\\Enemy\\Vine\\Vine_Catch",
       "GUID": "{E55BEC49-8120-4EEF-8440-E819B650F9F0}",
+      "MaxAttenuation": "20",
       "DurationType": "Infinite",
       "MediaRefs": [
        {
@@ -2424,6 +2717,7 @@
       "Name": "Vine_Eating",
       "ObjectPath": "\\Events\\Enemy\\Vine\\Vine_Eating",
       "GUID": "{12001EBC-3F44-4627-A43D-699A0F9E70F9}",
+      "MaxAttenuation": "20",
       "DurationType": "Infinite",
       "MediaRefs": [
        {
@@ -2436,6 +2730,7 @@
       "Name": "Vine_Hit",
       "ObjectPath": "\\Events\\Enemy\\Vine\\Vine_Hit",
       "GUID": "{AF7CE75B-1933-47DF-9C2B-91ECACD9B248}",
+      "MaxAttenuation": "20",
       "DurationType": "OneShot",
       "DurationMin": "0.27357164",
       "DurationMax": "0.44555625",
@@ -2456,12 +2751,32 @@
       "Name": "Vine_LastHit",
       "ObjectPath": "\\Events\\Enemy\\Vine\\Vine_LastHit",
       "GUID": "{F1A09195-2D22-4971-84AD-4D036EF67649}",
+      "MaxAttenuation": "20",
       "DurationType": "OneShot",
       "DurationMin": "1.1166667",
       "DurationMax": "1.1166667",
       "MediaRefs": [
        {
         "Id": "511758148"
+       }
+      ]
+     },
+     {
+      "Id": "1476808986",
+      "Name": "Vine_Regrow",
+      "ObjectPath": "\\Events\\Enemy\\Vine\\Vine_Regrow",
+      "GUID": "{515482E9-5338-41EA-A1AB-EAA767102FA1}",
+      "MaxAttenuation": "20",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "126584430"
+       },
+       {
+        "Id": "370205602"
+       },
+       {
+        "Id": "653262788"
        }
       ]
      },
@@ -2477,6 +2792,12 @@
      }
     ],
     "GameParameters": [
+     {
+      "Id": "2379434306",
+      "Name": "Cricket_Speed",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Enemy\\Cricket\\Cricket_Speed",
+      "GUID": "{B10B78B6-B622-4CAD-BA11-FB5FB6453643}"
+     },
      {
       "Id": "2763939063",
       "Name": "Pull_Tension",
@@ -2552,6 +2873,6 @@
     ]
    }
   ],
-  "FileHash": "{9C8A1AF2-2F3A-85A9-1421-ABBDCEA1357F}"
+  "FileHash": "{7A2DD3E7-AC7A-5402-62AE-6172341A4896}"
  }
 }

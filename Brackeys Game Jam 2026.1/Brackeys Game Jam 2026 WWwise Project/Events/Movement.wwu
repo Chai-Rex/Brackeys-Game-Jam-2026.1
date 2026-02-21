@@ -50,6 +50,31 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Player_Sliding" ID="{DE9FC441-9055-4E68-B302-E554B179F6FD}">
+					<ChildrenList>
+						<Action Name="" ID="{FE3F0DA7-2E06-4600-8DD6-4B26DF98E737}" ShortID="319348492">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Slide" ID="{4B43142F-96B7-4270-8719-5D6A873472A6}" WorkUnitID="{3ECFDC21-BC11-4FE3-954C-F43EAD4EBE72}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_PlayerSliding" ID="{11BDE0F9-B686-497D-9751-7A0408131914}">
+					<ChildrenList>
+						<Action Name="" ID="{3A96987E-444F-439F-9AE2-22E332C5461B}" ShortID="623611228">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Slide" ID="{4B43142F-96B7-4270-8719-5D6A873472A6}" WorkUnitID="{3ECFDC21-BC11-4FE3-954C-F43EAD4EBE72}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

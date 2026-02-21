@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{2AFD95FA-204C-46FF-936B-C1FE2A728032}" SchemaVersion="133" RootDocumentID="{AF08D2E5-B87B-40C5-8E32-6F0E8F795133}" ParentDocumentID="{AF08D2E5-B87B-40C5-8E32-6F0E8F795133}">
+	<Events>
+		<WorkUnit Name="Drill" ID="{2AFD95FA-204C-46FF-936B-C1FE2A728032}" OwnerID="{AF08D2E5-B87B-40C5-8E32-6F0E8F795133}" PersistMode="Nested">
+			<ChildrenList>
+				<Event Name="Block_Hit" ID="{2643AC9C-70CF-4FB1-8DE7-A714C946EFCE}">
+					<ChildrenList>
+						<Action Name="" ID="{0A7E5518-B613-49C9-9D5D-0E8C5B01852E}" ShortID="21152932">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Block Crack" ID="{8C6F21AE-1143-496D-8634-D227D91B4B28}" WorkUnitID="{3ECFDC21-BC11-4FE3-954C-F43EAD4EBE72}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Block_Break" ID="{558870C0-E5CE-46E7-87E8-45ADC0BB145F}">
+					<ChildrenList>
+						<Action Name="" ID="{BE348200-A1D4-42FB-872F-3F7012FC2565}" ShortID="339234535">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Block Break" ID="{749AE720-2145-498D-8D5B-6932EF98B565}" WorkUnitID="{3ECFDC21-BC11-4FE3-954C-F43EAD4EBE72}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

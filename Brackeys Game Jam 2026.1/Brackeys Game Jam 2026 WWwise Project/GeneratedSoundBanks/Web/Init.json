@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{D92F2DD0-2EFB-D41A-2260-522B901464A6}",
+    "Hash": "{23F5C90B-01F4-F9A9-3165-BB7516B38C8B}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -124,6 +124,12 @@
       "Name": "Instrument_FA_SSGrain",
       "ObjectPath": "\\Game Parameters\\Factory Soundseed Grain\\Instrument_FA_SSGrain",
       "GUID": "{6279AF44-C082-4608-981E-9A63D1EE7555}"
+     },
+     {
+      "Id": "2379434306",
+      "Name": "Cricket_Speed",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Enemy\\Cricket\\Cricket_Speed",
+      "GUID": "{B10B78B6-B622-4CAD-BA11-FB5FB6453643}"
      },
      {
       "Id": "2428833394",
@@ -737,6 +743,6 @@
     ]
    }
   ],
-  "FileHash": "{8F09F2CF-3F29-A619-A8AD-B2096D25B4F0}"
+  "FileHash": "{B5C17D52-CCB3-7EAC-09B9-E54ABA7D6D0C}"
  }
 }

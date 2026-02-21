@@ -5,6 +5,7 @@
 			<ChildrenList>
 				<WorkUnit Name="VIne" ID="{764C261B-C567-4CE0-B93D-123AD4FC1CB3}" PersistMode="Reference"/>
 				<WorkUnit Name="Mosquito" ID="{4C60F7ED-E134-441E-8642-BA4CFEA074BC}" PersistMode="Reference"/>
+				<WorkUnit Name="Cricket" ID="{57763164-EB38-4BF5-BC07-BDDAB518FB21}" PersistMode="Reference"/>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>

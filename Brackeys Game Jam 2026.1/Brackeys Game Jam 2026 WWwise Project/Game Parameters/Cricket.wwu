@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{57763164-EB38-4BF5-BC07-BDDAB518FB21}" SchemaVersion="133" RootDocumentID="{BB83B9EE-E870-43DF-9B03-09E650C10305}" ParentDocumentID="{1104F235-17E4-4EF6-9D1F-E4260C2ECEB3}">
+	<GameParameters>
+		<WorkUnit Name="Cricket" ID="{57763164-EB38-4BF5-BC07-BDDAB518FB21}" OwnerID="{1104F235-17E4-4EF6-9D1F-E4260C2ECEB3}" PersistMode="Nested">
+			<ChildrenList>
+				<GameParameter Name="Cricket_Speed" ID="{B10B78B6-B622-4CAD-BA11-FB5FB6453643}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+						<Property Name="Max" Type="Real64" Value="1"/>
+					</PropertyList>
+				</GameParameter>
+			</ChildrenList>
+		</WorkUnit>
+	</GameParameters>
+</WwiseDocument>

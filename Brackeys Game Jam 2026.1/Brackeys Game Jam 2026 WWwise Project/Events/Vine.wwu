@@ -19,6 +19,28 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
+						<Action Name="" ID="{362010D9-530F-4EC8-A6B9-8B2A96869E0D}" ShortID="9258321">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Vine Capture" ID="{27D0573A-9C9C-4B66-A37B-B986430C829F}" WorkUnitID="{A80FAC1F-5598-46B4-A396-211E88A88EEF}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{D6849657-14F0-41A5-8B55-09A695E4CB8F}" ShortID="465262624">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Vine Pulling" ID="{77EC9096-A8F1-4E95-947E-F39E499051FD}" WorkUnitID="{A80FAC1F-5598-46B4-A396-211E88A88EEF}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 					</ChildrenList>
 				</Event>
 				<Event Name="Vine_LastHit" ID="{F1A09195-2D22-4971-84AD-4D036EF67649}">
@@ -98,6 +120,7 @@
 						<Action Name="" ID="{195902E1-302C-424A-946C-A7EE2B166B0B}" ShortID="458059342">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -108,6 +131,7 @@
 						<Action Name="" ID="{D7698DF1-58F4-4BD9-833E-F74EED543C63}" ShortID="270247707">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -118,10 +142,42 @@
 						<Action Name="" ID="{DFE25754-5336-4571-966E-0CAC2B12059D}" ShortID="58610701">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Vine Pulling" ID="{77EC9096-A8F1-4E95-947E-F39E499051FD}" WorkUnitID="{A80FAC1F-5598-46B4-A396-211E88A88EEF}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{AAD4DF2B-1618-41D7-BA90-E995E5074A72}" ShortID="455310009">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Vine Regrow" ID="{4388B5CC-DD69-4334-A6AE-07920EF0CC6A}" WorkUnitID="{A80FAC1F-5598-46B4-A396-211E88A88EEF}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Vine_Regrow" ID="{515482E9-5338-41EA-A1AB-EAA767102FA1}">
+					<ChildrenList>
+						<Action Name="" ID="{9048626F-6BFA-45CA-A9E0-626570273997}" ShortID="322919636">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Vine Eating" ID="{1CD35A9E-9B36-46B9-8096-0E565065CEBB}" WorkUnitID="{A80FAC1F-5598-46B4-A396-211E88A88EEF}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{89A32A21-89F7-4B2D-8999-31F2D6063D1F}" ShortID="987922719">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Vine Regrow" ID="{4388B5CC-DD69-4334-A6AE-07920EF0CC6A}" WorkUnitID="{A80FAC1F-5598-46B4-A396-211E88A88EEF}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

@@ -29,6 +29,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Bubble_Collect" ID="{DAED48FF-2FBD-4DAB-8FE4-0853492DD518}">
+					<ChildrenList>
+						<Action Name="" ID="{FB7E9DBA-0100-4B6B-89F4-C710747A9DBD}" ShortID="322461558">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Oxygen Bubble" ID="{1DB410AC-EAB1-4788-BFC8-E8BD6E98A840}" WorkUnitID="{11C41816-BB81-4D5E-AB01-A01C8800C032}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
