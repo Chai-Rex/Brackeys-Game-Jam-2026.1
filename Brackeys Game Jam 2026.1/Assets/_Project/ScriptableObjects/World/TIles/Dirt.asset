@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TileData
   tileName: Dirt Rule Tiles
   isDestructible: 1
-  durability: 5
+  durability: 1
   physicalMaterial: {fileID: 6200000, guid: 6c6e43eb2f16b52439b5e652db58975a, type: 2}

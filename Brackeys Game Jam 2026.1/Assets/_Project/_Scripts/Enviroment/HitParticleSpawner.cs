@@ -10,6 +10,6 @@ public class HitParticleSpawner : MonoBehaviour
         ParticleSystemRenderer particleRenderer = _ParticlePrefab.transform.GetChild(0).GetComponent<ParticleSystemRenderer>();
         particleMaterial.mainTexture = tileSprite.texture;
         particleRenderer.material = particleMaterial;
-        Instantiate(_ParticlePrefab, new Vector3(cellPosition.x + 0.5f, cellPosition.y + 0.5f, 0f), Quaternion.identity);
+        Instantiate(_ParticlePrefab, new Vector3(cellPosition.x + 0f, cellPosition.y + 0f, 0f), Quaternion.identity);
     }
 }
