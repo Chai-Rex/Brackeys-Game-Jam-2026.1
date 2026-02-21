@@ -65,5 +65,8 @@ public enum SkillUpgradeEnum
 
     // Abilities
     DodgingCooldown,
-    DodgingDistance
+    DodgingDistance,
+    
+    //Drill
+    DrillDurationNeeded
 }

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Tilemaps;
@@ -182,4 +183,23 @@ public class DrillHandler : MonoBehaviour
         return Vector3.zero;
     }
 
+    
+    private void Awake()
+    {
+        SkillTreeNode.upgradeDrill += UpgradeDrill;
+    }
+    private void OnDestroy()
+    {
+        SkillTreeNode.upgradeDrill -= UpgradeDrill;
+    }
+    
+    private void UpgradeDrill(SkillUpgradeSO obj)
+    {
+        //Upgrade Amount here is a positive value that is used to reduce the time needed to break blocks
+        float durationNeededReduction = obj.SkillUpgrades[0].UpgradeAmount;
+        if (drillDelay - durationNeededReduction > 0)
+        {
+            drillDelay -= obj.SkillUpgrades[0].UpgradeAmount;
+        }
+    }
 }

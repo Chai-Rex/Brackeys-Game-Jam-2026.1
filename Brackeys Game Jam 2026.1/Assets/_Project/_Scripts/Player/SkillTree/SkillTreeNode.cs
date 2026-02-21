@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using JetBrains.Annotations;
 using TMPro;
 using UnityEngine;
@@ -65,22 +66,35 @@ public class SkillTreeNode : MonoBehaviour
             ActivateUpgrade();
     }
 
-    public static event Action<SkillUpgradeSO> upgradeActivation;
+    public static event Action<SkillUpgradeSO> upgradeActivation, upgradeDrill;
     private void ActivateUpgrade()
     {
         if(activated)return;
         activated = true;
-        
-        
+
+        //check if the scriptable object has the drill upgrade
+        bool hasDrillUpgrade 
+            = skillUpgrade.SkillUpgrades.Any
+                (u => u.SkillUpgradeEnum == SkillUpgradeEnum.DrillDurationNeeded);
+
         //Send signal
-        upgradeActivation?.Invoke(skillUpgrade);
+        if (hasDrillUpgrade)
+        {
+            upgradeDrill?.Invoke(skillUpgrade);
+        }
+        else
+        {
+            upgradeActivation?.Invoke(skillUpgrade);
+        }
         //
         
         ChangeButtonColor(Color.cyan);
         CheckUnlocks();
     }
-    
 
+
+    #region Editor Functions
+    
     public void SpawnNextNode()
     {
 #if UNITY_EDITOR
@@ -130,4 +144,5 @@ public class SkillTreeNode : MonoBehaviour
 #endif
     }
 
+    #endregion
 }
