@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class LavaStartTrigger : MonoBehaviour {
     [SerializeField] private RisingLava _lava;
+    [SerializeField] private HeightWinCondition _winCondition;
     [SerializeField] private LayerMask _triggerLayers;
     [SerializeField] private bool _triggerOnce = true;
 
@@ -11,11 +12,12 @@ public class LavaStartTrigger : MonoBehaviour {
         if (_hasTriggered && _triggerOnce)
             return;
 
-        // Check if object's layer is inside the mask
         if (((1 << other.gameObject.layer) & _triggerLayers) == 0)
             return;
 
         _lava.StartLavaRise();
+        _winCondition.ActivateWinCondition();
+
         _hasTriggered = true;
     }
 }
