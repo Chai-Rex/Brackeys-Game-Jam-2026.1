@@ -11,6 +11,9 @@ public class UIGamePlayHandler : MonoBehaviour {
     [SerializeField] private HUDCanvas _iHUDCanvas;
     [SerializeField] private CreditsCanvas _iCreditsCanvas;
     [SerializeField] private VideoCanvas _iVideoCanvas;
+    [SerializeField] private DeathCanvas _iDeathCanvas;
+    [SerializeField] private TimeCanvas _iTimeCanvas;
+
 
     [Header("Video play")]
     [SerializeField] private bool _iPlayVideoOnStart = false;
@@ -50,6 +53,8 @@ public class UIGamePlayHandler : MonoBehaviour {
         _iPauseCanvas.gameObject.SetActive(true);
         _inputManager.SetUIActionMap();
 
+        _iTimeCanvas.PauseTimer();
+
         _gameCommandsManager.PauseGame();
     }
 
@@ -65,6 +70,8 @@ public class UIGamePlayHandler : MonoBehaviour {
         _iPauseCanvas.gameObject.SetActive(false);
         _inputManager.SetPlayerActionMap();
 
+        _iTimeCanvas.ResumeTimer();
+
         _gameCommandsManager.ResumeGame();
     }
 
@@ -75,6 +82,8 @@ public class UIGamePlayHandler : MonoBehaviour {
         _iHUDCanvas.gameObject.SetActive(false);
         _iPauseCanvas.gameObject.SetActive(false);
         _iCreditsCanvas.gameObject.SetActive(false);
+        _iDeathCanvas.gameObject.SetActive(false);
+        _iTimeCanvas.gameObject.SetActive(false);
 
         _isVideoPlaying = true;
 
@@ -89,6 +98,10 @@ public class UIGamePlayHandler : MonoBehaviour {
         _iHUDCanvas.gameObject.SetActive(true);
         _iPauseCanvas.gameObject.SetActive(false);
         _iCreditsCanvas.gameObject.SetActive(false);
+        _iDeathCanvas.gameObject.SetActive(false);
+        _iTimeCanvas.gameObject.SetActive(true);
+
+        _iTimeCanvas.StartTimer();
 
         _inputManager.SetPlayerActionMap();
 

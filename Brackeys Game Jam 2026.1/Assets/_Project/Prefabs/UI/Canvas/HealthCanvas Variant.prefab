@@ -222,13 +222,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: TemperatureSlider
       objectReference: {fileID: 0}
+    - target: {fileID: 341279614160483661, guid: 27d4e66000b74564ea65e42013a8e3b9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1055104831890254595, guid: 27d4e66000b74564ea65e42013a8e3b9, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1055104831890254595, guid: 27d4e66000b74564ea65e42013a8e3b9, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1055104831890254595, guid: 27d4e66000b74564ea65e42013a8e3b9, type: 3}
       propertyPath: m_AnchorMin.x

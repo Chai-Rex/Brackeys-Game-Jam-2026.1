@@ -3,15 +3,37 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class EyesCanvas : MonoBehaviour {
+public class DeathCanvas : MonoBehaviour {
 
+    [Header("References")]
+    [SerializeField] private SceneContainerSO _sceneContainer;
+
+    [Header("Animation")]
+    [SerializeField] private Image _iUpperImage;
+    [SerializeField] private Image _iLowerImage;
+    [SerializeField] private float _iFillSpeed = 1;
+
+    [Header("Death Reason")]
     [SerializeField] private TMP_Text _iDeathText;
 
-    [SerializeField] private Image _iUpperImage;
+    [Header("Stats")]
+    [SerializeField] private TMP_Text _iTime;
+    [SerializeField] private TMP_Text _iBlocksBroken;
+    [SerializeField] private TMP_Text _iDistanceTraveled;
 
-    [SerializeField] private Image _iLowerImage;
+    [Header("Restart")]
+    [SerializeField] private string _iLevelToRestart = "GameplayScene";
+    [SerializeField] private Button _iRestartButton;
 
-    [SerializeField] private float _iFillSpeed = 1;
+
+    private PlayerManager _playerManager;
+    private GameCommandsManager _gameCommandsManager;
+
+    private void Start() {
+        _playerManager = _sceneContainer.GetManager<PlayerManager>();
+        _gameCommandsManager = _sceneContainer.GetManager<GameCommandsManager>();
+        _iRestartButton.onClick.AddListener(RestartLevel);
+    }
 
     public void SetCauseOfDeathText(string i_causeOfDeath) {
         _iDeathText.gameObject.SetActive(true);
@@ -43,6 +65,15 @@ public class EyesCanvas : MonoBehaviour {
             await Awaitable.NextFrameAsync();
         }
 
+    }
+
+
+    public void SetStats() {
+
+    }
+
+    public void RestartLevel() {
+        _gameCommandsManager.LoadLevel(_iLevelToRestart);
     }
 
 }
