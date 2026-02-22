@@ -141,7 +141,7 @@ public class DrillHandler : MonoBehaviour
 
     private void DestroyTile(Tilemap tilemap, TileData tileData, Vector3Int cellPosition)
     {
-        tilemap.GetComponent<HitParticleSpawner>().SpawnParticles(tilemap.GetSprite(cellPosition), cellPosition);
+        tilemap.GetComponent<HitParticleSpawner>().SpawnParticles(tilemap.GetSprite(cellPosition), tilemap.GetCellCenterWorld(cellPosition));
         tilemap.SetTile(cellPosition, null);
         if (fogOfWarManager) { fogOfWarManager.OnTileBroken(cellPosition); }
         //Debug.Log($"{cellPosition} destroyed");
