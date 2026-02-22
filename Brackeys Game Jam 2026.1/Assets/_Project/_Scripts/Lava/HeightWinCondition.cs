@@ -14,7 +14,7 @@ public class HeightWinCondition : MonoBehaviour {
     }
     
     private IEnumerator WinConditionRoutine() {
-        while (_player.position.y >= _winHeight) {
+        while (_player.position.y < _winHeight) {
             yield return null;
         }
         TriggerWin();

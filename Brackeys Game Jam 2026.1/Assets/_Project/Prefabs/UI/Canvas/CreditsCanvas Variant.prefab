@@ -4014,7 +4014,7 @@ MonoBehaviour:
   content: {fileID: 2221566552260280260}
   scrollSpeed: 20
   _iDeathsText: {fileID: 4281571942999039188}
-  _sceneContainer: {fileID: 0}
+  _sceneContainer: {fileID: 11400000, guid: 65d76e9f161e8bb4f886798d08eb0b44, type: 2}
 --- !u!1001 &5348783856321966531
 PrefabInstance:
   m_ObjectHideFlags: 0

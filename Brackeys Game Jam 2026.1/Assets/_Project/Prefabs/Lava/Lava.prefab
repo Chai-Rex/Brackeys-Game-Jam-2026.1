@@ -141,6 +141,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RisingLava
   _player: {fileID: 0}
+  _uiGamePlayHandler: {fileID: 0}
   _baseRiseSpeed: 5
   _pressureRange: 5
   _maxCatchupMultiplier: 6
@@ -248,7 +249,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HeightWinCondition
   _player: {fileID: 0}
-  _winHeight: 10
+  _winHeight: 9
+  _uiGamePlayHandler: {fileID: 0}
 --- !u!1 &4281970147606386793
 GameObject:
   m_ObjectHideFlags: 0
@@ -331,7 +333,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 3625043607559282579, guid: 19fb86013d8c24d6cb8410c0aadf30fa, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 1, b: 0.8638129, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
