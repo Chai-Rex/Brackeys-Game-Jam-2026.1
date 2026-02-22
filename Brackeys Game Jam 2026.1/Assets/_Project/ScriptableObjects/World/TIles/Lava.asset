@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: Lava
   m_EditorClassIdentifier: Assembly-CSharp::TileData
   tileName: Lava Rule Tiles
-  isDestructible: 0
+  isDestructible: 1
   durability: 2
-  pointValue: 3
   physicalMaterial: {fileID: 6200000, guid: 9e0a2d3db30e7a545805755ab6d0aeb0, type: 2}

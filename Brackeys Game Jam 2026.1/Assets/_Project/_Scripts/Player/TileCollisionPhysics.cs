@@ -11,6 +11,7 @@ private void OnTriggerEnter2D(Collision2D other)
 {
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 if (other.CompareTag("Ground"))
 {
     Vector3Int cellPosition = tilemap.WorldToCell(other.transform.position);
@@ -34,6 +35,12 @@ if (other.CompareTag("Ground"))
     {
         if (other.transform.CompareTag("Ground"))
         {
+=======
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.transform.CompareTag("Ground"))
+        {
+>>>>>>> Stashed changes
             Vector3Int cellPosition = tilemap.WorldToCell(other.contacts[0].point);
             Debug.Log($"Collided with tile at Position: {other.transform.position}, Cell Position: {cellPosition}");
             if(tilemap.GetTile(cellPosition) != null)
@@ -55,6 +62,9 @@ if (other.CompareTag("Ground"))
                 }
             }
         }
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     }
 }

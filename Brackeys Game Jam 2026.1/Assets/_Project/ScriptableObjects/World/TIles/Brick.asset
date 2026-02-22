@@ -15,5 +15,4 @@ MonoBehaviour:
   tileName: Brick Rule Tiles
   isDestructible: 1
   durability: 5
-  pointValue: 2
   physicalMaterial: {fileID: 0}

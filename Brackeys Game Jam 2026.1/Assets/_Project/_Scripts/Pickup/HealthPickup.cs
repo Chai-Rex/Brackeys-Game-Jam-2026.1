@@ -16,13 +16,11 @@ public class HealthPickup : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log($"HealthPickup collided with {other.name}");
         if (other.CompareTag("Player"))
         {
-            Health playerHealth = other.transform.parent.GetComponent<Health>();
+            Health playerHealth = other.GetComponent<Health>();
             if (playerHealth != null)
             {
-                Debug.Log($"HealthPickup picked up by {other.transform.parent.name}");
                 OnPickup(playerHealth);
             }
         }
