@@ -52,7 +52,7 @@ Material:
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _ExploredTint: {r: 0.05, g: 0.05, b: 0.1, a: 1}
-    - _FogWorldRect: {r: -21, g: -383.5, b: 41, a: 405}
+    - _FogWorldRect: {r: -21, g: -383.5, b: 41, a: 391.5}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
     - _UnseenColor: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
