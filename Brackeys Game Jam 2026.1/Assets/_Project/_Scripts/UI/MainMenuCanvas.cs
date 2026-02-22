@@ -6,7 +6,6 @@ public class MainMenuCanvas : MonoBehaviour {
 
     [Header("References")]
     [SerializeField] private SceneContainerSO _iSceneContainer;
-    [SerializeField] private SoundManager _iSoundManager;
     [SerializeField] private SaveManager _iSaveManager;
     [SerializeField] private GameCommandsManager _iGameCommandsManager;
 
@@ -20,12 +19,10 @@ public class MainMenuCanvas : MonoBehaviour {
 
     private SaveUISettingsSO _settings;
 
-    const string MIXER_MASTER = "MasterVolume";
 
     private void Start() {
 
 
-        _iSoundManager = _iSceneContainer.GetManager<SoundManager>();
         _iGameCommandsManager = _iSceneContainer.GetManager<GameCommandsManager>();
         //_iSaveManager = _iSceneContainer.GetManager<SaveManager>();
 
@@ -34,7 +31,7 @@ public class MainMenuCanvas : MonoBehaviour {
         _iMasterVolumeSlider.value = _settings.MasterVolume;
 
         // Slider
-        _iMasterVolumeSlider.onValueChanged.AddListener((float value) => { _settings.MasterVolume = value; _iSoundManager.SetMixerFloat(MIXER_MASTER, value); });
+        _iMasterVolumeSlider.onValueChanged.AddListener((float value) => { _settings.MasterVolume = value; });
 
         // Buttons
         _iStartButton.onClick.AddListener(StartGame);

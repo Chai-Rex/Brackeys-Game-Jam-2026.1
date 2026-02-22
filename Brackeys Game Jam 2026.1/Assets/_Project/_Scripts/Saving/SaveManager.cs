@@ -23,7 +23,6 @@ public class SaveManager : ScriptableObject, IInitializable, ICleanable {
             _iSaveUISettings.MasterVolume = 0.5f;
             _iSaveUISettings.MusicVolume = 0.5f;
             _iSaveUISettings.EffectsVolume = 0.5f;
-            _iSaveUISettings.MouseSensitivity = 0.5f;
         }
         await Task.CompletedTask;
     }

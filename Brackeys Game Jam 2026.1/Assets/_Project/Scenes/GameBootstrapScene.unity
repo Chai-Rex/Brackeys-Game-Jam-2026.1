@@ -129,7 +129,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1178143894}
   - component: {fileID: 1178143893}
-  - component: {fileID: 1178143892}
   m_Layer: 0
   m_Name: WwiseGlobal
   m_TagString: Untagged
@@ -137,19 +136,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1178143892
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1178143891}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed39f2b237e573f4f85990bb5d1440ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: AK.Wwise.Unity.Addressables::AK.Wwise.Unity.WwiseAddressables.InitBankHolder
-  InitBank: {fileID: 11400000, guid: 0c51ed8f808964634a5ace6c02c392f7, type: 2}
 --- !u!114 &1178143893
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -202,14 +188,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameBootstrap
       objectReference: {fileID: 0}
-    - target: {fileID: 7036005523895601899, guid: 9e73c8232cbd76742ad57e75e4ac9984, type: 3}
-      propertyPath: _enableDebugLogs
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7036005523895601899, guid: 9e73c8232cbd76742ad57e75e4ac9984, type: 3}
-      propertyPath: _iGameplayContainer
-      value: 
-      objectReference: {fileID: 11400000, guid: 65d76e9f161e8bb4f886798d08eb0b44, type: 2}
     - target: {fileID: 7103409154828404630, guid: 9e73c8232cbd76742ad57e75e4ac9984, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

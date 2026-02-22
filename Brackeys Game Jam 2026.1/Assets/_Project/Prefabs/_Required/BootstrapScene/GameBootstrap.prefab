@@ -50,8 +50,7 @@ MonoBehaviour:
   _iSoundManager: {fileID: 11400000, guid: 6ac33709902ba4042b0e633cfa7ca1dc, type: 2}
   _iInputManager: {fileID: 11400000, guid: 060aa07aca206d345830d3de39888317, type: 2}
   _iMainMenuContainer: {fileID: 11400000, guid: c485b1743705fd744a612354c8205969, type: 2}
-  _iGameplayContainer: {fileID: 11400000, guid: 5d505735d37a61246905fa2ca4002fae, type: 2}
-  _iCameraTemplate: {fileID: 3609894792491345745, guid: 3078bfc29fd4d2142a23c78f52192af3, type: 3}
+  _iGameplayContainer: {fileID: 11400000, guid: 65d76e9f161e8bb4f886798d08eb0b44, type: 2}
   _iEventSystemTemplate: {fileID: 1898514338746754847, guid: 7001fa82e6cf83f499517e8ad3d6839a, type: 3}
   _iEnableDebugLogs: 0
   _iEnableVerboseLogs: 0
