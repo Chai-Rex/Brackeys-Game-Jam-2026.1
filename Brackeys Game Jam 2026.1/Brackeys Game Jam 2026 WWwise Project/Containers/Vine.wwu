@@ -728,7 +728,6 @@
 										<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
 										<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
 										<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="2"/>
-										<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
 												<Value>-12</Value>
@@ -773,11 +772,11 @@
 												<AudioFileSource Name="Vegetation, Misc, Plant, Vines, Growing, Movement, Creaks, Rubbery Vines SND133890 1" ID="{E90322FF-3CBD-4477-9C2B-149A440F7D7D}">
 													<PropertyList>
 														<Property Name="FadeInDuration" Type="Real64" Value="0.259852051734924"/>
-														<Property Name="FadeOutDuration" Type="Real64" Value="0.285837256908417"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.979773095786143"/>
 														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
 														<Property Name="Soundly:FileIDForAudioSource" Type="string" Value="SND133890"/>
 														<Property Name="TrimBegin" Type="Real64" Value="0.155911231040955"/>
-														<Property Name="TrimEnd" Type="Real64" Value="6.05455274438858"/>
+														<Property Name="TrimEnd" Type="Real64" Value="2.46522943984862"/>
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>Soundly Audio\Vegetation, Misc, Plant, Vines, Growing, Movement, Creaks, Rubbery Vines SND133890 1.wav</AudioFile>
@@ -819,11 +818,11 @@
 												<AudioFileSource Name="Vegetation, Misc, Plant, Vines, Growing, Movement, Creaks, Rubbery Vines SND133890 1" ID="{4011DBF8-260E-4823-87EF-60ABBF25944C}">
 													<PropertyList>
 														<Property Name="FadeInDuration" Type="Real64" Value="0.207881641387939"/>
-														<Property Name="FadeOutDuration" Type="Real64" Value="0.181896436214446"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.42118465651711"/>
 														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
 														<Property Name="Soundly:FileIDForAudioSource" Type="string" Value="SND133890"/>
-														<Property Name="TrimBegin" Type="Real64" Value="3.71588433980942"/>
-														<Property Name="TrimEnd" Type="Real64" Value="9.66649626350403"/>
+														<Property Name="TrimBegin" Type="Real64" Value="6.56341416141112"/>
+														<Property Name="TrimEnd" Type="Real64" Value="8.37433987386965"/>
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>Soundly Audio\Vegetation, Misc, Plant, Vines, Growing, Movement, Creaks, Rubbery Vines SND133890 1.wav</AudioFile>
@@ -865,11 +864,11 @@
 												<AudioFileSource Name="Vegetation, Misc, Plant, Vines, Growing, Movement, Creaks, Rubbery Vines SND133890 1" ID="{06F3B4E2-B14C-42EF-AE5E-953DF03AC5D4}">
 													<PropertyList>
 														<Property Name="FadeInDuration" Type="Real64" Value="0.233866846561432"/>
-														<Property Name="FadeOutDuration" Type="Real64" Value="0.233866846561432"/>
+														<Property Name="FadeOutDuration" Type="Real64" Value="0.736372109197026"/>
 														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
 														<Property Name="Soundly:FileIDForAudioSource" Type="string" Value="SND133890"/>
 														<Property Name="TrimBegin" Type="Real64" Value="9.14679222106933"/>
-														<Property Name="TrimEnd" Type="Real64" Value="14.4217888102531"/>
+														<Property Name="TrimEnd" Type="Real64" Value="10.9760384378947"/>
 													</PropertyList>
 													<Language>SFX</Language>
 													<AudioFile>Soundly Audio\Vegetation, Misc, Plant, Vines, Growing, Movement, Creaks, Rubbery Vines SND133890 1.wav</AudioFile>

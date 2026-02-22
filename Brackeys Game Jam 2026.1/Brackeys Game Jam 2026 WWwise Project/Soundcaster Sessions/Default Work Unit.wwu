@@ -70,6 +70,14 @@
 							<Position X="3" Y="6"/>
 						</Module>
 						<Module>
+							<ObjectRef Name="Block_Break" ID="{558870C0-E5CE-46E7-87E8-45ADC0BB145F}" WorkUnitID="{2AFD95FA-204C-46FF-936B-C1FE2A728032}"/>
+							<Position X="4" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Block_Hit" ID="{2643AC9C-70CF-4FB1-8DE7-A714C946EFCE}" WorkUnitID="{2AFD95FA-204C-46FF-936B-C1FE2A728032}"/>
+							<Position X="4" Y="1"/>
+						</Module>
+						<Module>
 							<ObjectRef Name="Clock_Tick" ID="{A63A5CCB-8CBE-4B71-A447-C206091AFB43}" WorkUnitID="{9A063BF4-7242-4F17-AE57-FC6490DD3F4D}"/>
 							<Position X="4" Y="3"/>
 						</Module>
