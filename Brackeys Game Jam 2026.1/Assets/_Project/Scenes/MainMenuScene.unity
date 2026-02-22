@@ -129,7 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 106772704}
   - component: {fileID: 106772703}
-  - component: {fileID: 106772702}
+  - component: {fileID: 106772705}
   m_Layer: 0
   m_Name: WwiseGlobal
   m_TagString: Untagged
@@ -137,18 +137,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &106772702
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 106772701}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed39f2b237e573f4f85990bb5d1440ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: AK.Wwise.Unity.Addressables::AK.Wwise.Unity.WwiseAddressables.InitBankHolder
 --- !u!114 &106772703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -189,6 +177,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &106772705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 106772701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 285a4bf9c8c0a481abbb330e6bb00e01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AkLoadBankOnAwake
+  in_psz: SFX
 --- !u!1001 &666181425
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -548,6 +549,6 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 106772704}
   - {fileID: 666181425}
   - {fileID: 783740079}
-  - {fileID: 106772704}

@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: '[SkillTree] Ground Speed 1'
   m_EditorClassIdentifier: Assembly-CSharp::SkillUpgradeSO
   SkillUpgradeName: Ground Speed 1
+  classification: 0
+  pointCost: 100
   SkillUpgrades:
   - SkillUpgradeEnum: 1
     UpgradeAmount: 2

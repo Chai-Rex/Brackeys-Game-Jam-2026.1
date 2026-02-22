@@ -7,29 +7,37 @@ public class CreditsCanvas : MonoBehaviour {
     //[Header("Level Loading")]
     //[SerializeField] private LevelManager.Levels levelToLoad;
 
+    [SerializeField] private SceneContainerSO _mainMenuSceneContainer;
+
     [SerializeField] private RectTransform viewport;
     [SerializeField] private RectTransform content;
 
     [SerializeField] private float scrollSpeed = 50f; // pixels per second
 
     [SerializeField] private TMP_Text _iDeathsText;
+    [SerializeField] private SceneContainerSO _sceneContainer;
 
     private float _maxScrollY;
     private bool _isScrolling;
 
     private CancellationTokenSource _cancellationTokenSource;
 
+    private InputManager _inputManager;
+    private GameCommandsManager _gameCommandsManager;
+
     private void Awake() {
         _cancellationTokenSource = new CancellationTokenSource();
     }
-
+    private void Start() {
+        _inputManager = _sceneContainer.GetManager<InputManager>();
+        _gameCommandsManager = _sceneContainer.GetManager<GameCommandsManager>();
+    }
     private void OnDestroy() {
         // Cancel any running async work
         _cancellationTokenSource.Cancel();
         _cancellationTokenSource.Dispose();
 
-        //if (InputManager.Instance)
-        //    InputManager.Instance._DialogueContinueAction.started -= _DialogueContinueAction_started;
+        _inputManager._PlayerJumpAction.started -= _PlayerJumpAction_started;
     }
 
     public async void StartCredits() {
@@ -38,10 +46,10 @@ public class CreditsCanvas : MonoBehaviour {
         try {
             //InputManager.Instance.DisablePlayerActions();
 
-            await Awaitable.WaitForSecondsAsync(2f, token);
+            await Awaitable.WaitForSecondsAsync(1f, token);
 
             //InputManager.Instance.EnableDialogueActions();
-            //InputManager.Instance._DialogueContinueAction.started += _DialogueContinueAction_started;
+            _inputManager._PlayerJumpAction.started += _PlayerJumpAction_started;
 
             // content height minus viewport height
             _maxScrollY = Mathf.Max(
@@ -69,8 +77,7 @@ public class CreditsCanvas : MonoBehaviour {
         }
     }
 
-    private void _DialogueContinueAction_started(
-        UnityEngine.InputSystem.InputAction.CallbackContext obj) {
-        //LevelManager.Instance.LoadScene(levelToLoad);
+    private void _PlayerJumpAction_started(UnityEngine.InputSystem.InputAction.CallbackContext obj) {
+        _gameCommandsManager.LoadLevel(_mainMenuSceneContainer);
     }
 }

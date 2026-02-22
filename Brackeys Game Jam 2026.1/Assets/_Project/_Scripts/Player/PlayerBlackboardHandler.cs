@@ -41,6 +41,10 @@ public class PlayerBlackboardHandler : MonoBehaviour {
     [Header("Animation")]
     public int CurrentAnimationHash;
 
+    [Header("Block Destruction & Point Tracking")]
+    public int skillPoints = 0;
+    public int blockDestroyed = 0;
+
     // Direction tracking
     private bool _isFacingRight = true;
 

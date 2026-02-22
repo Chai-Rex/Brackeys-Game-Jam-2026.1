@@ -345,7 +345,7 @@ public class FogOfWarManager : MonoBehaviour {
         _meshRenderer.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
         _meshRenderer.receiveShadows = false;
         _meshRenderer.sortingLayerName = "Default";
-        _meshRenderer.sortingOrder = 32000;
+        _meshRenderer.sortingOrder = 10;
 
         UpdateQuadTransform();
     }

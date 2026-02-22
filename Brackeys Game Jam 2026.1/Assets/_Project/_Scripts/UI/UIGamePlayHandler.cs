@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 
 public class UIGamePlayHandler : MonoBehaviour {
@@ -18,6 +19,7 @@ public class UIGamePlayHandler : MonoBehaviour {
 
     [Header("Video play")]
     [SerializeField] private bool _iPlayVideoOnStart = false;
+    [SerializeField] private Key TestKey = Key.T; 
 
     private InputManager _inputManager;
     private GameCommandsManager _gameCommandsManager;
@@ -39,6 +41,11 @@ public class UIGamePlayHandler : MonoBehaviour {
 
     }
 
+    private void Update() {
+        if (Keyboard.current[TestKey].isPressed)
+            PlayerDeath();
+    }
+
     public void Start() {
 
         _inputManager._PlayerPauseAction.started += _PlayerPauseAction_started;
@@ -57,6 +64,8 @@ public class UIGamePlayHandler : MonoBehaviour {
         _iTimeCanvas.PauseTimer();
 
         _gameCommandsManager.PauseGame();
+
+        Time.timeScale = 0f;
     }
 
     private void _UIResumeAction_started(UnityEngine.InputSystem.InputAction.CallbackContext obj) {
@@ -74,6 +83,8 @@ public class UIGamePlayHandler : MonoBehaviour {
         _iTimeCanvas.ResumeTimer();
 
         _gameCommandsManager.ResumeGame();
+
+        Time.timeScale = 1f;
     }
 
 
@@ -119,10 +130,26 @@ public class UIGamePlayHandler : MonoBehaviour {
 
         await _iDeathCanvas.CloseEyes();
 
+        _inputManager.SetUIActionMap();
+
         _iDeathCanvas.SetStats(
             _iTimeCanvas.GetFormattedTime(),
             Mathf.FloorToInt(_playerDistanceTracker.TotalDistance)
             );
+
+    }
+
+    public void Victory() {
+        _iVideoCanvas.gameObject.SetActive(false);
+        _iHUDCanvas.gameObject.SetActive(false);
+        _iPauseCanvas.gameObject.SetActive(false);
+        _iCreditsCanvas.gameObject.SetActive(true);
+        _iDeathCanvas.gameObject.SetActive(false);
+        _iTimeCanvas.gameObject.SetActive(false);
+
+        _iCreditsCanvas.StartCredits();
+
+        _inputManager.SetUIActionMap();
 
     }
 }

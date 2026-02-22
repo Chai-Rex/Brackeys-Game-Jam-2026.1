@@ -1,164 +1,167 @@
 character_side_view.png
-size:2048,256
+size:2048,512
 filter:Linear,Linear
 pma:true
+Jacket
+bounds:1281,397,107,209
+offsets:2,2,111,213
+rotate:90
+Skirt
+bounds:194,83,123,99
+Sleeve
+bounds:773,403,101,252
+rotate:90
+Sleeve _hidden
+bounds:1027,405,99,252
+offsets:0,0,101,252
+rotate:90
 chest
-bounds:1845,124,71,121
+bounds:932,330,71,121
 offsets:458,431,1002,1002
 rotate:90
 ear
-bounds:1639,63,68,100
+bounds:319,82,68,100
 offsets:504,615,1002,1002
 eyeball
-bounds:1968,144,32,51
+bounds:683,224,32,51
 offsets:435,644,1002,1002
 eyebrow
-bounds:2004,207,38,47
+bounds:1624,353,38,47
 offsets:426,698,1002,1002
 face blush
-bounds:1786,76,28,29
+bounds:744,247,28,29
 offsets:415,628,1002,1002
 foot _hidden
-bounds:129,16,51,25
+bounds:717,225,51,25
 offsets:467,50,1002,1002
+rotate:90
 foot
-bounds:129,16,51,25
+bounds:717,225,51,25
 offsets:467,50,1002,1002
+rotate:90
 front hair 1
-bounds:585,106,148,211
+bounds:560,356,148,211
 offsets:375,663,1002,1002
 rotate:90
 front hair 2
-bounds:990,69,177,185
+bounds:381,319,177,185
 offsets:394,671,1002,1002
 front hair 3
-bounds:798,64,190,190
+bounds:2,7,190,190
 offsets:465,673,1002,1002
 front hair 4
-bounds:1370,177,77,157
+bounds:1882,427,77,157
 offsets:515,463,1002,1002
 rotate:90
 glass
-bounds:1516,8,111,74
+bounds:1055,329,111,74
 offsets:2,2,115,78
 glove
-bounds:1516,84,79,121
+bounds:194,2,79,121
 offsets:1,2,82,125
 rotate:90
 hair_ bottom layer
-bounds:2,43,211,305
+bounds:2,199,211,305
 offsets:479,582,1002,1002
-rotate:90
 hand
-bounds:1082,17,50,76
+bounds:717,278,50,76
 offsets:471,253,1002,1002
-rotate:90
 hand _hidden
-bounds:903,11,51,99
+bounds:1409,344,51,99
 offsets:469,254,1002,1002
 rotate:90
 head
-bounds:309,90,164,274
+bounds:215,230,164,274
 offsets:407,570,1002,1002
-rotate:90
 headwear
-bounds:1786,107,51,68
+bounds:769,291,51,68
 offsets:1,1,54,70
-jacket
-bounds:1529,165,89,157
-offsets:2,2,93,161
 rotate:90
 lower arm _hidden
-bounds:774,9,53,127
+bounds:1280,342,53,127
 offsets:474,286,1002,1002
 rotate:90
 lower arm
-bounds:774,9,53,127
+bounds:1280,342,53,127
 offsets:474,286,1002,1002
 rotate:90
 lower eyelid
-bounds:774,81,23,18
+bounds:2028,402,23,18
 offsets:442,631,1002,1002
 rotate:90
 lower leg _hidden
-bounds:2,10,31,125
+bounds:1280,309,31,125
 offsets:486,63,1002,1002
 rotate:90
 lower leg
-bounds:2,10,31,125
+bounds:1280,309,31,125
 offsets:486,63,1002,1002
 rotate:90
 lower pants
-bounds:1361,134,41,153
+bounds:1873,384,41,153
 offsets:2,1,46,155
 rotate:90
 lower shirt
-bounds:1688,177,77,155
+bounds:560,277,77,155
 offsets:1,1,79,157
 rotate:90
 mouth
-bounds:1839,167,8,4
+bounds:1873,440,8,4
 offsets:427,606,1002,1002
 rotate:90
 neck
-bounds:463,37,51,112
+bounds:1510,349,51,112
 offsets:473,525,1002,1002
 rotate:90
 pants_2
-bounds:1337,63,69,132
+bounds:549,206,69,132
 offsets:2,2,73,136
 rotate:90
 pupil
-bounds:1082,2,11,13
+bounds:194,184,11,13
 offsets:441,665,1002,1002
 shirt 1
-bounds:1169,53,81,166
+bounds:381,236,81,166
 offsets:1,12,83,180
 rotate:90
 shoe _2
-bounds:1004,4,63,76
+bounds:317,4,63,76
 offsets:1,1,66,78
-rotate:90
 shoe
-bounds:1004,4,63,76
+bounds:317,4,63,76
 offsets:1,1,66,78
-rotate:90
-sleeve
-bounds:1845,197,57,157
-offsets:1,2,59,160
-rotate:90
 sleeve_hidden
-bounds:1845,197,57,157
+bounds:773,344,57,157
 offsets:1,2,59,160
 rotate:90
 thigh
-bounds:1169,200,54,199
+bounds:1681,450,54,199
 offsets:469,156,1002,1002
 rotate:90
 thigh_hidden
-bounds:1169,200,54,199
+bounds:1681,450,54,199
 offsets:469,156,1002,1002
 rotate:90
 upper arm _hidden
-bounds:309,44,44,152
+bounds:215,184,44,152
 offsets:484,394,1002,1002
 rotate:90
 upper arm
-bounds:309,44,44,152
+bounds:215,184,44,152
 offsets:484,394,1002,1002
 rotate:90
 upper eyelid
-bounds:1471,61,71,43
+bounds:839,299,71,43
 offsets:414,670,1002,1002
-rotate:90
 upper pants
-bounds:1169,136,62,190
+bounds:1681,386,62,190
 offsets:3,1,68,193
 rotate:90
 upper shirt
-bounds:1709,65,75,110
+bounds:1168,328,75,110
 offsets:1,5,77,117
+rotate:90
 waist
-bounds:585,2,102,187
+bounds:1492,402,102,187
 offsets:436,298,1002,1002
 rotate:90

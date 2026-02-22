@@ -32,7 +32,7 @@ public class PS_CoyoteWallJump : BaseHierarchicalState {
         _sm.Blackboard.IsFacingRight = wallDir < 0; // Face away from the wall
 
         if (_sm.Blackboard.debugStates)
-            Debug.Log($"[PS_CoyoteWallJump] Wall {(wallDir > 0 ? "RIGHT" : "LEFT")} → " +
+            Debug.Log($"[PS_CoyoteWallJump] Wall {(wallDir > 0 ? "RIGHT" : "LEFT")} -> " +
                       $"velocity ({hVel:F2}, {vVel:F2})");
 
         _sm.Animation.Play(PlayerAnimationHandler.Jump, false);
