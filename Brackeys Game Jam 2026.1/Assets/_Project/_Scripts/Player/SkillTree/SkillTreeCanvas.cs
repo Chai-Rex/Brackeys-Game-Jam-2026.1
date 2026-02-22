@@ -2,15 +2,18 @@
 using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SkillTreeCanvas : MonoBehaviour
 {
     private PlayerBlackboardHandler _blackboardHandler;
     [SerializeField] private TextMeshProUGUI skillPointText;
+    [SerializeField] private Button _iCloseButton;
 
     private void Awake()
     {
         _blackboardHandler = PlayerHandler.Instance.Blackboard;
+        _iCloseButton.onClick.AddListener(CloseSkills);
     }
 
     private void Start()
@@ -28,6 +31,8 @@ public class SkillTreeCanvas : MonoBehaviour
         SkillTreeNode.upgradeDrill -= UpdateByEvent;
         SkillTreeNode.upgradeHealth -= UpdateByEvent;
         SkillTreeNode.upgradeMovement -= UpdateByEvent;
+
+        _iCloseButton.onClick.RemoveAllListeners();
     }
 
     private void UpdateByEvent(SkillUpgradeSO dummy)
@@ -46,5 +51,9 @@ public class SkillTreeCanvas : MonoBehaviour
     {
         UpdateSkillPoints();
         panelOpened?.Invoke();
+    }
+
+    public void CloseSkills() {
+        gameObject.SetActive(false);
     }
 }

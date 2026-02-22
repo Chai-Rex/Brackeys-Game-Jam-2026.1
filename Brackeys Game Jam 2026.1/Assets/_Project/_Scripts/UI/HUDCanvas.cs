@@ -1,36 +1,23 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HUDCanvas : MonoBehaviour {
 
     [Header("References")]
-    [SerializeField] private InteractionHandler _iInteractionHandler;
-    [SerializeField] private GameObject _iInteractionPrompt;
-    [SerializeField] private TextMeshProUGUI _iVerbText;
-
-    //[Header("Settings")]
-    //[SerializeField] private string _iKeyPrompt = "[E] ";
+    [SerializeField] private Button _iSkillsButton;
+    [SerializeField] private GameObject _iSkillCanvas;
 
     private void Start() {
-        if (_iInteractionHandler == null) {
-            _iInteractionHandler = FindFirstObjectByType<InteractionHandler>();
-        }
+        _iSkillsButton.onClick.AddListener(OpenSkills);
+    }
+    private void OnDestroy() {
+        _iSkillsButton.onClick.RemoveAllListeners();
+    }   
 
-        // Hide prompt initially
-        HideInteractionPrompt();
+    private void OpenSkills() {
+        _iSkillCanvas.gameObject.SetActive(true);
     }
 
-    public void ShowInteractionPrompt(string verb) {
-        _iInteractionPrompt.SetActive(true);
 
-        if (_iVerbText != null) {
-            _iVerbText.text = verb;
-        }
-    }
-    public void ShowInteractionPrompt() {
-        _iInteractionPrompt.SetActive(true);
-    }
-    public void HideInteractionPrompt() {
-        _iInteractionPrompt.SetActive(false);
-    }
 }
