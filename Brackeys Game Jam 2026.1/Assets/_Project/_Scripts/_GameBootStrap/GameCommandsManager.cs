@@ -57,15 +57,15 @@ public class GameCommandsManager : ScriptableObject, IInitializable, ICleanable,
     /// <summary>
     /// Load a specific level by name
     /// </summary>
-    public void LoadLevel(string levelName) {
-        Log($"Command: LoadLevel({levelName})");
+    public void LoadLevel(SceneContainerSO scenecontainer) {
+        Log($"Command: LoadLevel({scenecontainer.GetSceneName()})");
 
         if (_gameBootstrap == null) {
             _gameBootstrap = Object.FindFirstObjectByType<GameBootstrap>();
 
         }
 
-        _gameBootstrap.LoadScene(levelName);
+        _ = _gameBootstrap.LoadSceneContainer(scenecontainer);
     }
 
     /// <summary>

@@ -88,6 +88,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 505159068659928579, guid: a83123190830e6d4e98c4d17b6f2351f, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3846460672646745606, guid: a83123190830e6d4e98c4d17b6f2351f, type: 3}
       propertyPath: m_Name
       value: HealthBar

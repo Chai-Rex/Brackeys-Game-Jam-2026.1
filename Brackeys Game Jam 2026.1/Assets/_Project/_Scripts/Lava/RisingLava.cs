@@ -4,6 +4,7 @@ using System.Collections;
 public class RisingLava : MonoBehaviour {
     [Header("References")]
     [SerializeField] private Transform _player;
+    [SerializeField] private UIGamePlayHandler _uiGamePlayHandler;
 
     [Header("Base Movement")]
     [SerializeField] private float _baseRiseSpeed = 2f;
@@ -131,14 +132,8 @@ public class RisingLava : MonoBehaviour {
 
     private void CatchPlayerButKeepRising() {
         Debug.Log("Player caught by lava!");
-
-        // Hook into real death logic here
-        // Example:
-        // _player.GetComponent<PlayerHealth>()?.Die();
-
         _pressureActive = false;
 
-        // No snapping / no stopping
-        // Lava naturally resumes chase behaviour
+        _uiGamePlayHandler.PlayerDeath();
     }
 }

@@ -130,6 +130,8 @@ public class UIGamePlayHandler : MonoBehaviour {
 
         await _iDeathCanvas.CloseEyes();
 
+        _inputManager.SetUIActionMap();
+
         _iDeathCanvas.SetStats(
             _iTimeCanvas.GetFormattedTime(),
             Mathf.FloorToInt(_playerDistanceTracker.TotalDistance)
@@ -146,5 +148,8 @@ public class UIGamePlayHandler : MonoBehaviour {
         _iTimeCanvas.gameObject.SetActive(false);
 
         _iCreditsCanvas.StartCredits();
+
+        _inputManager.SetUIActionMap();
+
     }
 }

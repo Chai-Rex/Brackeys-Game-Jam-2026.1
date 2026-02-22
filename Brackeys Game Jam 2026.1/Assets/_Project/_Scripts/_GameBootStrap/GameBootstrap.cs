@@ -137,7 +137,7 @@ public class GameBootstrap : MonoBehaviour {
     #region Scene Loading
     ////////////////////////////////////////////////////////////
 
-    private async Task LoadSceneContainer(SceneContainerSO i_container) {
+    public async Task LoadSceneContainer(SceneContainerSO i_container) {
         if (i_container == null) {
             LogError("Cannot load null scene container");
             return;

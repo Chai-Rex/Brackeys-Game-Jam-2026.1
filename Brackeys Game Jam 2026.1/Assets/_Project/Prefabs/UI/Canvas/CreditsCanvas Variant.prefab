@@ -666,7 +666,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 960.5607, y: -2551.4402}
+  m_AnchoredPosition: {x: 960.38715, y: -2551.4402}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &4035373756209879405
@@ -903,7 +903,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 960.5607, y: -2936.3003}
+  m_AnchoredPosition: {x: 960.38715, y: -2936.3003}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &3582503727688314666
@@ -2190,7 +2190,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6607147480977169907, guid: 68590f9c43c296a4a8a62159b6b6b60e, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 960.5607
+      value: 960.38715
       objectReference: {fileID: 0}
     - target: {fileID: 6607147480977169907, guid: 68590f9c43c296a4a8a62159b6b6b60e, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2655,7 +2655,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6607147480977169907, guid: 68590f9c43c296a4a8a62159b6b6b60e, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 960.5607
+      value: 960.38715
       objectReference: {fileID: 0}
     - target: {fileID: 6607147480977169907, guid: 68590f9c43c296a4a8a62159b6b6b60e, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -3450,7 +3450,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6607147480977169907, guid: 68590f9c43c296a4a8a62159b6b6b60e, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 960.5607
+      value: 960.38715
       objectReference: {fileID: 0}
     - target: {fileID: 6607147480977169907, guid: 68590f9c43c296a4a8a62159b6b6b60e, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -4009,10 +4009,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df3bfc82ec3b84640b679a7fa46c886b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CreditsCanvas
+  _mainMenuSceneContainer: {fileID: 11400000, guid: c485b1743705fd744a612354c8205969, type: 2}
   viewport: {fileID: 4121454502738068525}
   content: {fileID: 2221566552260280260}
   scrollSpeed: 20
   _iDeathsText: {fileID: 4281571942999039188}
+  _sceneContainer: {fileID: 0}
 --- !u!1001 &5348783856321966531
 PrefabInstance:
   m_ObjectHideFlags: 0

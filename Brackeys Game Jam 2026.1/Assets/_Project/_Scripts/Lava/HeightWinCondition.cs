@@ -7,6 +7,8 @@ public class HeightWinCondition : MonoBehaviour {
     [SerializeField] private Transform _player;
     [SerializeField] private float _winHeight = 50f;
 
+    [SerializeField] private UIGamePlayHandler _uiGamePlayHandler;
+
     public void StartWinCondition() {
         StartCoroutine(WinConditionRoutine());
     }
@@ -21,6 +23,7 @@ public class HeightWinCondition : MonoBehaviour {
     private void TriggerWin() {
 
         Debug.Log("Player Wins!");
+        _uiGamePlayHandler.Victory();
 
     }
 }

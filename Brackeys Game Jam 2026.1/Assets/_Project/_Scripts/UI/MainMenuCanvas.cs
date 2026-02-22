@@ -16,12 +16,15 @@ public class MainMenuCanvas : MonoBehaviour {
     [Header("Sliders")]
     [SerializeField] private Slider _iMasterVolumeSlider;
 
+    [Header("Music")]
+    [SerializeField] private string _iMusicEvent = "Menu_Music";
+
     private SaveUISettingsSO _settings;
 
 
     private void Start() {
 
-        AkUnitySoundEngine.PostEvent("Menu_Play", Camera.main.gameObject);
+        AkUnitySoundEngine.PostEvent(_iMusicEvent, Camera.main.gameObject);
 
         _iGameCommandsManager = _iSceneContainer.GetManager<GameCommandsManager>();
         //_iSaveManager = _iSceneContainer.GetManager<SaveManager>();
@@ -31,7 +34,10 @@ public class MainMenuCanvas : MonoBehaviour {
         _iMasterVolumeSlider.value = _settings.MasterVolume;
 
         // Slider
-        _iMasterVolumeSlider.onValueChanged.AddListener((float value) => { _settings.MasterVolume = value; });
+        _iMasterVolumeSlider.onValueChanged.AddListener((float value) => { 
+            _settings.MasterVolume = value; 
+            AkUnitySoundEngine.SetState("Master_Volume", ((uint)(value * 100)).ToString());
+        });
 
         // Buttons
         _iStartButton.onClick.AddListener(StartGame);

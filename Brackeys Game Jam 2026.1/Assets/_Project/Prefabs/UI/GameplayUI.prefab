@@ -60,6 +60,7 @@ MonoBehaviour:
   _iDeathCanvas: {fileID: 7553017981756666534}
   _iTimeCanvas: {fileID: 4341277643281746191}
   _iPlayVideoOnStart: 1
+  TestKey: 34
 --- !u!1 &2237131469961334510
 GameObject:
   m_ObjectHideFlags: 0
@@ -2157,6 +2158,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 4408430972481024613, guid: 5ca5cad4defaefb40bb4c9b1268113f6, type: 3}
+      propertyPath: _mainMenuSceneContainer
+      value: 
+      objectReference: {fileID: 11400000, guid: 65d76e9f161e8bb4f886798d08eb0b44, type: 2}
     - target: {fileID: 4996399337913511472, guid: 5ca5cad4defaefb40bb4c9b1268113f6, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

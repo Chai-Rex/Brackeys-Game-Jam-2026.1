@@ -38,9 +38,18 @@ public class PauseCanvas : MonoBehaviour {
         _iEffectsVolumeSlider.value = _settings.EffectsVolume;
 
         // Slider
-        _iMasterVolumeSlider.onValueChanged.AddListener((float value) => { _settings.MasterVolume = value; });
-        _iMusicVolumeSlider.onValueChanged.AddListener((float value) => { _settings.MusicVolume = value; });
-        _iEffectsVolumeSlider.onValueChanged.AddListener((float value) => { _settings.EffectsVolume = value; });
+        _iMasterVolumeSlider.onValueChanged.AddListener((float value) => { 
+            _settings.MasterVolume = value;
+            AkUnitySoundEngine.SetState("Master_Volume", ((uint)(value * 100)).ToString());
+        });
+        _iMusicVolumeSlider.onValueChanged.AddListener((float value) => { 
+            _settings.MusicVolume = value; 
+            AkUnitySoundEngine.SetState("Music_Volume", ((uint)(value * 100)).ToString());
+        });
+        _iEffectsVolumeSlider.onValueChanged.AddListener((float value) => { 
+            _settings.EffectsVolume = value;
+            AkUnitySoundEngine.SetState("Music_Volume", ((uint)(value * 100)).ToString());
+        });
 
         // Buttons
         _iResumeButton.onClick.AddListener(Resume);
@@ -73,6 +82,7 @@ public class PauseCanvas : MonoBehaviour {
 
     public void ReturnToMenu() {
         _gameCommandsManager.QuitToMainMenu();
+        gameObject.SetActive(false);
 
     }
 

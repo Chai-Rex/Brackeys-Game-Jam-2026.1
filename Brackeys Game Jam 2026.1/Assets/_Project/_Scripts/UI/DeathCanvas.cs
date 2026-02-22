@@ -86,7 +86,7 @@ public class DeathCanvas : MonoBehaviour {
     }
 
     public void RestartLevel() {
-        _gameCommandsManager.LoadLevel(_iLevelToRestart);
+        _gameCommandsManager.LoadLevel(_sceneContainer);
     }
 
 }
