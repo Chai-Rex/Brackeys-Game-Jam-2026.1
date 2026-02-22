@@ -13,6 +13,8 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID BLOCK_BREAK = 2687994736U;
+        static const AkUniqueID BLOCK_HIT = 2566810630U;
         static const AkUniqueID BUBBLE_COLLECT = 2101178656U;
         static const AkUniqueID CAT_ATTACK = 3947105714U;
         static const AkUniqueID CAT_EAT = 3455062928U;
@@ -21,10 +23,12 @@ namespace AK
         static const AkUniqueID CLOCK_TICK = 2719257531U;
         static const AkUniqueID CRICKET_JUMP = 515483981U;
         static const AkUniqueID CRICKET_LAND = 3381550706U;
+        static const AkUniqueID CYBERPUNK_PLAY = 1683108213U;
         static const AkUniqueID ELEVATOR_ARRIVE = 3929235283U;
         static const AkUniqueID ELEVATOR_DOORS_CLOSE = 4216832672U;
         static const AkUniqueID ELEVATOR_MOVING = 2518616252U;
         static const AkUniqueID FLOORVINE_EATING = 2689584014U;
+        static const AkUniqueID MENU_PLAY = 105544633U;
         static const AkUniqueID PLAY_CATPURR = 1797954987U;
         static const AkUniqueID PLAY_EMOTION = 1222141441U;
         static const AkUniqueID PLAY_MOSQUITO = 1534211419U;
@@ -32,10 +36,14 @@ namespace AK
         static const AkUniqueID PLAYER_LAND = 3629196698U;
         static const AkUniqueID PLAYER_MOVEMENT = 541470702U;
         static const AkUniqueID PLAYER_SLIDING = 2537560909U;
+        static const AkUniqueID STEAMPUNK_PLAY = 2322496412U;
+        static const AkUniqueID STONEAGE_PLAY = 3437213870U;
         static const AkUniqueID STOP_CAT = 704609316U;
         static const AkUniqueID STOP_PLAYERSLIDING = 761271875U;
         static const AkUniqueID TANK_FILL = 3580624671U;
         static const AkUniqueID TANK_FULL = 4112977187U;
+        static const AkUniqueID UI_BIGBUTTON = 931098012U;
+        static const AkUniqueID UI_SMALLBUTTON = 507163859U;
         static const AkUniqueID UMBRELLA_CLOSE = 3217770052U;
         static const AkUniqueID UMBRELLA_OPEN = 89220416U;
         static const AkUniqueID VINE_CATCH = 1532741045U;

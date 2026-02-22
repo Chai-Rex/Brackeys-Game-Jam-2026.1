@@ -1,10 +1,12 @@
 Event	ID	Name			Wwise Object Path	Notes
 	89220416	Umbrella_Open			\Items\Umbrella\Umbrella_Open	
 	239772940	Vine_StopRecovering			\Enemy\Vine\Vine_StopRecovering	
+	507163859	UI_SmallButton			\UI\UI_SmallButton	
 	515483981	Cricket_Jump			\Enemy\Cricket\Cricket_Jump	
 	541470702	Player_Movement			\Movement\Player_Movement	
 	704609316	Stop_Cat			\Enemy\Cat\Stop_Cat	
 	761271875	Stop_PlayerSliding			\Movement\Stop_PlayerSliding	
+	931098012	UI_BigButton			\UI\UI_BigButton	
 	1222141441	Play_Emotion			\Enemy\Pixel Face\Play_Emotion	
 	1305133589	Player_Jump			\Movement\Player_Jump	
 	1476808986	Vine_Regrow			\Enemy\Vine\Vine_Regrow	
@@ -16,6 +18,8 @@ Event	ID	Name			Wwise Object Path	Notes
 	2518616252	Elevator_Moving			\Items\Elevator\Elevator_Moving	
 	2537560909	Player_Sliding			\Movement\Player_Sliding	
 	2563575728	Clock_Close			\Items\Cuckoo Clock\Clock_Close	
+	2566810630	Block_Hit			\Items\Drill\Block_Hit	
+	2687994736	Block_Break			\Items\Drill\Block_Break	
 	2689584014	FloorVine_Eating			\Enemy\Vine\FloorVine_Eating	
 	2719257531	Clock_Tick			\Items\Cuckoo Clock\Clock_Tick	
 	2783995914	Vine_Eating			\Enemy\Vine\Vine_Eating	
@@ -59,6 +63,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	36096113	Vine Capture	.cache\1B\{1B4C6C3B-2F9C-23FD-E17F-C367C245A9B8}.wem		\Containers\World\Enemy\Vine\Vine Movement\Vine Capture\Vine Capture		32438
 	44741399	Land Grunt 1	.cache\39\{39D0C393-4BCD-4999-1943-DD610C070ACD}.wem		\Containers\World\Player\Vocals\Grunts\Land_Stim\Land Grunt 1		38400
 	49100587	Oxygen Tank Fill Up	.cache\E5\{E54D1208-8150-BDA4-9724-9D82F44CC337}.wem		\Containers\World\Items\Oxygen Tank\Tank FIll\Oxygen Tank Fill Up		472096
+	63225722	UI Click 1	.cache\53\{53B3399A-6E67-8B96-7B81-FD4C91E04182}.wem		\Containers\Non-World\UI\Pause Menu\UI Click small\UI Click 1		102096
 	73084760	Land Grunt 3	.cache\EE\{EEF4F033-F28B-5676-1755-2069E4EFE232}.wem		\Containers\World\Player\Vocals\Grunts\Land_Stim\Land Grunt 3		45792
 	73412954	Metal Walk 8	.cache\6B\{6B0D693C-F26A-6414-6B99-2792BF64F346}.wem		\Containers\World\Player\Movement\Footsteps\Footsteps_Metal\Footsteps_Metal_Walk\Metal Walk 8		47200
 	95379733	Vine Pull 1	.cache\5D\{5DA74C97-3412-78AA-756C-270CDB6BC7AB}.wem		\Containers\World\Enemy\Vine\Vine Movement\Vine Pulling\Pulling\Vine Pull 1		201696
@@ -234,6 +239,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	1002606011	Grass Walk 3	.cache\10\{1001E5B3-85EE-CC5E-A998-2A603B958BB2}.wem		\Containers\World\Player\Movement\Footsteps\Footsteps_Grass\Footsteps_Grass_Walk\Grass Walk 3		35232
 	1004360602	Cobble Jump 4	.cache\9A\{9AF51076-7722-1BB7-1621-B12339F9E987}.wem		\Containers\World\Player\Movement\Jump\Footsteps_Stone_Jump\Cobble Jump 4		52896
 	1016205611	Dirt Land 2	.cache\44\{446FCF75-A864-2474-14D4-A4404519E41F}.wem		\Containers\World\Player\Movement\Land\Footsteps_Dirt_Land\Dirt Land 2		40032
+	1019953498	UI Click 2	.cache\69\{69BCC154-009F-5A61-D7FD-25933C4C1521}.wem		\Containers\Non-World\UI\Pause Menu\UI Click Big\UI Click 2		51020
 	1027100442	Metal Walk 6	.cache\73\{73D80180-5126-A812-BAEF-2A3BC9E66BBA}.wem		\Containers\World\Player\Movement\Footsteps\Footsteps_Metal\Footsteps_Metal_Walk\Metal Walk 6		45664
 	1027197158	Cobble Jump 1	.cache\06\{06EC0E83-C9B6-D941-43C4-AAE35D223574}.wem		\Containers\World\Player\Movement\Jump\Footsteps_Stone_Jump\Cobble Jump 1		35296
 	1029938476	Cat Eat 2	.cache\81\{819616A0-BA1A-220F-6A23-C0D3B0391178}.wem		\Containers\World\Enemy\Cat\Cat Eat\Cat Chewing\Cat Eat 2		129120

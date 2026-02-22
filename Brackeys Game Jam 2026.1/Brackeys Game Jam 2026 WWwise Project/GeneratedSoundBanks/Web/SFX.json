@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{2B4FCDD6-7034-4F03-8455-9DC46B8F8FD0}",
     "Language": "SFX",
-    "Hash": "{E511A39C-D297-C6D4-44F3-04F6B57A8B9C}",
+    "Hash": "{B6D5F0CA-A059-B9B5-37D0-930FB2FB5696}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\SFX",
     "ShortName": "SFX",
     "Path": "SFX.bnk",
@@ -86,6 +86,14 @@
       "Location": "Memory",
       "ShortName": "Oxygen Tank Fill Up.wav",
       "CachePath": "E5/{E54D1208-8150-BDA4-9724-9D82F44CC337}.wem"
+     },
+     {
+      "Id": "63225722",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Soundly Audio\\Games, Video, Menu UI, Select, Notification 18 SND83166.wav",
+      "CachePath": "53/{53B3399A-6E67-8B96-7B81-FD4C91E04182}.wem"
      },
      {
       "Id": "73084760",
@@ -1488,6 +1496,14 @@
       "CachePath": "44/{446FCF75-A864-2474-14D4-A4404519E41F}.wem"
      },
      {
+      "Id": "1019953498",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Soundly Audio\\User Interface, Click, Sci Fi Games, UI Menu, Very Short, Close 14 SND85070.wav",
+      "CachePath": "69/{69BCC154-009F-5A61-D7FD-25933C4C1521}.wem"
+     },
+     {
       "Id": "1027100442",
       "Language": "SFX",
       "Streaming": "false",
@@ -1601,6 +1617,24 @@
      }
     ],
     "Events": [
+     {
+      "Id": "2687994736",
+      "Name": "Block_Break",
+      "ObjectPath": "\\Events\\Items\\Drill\\Block_Break",
+      "GUID": "{558870C0-E5CE-46E7-87E8-45ADC0BB145F}",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "2566810630",
+      "Name": "Block_Hit",
+      "ObjectPath": "\\Events\\Items\\Drill\\Block_Hit",
+      "GUID": "{2643AC9C-70CF-4FB1-8DE7-A714C946EFCE}",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
      {
       "Id": "2101178656",
       "Name": "Bubble_Collect",
@@ -2643,6 +2677,34 @@
       "DurationMax": "0"
      },
      {
+      "Id": "931098012",
+      "Name": "UI_BigButton",
+      "ObjectPath": "\\Events\\UI\\UI_BigButton",
+      "GUID": "{1C6ABE0F-68C4-42BB-94CC-6762FAF4763F}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.26524243",
+      "DurationMax": "0.26524243",
+      "MediaRefs": [
+       {
+        "Id": "1019953498"
+       }
+      ]
+     },
+     {
+      "Id": "507163859",
+      "Name": "UI_SmallButton",
+      "ObjectPath": "\\Events\\UI\\UI_SmallButton",
+      "GUID": "{5B4D355B-9CA8-4775-B23B-BBB3F0CC4FE9}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.53126043",
+      "DurationMax": "0.53126043",
+      "MediaRefs": [
+       {
+        "Id": "63225722"
+       }
+      ]
+     },
+     {
       "Id": "3217770052",
       "Name": "Umbrella_Close",
       "ObjectPath": "\\Events\\Items\\Umbrella\\Umbrella_Close",
@@ -2875,6 +2937,6 @@
     ]
    }
   ],
-  "FileHash": "{6F9B01EE-04E0-B2E1-C91B-0E936285DA58}"
+  "FileHash": "{F772E563-D010-DE62-3C00-1FDFB33D317A}"
  }
 }

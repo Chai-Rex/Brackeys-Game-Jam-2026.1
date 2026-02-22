@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{FFF6486A-17B5-40A7-B7AF-A4086A6D37D6}" SchemaVersion="133">
+	<Events>
+		<WorkUnit Name="Music" ID="{FFF6486A-17B5-40A7-B7AF-A4086A6D37D6}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Menu_Play" ID="{EC03880B-BF8A-49B2-BE06-FB951FB9D3C9}">
+					<ChildrenList>
+						<Action Name="" ID="{ECB89A12-5745-496F-84AA-C12408F3969C}" ShortID="153976323">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Theme_StoneAge_Loop" ID="{8557DB41-878C-4AB1-9551-D7F41CAF42B2}" WorkUnitID="{1CD31E6B-7F14-4AC9-AF98-C129AE7EDB05}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{B5F91E1E-7055-4BC7-B86B-8FA13AC66990}" ShortID="32000186">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Thème_CyberCIty_Loop" ID="{B03B375E-AB46-4B89-B67B-0C40DC584616}" WorkUnitID="{1CD31E6B-7F14-4AC9-AF98-C129AE7EDB05}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{8ADD9301-A975-47B2-81C1-F9BC99DE080C}" ShortID="532276904">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Thème_SteamPunk_Loop" ID="{A6330507-097A-45B4-89D8-0D5FCCF9ED9E}" WorkUnitID="{1CD31E6B-7F14-4AC9-AF98-C129AE7EDB05}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{0EA25BB8-882A-475C-B5FE-6587715F7633}" ShortID="193075999">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Theme_MainMenu_Loop" ID="{43281BFC-456B-4809-9399-B1693CF4BB7F}" WorkUnitID="{1CD31E6B-7F14-4AC9-AF98-C129AE7EDB05}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stoneage_Play" ID="{9998B0D4-7F42-4166-B8E8-4D28FF95A79F}">
+					<ChildrenList>
+						<Action Name="" ID="{63CBE4C5-6BA8-4C00-BB70-675B5A02CD1A}" ShortID="482915525">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Theme_StoneAge_Loop" ID="{8557DB41-878C-4AB1-9551-D7F41CAF42B2}" WorkUnitID="{1CD31E6B-7F14-4AC9-AF98-C129AE7EDB05}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{747820F7-C314-4098-95A3-CD302086C1FA}" ShortID="45546800">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Theme_MainMenu_Loop" ID="{43281BFC-456B-4809-9399-B1693CF4BB7F}" WorkUnitID="{1CD31E6B-7F14-4AC9-AF98-C129AE7EDB05}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{5275DD8A-CF7D-4ECF-89F1-4C2DC06776EB}" ShortID="318490792">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Thème_CyberCIty_Loop" ID="{B03B375E-AB46-4B89-B67B-0C40DC584616}" WorkUnitID="{1CD31E6B-7F14-4AC9-AF98-C129AE7EDB05}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{119BE2B1-C08E-4378-A508-B13774AF6A21}" ShortID="627227571">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Thème_SteamPunk_Loop" ID="{A6330507-097A-45B4-89D8-0D5FCCF9ED9E}" WorkUnitID="{1CD31E6B-7F14-4AC9-AF98-C129AE7EDB05}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Cyberpunk_Play" ID="{BF30F9B4-33C2-4275-A511-EA466CC82F4A}">
+					<ChildrenList>
+						<Action Name="" ID="{7ACB0DBA-1ACC-4A26-93F7-B276669C6694}" ShortID="87042626">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Thème_CyberCIty_Loop" ID="{B03B375E-AB46-4B89-B67B-0C40DC584616}" WorkUnitID="{1CD31E6B-7F14-4AC9-AF98-C129AE7EDB05}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{ED2E26C2-CC6A-4FC8-A5A5-5DA6189B0AD7}" ShortID="579056428">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Thème_SteamPunk_Loop" ID="{A6330507-097A-45B4-89D8-0D5FCCF9ED9E}" WorkUnitID="{1CD31E6B-7F14-4AC9-AF98-C129AE7EDB05}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{84AF24C3-6767-4ED1-BC40-242403CC70D9}" ShortID="381058139">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="20"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Theme_MainMenu_Loop" ID="{43281BFC-456B-4809-9399-B1693CF4BB7F}" WorkUnitID="{1CD31E6B-7F14-4AC9-AF98-C129AE7EDB05}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{2402308D-C85C-465E-B9B2-53022A2ADA8D}" ShortID="969803745">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Theme_StoneAge_Loop" ID="{8557DB41-878C-4AB1-9551-D7F41CAF42B2}" WorkUnitID="{1CD31E6B-7F14-4AC9-AF98-C129AE7EDB05}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Steampunk_Play" ID="{CA072AB0-EAD4-4582-93CB-D78A473ACF24}">
+					<ChildrenList>
+						<Action Name="" ID="{9D19F830-1620-4544-AEFF-CB5F8EBF2A2D}" ShortID="391148992">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="2"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Theme_MainMenu_Loop" ID="{43281BFC-456B-4809-9399-B1693CF4BB7F}" WorkUnitID="{1CD31E6B-7F14-4AC9-AF98-C129AE7EDB05}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{0F9AA666-A1E4-4F00-A958-D17B0BBFBCCC}" ShortID="74759268">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Thème_CyberCIty_Loop" ID="{B03B375E-AB46-4B89-B67B-0C40DC584616}" WorkUnitID="{1CD31E6B-7F14-4AC9-AF98-C129AE7EDB05}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{7664D284-FE97-4B53-B74C-058E11227110}" ShortID="1049791388">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Theme_StoneAge_Loop" ID="{8557DB41-878C-4AB1-9551-D7F41CAF42B2}" WorkUnitID="{1CD31E6B-7F14-4AC9-AF98-C129AE7EDB05}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{5B6D8CD3-9725-45BF-86B4-FB46508F89F4}" ShortID="56819903">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Thème_SteamPunk_Loop" ID="{A6330507-097A-45B4-89D8-0D5FCCF9ED9E}" WorkUnitID="{1CD31E6B-7F14-4AC9-AF98-C129AE7EDB05}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

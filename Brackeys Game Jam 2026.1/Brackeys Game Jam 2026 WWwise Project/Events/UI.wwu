@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{5B44F9F3-0030-47B9-A5EB-E344D1C19E39}" SchemaVersion="133">
+	<Events>
+		<WorkUnit Name="UI" ID="{5B44F9F3-0030-47B9-A5EB-E344D1C19E39}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="UI_BigButton" ID="{1C6ABE0F-68C4-42BB-94CC-6762FAF4763F}">
+					<ChildrenList>
+						<Action Name="" ID="{B800F8D1-DEBE-4AB7-BF83-73A848A4C9AA}" ShortID="194993383">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="UI Click Big" ID="{876DB6EE-48B0-4BFF-9D1E-894ED6D16798}" WorkUnitID="{0322AFCA-B03F-4014-BF95-D82DCD42371F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="UI_SmallButton" ID="{5B4D355B-9CA8-4775-B23B-BBB3F0CC4FE9}">
+					<ChildrenList>
+						<Action Name="" ID="{4EC6F6D8-8405-4D51-9785-E0CCBAB27266}" ShortID="130380841">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="UI Click small" ID="{8A783E89-DD85-4AEB-9C26-64A11C1BC655}" WorkUnitID="{0322AFCA-B03F-4014-BF95-D82DCD42371F}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

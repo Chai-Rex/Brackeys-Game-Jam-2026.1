@@ -10,6 +10,7 @@
 				<WorkUnit Name="Pause Menu" ID="{0322AFCA-B03F-4014-BF95-D82DCD42371F}" PersistMode="Reference"/>
 				<WorkUnit Name="Title Screen" ID="{27ED4A94-DF66-4D70-BB8C-C9CCE0F068FD}" PersistMode="Reference"/>
 				<WorkUnit Name="Credits" ID="{09C7CDA1-D1F5-49B0-A28D-D9CDDD0B6387}" PersistMode="Reference"/>
+				<Folder Name="New Virtual Folder" ID="{A6D7BF0C-F712-41B4-AB7C-EC7668790AB1}" ShortID="57702350"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Containers>

@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{2B4FCDD6-7034-4F03-8455-9DC46B8F8FD0}",
     "Language": "SFX",
-    "Hash": "{E511A39C-D297-C6D4-44F3-04F6B57A8B9C}",
+    "Hash": "{13BE7651-362C-F14C-204C-006840F04C9A}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\SFX",
     "ShortName": "SFX",
     "Path": "SFX.bnk",
@@ -86,6 +86,14 @@
       "Location": "Memory",
       "ShortName": "Oxygen Tank Fill Up.wav",
       "CachePath": "E5/{E54D1208-8150-BDA4-9724-9D82F44CC337}.wem"
+     },
+     {
+      "Id": "63225722",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Soundly Audio\\Games, Video, Menu UI, Select, Notification 18 SND83166.wav",
+      "CachePath": "53/{53B3399A-6E67-8B96-7B81-FD4C91E04182}.wem"
      },
      {
       "Id": "73084760",
@@ -576,6 +584,14 @@
       "CachePath": "0A/{0AF69BDD-4DE5-663D-4B3E-9F7518AE0CDC}.wem"
      },
      {
+      "Id": "424102005",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Thème_CyberCIty_Loop.wav",
+      "CachePath": "0C/{0C3AA6EB-AC97-3828-02AD-3AC017311C63}.wem"
+     },
+     {
       "Id": "424466210",
       "Language": "SFX",
       "Streaming": "false",
@@ -614,6 +630,14 @@
       "Location": "Memory",
       "ShortName": "Dirt Run 7.wav",
       "CachePath": "98/{98F616EE-F530-5C23-A161-403B61A7C34F}.wem"
+     },
+     {
+      "Id": "441596046",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Theme_MainMenu_Loop.wav",
+      "CachePath": "84/{84D0319B-231C-D1BC-0E2D-DC74E0DDC03D}.wem"
      },
      {
       "Id": "453807151",
@@ -886,6 +910,14 @@
       "Location": "Memory",
       "ShortName": "Grass Land 5.wav",
       "CachePath": "9F/{9FC0ADF5-09BC-D5CC-1B1C-95CF54908AB6}.wem"
+     },
+     {
+      "Id": "628982877",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Thème_SteamPunk_Loop.wav",
+      "CachePath": "16/{16AD1EAC-6A81-9143-D872-0904FA3B02D9}.wem"
      },
      {
       "Id": "629625774",
@@ -1264,6 +1296,14 @@
       "CachePath": "5C/{5C123571-4446-11E2-5AA0-C331C45BC8B1}.wem"
      },
      {
+      "Id": "869032357",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Theme_StoneAge_Loop.wav",
+      "CachePath": "A9/{A94CB5FC-376B-3640-A679-17BF10B9CE7B}.wem"
+     },
+     {
       "Id": "876752176",
       "Language": "SFX",
       "Streaming": "false",
@@ -1488,6 +1528,14 @@
       "CachePath": "44/{446FCF75-A864-2474-14D4-A4404519E41F}.wem"
      },
      {
+      "Id": "1019953498",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Soundly Audio\\User Interface, Click, Sci Fi Games, UI Menu, Very Short, Close 14 SND85070.wav",
+      "CachePath": "69/{69BCC154-009F-5A61-D7FD-25933C4C1521}.wem"
+     },
+     {
       "Id": "1027100442",
       "Language": "SFX",
       "Streaming": "false",
@@ -1601,6 +1649,24 @@
      }
     ],
     "Events": [
+     {
+      "Id": "2687994736",
+      "Name": "Block_Break",
+      "ObjectPath": "\\Events\\Items\\Drill\\Block_Break",
+      "GUID": "{558870C0-E5CE-46E7-87E8-45ADC0BB145F}",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "2566810630",
+      "Name": "Block_Hit",
+      "ObjectPath": "\\Events\\Items\\Drill\\Block_Hit",
+      "GUID": "{2643AC9C-70CF-4FB1-8DE7-A714C946EFCE}",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
      {
       "Id": "2101178656",
       "Name": "Bubble_Collect",
@@ -1745,6 +1811,20 @@
       ]
      },
      {
+      "Id": "1683108213",
+      "Name": "Cyberpunk_Play",
+      "ObjectPath": "\\Events\\Music\\Cyberpunk_Play",
+      "GUID": "{BF30F9B4-33C2-4275-A511-EA466CC82F4A}",
+      "DurationType": "OneShot",
+      "DurationMin": "96.256",
+      "DurationMax": "96.256",
+      "MediaRefs": [
+       {
+        "Id": "424102005"
+       }
+      ]
+     },
+     {
       "Id": "3929235283",
       "Name": "Elevator_Arrive",
       "ObjectPath": "\\Events\\Items\\Elevator\\Elevator_Arrive",
@@ -1804,6 +1884,20 @@
        },
        {
         "Id": "545669700"
+       }
+      ]
+     },
+     {
+      "Id": "105544633",
+      "Name": "Menu_Play",
+      "ObjectPath": "\\Events\\Music\\Menu_Play",
+      "GUID": "{EC03880B-BF8A-49B2-BE06-FB951FB9D3C9}",
+      "DurationType": "OneShot",
+      "DurationMin": "115.386",
+      "DurationMax": "115.386",
+      "MediaRefs": [
+       {
+        "Id": "441596046"
        }
       ]
      },
@@ -2599,6 +2693,34 @@
       ]
      },
      {
+      "Id": "2322496412",
+      "Name": "Steampunk_Play",
+      "ObjectPath": "\\Events\\Music\\Steampunk_Play",
+      "GUID": "{CA072AB0-EAD4-4582-93CB-D78A473ACF24}",
+      "DurationType": "OneShot",
+      "DurationMin": "125.80013",
+      "DurationMax": "125.80013",
+      "MediaRefs": [
+       {
+        "Id": "628982877"
+       }
+      ]
+     },
+     {
+      "Id": "3437213870",
+      "Name": "Stoneage_Play",
+      "ObjectPath": "\\Events\\Music\\Stoneage_Play",
+      "GUID": "{9998B0D4-7F42-4166-B8E8-4D28FF95A79F}",
+      "DurationType": "OneShot",
+      "DurationMin": "99.002",
+      "DurationMax": "99.002",
+      "MediaRefs": [
+       {
+        "Id": "869032357"
+       }
+      ]
+     },
+     {
       "Id": "704609316",
       "Name": "Stop_Cat",
       "ObjectPath": "\\Events\\Enemy\\Cat\\Stop_Cat",
@@ -2641,6 +2763,34 @@
       "DurationType": "OneShot",
       "DurationMin": "0",
       "DurationMax": "0"
+     },
+     {
+      "Id": "931098012",
+      "Name": "UI_BigButton",
+      "ObjectPath": "\\Events\\UI\\UI_BigButton",
+      "GUID": "{1C6ABE0F-68C4-42BB-94CC-6762FAF4763F}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.26524243",
+      "DurationMax": "0.26524243",
+      "MediaRefs": [
+       {
+        "Id": "1019953498"
+       }
+      ]
+     },
+     {
+      "Id": "507163859",
+      "Name": "UI_SmallButton",
+      "ObjectPath": "\\Events\\UI\\UI_SmallButton",
+      "GUID": "{5B4D355B-9CA8-4775-B23B-BBB3F0CC4FE9}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.53126043",
+      "DurationMax": "0.53126043",
+      "MediaRefs": [
+       {
+        "Id": "63225722"
+       }
+      ]
      },
      {
       "Id": "3217770052",
@@ -2875,6 +3025,6 @@
     ]
    }
   ],
-  "FileHash": "{15A37EDB-52E6-7A41-8EF5-A4AF3730C080}"
+  "FileHash": "{323726D6-B0B9-D921-29E6-53585AE7B6FA}"
  }
 }

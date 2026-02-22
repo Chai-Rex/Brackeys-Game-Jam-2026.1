@@ -1,6 +1,116 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{0322AFCA-B03F-4014-BF95-D82DCD42371F}" SchemaVersion="133" RootDocumentID="{DE19D50C-A927-41D8-8B3B-6B230573043D}" ParentDocumentID="{20454079-B662-4AB5-B914-9B615A56604A}">
 	<Containers>
-		<WorkUnit Name="Pause Menu" ID="{0322AFCA-B03F-4014-BF95-D82DCD42371F}" OwnerID="{20454079-B662-4AB5-B914-9B615A56604A}" PersistMode="Nested"/>
+		<WorkUnit Name="Pause Menu" ID="{0322AFCA-B03F-4014-BF95-D82DCD42371F}" OwnerID="{20454079-B662-4AB5-B914-9B615A56604A}" PersistMode="Nested">
+			<ChildrenList>
+				<RandomSequenceContainer Name="UI Click small" ID="{8A783E89-DD85-4AEB-9C26-64A11C1BC655}" ShortID="957870515">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFX" ID="{C0901958-AA0D-4450-9846-B896800D3928}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="UI Click 1" ID="{DE4DE275-EC96-4008-9BDB-39AD66451346}" ShortID="627830103">
+							<PropertyList>
+								<Property Name="Soundly:ActiveChannels" Type="string" Value="[]"/>
+								<Property Name="Soundly:FileID" Type="string" Value="SND83166"/>
+								<Property Name="Soundly:FileName" Type="string" Value="https://signing-274265463422.us-central1.run.app?Type=GetFile&amp;SessionID=1771693764F28FLSEfCz0XfsMTQmK&amp;File=soundlyeu/1426367345Ff4sxqvM_wkFwG/SND83166/sfy_YVgEoGxIIoHWqZqkTcnxNolKAMNbnn"/>
+								<Property Name="Soundly:HandleStartTime" Type="string" Value="0"/>
+								<Property Name="Soundly:HandleStopTime" Type="string" Value="0.5312604166666667"/>
+								<Property Name="Soundly:LibraryID" Type="string" Value="1426367345Ff4sxqvM_wkFwG"/>
+								<Property Name="Soundly:LibraryLocation" Type="string" Value="Cloud"/>
+								<Property Name="Soundly:PlaybackSpeed" Type="string" Value="1.0"/>
+								<Property Name="Soundly:ProcessList" Type="string" Value="[]"/>
+								<Property Name="Soundly:RenderedFileBitRate" Type="string" Value="3"/>
+								<Property Name="Soundly:RenderedFilePath" Type="string" Value="/Users/stephenlunn/Documents/Soundly Audio/Games, Video, Menu UI, Select, Notification 18 SND83166.wav"/>
+								<Property Name="Soundly:RenderedFileSampleRate" Type="string" Value="96000"/>
+								<Property Name="Soundly:SelectionStartTime" Type="string" Value="0"/>
+								<Property Name="Soundly:SelectionStopTime" Type="string" Value="0"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Games, Video, Menu UI, Select, Notification 18 SND83166" ID="{AB67E2AB-7D36-4B0C-AB87-CFC8AB8BFD8D}">
+									<PropertyList>
+										<Property Name="Soundly:FileIDForAudioSource" Type="string" Value="SND83166"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Soundly Audio\Games, Video, Menu UI, Select, Notification 18 SND83166.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="63225722"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Games, Video, Menu UI, Select, Notification 18 SND83166" ID="{AB67E2AB-7D36-4B0C-AB87-CFC8AB8BFD8D}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
+				<BlendContainer Name="UI Click Big" ID="{876DB6EE-48B0-4BFF-9D1E-894ED6D16798}" ShortID="763301205">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFX" ID="{C0901958-AA0D-4450-9846-B896800D3928}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="UI Click 2" ID="{6F0AF072-D44E-4204-8A72-6369C361FC94}" ShortID="1021998557">
+							<PropertyList>
+								<Property Name="Soundly:ActiveChannels" Type="string" Value="[]"/>
+								<Property Name="Soundly:FileID" Type="string" Value="SND85070"/>
+								<Property Name="Soundly:FileName" Type="string" Value="/var/folders/xp/g_qlryt92qs2ydl8vr73yp9m0000gn/T/tmpiatabyds/afcache/1426367345Ff4sxqvM_wkFwGSND85070sfy.sfy"/>
+								<Property Name="Soundly:HandleStartTime" Type="string" Value="0"/>
+								<Property Name="Soundly:HandleStopTime" Type="string" Value="2.094989583333333"/>
+								<Property Name="Soundly:LibraryID" Type="string" Value="1426367345Ff4sxqvM_wkFwG"/>
+								<Property Name="Soundly:LibraryLocation" Type="string" Value="Cloud"/>
+								<Property Name="Soundly:PlaybackSpeed" Type="string" Value="1.0"/>
+								<Property Name="Soundly:ProcessList" Type="string" Value="[]"/>
+								<Property Name="Soundly:RenderedFileBitRate" Type="string" Value="3"/>
+								<Property Name="Soundly:RenderedFilePath" Type="string" Value="/Users/stephenlunn/Documents/Soundly Audio/User Interface, Click, Sci Fi Games, UI Menu, Very Short, Close 14 SND85070.wav"/>
+								<Property Name="Soundly:RenderedFileSampleRate" Type="string" Value="96000"/>
+								<Property Name="Soundly:SelectionStartTime" Type="string" Value="0"/>
+								<Property Name="Soundly:SelectionStopTime" Type="string" Value="0.12660798916723087"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="User Interface, Click, Sci Fi Games, UI Menu, Very Short, Close 14 SND85070" ID="{B9622C21-49EF-44FF-B526-727642E10BF6}">
+									<PropertyList>
+										<Property Name="Soundly:FileIDForAudioSource" Type="string" Value="SND85070"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.265242418472128"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Soundly Audio\User Interface, Click, Sci Fi Games, UI Menu, Very Short, Close 14 SND85070.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1019953498"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="User Interface, Click, Sci Fi Games, UI Menu, Very Short, Close 14 SND85070" ID="{B9622C21-49EF-44FF-B526-727642E10BF6}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</BlendContainer>
+			</ChildrenList>
+		</WorkUnit>
 	</Containers>
 </WwiseDocument>

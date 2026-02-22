@@ -6,6 +6,108 @@
 				<Property Name="Color" Type="int16" Value="7"/>
 				<Property Name="OverrideColor" Type="bool" Value="True"/>
 			</PropertyList>
+			<ChildrenList>
+				<PropertyContainer Name="Music Cue" ID="{1577AEF9-F5C2-46F2-914C-DCC6C9A14CE0}" ShortID="502181909">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="SFX" ID="{C0901958-AA0D-4450-9846-B896800D3928}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Theme_MainMenu_Loop" ID="{43281BFC-456B-4809-9399-B1693CF4BB7F}" ShortID="377252374">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Theme_MainMenu_Loop" ID="{247DCE4D-EF58-4097-B438-827AE90CDBCF}">
+									<Language>SFX</Language>
+									<AudioFile>Theme_MainMenu_Loop.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="441596046"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Theme_MainMenu_Loop" ID="{247DCE4D-EF58-4097-B438-827AE90CDBCF}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Theme_StoneAge_Loop" ID="{8557DB41-878C-4AB1-9551-D7F41CAF42B2}" ShortID="790697178">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Theme_StoneAge_Loop" ID="{5431B0CB-B033-4296-8FBB-2DBD264A5A14}">
+									<Language>SFX</Language>
+									<AudioFile>Theme_StoneAge_Loop.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="869032357"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Theme_StoneAge_Loop" ID="{5431B0CB-B033-4296-8FBB-2DBD264A5A14}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Thème_CyberCIty_Loop" ID="{B03B375E-AB46-4B89-B67B-0C40DC584616}" ShortID="162519000">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Thème_CyberCIty_Loop" ID="{CB78D582-516F-422D-BD13-9DACB62D506D}">
+									<Language>SFX</Language>
+									<AudioFile>Thème_CyberCIty_Loop.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="424102005"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Thème_CyberCIty_Loop" ID="{CB78D582-516F-422D-BD13-9DACB62D506D}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Thème_SteamPunk_Loop" ID="{A6330507-097A-45B4-89D8-0D5FCCF9ED9E}" ShortID="440569036">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Thème_SteamPunk_Loop" ID="{A1E14EFE-481F-4F58-BF2D-8187492A50CD}">
+									<Language>SFX</Language>
+									<AudioFile>Thème_SteamPunk_Loop.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="628982877"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Thème_SteamPunk_Loop" ID="{A1E14EFE-481F-4F58-BF2D-8187492A50CD}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</PropertyContainer>
+			</ChildrenList>
 		</WorkUnit>
 	</Containers>
 </WwiseDocument>
