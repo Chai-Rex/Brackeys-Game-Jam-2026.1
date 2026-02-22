@@ -5,6 +5,7 @@ public class UIGamePlayHandler : MonoBehaviour {
 
     [Header("")]
     [SerializeField] private SceneContainerSO _sceneContainer;
+    [SerializeField] private PlayerDistanceTracker _playerDistanceTracker;
 
     [Header("Canvas")]
     [SerializeField] private PauseCanvas _iPauseCanvas;
@@ -104,6 +105,24 @@ public class UIGamePlayHandler : MonoBehaviour {
         _iTimeCanvas.StartTimer();
 
         _inputManager.SetPlayerActionMap();
+
+    }
+
+    public async void PlayerDeath() {
+        _iVideoCanvas.gameObject.SetActive(false);
+        _iHUDCanvas.gameObject.SetActive(false);
+        _iPauseCanvas.gameObject.SetActive(false);
+        _iCreditsCanvas.gameObject.SetActive(false);
+        _iDeathCanvas.gameObject.SetActive(true);
+        _iTimeCanvas.gameObject.SetActive(false);
+
+
+        await _iDeathCanvas.CloseEyes();
+
+        _iDeathCanvas.SetStats(
+            _iTimeCanvas.GetFormattedTime(),
+            Mathf.FloorToInt(_playerDistanceTracker.TotalDistance)
+            );
 
     }
 }

@@ -35,13 +35,8 @@ public class DeathCanvas : MonoBehaviour {
         _iRestartButton.onClick.AddListener(RestartLevel);
     }
 
-    public void SetCauseOfDeathText(string i_causeOfDeath) {
-        _iDeathText.gameObject.SetActive(true);
-        _iDeathText.text = i_causeOfDeath;
-    }
-
     public async Task CloseEyes() {
-        _iDeathText.gameObject.SetActive(false);
+        DisableText();
         _iUpperImage.fillAmount = 0;
         _iLowerImage.fillAmount = 0;
 
@@ -54,7 +49,7 @@ public class DeathCanvas : MonoBehaviour {
     }
 
     public async Task OpenEyes() {
-        _iDeathText.gameObject.SetActive(false);
+        DisableText();
         _iUpperImage.fillAmount = 1;
         _iLowerImage.fillAmount = 1;
 
@@ -67,9 +62,27 @@ public class DeathCanvas : MonoBehaviour {
 
     }
 
+    private void DisableText() {
+        _iDeathText.gameObject.SetActive(false);
+        _iTime.gameObject.SetActive(false);
+        _iBlocksBroken.gameObject.SetActive(false);
+        _iDistanceTraveled.gameObject.SetActive(false);
 
-    public void SetStats() {
+        _iRestartButton.gameObject.SetActive(false);
+    }
 
+
+    public void SetStats(string time, int distance, int blocks = 0) {
+        _iDeathText.gameObject.SetActive(true);
+        _iTime.gameObject.SetActive(true);
+        _iBlocksBroken.gameObject.SetActive(true);
+        _iDistanceTraveled.gameObject.SetActive(true);
+
+        _iRestartButton.gameObject.SetActive(true);
+
+        _iTime.text = $"Time: {time}";
+        _iBlocksBroken.text = $"Blocks Broken: {blocks}";
+        _iDistanceTraveled.text = $"Distance Traveled: {distance}m";
     }
 
     public void RestartLevel() {

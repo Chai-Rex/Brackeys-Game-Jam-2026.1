@@ -10356,9 +10356,9 @@ MonoBehaviour:
   OnDie:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1880327623}
-        m_TargetAssemblyTypeName: DeathMenu, Assembly-CSharp
-        m_MethodName: OpenMenu
+      - m_Target: {fileID: 2003660981}
+        m_TargetAssemblyTypeName: UIGamePlayHandler, Assembly-CSharp
+        m_MethodName: PlayerDeath
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12249,6 +12249,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85aad6f501bd92d40b4b1264f4596162, type: 3}
+--- !u!114 &2003660981 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1162975860477367711, guid: 85aad6f501bd92d40b4b1264f4596162, type: 3}
+  m_PrefabInstance: {fileID: 2003660980}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a52e673115d91c4499441010fe745c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIGamePlayHandler
 --- !u!1 &2010317412
 GameObject:
   m_ObjectHideFlags: 0

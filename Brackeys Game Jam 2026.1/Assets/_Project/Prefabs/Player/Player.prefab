@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 7689519159607885051}
   - component: {fileID: 6439155220111374215}
   - component: {fileID: 2592130765572809362}
+  - component: {fileID: 9213596789047060000}
   m_Layer: 18
   m_Name: Player
   m_TagString: Untagged
@@ -160,6 +161,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e6d1e9016a0e1f47b7b9bd42f57e1b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerInputHandler
+--- !u!114 &9213596789047060000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1780270255350207731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54346254b6c3b1c40bf546ea2cbebd98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerDistanceTracker
 --- !u!1 &1780813506179096520
 GameObject:
   m_ObjectHideFlags: 0

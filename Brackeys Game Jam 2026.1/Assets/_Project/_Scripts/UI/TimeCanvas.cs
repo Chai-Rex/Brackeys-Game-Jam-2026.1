@@ -17,11 +17,7 @@ public class TimeCanvas : MonoBehaviour {
     }
 
     private void UpdateDisplay() {
-        int totalSeconds = Mathf.FloorToInt(_elapsedTime);
-        int minutes = totalSeconds / 60;
-        int seconds = totalSeconds % 60;
-
-        _iTimerText.text = $"{minutes:00}:{seconds:00}";
+        _iTimerText.text = GetFormattedTime();
     }
 
     public void StartTimer() {
@@ -43,5 +39,12 @@ public class TimeCanvas : MonoBehaviour {
         _isRunning = false;
         UpdateDisplay();
     }
+
+    public string GetFormattedTime() {
+        int totalSeconds = Mathf.FloorToInt(_elapsedTime);
+        int minutes = totalSeconds / 60;
+        int seconds = totalSeconds % 60;
+        return $"{minutes:00}:{seconds:00}";
+    }   
 
 }
