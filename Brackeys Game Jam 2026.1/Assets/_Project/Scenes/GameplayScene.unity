@@ -10380,6 +10380,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1709779275 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9213596789047060000, guid: d241870146dd2464e8e8149fe85f7965, type: 3}
+  m_PrefabInstance: {fileID: 1709779267}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1709779271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54346254b6c3b1c40bf546ea2cbebd98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerDistanceTracker
 --- !u!1001 &1728349574
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12216,6 +12227,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ===== UI =====
       objectReference: {fileID: 0}
+    - target: {fileID: 1162975860477367711, guid: 85aad6f501bd92d40b4b1264f4596162, type: 3}
+      propertyPath: _playerDistanceTracker
+      value: 
+      objectReference: {fileID: 1709779275}
     - target: {fileID: 6536526504737801196, guid: 85aad6f501bd92d40b4b1264f4596162, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -12521,7 +12536,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dc14fc9df0d4e24296215de36292f60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DrillHandler
-  blockDestroyed: 0
   playerBlackboardHandler: {fileID: 1709779269}
   DestructibleLayer:
     serializedVersion: 2
