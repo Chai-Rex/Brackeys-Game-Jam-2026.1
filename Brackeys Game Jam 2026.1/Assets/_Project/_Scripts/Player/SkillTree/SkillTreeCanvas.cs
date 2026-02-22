@@ -18,12 +18,17 @@ public class SkillTreeCanvas : MonoBehaviour
 
     private void Start()
     {
-        UpdateSkillPoints();
+        //UpdateSkillPoints();
         
         //I know It's too much
         SkillTreeNode.upgradeDrill += UpdateByEvent;
         SkillTreeNode.upgradeHealth += UpdateByEvent;
         SkillTreeNode.upgradeMovement += UpdateByEvent;
+    }
+
+    private void OnEnable()
+    {
+        PanelOpened();
     }
 
     private void OnDestroy()
