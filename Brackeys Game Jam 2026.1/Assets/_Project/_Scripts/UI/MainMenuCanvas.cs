@@ -17,7 +17,7 @@ public class MainMenuCanvas : MonoBehaviour {
     [SerializeField] private Slider _iMasterVolumeSlider;
 
     [Header("Music")]
-    [SerializeField] private string _iMusicEvent = "Menu_Music";
+    [SerializeField] private string _iMusicEvent = "Menu_Play";
 
     private SaveUISettingsSO _settings;
 
@@ -36,7 +36,7 @@ public class MainMenuCanvas : MonoBehaviour {
         // Slider
         _iMasterVolumeSlider.onValueChanged.AddListener((float value) => { 
             _settings.MasterVolume = value; 
-            AkUnitySoundEngine.SetState("Master_Volume", ((uint)(value * 100)).ToString());
+            AkUnitySoundEngine.SetState("Master_Volume", ((int)(value * 100)).ToString());
         });
 
         // Buttons

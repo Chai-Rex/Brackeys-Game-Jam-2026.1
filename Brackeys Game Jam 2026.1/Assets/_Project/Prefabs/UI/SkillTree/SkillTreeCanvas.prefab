@@ -181,8 +181,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 760.1672, y: 351.62012}
-  m_SizeDelta: {x: -1544.3345, y: -926.9941}
+  m_AnchoredPosition: {x: 583, y: 411}
+  m_SizeDelta: {x: -1618.3672, y: -921.497}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6298439192925611963
 CanvasRenderer:
@@ -1563,11 +1563,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2099201887736502364, guid: 053c85902e7aa704f94888891c4a7a19, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 160
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 2099201887736502364, guid: 053c85902e7aa704f94888891c4a7a19, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 30
+      value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 2099201887736502364, guid: 053c85902e7aa704f94888891c4a7a19, type: 3}
       propertyPath: m_LocalScale.x
@@ -1628,6 +1628,26 @@ PrefabInstance:
     - target: {fileID: 2099201887736502364, guid: 053c85902e7aa704f94888891c4a7a19, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3976206105548869914, guid: 053c85902e7aa704f94888891c4a7a19, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000592833594365096, guid: 053c85902e7aa704f94888891c4a7a19, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 5251744956290624300, guid: 07ad5b200dfbf714e9b0cb4bcf63dfc5, type: 3}
+    - target: {fileID: 4000592833594365096, guid: 053c85902e7aa704f94888891c4a7a19, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000592833594365096, guid: 053c85902e7aa704f94888891c4a7a19, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4000592833594365096, guid: 053c85902e7aa704f94888891c4a7a19, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -11829,10 +11829,18 @@ PrefabInstance:
       propertyPath: _player
       value: 
       objectReference: {fileID: 1709779270}
+    - target: {fileID: 6824433579519681751, guid: f2cb6f20742a9d043a323660f9ae858d, type: 3}
+      propertyPath: _uiGamePlayHandler
+      value: 
+      objectReference: {fileID: 2003660981}
     - target: {fileID: 8556458618245674162, guid: f2cb6f20742a9d043a323660f9ae858d, type: 3}
       propertyPath: _player
       value: 
       objectReference: {fileID: 1709779270}
+    - target: {fileID: 8556458618245674162, guid: f2cb6f20742a9d043a323660f9ae858d, type: 3}
+      propertyPath: _uiGamePlayHandler
+      value: 
+      objectReference: {fileID: 2003660981}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
