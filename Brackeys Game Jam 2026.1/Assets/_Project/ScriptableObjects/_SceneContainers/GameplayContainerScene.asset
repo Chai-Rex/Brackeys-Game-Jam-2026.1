@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SceneContainerSO
   _managers:
   - {fileID: 11400000, guid: baad1b09049dc69479e3f008241a4772, type: 2}
+  - {fileID: 11400000, guid: 23434a9ac2ec85d48b701b9a0008a09a, type: 2}
   - {fileID: 11400000, guid: 060aa07aca206d345830d3de39888317, type: 2}
   - {fileID: 11400000, guid: 6ac33709902ba4042b0e633cfa7ca1dc, type: 2}
   - {fileID: 11400000, guid: afd9e7b049d45c941b64df0eb71ace5f, type: 2}

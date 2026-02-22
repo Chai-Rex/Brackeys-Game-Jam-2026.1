@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 011be8c91a6cb0b418538f7e89a290f7, type: 3}
   m_Name: GameCommandsManager
   m_EditorClassIdentifier: Assembly-CSharp::GameCommandsManager
-  _enableDebugLogs: 0
+  _enableDebugLogs: 1
+  _gameBootstrap: {fileID: 0}

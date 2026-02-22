@@ -14,7 +14,7 @@ public class GameCommandsManager : ScriptableObject, IInitializable, ICleanable,
     [SerializeField] private bool _enableDebugLogs = true;
 
     // Reference to GameBootstrap (set at initialization)
-    private GameBootstrap _gameBootstrap;
+    [SerializeField] private GameBootstrap _gameBootstrap;
 
     ////////////////////////////////////////////////////////////
     /// Initialization
@@ -47,8 +47,8 @@ public class GameCommandsManager : ScriptableObject, IInitializable, ICleanable,
         Log("Command: StartGame");
 
         if (_gameBootstrap == null) {
-            LogError("GameBootstrap not registered!");
-            return;
+            _gameBootstrap = Object.FindFirstObjectByType<GameBootstrap>();
+
         }
 
         _gameBootstrap.BeginGame();
@@ -61,8 +61,8 @@ public class GameCommandsManager : ScriptableObject, IInitializable, ICleanable,
         Log($"Command: LoadLevel({levelName})");
 
         if (_gameBootstrap == null) {
-            LogError("GameBootstrap not registered!");
-            return;
+            _gameBootstrap = Object.FindFirstObjectByType<GameBootstrap>();
+
         }
 
         _gameBootstrap.LoadScene(levelName);
@@ -75,8 +75,9 @@ public class GameCommandsManager : ScriptableObject, IInitializable, ICleanable,
         Log("Command: PauseGame");
 
         if (_gameBootstrap == null) {
-            LogError("GameBootstrap not registered!");
-            return;
+
+            _gameBootstrap = Object.FindFirstObjectByType<GameBootstrap>();
+
         }
 
         _gameBootstrap.PauseGame();
@@ -89,8 +90,8 @@ public class GameCommandsManager : ScriptableObject, IInitializable, ICleanable,
         Log("Command: ResumeGame");
 
         if (_gameBootstrap == null) {
-            LogError("GameBootstrap not registered!");
-            return;
+            _gameBootstrap = Object.FindFirstObjectByType<GameBootstrap>();
+
         }
 
         _gameBootstrap.ResumeGame();
@@ -103,8 +104,8 @@ public class GameCommandsManager : ScriptableObject, IInitializable, ICleanable,
         Log("Command: QuitToMainMenu");
 
         if (_gameBootstrap == null) {
-            LogError("GameBootstrap not registered!");
-            return;
+            _gameBootstrap = Object.FindFirstObjectByType<GameBootstrap>();
+
         }
 
         _gameBootstrap.ReturnToMainMenu();
