@@ -5,6 +5,7 @@ public class LavaStartTrigger : MonoBehaviour {
     [SerializeField] private HeightWinCondition _winCondition;
     [SerializeField] private LayerMask _triggerLayers;
     [SerializeField] private bool _triggerOnce = true;
+    [SerializeField] private GameObject _iItem;
 
     private bool _hasTriggered;
 
@@ -16,8 +17,10 @@ public class LavaStartTrigger : MonoBehaviour {
             return;
 
         _lava.StartLavaRise();
-        _winCondition.ActivateWinCondition();
+        _winCondition.StartWinCondition();
 
         _hasTriggered = true;
+
+        _iItem.SetActive(false);
     }
 }
