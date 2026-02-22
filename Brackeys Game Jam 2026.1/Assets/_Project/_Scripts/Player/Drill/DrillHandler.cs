@@ -144,7 +144,7 @@ public class DrillHandler : MonoBehaviour
     private void DestroyTile(Tilemap tilemap, TileData tileData, Vector3Int cellPosition)
     {
         playerBlackboardHandler.blockDestroyed++;
-        playerBlackboardHandler.skillPoints += tileData.durability; //Example of giving the player skill points based on the durability of the block they destroyed
+        playerBlackboardHandler.skillPoints += tileData.pointValue; //Example of giving the player skill points based on the point value of the block they destroyed
         tilemap.GetComponent<HitParticleSpawner>().SpawnParticles(tilemap.GetSprite(cellPosition), tilemap.GetCellCenterWorld(cellPosition));
         tilemap.SetTile(cellPosition, null);
         if (fogOfWarManager) { fogOfWarManager.OnTileBroken(cellPosition); }

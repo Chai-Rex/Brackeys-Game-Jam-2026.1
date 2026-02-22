@@ -15,4 +15,5 @@ MonoBehaviour:
   tileName: Stone Rule Tiles
   isDestructible: 1
   durability: 3
+  pointValue: 2
   physicalMaterial: {fileID: 0}
