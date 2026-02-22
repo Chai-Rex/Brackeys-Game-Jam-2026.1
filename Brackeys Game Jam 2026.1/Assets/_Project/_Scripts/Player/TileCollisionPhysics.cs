@@ -10,8 +10,11 @@ public class TileCollisionPhysics : MonoBehaviour
 private void OnTriggerEnter2D(Collision2D other)
 {
 
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+=======
+>>>>>>> parent of f083493 (More or less final Map)
 if (other.CompareTag("Ground"))
 {
     Vector3Int cellPosition = tilemap.WorldToCell(other.transform.position);
@@ -30,17 +33,12 @@ if (other.CompareTag("Ground"))
     if(tileData.physicalMaterial == null)
     {
         other.GetComponent<Collider2D>().sharedMaterial = null; // Reset to default material if no physical material is defined
+<<<<<<< HEAD
 =======
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.transform.CompareTag("Ground"))
         {
-=======
-    private void OnCollisionEnter2D(Collision2D other)
-    {
-        if (other.transform.CompareTag("Ground"))
-        {
->>>>>>> Stashed changes
             Vector3Int cellPosition = tilemap.WorldToCell(other.contacts[0].point);
             Debug.Log($"Collided with tile at Position: {other.transform.position}, Cell Position: {cellPosition}");
             if(tilemap.GetTile(cellPosition) != null)
@@ -66,6 +64,8 @@ if (other.CompareTag("Ground"))
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> parent of f083493 (More or less final Map)
     }
 }
 }
