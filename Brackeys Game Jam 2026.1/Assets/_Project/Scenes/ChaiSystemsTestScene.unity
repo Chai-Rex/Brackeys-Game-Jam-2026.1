@@ -1246,7 +1246,19 @@ MonoBehaviour:
   nextNodes:
   - {fileID: 1465572391}
   _nameText: {fileID: 1561674408}
+  resourceCostText: {fileID: 0}
   buttonImage: {fileID: 326857058}
+  buttonDefault: {r: 0, g: 0, b: 0, a: 0}
+  iconImage: {fileID: 0}
+  movementIcon: {fileID: 0}
+  drillIcon: {fileID: 0}
+  healthIcon: {fileID: 0}
+  movementBG: {fileID: 0}
+  drillBG: {fileID: 0}
+  healthBG: {fileID: 0}
+  connectorUIPrefab: {fileID: 0}
+  connectorParent: {fileID: 0}
+  connectedConnectors: []
 --- !u!114 &326857058
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4040,7 +4052,19 @@ MonoBehaviour:
   nextNodes:
   - {fileID: 1987465829}
   _nameText: {fileID: 1191745844}
+  resourceCostText: {fileID: 0}
   buttonImage: {fileID: 1465572392}
+  buttonDefault: {r: 0, g: 0, b: 0, a: 0}
+  iconImage: {fileID: 0}
+  movementIcon: {fileID: 0}
+  drillIcon: {fileID: 0}
+  healthIcon: {fileID: 0}
+  movementBG: {fileID: 0}
+  drillBG: {fileID: 0}
+  healthBG: {fileID: 0}
+  connectorUIPrefab: {fileID: 0}
+  connectorParent: {fileID: 0}
+  connectedConnectors: []
 --- !u!114 &1465572392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5930,7 +5954,19 @@ MonoBehaviour:
   - {fileID: 1465572391}
   nextNodes: []
   _nameText: {fileID: 1906827503}
+  resourceCostText: {fileID: 0}
   buttonImage: {fileID: 1987465831}
+  buttonDefault: {r: 0, g: 0, b: 0, a: 0}
+  iconImage: {fileID: 0}
+  movementIcon: {fileID: 0}
+  drillIcon: {fileID: 0}
+  healthIcon: {fileID: 0}
+  movementBG: {fileID: 0}
+  drillBG: {fileID: 0}
+  healthBG: {fileID: 0}
+  connectorUIPrefab: {fileID: 0}
+  connectorParent: {fileID: 0}
+  connectedConnectors: []
 --- !u!114 &1987465830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6387,6 +6423,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2119595297}
   m_CullTransparentMesh: 1
+--- !u!1001 &750353586017754511
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4382778056463718491, guid: 5e974f87a4e6aa74cbcc7464c12b4e08, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4382778056463718491, guid: 5e974f87a4e6aa74cbcc7464c12b4e08, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4382778056463718491, guid: 5e974f87a4e6aa74cbcc7464c12b4e08, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4382778056463718491, guid: 5e974f87a4e6aa74cbcc7464c12b4e08, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4382778056463718491, guid: 5e974f87a4e6aa74cbcc7464c12b4e08, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4382778056463718491, guid: 5e974f87a4e6aa74cbcc7464c12b4e08, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4382778056463718491, guid: 5e974f87a4e6aa74cbcc7464c12b4e08, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4382778056463718491, guid: 5e974f87a4e6aa74cbcc7464c12b4e08, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4382778056463718491, guid: 5e974f87a4e6aa74cbcc7464c12b4e08, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4382778056463718491, guid: 5e974f87a4e6aa74cbcc7464c12b4e08, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9009969474164214216, guid: 5e974f87a4e6aa74cbcc7464c12b4e08, type: 3}
+      propertyPath: m_Name
+      value: AudioZones
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5e974f87a4e6aa74cbcc7464c12b4e08, type: 3}
 --- !u!1001 &867513162471405400
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6629,3 +6722,4 @@ SceneRoots:
   - {fileID: 990054818}
   - {fileID: 872385133}
   - {fileID: 239759470}
+  - {fileID: 750353586017754511}

@@ -1,6 +1,7 @@
 ﻿using UnityEditor;
 using UnityEngine;
 
+#if UNITY_EDITOR
 [CustomEditor(typeof(SkillTreeNode))]
 public class PrefabSelfSpawnerEditor : Editor
 {
@@ -23,3 +24,4 @@ public class PrefabSelfSpawnerEditor : Editor
         }
     }
 }
+#endif
