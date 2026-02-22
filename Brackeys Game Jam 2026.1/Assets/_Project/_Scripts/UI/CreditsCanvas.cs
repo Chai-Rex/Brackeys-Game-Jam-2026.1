@@ -38,7 +38,7 @@ public class CreditsCanvas : MonoBehaviour {
         try {
             //InputManager.Instance.DisablePlayerActions();
 
-            await Awaitable.WaitForSecondsAsync(2f, token);
+            await Awaitable.WaitForSecondsAsync(1f, token);
 
             //InputManager.Instance.EnableDialogueActions();
             //InputManager.Instance._DialogueContinueAction.started += _DialogueContinueAction_started;

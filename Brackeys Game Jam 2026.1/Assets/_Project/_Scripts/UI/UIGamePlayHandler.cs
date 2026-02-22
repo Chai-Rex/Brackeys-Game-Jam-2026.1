@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 
 public class UIGamePlayHandler : MonoBehaviour {
@@ -18,6 +19,7 @@ public class UIGamePlayHandler : MonoBehaviour {
 
     [Header("Video play")]
     [SerializeField] private bool _iPlayVideoOnStart = false;
+    [SerializeField] private Key TestKey = Key.T; 
 
     private InputManager _inputManager;
     private GameCommandsManager _gameCommandsManager;
@@ -37,6 +39,11 @@ public class UIGamePlayHandler : MonoBehaviour {
             StartGame();
         }
 
+    }
+
+    private void Update() {
+        if (Keyboard.current[TestKey].isPressed)
+            PlayerDeath();
     }
 
     public void Start() {
@@ -124,5 +131,16 @@ public class UIGamePlayHandler : MonoBehaviour {
             Mathf.FloorToInt(_playerDistanceTracker.TotalDistance)
             );
 
+    }
+
+    public void Victory() {
+        _iVideoCanvas.gameObject.SetActive(false);
+        _iHUDCanvas.gameObject.SetActive(false);
+        _iPauseCanvas.gameObject.SetActive(false);
+        _iCreditsCanvas.gameObject.SetActive(true);
+        _iDeathCanvas.gameObject.SetActive(false);
+        _iTimeCanvas.gameObject.SetActive(false);
+
+        _iCreditsCanvas.StartCredits();
     }
 }
