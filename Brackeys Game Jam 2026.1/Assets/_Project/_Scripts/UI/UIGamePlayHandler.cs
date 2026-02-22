@@ -64,6 +64,8 @@ public class UIGamePlayHandler : MonoBehaviour {
         _iTimeCanvas.PauseTimer();
 
         _gameCommandsManager.PauseGame();
+
+        Time.timeScale = 0f;
     }
 
     private void _UIResumeAction_started(UnityEngine.InputSystem.InputAction.CallbackContext obj) {
@@ -81,6 +83,8 @@ public class UIGamePlayHandler : MonoBehaviour {
         _iTimeCanvas.ResumeTimer();
 
         _gameCommandsManager.ResumeGame();
+
+        Time.timeScale = 1f;
     }
 
 

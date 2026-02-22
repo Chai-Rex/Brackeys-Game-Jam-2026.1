@@ -60,5 +60,6 @@ public class SkillTreeCanvas : MonoBehaviour
 
     public void CloseSkills() {
         gameObject.SetActive(false);
+        Time.timeScale = 1f;
     }
 }

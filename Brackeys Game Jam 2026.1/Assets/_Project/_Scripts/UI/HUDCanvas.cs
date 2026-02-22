@@ -17,6 +17,7 @@ public class HUDCanvas : MonoBehaviour {
 
     private void OpenSkills() {
         _iSkillCanvas.gameObject.SetActive(true);
+        Time.timeScale = 0f;
     }
 
 
