@@ -3,7 +3,7 @@ using System;
 using TMPro;
 using UnityEngine;
 
-public class SkillTree : MonoBehaviour
+public class SkillTreeCanvas : MonoBehaviour
 {
     private PlayerBlackboardHandler _blackboardHandler;
     [SerializeField] private TextMeshProUGUI skillPointText;

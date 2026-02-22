@@ -133,8 +133,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 7163818009098428852}
-        m_TargetAssemblyTypeName: SkillTree, Assembly-CSharp
+      - m_Target: {fileID: 5998675498483007271}
+        m_TargetAssemblyTypeName: SkillTreeCanvas, Assembly-CSharp
         m_MethodName: PanelOpened
         m_Mode: 1
         m_Arguments:
@@ -505,6 +505,7 @@ GameObject:
   - component: {fileID: 5638590420060664677}
   - component: {fileID: 8253965509236372990}
   - component: {fileID: 8804747852159079037}
+  - component: {fileID: 5998675498483007271}
   m_Layer: 5
   m_Name: SkillTreeCanvas
   m_TagString: Untagged
@@ -596,6 +597,19 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &5998675498483007271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7219907319538837350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45540c061e7841a391421f116030b936, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SkillTree
+  skillPointText: {fileID: 5778573605724936701}
 --- !u!1 &7306453585242294906
 GameObject:
   m_ObjectHideFlags: 0
@@ -839,7 +853,6 @@ GameObject:
   - component: {fileID: 6169520886630969187}
   - component: {fileID: 363368479256158468}
   - component: {fileID: 5280475430215773392}
-  - component: {fileID: 7163818009098428852}
   m_Layer: 5
   m_Name: SkillPanel
   m_TagString: Untagged
@@ -907,19 +920,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &7163818009098428852
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7665064543380614165}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45540c061e7841a391421f116030b936, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SkillTree
-  skillPointText: {fileID: 5778573605724936701}
 --- !u!1 &7668608615094844433
 GameObject:
   m_ObjectHideFlags: 0

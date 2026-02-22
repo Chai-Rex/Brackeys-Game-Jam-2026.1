@@ -38,12 +38,12 @@ public class SkillTreeNode : MonoBehaviour
     private void Start()
     {
         IsThisUnlocked();
-        SkillTree.panelOpened +=RefreshResourceText;
+        SkillTreeCanvas.panelOpened +=RefreshResourceText;
     }
 
     private void OnDestroy()
     {
-        SkillTree.panelOpened -=RefreshResourceText;
+        SkillTreeCanvas.panelOpened -=RefreshResourceText;
     }
 
     private void RefreshResourceText()
