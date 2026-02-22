@@ -62,7 +62,7 @@ public class SkillTreeNode : MonoBehaviour
     private void IsThisUnlocked()
     {
         unlocked = true;
-        ChangeButtonColor(buttonDefault);
+        ChangeButtonColor(Color.white);
 
         foreach (var node in precedingNodes)
         {
