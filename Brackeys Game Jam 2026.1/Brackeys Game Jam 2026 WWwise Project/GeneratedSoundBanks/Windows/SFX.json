@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{2B4FCDD6-7034-4F03-8455-9DC46B8F8FD0}",
     "Language": "SFX",
-    "Hash": "{8E13EE1F-037F-F08E-5E91-AC2D337C5B30}",
+    "Hash": "{E511A39C-D297-C6D4-44F3-04F6B57A8B9C}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\SFX",
     "ShortName": "SFX",
     "Path": "SFX.bnk",
@@ -157,7 +157,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Soundly Audio\\Vegetation, Misc, Plant, Vines, Growing, Movement, Creaks, Rubbery Vines SND133890 1.wav",
-      "CachePath": "6D/{6D2D1170-0084-8E90-ACF5-69A21F445062}.wem"
+      "CachePath": "7B/{7B3A6906-948C-8FF6-A09D-30F4263B6F30}.wem"
      },
      {
       "Id": "138220742",
@@ -445,7 +445,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Soundly Audio\\Vegetation, Misc, Plant, Vines, Growing, Movement, Creaks, Rubbery Vines SND133890 1.wav",
-      "CachePath": "20/{2099A4CA-7299-BAFA-23C7-C389BDC5F68F}.wem"
+      "CachePath": "FF/{FF6922F3-FFAF-9E50-3939-86A1C766B136}.wem"
      },
      {
       "Id": "370718029",
@@ -957,7 +957,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Soundly Audio\\Vegetation, Misc, Plant, Vines, Growing, Movement, Creaks, Rubbery Vines SND133890 1.wav",
-      "CachePath": "C2/{C281E6EF-B2A3-A307-EECC-79EE2BE0BCB8}.wem"
+      "CachePath": "55/{55D1556A-91A5-E481-4093-F2BB62E4AF10}.wem"
      },
      {
       "Id": "655803969",
@@ -1189,7 +1189,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Cat Purring.wav",
-      "CachePath": "99/{99A20463-A093-7236-61B0-03211A04930A}.wem"
+      "CachePath": "40/{40BC5147-CDC9-BA02-17E2-EA403C768330}.wem"
      },
      {
       "Id": "839377454",
@@ -2767,7 +2767,9 @@
       "ObjectPath": "\\Events\\Enemy\\Vine\\Vine_Regrow",
       "GUID": "{515482E9-5338-41EA-A1AB-EAA767102FA1}",
       "MaxAttenuation": "20",
-      "DurationType": "Infinite",
+      "DurationType": "OneShot",
+      "DurationMin": "1.8109257",
+      "DurationMax": "2.3093183",
       "MediaRefs": [
        {
         "Id": "126584430"
@@ -2873,6 +2875,6 @@
     ]
    }
   ],
-  "FileHash": "{1E7EFF23-EDD3-0504-512E-6DEE4C9BD484}"
+  "FileHash": "{15A37EDB-52E6-7A41-8EF5-A4AF3730C080}"
  }
 }

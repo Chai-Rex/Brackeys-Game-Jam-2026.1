@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{2F5CA59A-9879-77BB-F917-A4D7D7A39311}",
+    "Hash": "{3747BBB3-C4E2-7E07-DD55-CD9BAE028013}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -96,6 +96,12 @@
       "Name": "SS_Air_RPM",
       "ObjectPath": "\\Game Parameters\\Factory Soundseed Air Game Syncs\\SS_Air_RPM",
       "GUID": "{A34890AB-B9D5-4526-A64D-5290C43EF2DC}"
+     },
+     {
+      "Id": "1006694123",
+      "Name": "Music_Volume",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\UI\\Music_Volume",
+      "GUID": "{CF75493C-FD4A-48C9-926C-986479E7DD6B}"
      },
      {
       "Id": "1029930033",
@@ -210,6 +216,12 @@
       "Name": "SS_Air_Turbulence",
       "ObjectPath": "\\Game Parameters\\Factory Soundseed Air Game Syncs\\SS_Air_Turbulence",
       "GUID": "{EDA87B19-73AA-40A0-9F19-2073606DB710}"
+     },
+     {
+      "Id": "4179668880",
+      "Name": "Master_Volume",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\UI\\Master_Volume",
+      "GUID": "{105F16F3-A564-4262-9560-DCE10924AB4C}"
      }
     ],
     "SwitchGroups": [
@@ -751,6 +763,6 @@
     ]
    }
   ],
-  "FileHash": "{BB2129BB-11D1-0587-29C1-7B9589F01B69}"
+  "FileHash": "{5906C1D8-5C42-8BBF-FF2F-032518D1CC51}"
  }
 }

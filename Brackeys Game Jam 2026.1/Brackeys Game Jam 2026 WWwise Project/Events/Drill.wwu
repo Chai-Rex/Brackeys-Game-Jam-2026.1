@@ -8,7 +8,7 @@
 						<Action Name="" ID="{0A7E5518-B613-49C9-9D5D-0E8C5B01852E}" ShortID="21152932">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Block Crack" ID="{8C6F21AE-1143-496D-8634-D227D91B4B28}" WorkUnitID="{3ECFDC21-BC11-4FE3-954C-F43EAD4EBE72}"/>
+									<ObjectRef Name="Block Cracking" ID="{6B0E32E4-6C8E-40F5-8185-FB44586C19B8}" WorkUnitID="{3ECFDC21-BC11-4FE3-954C-F43EAD4EBE72}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
