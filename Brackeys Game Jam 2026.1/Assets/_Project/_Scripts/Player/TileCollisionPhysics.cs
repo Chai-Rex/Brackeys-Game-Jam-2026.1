@@ -9,6 +9,7 @@ public class TileCollisionPhysics : MonoBehaviour
 
     private void OnTriggerEnter2D(Collision2D other)
     {
+        /*
         if (other.CompareTag("Ground"))
         {
             Vector3Int cellPosition = tilemap.WorldToCell(other.transform.position);
@@ -28,6 +29,6 @@ public class TileCollisionPhysics : MonoBehaviour
             {
                 other.GetComponent<Collider2D>().sharedMaterial = null; // Reset to default material if no physical material is defined
             }
-        }
+        }*/
     }
 }
