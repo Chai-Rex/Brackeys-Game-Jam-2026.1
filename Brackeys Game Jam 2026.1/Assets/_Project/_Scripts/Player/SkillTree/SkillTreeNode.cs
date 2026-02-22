@@ -20,7 +20,7 @@ public class SkillTreeNode : MonoBehaviour
     [SerializeField] private Image buttonImage;
     [SerializeField] private Color buttonDefault;
     [SerializeField] private Image iconImage;
-    [SerializeField] private Sprite movementIcon, drillIcon, healthIcon;
+    [SerializeField] private Sprite movementIcon, drillIcon, healthIcon, movementBG,drillBG, healthBG;
     
     [Header("Connector UI")]
     [SerializeField] private GameObject connectorUIPrefab;
@@ -149,7 +149,7 @@ public class SkillTreeNode : MonoBehaviour
         }
         //
         
-        ChangeButtonColor(Color.cyan);
+        ChangeButtonColor(Color.darkGreen);
         CheckUnlocks();
     }
 
@@ -157,19 +157,22 @@ public class SkillTreeNode : MonoBehaviour
     {
         if (skillUpgrade == null) return;
         
-        _nameText.text = skillUpgrade.SkillUpgradeName;
+        //_nameText.text = skillUpgrade.SkillUpgradeName;
         resourceCostText.text = skillUpgrade.pointCost.ToString();
         
         switch (skillUpgrade.classification)
         {
             case UpgradeGeneralClassification.Drill:
                 iconImage.sprite = drillIcon;
+                buttonImage.sprite = drillBG;
                 break;
             case UpgradeGeneralClassification.Health:
                 iconImage.sprite = healthIcon;
+                buttonImage.sprite = healthBG;
                 break;
             case UpgradeGeneralClassification.Movement:
                 iconImage.sprite = movementIcon;
+                buttonImage.sprite = movementBG;
                 break;
         }
     }
