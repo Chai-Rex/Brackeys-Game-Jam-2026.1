@@ -30,12 +30,33 @@ public class SkillTreeNode : MonoBehaviour
 
     private void Awake()
     {
+        _blackboard = PlayerHandler.Instance.Blackboard;
         AdjustToScriptableObject();
     }
 
+    private PlayerBlackboardHandler _blackboard;
     private void Start()
     {
         IsThisUnlocked();
+        SkillTree.panelOpened +=RefreshResourceText;
+    }
+
+    private void OnDestroy()
+    {
+        SkillTree.panelOpened -=RefreshResourceText;
+    }
+
+    private void RefreshResourceText()
+    {
+        if (activated) return;
+        if (_blackboard.skillPoints < skillUpgrade.pointCost)
+        {
+            resourceCostText.color = Color.pink;
+        }
+        else
+        {
+            resourceCostText.color = Color.white;
+        }
     }
 
     private void IsThisUnlocked()
@@ -91,19 +112,27 @@ public class SkillTreeNode : MonoBehaviour
     public void OnClicked()
     {
         //Debug.Log($"Clicked unlocked:{unlocked} activated{activated}");
+
+        if (_blackboard.skillPoints < skillUpgrade.pointCost)
+        {//not enough points to spend on upgrade
+            return;
+        }
+
         if (unlocked && !activated)
         {
+            _blackboard.skillPoints -= skillUpgrade.pointCost;
             ActivateUpgrade();
         }
 
     }
 
+    //I realized too late that the player handler is a singleton where you can just grab and set the stats. 
     public static event Action<SkillUpgradeSO> upgradeMovement, upgradeDrill, upgradeHealth;
     private void ActivateUpgrade()
     {
         if(activated)return;
         activated = true;
-        
+        resourceCostText.text = "Unlocked";
 
         //Send event assuming the SO classifications are accurate and the SOs only have that type of upgrade
         switch (skillUpgrade.classification)
@@ -129,6 +158,7 @@ public class SkillTreeNode : MonoBehaviour
         if (skillUpgrade == null) return;
         
         _nameText.text = skillUpgrade.SkillUpgradeName;
+        resourceCostText.text = skillUpgrade.pointCost.ToString();
         
         switch (skillUpgrade.classification)
         {

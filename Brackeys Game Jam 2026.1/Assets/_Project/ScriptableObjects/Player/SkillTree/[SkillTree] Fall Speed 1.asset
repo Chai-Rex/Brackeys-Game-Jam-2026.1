@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: '[SkillTree] Fall Speed 1'
   m_EditorClassIdentifier: Assembly-CSharp::SkillUpgradeSO
   SkillUpgradeName: 'Fall Speed 1 '
+  classification: 0
+  pointCost: 150
   SkillUpgrades:
   - SkillUpgradeEnum: 32
     UpgradeAmount: 2

@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SkillUpgradeSO
   SkillUpgradeName: Maximum Health 1
   classification: 1
+  pointCost: 30
   SkillUpgrades:
   - SkillUpgradeEnum: 43
     UpgradeAmount: 10

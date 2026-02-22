@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da9b8fd1f35c1774882b376372cb173f, type: 3}
   m_Name: '[SkillTree] Dodge Cooldown 1'
   m_EditorClassIdentifier: Assembly-CSharp::SkillUpgradeSO
-  SkillUpgradeName: Dodge Cooldown Reduction
+  SkillUpgradeName: Dodge Cooldown
+  classification: 0
+  pointCost: 100
   SkillUpgrades:
   - SkillUpgradeEnum: 40
     UpgradeAmount: -0.05

@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: '[SkillTree] Jump Height 2'
   m_EditorClassIdentifier: Assembly-CSharp::SkillUpgradeSO
   SkillUpgradeName: Jump Height 2
+  classification: 0
+  pointCost: 200
   SkillUpgrades:
   - SkillUpgradeEnum: 24
     UpgradeAmount: 2

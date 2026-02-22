@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da9b8fd1f35c1774882b376372cb173f, type: 3}
   m_Name: '[SkillTree] Wall Slide 1'
   m_EditorClassIdentifier: Assembly-CSharp::SkillUpgradeSO
-  SkillUpgradeName: Wall Slide 1
+  SkillUpgradeName: Wall Slide
+  classification: 0
+  pointCost: 30
   SkillUpgrades:
   - SkillUpgradeEnum: 8
     UpgradeAmount: -2
