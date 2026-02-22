@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a441926731940b3499b88ce0327c23d0, type: 3}
   m_Name: Cybernetic
   m_EditorClassIdentifier: Assembly-CSharp::TileData
-  tileName: Cybernetic Rule Tile
-  isDestructible: 0
-  durability: 5
+  tileName: Cyber Rule Tiles
+  isDestructible: 1
+  durability: 10
   physicalMaterial: {fileID: 0}

@@ -1,5 +1,4 @@
 using UnityEngine;
-using static UnityEditor.Progress;
 
 public class WWiseSoundZoneTrigger : MonoBehaviour {
 
@@ -12,6 +11,8 @@ public class WWiseSoundZoneTrigger : MonoBehaviour {
             return;
 
         AkUnitySoundEngine.PostEvent(_soundEventName, gameObject);
+
+        Debug.Log("Playing: " + _soundEventName);
 
     }
 }
