@@ -1,5 +1,4 @@
 using UnityEngine;
-using static UnityEditor.Progress;
 
 public class WWiseSoundZoneTrigger : MonoBehaviour {
 
@@ -11,7 +10,9 @@ public class WWiseSoundZoneTrigger : MonoBehaviour {
         if (((1 << other.gameObject.layer) & _triggerLayers) == 0)
             return;
 
-        AkUnitySoundEngine.PostEvent(_soundEventName, gameObject);
+        AkUnitySoundEngine.PostEvent(_soundEventName, Camera.main.gameObject);
+
+        Debug.Log("Playing: " + _soundEventName);
 
     }
 }
