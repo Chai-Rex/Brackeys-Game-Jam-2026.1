@@ -23,12 +23,11 @@ namespace AK
         static const AkUniqueID CLOCK_TICK = 2719257531U;
         static const AkUniqueID CRICKET_JUMP = 515483981U;
         static const AkUniqueID CRICKET_LAND = 3381550706U;
-        static const AkUniqueID CYBERPUNK_PLAY = 1683108213U;
         static const AkUniqueID ELEVATOR_ARRIVE = 3929235283U;
         static const AkUniqueID ELEVATOR_DOORS_CLOSE = 4216832672U;
         static const AkUniqueID ELEVATOR_MOVING = 2518616252U;
         static const AkUniqueID FLOORVINE_EATING = 2689584014U;
-        static const AkUniqueID MENU_PLAY = 105544633U;
+        static const AkUniqueID MUSIC_PLAY = 202194903U;
         static const AkUniqueID PLAY_CATPURR = 1797954987U;
         static const AkUniqueID PLAY_EMOTION = 1222141441U;
         static const AkUniqueID PLAY_MOSQUITO = 1534211419U;
@@ -36,8 +35,6 @@ namespace AK
         static const AkUniqueID PLAYER_LAND = 3629196698U;
         static const AkUniqueID PLAYER_MOVEMENT = 541470702U;
         static const AkUniqueID PLAYER_SLIDING = 2537560909U;
-        static const AkUniqueID STEAMPUNK_PLAY = 2322496412U;
-        static const AkUniqueID STONEAGE_PLAY = 3437213870U;
         static const AkUniqueID STOP_CAT = 704609316U;
         static const AkUniqueID STOP_PLAYERSLIDING = 761271875U;
         static const AkUniqueID TANK_FILL = 3580624671U;
@@ -80,6 +77,19 @@ namespace AK
                 static const AkUniqueID WALK = 2108779966U;
             } // namespace SWITCH
         } // namespace MOVEMENT_TYPE
+
+        namespace MUSIC_STATE
+        {
+            static const AkUniqueID GROUP = 3826569560U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID CYBERPUNK = 1755910996U;
+                static const AkUniqueID MENU = 2607556080U;
+                static const AkUniqueID STEAMPUNK = 803157131U;
+                static const AkUniqueID STONEAGE = 2795902013U;
+            } // namespace SWITCH
+        } // namespace MUSIC_STATE
 
     } // namespace SWITCHES
 

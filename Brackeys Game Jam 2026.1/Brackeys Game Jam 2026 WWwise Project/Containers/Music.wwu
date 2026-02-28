@@ -7,17 +7,56 @@
 				<Property Name="OverrideColor" Type="bool" Value="True"/>
 			</PropertyList>
 			<ChildrenList>
-				<PropertyContainer Name="Music Cue" ID="{1577AEF9-F5C2-46F2-914C-DCC6C9A14CE0}" ShortID="502181909">
+				<MusicSwitchContainer Name="Music State" ID="{E4468C68-E5F2-4C44-949E-3DD00DB4A61D}" ShortID="297211382">
+					<PropertyList>
+						<Property Name="Tempo" Type="Real64" Value="100"/>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
 						</Reference>
 						<Reference Name="OutputBus">
-							<ObjectRef Name="SFX" ID="{C0901958-AA0D-4450-9846-B896800D3928}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+							<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+						</Reference>
+						<Reference Name="TransitionRoot">
+							<Custom>
+								<MusicTransition Name="Root" ID="{12BB84AE-4F97-4736-AA14-321D27634CAB}">
+									<PropertyList>
+										<Property Name="IsFolder" Type="bool" Value="True"/>
+									</PropertyList>
+									<ChildrenList>
+										<MusicTransition Name="Transition" ID="{4BE8F495-2701-432E-9E26-DDFE426F4393}">
+											<PropertyList>
+												<Property Name="EnableSourceFadeOut" Type="bool" Value="True"/>
+												<Property Name="ExitSourceAt" Type="int16" Value="0"/>
+												<Property Name="PlayDestinationPreEntry" Type="bool" Value="False"/>
+											</PropertyList>
+											<TransitionInfo>
+												<SourceFadeOut>
+													<MusicFade Name="Source Fade-out" ID="{A734E54B-6995-414A-9E19-DC082702C99F}">
+														<PropertyList>
+															<Property Name="FadeTime" Type="Real64" Value="1"/>
+															<Property Name="FadeType" Type="int16" Value="1"/>
+														</PropertyList>
+													</MusicFade>
+												</SourceFadeOut>
+												<DestinationFadeIn>
+													<MusicFade Name="Destination Fade-in" ID="{B499FE8A-5D1D-4F9F-B371-092EE6B107FE}">
+														<PropertyList>
+															<Property Name="FadeTime" Type="Real64" Value="0.4"/>
+														</PropertyList>
+													</MusicFade>
+												</DestinationFadeIn>
+											</TransitionInfo>
+										</MusicTransition>
+									</ChildrenList>
+									<TransitionInfo/>
+								</MusicTransition>
+							</Custom>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<Sound Name="Theme_MainMenu_Loop" ID="{43281BFC-456B-4809-9399-B1693CF4BB7F}" ShortID="377252374">
+						<MusicPlaylistContainer Name="Cyberpunk" ID="{C1EC881C-1BC6-48CE-A9B6-740F3C04B20B}" ShortID="212684974">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
@@ -25,21 +64,118 @@
 								<Reference Name="OutputBus">
 									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
 								</Reference>
+								<Reference Name="PlaylistRoot">
+									<Custom>
+										<MusicPlaylistItem Name="" ID="{37320EAE-09CE-49D4-AF5D-43A6852CEB05}" ShortID="553245847">
+											<PropertyList>
+												<Property Name="LoopCount" Type="int16" Value="0"/>
+											</PropertyList>
+											<ChildrenList>
+												<MusicPlaylistItem Name="" ID="{22AF6951-FB54-49D6-9CB7-116D4F5D9A36}" ShortID="971056978">
+													<PropertyList>
+														<Property Name="LoopCount" Type="int16" Value="0"/>
+														<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Segment">
+															<ObjectRef Name="Thème_CyberCIty_Loop" ID="{2A5EA1BD-1666-4C04-BC05-37341B4DD30B}" WorkUnitID="{1CD31E6B-7F14-4AC9-AF98-C129AE7EDB05}"/>
+														</Reference>
+													</ReferenceList>
+												</MusicPlaylistItem>
+											</ChildrenList>
+										</MusicPlaylistItem>
+									</Custom>
+								</Reference>
+								<Reference Name="TransitionRoot">
+									<Custom>
+										<MusicTransition Name="Root" ID="{352E5A94-D5AF-4B2B-A786-BEB680F2309F}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<ChildrenList>
+												<MusicTransition Name="Transition" ID="{D1C04285-3885-4E6A-B966-3573504D287C}">
+													<TransitionInfo/>
+												</MusicTransition>
+											</ChildrenList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</Custom>
+								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="Theme_MainMenu_Loop" ID="{247DCE4D-EF58-4097-B438-827AE90CDBCF}">
-									<Language>SFX</Language>
-									<AudioFile>Theme_MainMenu_Loop.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="441596046"/>
-									</MediaIDList>
-								</AudioFileSource>
+								<MusicSegment Name="Thème_CyberCIty_Loop" ID="{2A5EA1BD-1666-4C04-BC05-37341B4DD30B}" ShortID="1054840827">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="96256"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="Thème_CyberCIty_Loop" ID="{8A111EE9-0255-40FB-860A-BEAC7110C18A}" ShortID="526718705">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{9ADB1611-9B7B-48EE-ABBC-59783758E90B}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Thème_CyberCIty_Loop" ID="{47AC12BA-B15E-4909-9A73-F95685C770BE}">
+													<Language>SFX</Language>
+													<AudioFile>Thème_CyberCIty_Loop.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="424102005"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<MusicTrackSequence Name="" ID="{ECFF46A8-A7BD-4D8A-A08F-167439791AC8}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<MusicClip Name="Thème_CyberCIty_Loop" ID="{DE6E448E-4611-472D-BDFC-4F10F77792FB}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="96256"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="Thème_CyberCIty_Loop" ID="{47AC12BA-B15E-4909-9A73-F95685C770BE}"/>
+																</MusicClip>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Cues">
+											<MusicCue Name="Entry Cue" ID="{620641C0-16F5-411E-BCFA-52583DBE6562}"/>
+											<MusicCue Name="Exit Cue" ID="{99518044-2BD8-4291-A86A-B6DE519CC459}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="1"/>
+													<Property Name="TimeMs" Type="Real64" Value="96256"/>
+												</PropertyList>
+											</MusicCue>
+										</ObjectList>
+									</ObjectLists>
+								</MusicSegment>
 							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="Theme_MainMenu_Loop" ID="{247DCE4D-EF58-4097-B438-827AE90CDBCF}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="Theme_StoneAge_Loop" ID="{8557DB41-878C-4AB1-9551-D7F41CAF42B2}" ShortID="790697178">
+						</MusicPlaylistContainer>
+						<MusicPlaylistContainer Name="Stoneage" ID="{C0271B22-2F58-4E10-96A0-23D5101EB4D2}" ShortID="294709024">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
@@ -47,21 +183,118 @@
 								<Reference Name="OutputBus">
 									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
 								</Reference>
+								<Reference Name="PlaylistRoot">
+									<Custom>
+										<MusicPlaylistItem Name="" ID="{E9217774-028B-41D1-A748-6753EA1D3122}" ShortID="6875942">
+											<PropertyList>
+												<Property Name="LoopCount" Type="int16" Value="0"/>
+											</PropertyList>
+											<ChildrenList>
+												<MusicPlaylistItem Name="" ID="{1FBB6009-B2AA-4416-B8C4-FD6FEEBF2696}" ShortID="716940351">
+													<PropertyList>
+														<Property Name="LoopCount" Type="int16" Value="0"/>
+														<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Segment">
+															<ObjectRef Name="Theme_StoneAge_Loop" ID="{5375ADAD-DBDC-4734-A942-AE6E667C10A7}" WorkUnitID="{1CD31E6B-7F14-4AC9-AF98-C129AE7EDB05}"/>
+														</Reference>
+													</ReferenceList>
+												</MusicPlaylistItem>
+											</ChildrenList>
+										</MusicPlaylistItem>
+									</Custom>
+								</Reference>
+								<Reference Name="TransitionRoot">
+									<Custom>
+										<MusicTransition Name="Root" ID="{689454B8-9823-4F1E-A494-7551942ED006}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<ChildrenList>
+												<MusicTransition Name="Transition" ID="{9DF03CF1-3AF3-43A2-9475-E38550B337CE}">
+													<TransitionInfo/>
+												</MusicTransition>
+											</ChildrenList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</Custom>
+								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="Theme_StoneAge_Loop" ID="{5431B0CB-B033-4296-8FBB-2DBD264A5A14}">
-									<Language>SFX</Language>
-									<AudioFile>Theme_StoneAge_Loop.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="869032357"/>
-									</MediaIDList>
-								</AudioFileSource>
+								<MusicSegment Name="Theme_StoneAge_Loop" ID="{5375ADAD-DBDC-4734-A942-AE6E667C10A7}" ShortID="111776117">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="99002"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="Theme_StoneAge_Loop" ID="{29FFBB7C-B9FC-44B0-A1D5-16B1C7ECAB0D}" ShortID="315503431">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{90FDECAF-BE02-4BE1-B337-697D00437E15}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Theme_StoneAge_Loop" ID="{9F023178-FDD1-4D37-B6D0-0C5AD61904E3}">
+													<Language>SFX</Language>
+													<AudioFile>Theme_StoneAge_Loop.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="869032357"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<MusicTrackSequence Name="" ID="{A97FC6BE-5599-4E57-8708-3700B41EAC4F}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<MusicClip Name="Theme_StoneAge_Loop" ID="{1658774A-453A-4215-9669-F2B817A73786}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="99002"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="Theme_StoneAge_Loop" ID="{9F023178-FDD1-4D37-B6D0-0C5AD61904E3}"/>
+																</MusicClip>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Cues">
+											<MusicCue Name="Entry Cue" ID="{17D3CA6C-A23D-4F79-95CF-FFA9BBB12BAB}"/>
+											<MusicCue Name="Exit Cue" ID="{227BB856-EC06-4BEF-A87A-6D4FFAC18B22}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="1"/>
+													<Property Name="TimeMs" Type="Real64" Value="99002"/>
+												</PropertyList>
+											</MusicCue>
+										</ObjectList>
+									</ObjectLists>
+								</MusicSegment>
 							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="Theme_StoneAge_Loop" ID="{5431B0CB-B033-4296-8FBB-2DBD264A5A14}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="Thème_CyberCIty_Loop" ID="{B03B375E-AB46-4B89-B67B-0C40DC584616}" ShortID="162519000">
+						</MusicPlaylistContainer>
+						<MusicPlaylistContainer Name="Menu" ID="{A81E1B0B-DAC0-46C4-AB50-FE38C1F55227}" ShortID="304616561">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
@@ -69,21 +302,118 @@
 								<Reference Name="OutputBus">
 									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
 								</Reference>
+								<Reference Name="PlaylistRoot">
+									<Custom>
+										<MusicPlaylistItem Name="" ID="{990F0EAF-8CA8-4AB3-91DA-BD565C066298}" ShortID="647030673">
+											<PropertyList>
+												<Property Name="LoopCount" Type="int16" Value="0"/>
+											</PropertyList>
+											<ChildrenList>
+												<MusicPlaylistItem Name="" ID="{D842CD49-9524-4581-8BB9-A65BC9E68446}" ShortID="399528376">
+													<PropertyList>
+														<Property Name="LoopCount" Type="int16" Value="0"/>
+														<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Segment">
+															<ObjectRef Name="Theme_MainMenu_Loop" ID="{090B9A03-8FA6-4E52-A74D-5EC87CAC9629}" WorkUnitID="{1CD31E6B-7F14-4AC9-AF98-C129AE7EDB05}"/>
+														</Reference>
+													</ReferenceList>
+												</MusicPlaylistItem>
+											</ChildrenList>
+										</MusicPlaylistItem>
+									</Custom>
+								</Reference>
+								<Reference Name="TransitionRoot">
+									<Custom>
+										<MusicTransition Name="Root" ID="{95211F94-1AC7-456E-A16A-4A04D048FBCF}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<ChildrenList>
+												<MusicTransition Name="Transition" ID="{EEEF9FB4-2568-4F88-BD0F-B6237D662937}">
+													<TransitionInfo/>
+												</MusicTransition>
+											</ChildrenList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</Custom>
+								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="Thème_CyberCIty_Loop" ID="{CB78D582-516F-422D-BD13-9DACB62D506D}">
-									<Language>SFX</Language>
-									<AudioFile>Thème_CyberCIty_Loop.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="424102005"/>
-									</MediaIDList>
-								</AudioFileSource>
+								<MusicSegment Name="Theme_MainMenu_Loop" ID="{090B9A03-8FA6-4E52-A74D-5EC87CAC9629}" ShortID="724849141">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="115386"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="Theme_MainMenu_Loop" ID="{752B9606-69A0-45B1-8AE4-43A49C86CCB5}" ShortID="478756960">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{EBD75C3C-04FA-49E1-8996-8108E62D0857}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Theme_MainMenu_Loop" ID="{94803C07-4798-455F-8B4F-308688BD74D4}">
+													<Language>SFX</Language>
+													<AudioFile>Theme_MainMenu_Loop.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="441596046"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<MusicTrackSequence Name="" ID="{E683829E-6642-432A-9EEA-9D906036316E}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<MusicClip Name="Theme_MainMenu_Loop" ID="{38C59F08-BCA8-4B72-8AA6-8D7ED0C5016B}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="115386"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="Theme_MainMenu_Loop" ID="{94803C07-4798-455F-8B4F-308688BD74D4}"/>
+																</MusicClip>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Cues">
+											<MusicCue Name="Entry Cue" ID="{7B9AECCA-E103-412A-A5B2-299A60E0D2BA}"/>
+											<MusicCue Name="Exit Cue" ID="{65E96B98-3211-408F-A928-64EE9D811243}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="1"/>
+													<Property Name="TimeMs" Type="Real64" Value="115386"/>
+												</PropertyList>
+											</MusicCue>
+										</ObjectList>
+									</ObjectLists>
+								</MusicSegment>
 							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="Thème_CyberCIty_Loop" ID="{CB78D582-516F-422D-BD13-9DACB62D506D}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="Thème_SteamPunk_Loop" ID="{A6330507-097A-45B4-89D8-0D5FCCF9ED9E}" ShortID="440569036">
+						</MusicPlaylistContainer>
+						<MusicPlaylistContainer Name="Steampunk" ID="{0E50A961-6EAF-43C7-AF3E-B45288A35C57}" ShortID="598710041">
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
@@ -91,22 +421,209 @@
 								<Reference Name="OutputBus">
 									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
 								</Reference>
+								<Reference Name="PlaylistRoot">
+									<Custom>
+										<MusicPlaylistItem Name="" ID="{5F70E1AA-C584-42D4-95DF-FA477F218C2F}" ShortID="1064493186">
+											<PropertyList>
+												<Property Name="LoopCount" Type="int16" Value="0"/>
+											</PropertyList>
+											<ChildrenList>
+												<MusicPlaylistItem Name="" ID="{D5F4E964-7CF4-461F-9E82-8868A4A9E66B}" ShortID="638217977">
+													<PropertyList>
+														<Property Name="LoopCount" Type="int16" Value="0"/>
+														<Property Name="PlaylistItemType" Type="int16" Value="1"/>
+													</PropertyList>
+													<ReferenceList>
+														<Reference Name="Segment">
+															<ObjectRef Name="Thème_SteamPunk_Loop" ID="{772A2DCA-9708-45CB-A5B8-ABC53A289AEE}" WorkUnitID="{1CD31E6B-7F14-4AC9-AF98-C129AE7EDB05}"/>
+														</Reference>
+													</ReferenceList>
+												</MusicPlaylistItem>
+											</ChildrenList>
+										</MusicPlaylistItem>
+									</Custom>
+								</Reference>
+								<Reference Name="TransitionRoot">
+									<Custom>
+										<MusicTransition Name="Root" ID="{811A44E1-55A0-45DB-A6EE-18CD65AFCAEF}">
+											<PropertyList>
+												<Property Name="IsFolder" Type="bool" Value="True"/>
+											</PropertyList>
+											<ChildrenList>
+												<MusicTransition Name="Transition" ID="{25616D0D-1F06-48F2-847B-8FFC38146711}">
+													<TransitionInfo/>
+												</MusicTransition>
+											</ChildrenList>
+											<TransitionInfo/>
+										</MusicTransition>
+									</Custom>
+								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="Thème_SteamPunk_Loop" ID="{A1E14EFE-481F-4F58-BF2D-8187492A50CD}">
-									<Language>SFX</Language>
-									<AudioFile>Thème_SteamPunk_Loop.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="628982877"/>
-									</MediaIDList>
-								</AudioFileSource>
+								<MusicSegment Name="Thème_SteamPunk_Loop" ID="{772A2DCA-9708-45CB-A5B8-ABC53A289AEE}" ShortID="1000716120">
+									<PropertyList>
+										<Property Name="EndPosition" Type="Real64" Value="195050.113892847"/>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>10</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{41D9938C-168F-40DB-A3DB-D9BFB74B85EA}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<MusicTrack Name="Thème_SteamPunk_Loop" ID="{A64F6FBB-4CAC-48FB-8D65-947FF819BB70}" ShortID="950100928">
+											<ReferenceList>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{98FB81A1-8648-4804-8BBA-9C4D5ED8FDA8}"/>
+												</Reference>
+												<Reference Name="TransitionRoot">
+													<Custom>
+														<MusicTransition Name="Root" ID="{538FF5D9-4698-42B5-83ED-79900F0CAA63}">
+															<PropertyList>
+																<Property Name="IsFolder" Type="bool" Value="True"/>
+															</PropertyList>
+															<TransitionInfo/>
+														</MusicTransition>
+													</Custom>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="Thème_SteamPunk_Loop" ID="{CA59A744-FA10-4944-9197-7D484DDD60CA}">
+													<Language>SFX</Language>
+													<AudioFile>Thème_SteamPunk_Loop.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="628982877"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists>
+												<ObjectList Name="Sequences">
+													<MusicTrackSequence Name="" ID="{1EB4B157-9187-48C4-BD5C-0A4BC7AA7FF6}">
+														<ObjectLists>
+															<ObjectList Name="Clips">
+																<MusicClip Name="Thème_SteamPunk_Loop" ID="{CB7D5F5B-EE44-44B3-BE56-7C177931E981}">
+																	<PropertyList>
+																		<Property Name="EndTrimOffset" Type="Real64" Value="125800.136054422"/>
+																		<Property Name="FadeInMode" Type="int16" Value="0"/>
+																		<Property Name="FadeOutMode" Type="int16" Value="0"/>
+																	</PropertyList>
+																	<AudioSourceRef Name="Thème_SteamPunk_Loop" ID="{CA59A744-FA10-4944-9197-7D484DDD60CA}"/>
+																</MusicClip>
+															</ObjectList>
+														</ObjectLists>
+													</MusicTrackSequence>
+												</ObjectList>
+											</ObjectLists>
+										</MusicTrack>
+									</ChildrenList>
+									<ObjectLists>
+										<ObjectList Name="Cues">
+											<MusicCue Name="Entry Cue" ID="{3A7953DA-1C39-416A-854D-B9F620534244}"/>
+											<MusicCue Name="Exit Cue" ID="{7C55C998-08AA-46E5-BFD3-B5B88C6DA07B}">
+												<PropertyList>
+													<Property Name="CueType" Type="int16" Value="1"/>
+													<Property Name="TimeMs" Type="Real64" Value="125800.136054422"/>
+												</PropertyList>
+											</MusicCue>
+										</ObjectList>
+									</ObjectLists>
+								</MusicSegment>
 							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="Thème_SteamPunk_Loop" ID="{A1E14EFE-481F-4F58-BF2D-8187492A50CD}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
+						</MusicPlaylistContainer>
 					</ChildrenList>
-				</PropertyContainer>
+					<ObjectLists>
+						<ObjectList Name="Arguments">
+							<PluginInnerObject Name="" ID="{77AECC68-721A-4D19-A8DC-154EE9E168AD}" PluginName="MusicArgumentsSlot" CompanyID="0" PluginID="89">
+								<ReferenceList>
+									<Reference Name="Argument">
+										<ObjectRef Name="Music_State" ID="{28A4FD8A-EFAC-445A-9D5E-4F5A14B19543}" WorkUnitID="{B7FA90F1-D7EF-40BE-876E-E41F469776F1}"/>
+									</Reference>
+								</ReferenceList>
+							</PluginInnerObject>
+						</ObjectList>
+						<ObjectList Name="Entries">
+							<MultiSwitchEntry Name="" ID="{68ACA04E-2E98-4313-B604-0E20BABCA72A}">
+								<ReferenceList>
+									<Reference Name="AudioNode">
+										<ObjectRef Name="Cyberpunk" ID="{C1EC881C-1BC6-48CE-A9B6-740F3C04B20B}" WorkUnitID="{1CD31E6B-7F14-4AC9-AF98-C129AE7EDB05}"/>
+									</Reference>
+								</ReferenceList>
+								<ObjectLists>
+									<ObjectList Name="EntryPath">
+										<PluginInnerObject Name="" ID="{4B9D1CE5-09AB-4583-8AEA-3A9F7A1E3CDD}" PluginName="EntryPathSlot" CompanyID="0" PluginID="88">
+											<ReferenceList>
+												<Reference Name="EntryPathObject">
+													<ObjectRef Name="Cyberpunk" ID="{C17B810B-466C-44FF-B319-E4C672D31689}" WorkUnitID="{B7FA90F1-D7EF-40BE-876E-E41F469776F1}"/>
+												</Reference>
+											</ReferenceList>
+										</PluginInnerObject>
+									</ObjectList>
+								</ObjectLists>
+							</MultiSwitchEntry>
+							<MultiSwitchEntry Name="" ID="{03F27D8F-5DBC-44DE-9691-CBCBEBA876AD}">
+								<ReferenceList>
+									<Reference Name="AudioNode">
+										<ObjectRef Name="Menu" ID="{A81E1B0B-DAC0-46C4-AB50-FE38C1F55227}" WorkUnitID="{1CD31E6B-7F14-4AC9-AF98-C129AE7EDB05}"/>
+									</Reference>
+								</ReferenceList>
+								<ObjectLists>
+									<ObjectList Name="EntryPath">
+										<PluginInnerObject Name="" ID="{7D1975D7-B101-4DD3-ADAE-FC2837BA444D}" PluginName="EntryPathSlot" CompanyID="0" PluginID="88">
+											<ReferenceList>
+												<Reference Name="EntryPathObject">
+													<ObjectRef Name="Menu" ID="{FEA1CC4B-9537-4532-8F0E-AFDFE91A95F4}" WorkUnitID="{B7FA90F1-D7EF-40BE-876E-E41F469776F1}"/>
+												</Reference>
+											</ReferenceList>
+										</PluginInnerObject>
+									</ObjectList>
+								</ObjectLists>
+							</MultiSwitchEntry>
+							<MultiSwitchEntry Name="" ID="{36DC62C6-9BDB-43C9-A7E5-377FC131CEAA}">
+								<ReferenceList>
+									<Reference Name="AudioNode">
+										<ObjectRef Name="Steampunk" ID="{0E50A961-6EAF-43C7-AF3E-B45288A35C57}" WorkUnitID="{1CD31E6B-7F14-4AC9-AF98-C129AE7EDB05}"/>
+									</Reference>
+								</ReferenceList>
+								<ObjectLists>
+									<ObjectList Name="EntryPath">
+										<PluginInnerObject Name="" ID="{F7DA118C-3F5A-4D34-BB90-9A48EDB0645D}" PluginName="EntryPathSlot" CompanyID="0" PluginID="88">
+											<ReferenceList>
+												<Reference Name="EntryPathObject">
+													<ObjectRef Name="Steampunk" ID="{2BAD8B0B-32FB-4DE7-8E46-B80C63DF27A1}" WorkUnitID="{B7FA90F1-D7EF-40BE-876E-E41F469776F1}"/>
+												</Reference>
+											</ReferenceList>
+										</PluginInnerObject>
+									</ObjectList>
+								</ObjectLists>
+							</MultiSwitchEntry>
+							<MultiSwitchEntry Name="" ID="{952652E4-DC81-4755-835D-41ACED9798C7}">
+								<ReferenceList>
+									<Reference Name="AudioNode">
+										<ObjectRef Name="Stoneage" ID="{C0271B22-2F58-4E10-96A0-23D5101EB4D2}" WorkUnitID="{1CD31E6B-7F14-4AC9-AF98-C129AE7EDB05}"/>
+									</Reference>
+								</ReferenceList>
+								<ObjectLists>
+									<ObjectList Name="EntryPath">
+										<PluginInnerObject Name="" ID="{DB5E2524-F8E3-4846-A3EC-459316D96788}" PluginName="EntryPathSlot" CompanyID="0" PluginID="88">
+											<ReferenceList>
+												<Reference Name="EntryPathObject">
+													<ObjectRef Name="Stoneage" ID="{852300AD-B51C-4589-AF68-C399A5148303}" WorkUnitID="{B7FA90F1-D7EF-40BE-876E-E41F469776F1}"/>
+												</Reference>
+											</ReferenceList>
+										</PluginInnerObject>
+									</ObjectList>
+								</ObjectLists>
+							</MultiSwitchEntry>
+						</ObjectList>
+					</ObjectLists>
+				</MusicSwitchContainer>
 			</ChildrenList>
 		</WorkUnit>
 	</Containers>

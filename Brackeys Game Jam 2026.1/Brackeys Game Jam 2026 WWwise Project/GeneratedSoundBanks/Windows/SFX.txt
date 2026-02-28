@@ -1,6 +1,6 @@
 Event	ID	Name			Wwise Object Path	Notes
 	89220416	Umbrella_Open			\Items\Umbrella\Umbrella_Open	
-	105544633	Menu_Play			\Music\Menu_Play	
+	202194903	Music_Play			\Music\Music_Play	
 	239772940	Vine_StopRecovering			\Enemy\Vine\Vine_StopRecovering	
 	507163859	UI_SmallButton			\UI\UI_SmallButton	
 	515483981	Cricket_Jump			\Enemy\Cricket\Cricket_Jump	
@@ -13,10 +13,8 @@ Event	ID	Name			Wwise Object Path	Notes
 	1476808986	Vine_Regrow			\Enemy\Vine\Vine_Regrow	
 	1532741045	Vine_Catch			\Enemy\Vine\Vine_Catch	
 	1534211419	Play_Mosquito			\Enemy\Mosquito\Play_Mosquito	
-	1683108213	Cyberpunk_Play			\Music\Cyberpunk_Play	
 	1797954987	Play_CatPurr			\Enemy\Cat\Play_CatPurr	
 	2101178656	Bubble_Collect			\Items\Oxygen Tank\Bubble_Collect	
-	2322496412	Steampunk_Play			\Music\Steampunk_Play	
 	2514947935	Vine_LastHit			\Enemy\Vine\Vine_LastHit	
 	2518616252	Elevator_Moving			\Items\Elevator\Elevator_Moving	
 	2537560909	Player_Sliding			\Movement\Player_Sliding	
@@ -29,7 +27,6 @@ Event	ID	Name			Wwise Object Path	Notes
 	2846897348	Clock_Open			\Items\Cuckoo Clock\Clock_Open	
 	3217770052	Umbrella_Close			\Items\Umbrella\Umbrella_Close	
 	3381550706	Cricket_Land			\Enemy\Cricket\Cricket_Land	
-	3437213870	Stoneage_Play			\Music\Stoneage_Play	
 	3455062928	Cat_Eat			\Enemy\Cat\Cat_Eat	
 	3580624671	Tank_Fill			\Items\Oxygen Tank\Tank_Fill	
 	3629196698	Player_Land			\Movement\Player_Land	
@@ -42,6 +39,7 @@ Event	ID	Name			Wwise Object Path	Notes
 Switch Group	ID	Name			Wwise Object Path	Notes
 	1088160865	Movement_Type			\Movements\Movement_Type	
 	1162743606	Footsteps_Surface			\Movements\Footsteps_Surface	
+	3826569560	Music_State			\Music\Music_State	
 
 Switch	ID	Name	Switch Group			Notes
 	712161704	Run	Movement_Type			
@@ -51,6 +49,10 @@ Switch	ID	Name	Switch Group			Notes
 	2449969375	Glass	Footsteps_Surface			
 	2473969246	Metal	Footsteps_Surface			
 	4248645337	Grass	Footsteps_Surface			
+	803157131	Steampunk	Music_State			
+	1755910996	Cyberpunk	Music_State			
+	2607556080	Menu	Music_State			
+	2795902013	Stoneage	Music_State			
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	2379434306	Cricket_Speed			\Default Work Unit\Enemy\Cricket\Cricket_Speed	
@@ -76,7 +78,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	108715833	Glass Jump 1	.cache\83\{8304421C-88B7-F0F7-431F-139753DD13B3}.wem		\Containers\World\Player\Movement\Jump\Footsteps_Glass_Jump\Glass Jump 1		43296
 	111494119	Dirt Run 1	.cache\84\{8487A3A4-3B69-3351-3A6D-D0679DEA5A42}.wem		\Containers\World\Player\Movement\Footsteps\Footsteps_Dirt\Footsteps_Dirt_Run\Dirt Run 1		18848
 	122619185	Clock Rattle	.cache\0A\{0A7FC003-30B3-AE9D-E094-4E10AB73258F}.wem		\Containers\World\Items\Cuckoo Clock\Ticking Clock\Clock Rattle		441504
-	126584430	Vegetation_02	.cache\7B\{7B3A6906-948C-8FF6-A09D-30F4263B6F30}.wem		\Containers\World\Enemy\Vine\Vine Movement\Vine Regrow\Vine Hiding\Vegetation_02		351312
+	126584430	Vegetation_02	.cache\FC\{FCC4518A-D047-13F9-4A13-B5A69F8E831E}.wem		\Containers\World\Enemy\Vine\Vine Movement\Vine Regrow\Vine Hiding\Vegetation_02		351312
 	138220742	Grass Walk 2	.cache\B5\{B5D5A8CF-C798-6627-053E-9DB75ABC426E}.wem		\Containers\World\Player\Movement\Footsteps\Footsteps_Grass\Footsteps_Grass_Walk\Grass Walk 2		38368
 	142764419	Vine Hit 2	.cache\F7\{F7113949-AAA2-8925-611A-8B873090F6EF}.wem		\Containers\World\Enemy\Vine\Vine Movement\Vine Hit\Vine Hit 2		36064
 	146586893	Grass Run 3	.cache\78\{7857723C-A0E2-3714-8DA4-0750C5041608}.wem		\Containers\World\Player\Movement\Footsteps\Footsteps_Grass\Footsteps_Grass_Run\Grass Run 3		29280
@@ -112,7 +114,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	355140699	Pixel Face Stim 5	.cache\F9\{F9B96327-9642-1CBC-457C-E4DC482B873F}.wem		\Containers\World\NPC\Pixel Face\Emotions\Pixel Face Stim 5		42720
 	359429183	Cobble Walk 9	.cache\2E\{2E28AB7B-4C68-3835-4C03-A95330FCB8DE}.wem		\Containers\World\Player\Movement\Footsteps\Footsteps_Stone\Footsteps_Stone_Walk\Cobble Walk 9		22368
 	364803555	Metal Walk 10	.cache\50\{5098AEB5-98C4-EB48-0A00-E914B9AF8E5D}.wem		\Containers\World\Player\Movement\Footsteps\Footsteps_Metal\Footsteps_Metal_Walk\Metal Walk 10		49248
-	370205602	Vegetation_01	.cache\FF\{FF6922F3-FFAF-9E50-3939-86A1C766B136}.wem		\Containers\World\Enemy\Vine\Vine Movement\Vine Regrow\Vine Hiding\Vegetation_01		347792
+	370205602	Vegetation_01	.cache\A4\{A4930917-1755-978C-A6F6-8355B8779769}.wem		\Containers\World\Enemy\Vine\Vine Movement\Vine Regrow\Vine Hiding\Vegetation_01		347792
 	370718029	Metal Walk 4	.cache\BF\{BFB5A971-227B-982B-8B4C-A28EF3B1CE17}.wem		\Containers\World\Player\Movement\Footsteps\Footsteps_Metal\Footsteps_Metal_Walk\Metal Walk 4		52320
 	372175197	Grass Jump 3	.cache\6C\{6C6987EC-4184-E1D4-DA60-8285972F3BE5}.wem		\Containers\World\Player\Movement\Jump\Footsteps_Grass_Jump\Grass Jump 3		32096
 	375392163	Jump Grunt 1	.cache\E0\{E06CB1F0-0651-08F2-6971-B891EB7B711C}.wem		\Containers\World\Player\Vocals\Grunts\Jump_Stim\Jump Grunt 1		42208
@@ -129,13 +131,13 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	417385780	Grass Walk 10	.cache\64\{64D0A806-9100-349B-08E2-EA4BD5D0D52A}.wem		\Containers\World\Player\Movement\Footsteps\Footsteps_Grass\Footsteps_Grass_Walk\Grass Walk 10		53600
 	423357366	Clock Ticking	.cache\27\{27EA1A04-6D98-AFDA-0BD0-CD9E5647857A}.wem		\Containers\World\Items\Cuckoo Clock\Ticking Clock\Clock Ticking		544160
 	423523880	Grass Land 4	.cache\0A\{0AF69BDD-4DE5-663D-4B3E-9F7518AE0CDC}.wem		\Containers\World\Player\Movement\Land\Footsteps_Grass_Land\Grass Land 4		46176
-	424102005	Thème_CyberCIty_Loop	.cache\0C\{0C3AA6EB-AC97-3828-02AD-3AC017311C63}.wem		\Containers\Non-World\Music\Music Cue\Thème_CyberCIty_Loop		18481312
+	424102005	Thème_CyberCIty_Loop	.cache\BB\{BB6B3707-3808-7C90-1739-E35B7A18AD6D}.wem		\Containers\Non-World\Music\Music State\Cyberpunk\Thème_CyberCIty_Loop\Thème_CyberCIty_Loop		18481312
 	424466210	Glass Walk 7	.cache\40\{4024996E-04F9-0240-0100-3F41FF4FD09C}.wem		\Containers\World\Player\Movement\Footsteps\Footsteps_Glass\Footsteps_Glass_Walk\Glass Walk 7		26352
 	425977591	Grass Run 11	.cache\87\{8789CF09-EFFA-0E81-D8EA-835191DE800C}.wem		\Containers\World\Player\Movement\Footsteps\Footsteps_Grass\Footsteps_Grass_Run\Grass Run 11		40544
 	427877799	Glass Land 2	.cache\AD\{ADAD980B-ED3A-0DE2-343B-7F104C653586}.wem		\Containers\World\Player\Movement\Land\Footsteps_Glass_Land\Glass Land 2		31572
 	437941889	Cobble Walk 1	.cache\D1\{D10125BE-845D-3ED9-DF5E-FE0418CC1558}.wem		\Containers\World\Player\Movement\Footsteps\Footsteps_Stone\Footsteps_Stone_Walk\Cobble Walk 1		19296
 	441582839	Dirt Run 7	.cache\98\{98F616EE-F530-5C23-A161-403B61A7C34F}.wem		\Containers\World\Player\Movement\Footsteps\Footsteps_Dirt\Footsteps_Dirt_Run\Dirt Run 7		30176
-	441596046	Theme_MainMenu_Loop	.cache\84\{84D0319B-231C-D1BC-0E2D-DC74E0DDC03D}.wem		\Containers\Non-World\Music\Music Cue\Theme_MainMenu_Loop		22154320
+	441596046	Theme_MainMenu_Loop	.cache\75\{75B0F56F-05C6-7026-6797-29E683259CE1}.wem		\Containers\Non-World\Music\Music State\Menu\Theme_MainMenu_Loop\Theme_MainMenu_Loop		22154320
 	453807151	Glass Walk 2	.cache\1A\{1A7DDF37-D879-578C-A34C-7EECBC9962C6}.wem		\Containers\World\Player\Movement\Footsteps\Footsteps_Glass\Footsteps_Glass_Walk\Glass Walk 2		18324
 	464991649	Dirt Walk 1	.cache\8B\{8B5D90F6-3785-45BA-538A-32F271FC545F}.wem		\Containers\World\Player\Movement\Footsteps\Footsteps_Dirt\Footsteps_Dirt_Walk\Dirt Walk 1		27616
 	467244428	Glass Land 1	.cache\35\{3551D27B-A29A-419D-C1DC-FD5B745D5779}.wem		\Containers\World\Player\Movement\Land\Footsteps_Glass_Land\Glass Land 1		35636
@@ -170,7 +172,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	616129302	Grass Run 7	.cache\99\{99C85BB0-FC41-E574-F270-71DFFB9886FA}.wem		\Containers\World\Player\Movement\Footsteps\Footsteps_Grass\Footsteps_Grass_Run\Grass Run 7		31072
 	621941156	Umbrella Close 1	.cache\F5\{F5C41698-5446-6F39-4199-9E65BA862BCF}.wem		\Containers\World\Items\Umbrella\Umbrella Close\Umbrella Close 1		87136
 	628138148	Grass Land 5	.cache\9F\{9FC0ADF5-09BC-D5CC-1B1C-95CF54908AB6}.wem		\Containers\World\Player\Movement\Land\Footsteps_Grass_Land\Grass Land 5		32096
-	628982877	Thème_SteamPunk_Loop	.cache\16\{16AD1EAC-6A81-9143-D872-0904FA3B02D9}.wem		\Containers\Non-World\Music\Music Cue\Thème_SteamPunk_Loop		22191240
+	628982877	Thème_SteamPunk_Loop	.cache\CA\{CAEEB0D8-6C30-3168-B73A-82C75BDBF47B}.wem		\Containers\Non-World\Music\Music State\Steampunk\Thème_SteamPunk_Loop\Thème_SteamPunk_Loop		22191240
 	629625774	Slide 3	.cache\E2\{E2F02E1B-8810-E8DE-D90D-BD42A5E217A7}.wem		\Containers\World\Player\Movement\Slide\Slide Contact\Slide 3		90080
 	638738910	Cobble Run 4	.cache\46\{468A230B-F746-976B-AC3E-30532C51D3E6}.wem		\Containers\World\Player\Movement\Footsteps\Footsteps_Stone\Footsteps_Stone_Run\Cobble Run 4		10624
 	639054404	Metal Land 1	.cache\E2\{E25E6A95-2223-285A-8381-93FD19DE0174}.wem		\Containers\World\Player\Movement\Land\Footsteps_Metal_Land\Metal Land 1		47072
@@ -179,7 +181,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	644042444	Cobble Walk 10	.cache\AE\{AE1C4555-3455-7D11-7426-57027092E197}.wem		\Containers\World\Player\Movement\Footsteps\Footsteps_Stone\Footsteps_Stone_Walk\Cobble Walk 10		20944
 	649936251	Pixel Face Stim 3	.cache\94\{94F6899F-8666-B61A-408C-CBED56AC2BC6}.wem		\Containers\World\NPC\Pixel Face\Emotions\Pixel Face Stim 3		69080
 	651752867	Dirt Run 6	.cache\4C\{4C6193F3-3A4E-4622-635B-C7F78D66F05F}.wem		\Containers\World\Player\Movement\Footsteps\Footsteps_Dirt\Footsteps_Dirt_Run\Dirt Run 6		21216
-	653262788	Vegetation	.cache\55\{55D1556A-91A5-E481-4093-F2BB62E4AF10}.wem		\Containers\World\Enemy\Vine\Vine Movement\Vine Regrow\Vine Hiding\Vegetation		443484
+	653262788	Vegetation	.cache\3F\{3F093F57-64FC-3F83-90D5-467EB9855098}.wem		\Containers\World\Enemy\Vine\Vine Movement\Vine Regrow\Vine Hiding\Vegetation		443484
 	655803969	Glass Walk 1	.cache\AF\{AF1FF011-1A7D-2A83-8FFC-2FB851EC1EDC}.wem		\Containers\World\Player\Movement\Footsteps\Footsteps_Glass\Footsteps_Glass_Walk\Glass Walk 1		15200
 	660733861	Grass Run 8	.cache\6F\{6F3158B5-9786-6BAE-C1CC-CE662DF6CC61}.wem		\Containers\World\Player\Movement\Footsteps\Footsteps_Grass\Footsteps_Grass_Run\Grass Run 8		28256
 	667962554	Metal Land 5	.cache\E3\{E37E6452-154B-7770-D89E-4BC61DFF0517}.wem		\Containers\World\Player\Movement\Land\Footsteps_Metal_Land\Metal Land 5		55648
@@ -218,7 +220,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	866357989	Cat Eat 3	.cache\71\{7118975B-AA6B-4AB4-217D-6F0CB512E068}.wem		\Containers\World\Enemy\Cat\Cat Eat\Cat Chewing\Cat Eat 3		132704
 	867287046	Glass Land 3	.cache\83\{83E941DF-966C-D394-E59A-0DFE8248BDBA}.wem		\Containers\World\Player\Movement\Land\Footsteps_Glass_Land\Glass Land 3		32872
 	868765382	Grass Jump 2	.cache\5C\{5C123571-4446-11E2-5AA0-C331C45BC8B1}.wem		\Containers\World\Player\Movement\Jump\Footsteps_Grass_Jump\Grass Jump 2		28896
-	869032357	Theme_StoneAge_Loop	.cache\A9\{A94CB5FC-376B-3640-A679-17BF10B9CE7B}.wem		\Containers\Non-World\Music\Music Cue\Theme_StoneAge_Loop		19008544
+	869032357	Theme_StoneAge_Loop	.cache\70\{70F3B878-8F7C-AE59-FCDF-3D7CAEC2E211}.wem		\Containers\Non-World\Music\Music State\Stoneage\Theme_StoneAge_Loop\Theme_StoneAge_Loop		19008544
 	876752176	Land Grunt 5	.cache\2F\{2FFCF962-38DB-0F4C-8B90-8CABFECFB93F}.wem		\Containers\World\Player\Vocals\Grunts\Land_Stim\Land Grunt 5		35488
 	892218766	Glass Walk 5	.cache\DE\{DEEA3497-3670-4E1B-1238-6B9A1126B150}.wem		\Containers\World\Player\Movement\Footsteps\Footsteps_Glass\Footsteps_Glass_Walk\Glass Walk 5		28836
 	915129765	Elevator Arrive	.cache\19\{19875BCC-DE48-D464-62EA-2F1D40A370D6}.wem		\Containers\World\Items\Elevator\Doors Opening\Elevator Arrive		374496
@@ -247,7 +249,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	1002606011	Grass Walk 3	.cache\10\{1001E5B3-85EE-CC5E-A998-2A603B958BB2}.wem		\Containers\World\Player\Movement\Footsteps\Footsteps_Grass\Footsteps_Grass_Walk\Grass Walk 3		35232
 	1004360602	Cobble Jump 4	.cache\9A\{9AF51076-7722-1BB7-1621-B12339F9E987}.wem		\Containers\World\Player\Movement\Jump\Footsteps_Stone_Jump\Cobble Jump 4		52896
 	1016205611	Dirt Land 2	.cache\44\{446FCF75-A864-2474-14D4-A4404519E41F}.wem		\Containers\World\Player\Movement\Land\Footsteps_Dirt_Land\Dirt Land 2		40032
-	1019953498	UI Click 2	.cache\69\{69BCC154-009F-5A61-D7FD-25933C4C1521}.wem		\Containers\Non-World\UI\Pause Menu\UI Click Big\UI Click 2		51020
+	1019953498	UI Click 2	.cache\67\{6778D4D5-E3DA-638C-CAF4-99DBB28635E3}.wem		\Containers\Non-World\UI\Pause Menu\UI Click Big\UI Click 2		51020
 	1027100442	Metal Walk 6	.cache\73\{73D80180-5126-A812-BAEF-2A3BC9E66BBA}.wem		\Containers\World\Player\Movement\Footsteps\Footsteps_Metal\Footsteps_Metal_Walk\Metal Walk 6		45664
 	1027197158	Cobble Jump 1	.cache\06\{06EC0E83-C9B6-D941-43C4-AAE35D223574}.wem		\Containers\World\Player\Movement\Jump\Footsteps_Stone_Jump\Cobble Jump 1		35296
 	1029938476	Cat Eat 2	.cache\81\{819616A0-BA1A-220F-6A23-C0D3B0391178}.wem		\Containers\World\Enemy\Cat\Cat Eat\Cat Chewing\Cat Eat 2		129120

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{B7FA90F1-D7EF-40BE-876E-E41F469776F1}" SchemaVersion="133">
+	<Switches>
+		<WorkUnit Name="Music" ID="{B7FA90F1-D7EF-40BE-876E-E41F469776F1}" PersistMode="Standalone">
+			<ChildrenList>
+				<SwitchGroup Name="Music_State" ID="{28A4FD8A-EFAC-445A-9D5E-4F5A14B19543}">
+					<ChildrenList>
+						<Switch Name="Menu" ID="{FEA1CC4B-9537-4532-8F0E-AFDFE91A95F4}"/>
+						<Switch Name="Cyberpunk" ID="{C17B810B-466C-44FF-B319-E4C672D31689}"/>
+						<Switch Name="Steampunk" ID="{2BAD8B0B-32FB-4DE7-8E46-B80C63DF27A1}"/>
+						<Switch Name="Stoneage" ID="{852300AD-B51C-4589-AF68-C399A5148303}"/>
+					</ChildrenList>
+				</SwitchGroup>
+			</ChildrenList>
+		</WorkUnit>
+	</Switches>
+</WwiseDocument>

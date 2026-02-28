@@ -282,6 +282,38 @@
         "GUID": "{F37F10EA-F944-40B2-A648-B3FBBB0A54B1}"
        }
       ]
+     },
+     {
+      "Id": "3826569560",
+      "Name": "Music_State",
+      "ObjectPath": "\\Switches\\Music\\Music_State",
+      "GUID": "{28A4FD8A-EFAC-445A-9D5E-4F5A14B19543}",
+      "Switches": [
+       {
+        "Id": "803157131",
+        "Name": "Steampunk",
+        "ObjectPath": "\\Switches\\Music\\Music_State\\Steampunk",
+        "GUID": "{2BAD8B0B-32FB-4DE7-8E46-B80C63DF27A1}"
+       },
+       {
+        "Id": "1755910996",
+        "Name": "Cyberpunk",
+        "ObjectPath": "\\Switches\\Music\\Music_State\\Cyberpunk",
+        "GUID": "{C17B810B-466C-44FF-B319-E4C672D31689}"
+       },
+       {
+        "Id": "2607556080",
+        "Name": "Menu",
+        "ObjectPath": "\\Switches\\Music\\Music_State\\Menu",
+        "GUID": "{FEA1CC4B-9537-4532-8F0E-AFDFE91A95F4}"
+       },
+       {
+        "Id": "2795902013",
+        "Name": "Stoneage",
+        "ObjectPath": "\\Switches\\Music\\Music_State\\Stoneage",
+        "GUID": "{852300AD-B51C-4589-AF68-C399A5148303}"
+       }
+      ]
      }
     ],
     "AcousticTextures": [
@@ -763,6 +795,6 @@
     ]
    }
   ],
-  "FileHash": "{A178DFE4-E13B-E800-6AED-03FFD0D5F274}"
+  "FileHash": "{027BE875-89C2-11C5-ECB2-CB548F7E2801}"
  }
 }

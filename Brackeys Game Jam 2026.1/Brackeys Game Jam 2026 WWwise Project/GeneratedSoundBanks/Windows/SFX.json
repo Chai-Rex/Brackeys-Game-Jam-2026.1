@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{2B4FCDD6-7034-4F03-8455-9DC46B8F8FD0}",
     "Language": "SFX",
-    "Hash": "{13BE7651-362C-F14C-204C-006840F04C9A}",
+    "Hash": "{E1AC7B2E-3658-D433-CF51-AACCA2D58122}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\SFX",
     "ShortName": "SFX",
     "Path": "SFX.bnk",
@@ -165,7 +165,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Soundly Audio\\Vegetation, Misc, Plant, Vines, Growing, Movement, Creaks, Rubbery Vines SND133890 1.wav",
-      "CachePath": "7B/{7B3A6906-948C-8FF6-A09D-30F4263B6F30}.wem"
+      "CachePath": "FC/{FCC4518A-D047-13F9-4A13-B5A69F8E831E}.wem"
      },
      {
       "Id": "138220742",
@@ -453,7 +453,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Soundly Audio\\Vegetation, Misc, Plant, Vines, Growing, Movement, Creaks, Rubbery Vines SND133890 1.wav",
-      "CachePath": "FF/{FF6922F3-FFAF-9E50-3939-86A1C766B136}.wem"
+      "CachePath": "A4/{A4930917-1755-978C-A6F6-8355B8779769}.wem"
      },
      {
       "Id": "370718029",
@@ -589,7 +589,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Thème_CyberCIty_Loop.wav",
-      "CachePath": "0C/{0C3AA6EB-AC97-3828-02AD-3AC017311C63}.wem"
+      "CachePath": "BB/{BB6B3707-3808-7C90-1739-E35B7A18AD6D}.wem"
      },
      {
       "Id": "424466210",
@@ -637,7 +637,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Theme_MainMenu_Loop.wav",
-      "CachePath": "84/{84D0319B-231C-D1BC-0E2D-DC74E0DDC03D}.wem"
+      "CachePath": "75/{75B0F56F-05C6-7026-6797-29E683259CE1}.wem"
      },
      {
       "Id": "453807151",
@@ -917,7 +917,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Thème_SteamPunk_Loop.wav",
-      "CachePath": "16/{16AD1EAC-6A81-9143-D872-0904FA3B02D9}.wem"
+      "CachePath": "CA/{CAEEB0D8-6C30-3168-B73A-82C75BDBF47B}.wem"
      },
      {
       "Id": "629625774",
@@ -989,7 +989,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Soundly Audio\\Vegetation, Misc, Plant, Vines, Growing, Movement, Creaks, Rubbery Vines SND133890 1.wav",
-      "CachePath": "55/{55D1556A-91A5-E481-4093-F2BB62E4AF10}.wem"
+      "CachePath": "3F/{3F093F57-64FC-3F83-90D5-467EB9855098}.wem"
      },
      {
       "Id": "655803969",
@@ -1301,7 +1301,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Theme_StoneAge_Loop.wav",
-      "CachePath": "A9/{A94CB5FC-376B-3640-A679-17BF10B9CE7B}.wem"
+      "CachePath": "70/{70F3B878-8F7C-AE59-FCDF-3D7CAEC2E211}.wem"
      },
      {
       "Id": "876752176",
@@ -1533,7 +1533,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Soundly Audio\\User Interface, Click, Sci Fi Games, UI Menu, Very Short, Close 14 SND85070.wav",
-      "CachePath": "69/{69BCC154-009F-5A61-D7FD-25933C4C1521}.wem"
+      "CachePath": "67/{6778D4D5-E3DA-638C-CAF4-99DBB28635E3}.wem"
      },
      {
       "Id": "1027100442",
@@ -1811,20 +1811,6 @@
       ]
      },
      {
-      "Id": "1683108213",
-      "Name": "Cyberpunk_Play",
-      "ObjectPath": "\\Events\\Music\\Cyberpunk_Play",
-      "GUID": "{BF30F9B4-33C2-4275-A511-EA466CC82F4A}",
-      "DurationType": "OneShot",
-      "DurationMin": "96.256",
-      "DurationMax": "96.256",
-      "MediaRefs": [
-       {
-        "Id": "424102005"
-       }
-      ]
-     },
-     {
       "Id": "3929235283",
       "Name": "Elevator_Arrive",
       "ObjectPath": "\\Events\\Items\\Elevator\\Elevator_Arrive",
@@ -1888,16 +1874,63 @@
       ]
      },
      {
-      "Id": "105544633",
-      "Name": "Menu_Play",
-      "ObjectPath": "\\Events\\Music\\Menu_Play",
-      "GUID": "{EC03880B-BF8A-49B2-BE06-FB951FB9D3C9}",
-      "DurationType": "OneShot",
-      "DurationMin": "115.386",
-      "DurationMax": "115.386",
-      "MediaRefs": [
+      "Id": "202194903",
+      "Name": "Music_Play",
+      "ObjectPath": "\\Events\\Music\\Music_Play",
+      "GUID": "{DB9AFADD-816D-490F-BF0D-CC98063230E8}",
+      "DurationType": "Infinite",
+      "SwitchContainers": [
        {
-        "Id": "441596046"
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "3826569560",
+         "Id": "1755910996",
+         "GUID": "{C17B810B-466C-44FF-B319-E4C672D31689}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "424102005"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "3826569560",
+         "Id": "2607556080",
+         "GUID": "{FEA1CC4B-9537-4532-8F0E-AFDFE91A95F4}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "441596046"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "3826569560",
+         "Id": "803157131",
+         "GUID": "{2BAD8B0B-32FB-4DE7-8E46-B80C63DF27A1}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "628982877"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "3826569560",
+         "Id": "2795902013",
+         "GUID": "{852300AD-B51C-4589-AF68-C399A5148303}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "869032357"
+         }
+        ]
        }
       ]
      },
@@ -2693,34 +2726,6 @@
       ]
      },
      {
-      "Id": "2322496412",
-      "Name": "Steampunk_Play",
-      "ObjectPath": "\\Events\\Music\\Steampunk_Play",
-      "GUID": "{CA072AB0-EAD4-4582-93CB-D78A473ACF24}",
-      "DurationType": "OneShot",
-      "DurationMin": "125.80013",
-      "DurationMax": "125.80013",
-      "MediaRefs": [
-       {
-        "Id": "628982877"
-       }
-      ]
-     },
-     {
-      "Id": "3437213870",
-      "Name": "Stoneage_Play",
-      "ObjectPath": "\\Events\\Music\\Stoneage_Play",
-      "GUID": "{9998B0D4-7F42-4166-B8E8-4D28FF95A79F}",
-      "DurationType": "OneShot",
-      "DurationMin": "99.002",
-      "DurationMax": "99.002",
-      "MediaRefs": [
-       {
-        "Id": "869032357"
-       }
-      ]
-     },
-     {
       "Id": "704609316",
       "Name": "Stop_Cat",
       "ObjectPath": "\\Events\\Enemy\\Cat\\Stop_Cat",
@@ -3021,10 +3026,42 @@
         "GUID": "{F37F10EA-F944-40B2-A648-B3FBBB0A54B1}"
        }
       ]
+     },
+     {
+      "Id": "3826569560",
+      "Name": "Music_State",
+      "ObjectPath": "\\Switches\\Music\\Music_State",
+      "GUID": "{28A4FD8A-EFAC-445A-9D5E-4F5A14B19543}",
+      "Switches": [
+       {
+        "Id": "803157131",
+        "Name": "Steampunk",
+        "ObjectPath": "\\Switches\\Music\\Music_State\\Steampunk",
+        "GUID": "{2BAD8B0B-32FB-4DE7-8E46-B80C63DF27A1}"
+       },
+       {
+        "Id": "1755910996",
+        "Name": "Cyberpunk",
+        "ObjectPath": "\\Switches\\Music\\Music_State\\Cyberpunk",
+        "GUID": "{C17B810B-466C-44FF-B319-E4C672D31689}"
+       },
+       {
+        "Id": "2607556080",
+        "Name": "Menu",
+        "ObjectPath": "\\Switches\\Music\\Music_State\\Menu",
+        "GUID": "{FEA1CC4B-9537-4532-8F0E-AFDFE91A95F4}"
+       },
+       {
+        "Id": "2795902013",
+        "Name": "Stoneage",
+        "ObjectPath": "\\Switches\\Music\\Music_State\\Stoneage",
+        "GUID": "{852300AD-B51C-4589-AF68-C399A5148303}"
+       }
+      ]
      }
     ]
    }
   ],
-  "FileHash": "{323726D6-B0B9-D921-29E6-53585AE7B6FA}"
+  "FileHash": "{C31567F5-790D-61D4-C92F-7D4AC96DBC6B}"
  }
 }
